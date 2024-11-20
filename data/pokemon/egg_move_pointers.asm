@@ -344,6 +344,5 @@ EggMovePointers::
 	dw NoEggMoves                ; Tauros (Paldean Form)
 	dw NoEggMoves                ; Tauros (Paldean Fire Form)
 	dw NoEggMoves                ; Tauros (Paldean Water Form)
-	
-	dw NoEggMoves                ; Ursaluna (Bloodmoon Form)
+
 	assert_table_length NUM_EXT_POKEMON

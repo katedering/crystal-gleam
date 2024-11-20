@@ -288,7 +288,7 @@ PokemonPicPointers::
 	pics MrRime
 	pics Wyrdeer
 	pics Kleavor
-	pics UrsalunaPlain
+	pics Ursaluna
 	pics Sneasler
 	pics Overqwil
 	pics DudunsparceTwoSegment
@@ -411,7 +411,5 @@ PokemonPicPointers::
 	pics TaurosPaldean
 	pics TaurosPaldeanFire
 	pics TaurosPaldeanWater
-
-	pics UrsalunaBloodmoon
 
 	assert_table_length NUM_UNIQUE_POKEMON

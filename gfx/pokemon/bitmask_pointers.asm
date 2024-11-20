@@ -284,7 +284,7 @@ BitmasksPointers:
 	dw MrRimeBitmasks
 	dw WyrdeerBitmasks
 	dw KleavorBitmasks
-	dw UrsalunaPlainBitmasks
+	dw UrsalunaBitmasks
 	dw SneaslerBitmasks
 	dw OverqwilBitmasks
 	dw DudunsparceTwoSegmentBitmasks
@@ -407,7 +407,5 @@ BitmasksPointers:
 	dw TaurosPaldeanBitmasks
 	dw TaurosPaldeanFireBitmasks
 	dw TaurosPaldeanWaterBitmasks
-
-	dw UrsalunaBloodmoonBitmasks
 
 	assert_table_length NUM_UNIQUE_POKEMON

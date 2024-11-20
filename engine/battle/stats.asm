@@ -108,9 +108,6 @@ FarChangeStat:
 	ld c, ACCURACY
 	jr z, .ability_check
 	cp ILLUMINATE
-	ld c, ACCURACY
-	jr z, .ability_check
-	cp MINDS_EYE
 	jr nz, .check_item
 .ability_check
 	ld a, [wChangedStat]

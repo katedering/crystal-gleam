@@ -345,5 +345,4 @@ FootprintPointers::
 	dw TaurosFootprint
 	dw TaurosFootprint
 
-	dw UrsalunaFootprint
 	assert_table_length NUM_EXT_POKEMON
