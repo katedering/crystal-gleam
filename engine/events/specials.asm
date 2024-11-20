@@ -376,6 +376,13 @@ RespawnOneOffs:
 	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
 .CaughtArticuno
 
+    ld de, ENGINE_PLAYER_CAUGHT_GARTICUNO
+	farcall EngineFlagAction
+	jr nz, .CaughtGArticuno
+	eventflagreset EVENT_BATTLED_GARTICUNO
+	eventflagreset EVENT_GARTICUNO_GONE
+.CaughtGArticuno
+
 	ld de, ENGINE_PLAYER_CAUGHT_ZAPDOS
 	farcall EngineFlagAction
 	jr nz, .CaughtZapdos
@@ -383,11 +390,31 @@ RespawnOneOffs:
 	eventflagreset EVENT_ZAPDOS_GONE
 .CaughtZapdos
 
+    ld de, ENGINE_PLAYER_CAUGHT_GZAPDOS
+	farcall EngineFlagAction
+	jr nz, .CaughtGZapdos
+	eventflagreset EVENT_BATTLED_GZAPDOS
+	eventflagreset EVENT_GZAPDOS_GONE
+.CaughtGZapdos
+
 	ld de, ENGINE_PLAYER_CAUGHT_MOLTRES
 	farcall EngineFlagAction
 	jr nz, .CaughtMoltres
 	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
 .CaughtMoltres
+
+    ld de, ENGINE_PLAYER_CAUGHT_GMOLTRES
+	farcall EngineFlagAction
+	jr nz, .CaughtGMoltres
+	eventflagreset EVENT_BATTLED_GMOLTRES
+	eventflagreset EVENT_GMOLTRES_GONE
+.CaughtGMoltres
+
+	ld de, ENGINE_PLAYER_CAUGHT_GHOST
+	farcall EngineFlagAction
+	jr nz, .CaughtGhost
+	eventflagreset EVENT_VIOLET_HAUNTED_HOUSE_GHOST
+.CaughtGhost
 
 	ld de, ENGINE_PLAYER_CAUGHT_MEWTWO
 	farcall EngineFlagAction
