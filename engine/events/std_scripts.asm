@@ -1551,16 +1551,16 @@ CoinVendor_IntroScript:
 	loadmenu .MenuDataHeader
 	verticalmenu
 	closewindow
-	ifequalfwd $1, .Buy50
-	ifequalfwd $2, .Buy500
+	ifequalfwd $1, .Buy100
+	ifequalfwd $2, .Buy1000
 	sjumpfwd .Cancel
 
-.Buy50:
-	checkcoins 49950
+.Buy100:
+	checkcoins 49900
 	ifequalfwd $0, .CoinCaseFull
 	checkmoney $0, 1000
 	ifequalfwd $2, .NotEnoughMoney
-	givecoins 50
+	givecoins 100
 	takemoney $0, 1000
 	waitsfx
 	playsound SFX_TRANSACTION
@@ -1568,12 +1568,12 @@ CoinVendor_IntroScript:
 	waitbutton
 	sjump .loop
 
-.Buy500:
-	checkcoins 49500
+.Buy1000:
+	checkcoins 49000
 	ifequalfwd $0, .CoinCaseFull
 	checkmoney $0, 10000
 	ifequalfwd $2, .NotEnoughMoney
-	givecoins 500
+	givecoins 1000
 	takemoney $0, 10000
 	waitsfx
 	playsound SFX_TRANSACTION
