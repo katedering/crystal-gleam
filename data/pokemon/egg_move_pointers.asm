@@ -291,6 +291,7 @@ EggMovePointers::
 	dw GirafarigEggMoves         ; Farigiraf
 	dw WooperPaldeanEggMoves     ; Clodsire
 	dw MankeyEggMoves            ; Annihilape
+	dw EeveeEggMoves             ; Eeveeon
 	assert_table_length NUM_SPECIES
 
 	dw NoEggMoves                ; Gyarados (Red Form)
@@ -344,5 +345,16 @@ EggMovePointers::
 	dw NoEggMoves                ; Tauros (Paldean Form)
 	dw NoEggMoves                ; Tauros (Paldean Fire Form)
 	dw NoEggMoves                ; Tauros (Paldean Water Form)
-
+	
+	dw NoEggMoves                ; Ursaluna (Bloodmoon Form)
+	
+	dw EeveeEggMoves             ; Eevee (Eon Form)
+	dw EeveeEggMoves             ; Vaporeon (Eon Form)
+	dw EeveeEggMoves             ; Jolteon (Eon Form)
+	dw EeveeEggMoves             ; Flareon (Eon Form)
+	dw EeveeEggMoves             ; Espeon (Eon Form)
+	dw EeveeEggMoves             ; Umbreon (Eon Form)
+	dw EeveeEggMoves             ; Leafeon (Eon Form)
+	dw EeveeEggMoves             ; Glaceon (Eon Form)
+	dw EeveeEggMoves             ; Sylveon (Eon Form)
 	assert_table_length NUM_EXT_POKEMON

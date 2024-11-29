@@ -804,3 +804,6 @@ SECTION "LureIcon", ROMX
 HarshLureIcon::
 PotentLureIcon::
 MalignLureIcon:: INCBIN "gfx/items/lure.2bpp.lz"
+
+SECTION "EonStoneIcon", ROMX
+EonStoneIcon:: INCBIN "gfx/items/eon_stone.2bpp.lz"

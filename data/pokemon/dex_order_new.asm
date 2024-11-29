@@ -213,6 +213,7 @@ NewPokedexOrder:
 	dp LEAFEON
 	dp GLACEON
 	dp SYLVEON
+	dp EEVEEON
 	dp HORSEA
 	dp SEADRA
 	dp KINGDRA

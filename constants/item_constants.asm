@@ -660,6 +660,7 @@ DEF NUM_WINGS EQU const_value
 	const HARSH_LURE   ; 1f
 	const POTENT_LURE  ; 20
 	const MALIGN_LURE  ; 21
+	const EON_STONE    ;
 DEF CHARMS_START EQU const_value
 	; Only charms below this point!
 	const SHINY_CHARM  ; 22
@@ -677,6 +678,7 @@ DEF NUM_KEY_ITEMS EQU const_value - 1
 	const NAM_CATCH_CHARM
 	const NAM_CLEAR_BELL
 	const NAM_COIN_CASE
+	const NAM_EON_STONE
 	const NAM_GBC_SOUNDS
 	const NAM_GO_GOGGLES
 	const NAM_GOOD_ROD

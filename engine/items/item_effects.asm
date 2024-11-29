@@ -315,6 +315,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; HARSH_LURE
 	dw IsntTheTimeMessage ; POTENT_LURE
 	dw IsntTheTimeMessage ; MALIGN_LURE
+	dw EvoStoneEffect     ; EON_STONE
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM

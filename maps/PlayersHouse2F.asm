@@ -97,6 +97,8 @@ endr
 	giveitem CALCIUM, 99
 	giveitem ZINC, 99
 	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
+	giveitem RARE_CANDY, 99
 	giveitem PP_UP, 99
 	giveitem PP_MAX, 99
 	giveitem SACRED_ASH, 99
@@ -124,6 +126,15 @@ endr
 	giveitem BOTTLE_CAP, 99
 	giveitem BIG_NUGGET, 99
 	giveitem ARMOR_SUIT, 1
+	giveitem QUICK_CLAW, 1
+	giveitem WATER_STONE, 99
+	giveitem THUNDERSTONE, 99
+	giveitem FIRE_STONE, 99
+	giveitem SUN_STONE, 99
+	giveitem MOON_STONE, 99
+	giveitem LEAF_STONE, 99
+	giveitem ICE_STONE, 99
+	giveitem SHINY_STONE, 99
 	; all decorations except Diploma
 for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
 	setevent x
@@ -252,8 +263,9 @@ endr
 	givepoke TYPHLOSION, HISUIAN_FORM, 50
 	loadmem wPartyMon3Shiny, SHINY_MASK
 	; ext species test
-	givepoke WYRDEER, 50
-	givepoke DUDUNSPARCE, DUDUNSPARCE_THREE_SEGMENT_FORM, 50
+	givepoke URSARING, 50
+	givepoke EEVEE, EON_FORM, 99
+	loadmem wPartyMon5Shiny, SHINY_MASK
 	givepoke FARIGIRAF, 50
 	; fill pokedex
 	callasm FillPokedex

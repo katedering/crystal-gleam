@@ -2894,6 +2894,16 @@ AnnihilapePokedexEntry::
 	page "gained power unfe-"
 	next "ttered by its"
 	next "physical body.@"
+	
+SECTION "EeveeonPokedexEntry", ROMX
+EeveeonPokedexEntry::
+	db "Evolution@"
+	db   "Training it to"
+	next "the absolute limit"
+	next "allowed it to"
+	page "obtain ultimate"
+	next "power. It now has"
+	next "vast potential.@"
 
 SECTION "GyaradosRedPokedexEntry", ROMX
 GyaradosRedPokedexEntry::
@@ -3336,3 +3346,103 @@ TaurosPaldeanWaterPokedexEntry::
 	page "horns. Its high"
 	next "body fat allows it"
 	next "to float easily.@"
+	
+SECTION "UrsalunaBloodmoonPokedexEntry", ROMX
+UrsalunaBloodmoonPokedexEntry::
+	db "Peat@"
+	db   "It can see in the"
+	next "dark with its left"
+	next "eye, and protects"
+	page "itself with mud"
+	next "that is as hard as"
+	next "iron.@"
+
+SECTION "EeveeEonPokedexEntry", ROMX
+EeveeEonPokedexEntry::
+	db "Evolution@"
+	db   "This special breed"
+	next "of Eevee seems to"
+	next "be able to change"
+	page "it's evolution"
+	next "form at will. It"
+	next "is an enigma.@"
+	
+SECTION "VaporeonEonPokedexEntry", ROMX
+VaporeonEonPokedexEntry::
+	db "Bubble Jet@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has power over"
+	next "water.@"
+
+SECTION "JolteonEonPokedexEntry", ROMX
+JolteonEonPokedexEntry::
+	db "Lightning@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has power over"
+	next "electricity.@"
+
+SECTION "FlareonEonPokedexEntry", ROMX
+FlareonEonPokedexEntry::
+	db "Flame@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has power over"
+	next "fire.@"
+
+SECTION "EspeonEonPokedexEntry", ROMX
+EspeonEonPokedexEntry::
+	db "Sun@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has a strong"
+	next "psychic power.@"
+
+SECTION "UmbreonEonPokedexEntry", ROMX
+UmbreonEonPokedexEntry::
+	db "Moonlight@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It thrives in"
+	next "darkness.@"
+
+SECTION "LeafeonEonPokedexEntry", ROMX
+LeafeonEonPokedexEntry::
+	db "Verdant@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It thrives in"
+	next "lush forests.@"
+
+SECTION "GlaceonEonPokedexEntry", ROMX
+GlaceonEonPokedexEntry::
+	db "Fresh Snow@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has power over"
+	next "ice.@"
+
+SECTION "SylveonEonPokedexEntry", ROMX
+SylveonEonPokedexEntry::
+	db "Intertwined@"
+	db   "An enigmatic"
+	next "#mon that evol-"
+	next "ved from a very"
+	page "special Eevee."
+	next "It has a calming"
+	next "aura.@"

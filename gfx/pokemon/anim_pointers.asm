@@ -132,10 +132,10 @@ AnimationPointers:
 	dw GyaradosPlainAnimation
 	dw LaprasAnimation
 	dw DittoAnimation
-	dw EeveeAnimation
-	dw VaporeonAnimation
-	dw JolteonAnimation
-	dw FlareonAnimation
+	dw EeveePlainAnimation
+	dw VaporeonPlainAnimation
+	dw JolteonPlainAnimation
+	dw FlareonPlainAnimation
 	dw PorygonAnimation
 	dw OmanyteAnimation
 	dw OmastarAnimation
@@ -195,8 +195,8 @@ AnimationPointers:
 	dw YanmaAnimation
 	dw WooperPlainAnimation
 	dw QuagsireAnimation
-	dw EspeonAnimation
-	dw UmbreonAnimation
+	dw EspeonPlainAnimation
+	dw UmbreonPlainAnimation
 	dw MurkrowAnimation
 	dw SlowkingPlainAnimation
 	dw MisdreavusAnimation
@@ -272,25 +272,26 @@ AnimationPointers:
 	dw MagmortarAnimation
 	dw TogekissAnimation
 	dw YanmegaAnimation
-	dw LeafeonAnimation
-	dw GlaceonAnimation
+	dw LeafeonPlainAnimation
+	dw GlaceonPlainAnimation
 	dw GliscorAnimation
 	dw MamoswineAnimation
 	dw PorygonZAnimation
-	dw SylveonAnimation
+	dw SylveonPlainAnimation
 	dw PerrserkerAnimation
 	dw CursolaAnimation
 	dw SirfetchDAnimation
 	dw MrRimeAnimation
 	dw WyrdeerAnimation
 	dw KleavorAnimation
-	dw UrsalunaAnimation
+	dw UrsalunaPlainAnimation
 	dw SneaslerAnimation
 	dw OverqwilAnimation
 	dw DudunsparceTwoSegmentAnimation
 	dw FarigirafAnimation
 	dw ClodsireAnimation
 	dw AnnihilapeAnimation
+	dw EeveeonAnimation
 	assert_table_length NUM_SPECIES
 
 	dw UnownBAnimation
@@ -408,4 +409,15 @@ AnimationPointers:
 	dw TaurosPaldeanFireAnimation
 	dw TaurosPaldeanWaterAnimation
 
+	dw UrsalunaBloodmoonAnimation
+
+	dw EeveeEonAnimation
+	dw VaporeonEonAnimation
+	dw JolteonEonAnimation
+	dw FlareonEonAnimation
+	dw EspeonEonAnimation
+	dw UmbreonEonAnimation
+	dw LeafeonEonAnimation
+	dw GlaceonEonAnimation
+	dw SylveonEonAnimation
 	assert_table_length NUM_UNIQUE_POKEMON

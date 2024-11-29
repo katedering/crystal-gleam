@@ -291,6 +291,7 @@ KeyItemDescriptions:
 	dw HarshLureDesc
 	dw PotentLureDesc
 	dw MalignLureDesc
+	dw EonStoneDesc
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
@@ -1688,4 +1689,9 @@ TypeChartDesc:
 WingCaseDesc:
 	text "Holds up to 999 of"
 	next "each Wing."
+	done
+
+EonStoneDesc:
+	text "A curious item for"
+	next "use with Eeveeon."
 	done

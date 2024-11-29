@@ -1811,3 +1811,59 @@ SECTION "TaurosPaldeanWater Mini Icon", ROMX
 TaurosPaldeanWaterMini::     INCBIN "gfx/minis/tauros_paldean_water.2bpp.lz"
 TaurosPaldeanWaterMiniMask:: INCBIN "gfx/minis/tauros_paldean_water_mask.1bpp.lz"
 TaurosPaldeanWaterIcon::     INCBIN "gfx/icons/tauros_paldean_water.2bpp.lz"
+
+SECTION "UrsalunaBloodmoon Mini Icon", ROMX
+UrsalunaBloodmoonMini::     INCBIN "gfx/minis/ursaluna_bloodmoon.2bpp.lz"
+UrsalunaBloodmoonMiniMask:: INCBIN "gfx/minis/ursaluna_bloodmoon_mask.1bpp.lz"
+UrsalunaBloodmoonIcon::     INCBIN "gfx/icons/ursaluna_bloodmoon.2bpp.lz"
+
+SECTION "EeveeEon Mini Icon", ROMX
+EeveeEonMini::     INCBIN "gfx/minis/eevee_eon.2bpp.lz"
+EeveeEonMiniMask:: INCBIN "gfx/minis/eevee_eon_mask.1bpp.lz"
+EeveeEonIcon::     INCBIN "gfx/icons/eevee_eon.2bpp.lz"
+
+SECTION "VaporeonEon Mini Icon", ROMX
+VaporeonEonMini::     INCBIN "gfx/minis/vaporeon_eon.2bpp.lz"
+VaporeonEonMiniMask:: INCBIN "gfx/minis/vaporeon_eon_mask.1bpp.lz"
+VaporeonEonIcon::     INCBIN "gfx/icons/vaporeon_eon.2bpp.lz"
+
+SECTION "JolteonEon Mini Icon", ROMX
+JolteonEonMini::     INCBIN "gfx/minis/jolteon_eon.2bpp.lz"
+JolteonEonMiniMask:: INCBIN "gfx/minis/jolteon_eon_mask.1bpp.lz"
+JolteonEonIcon::     INCBIN "gfx/icons/jolteon_eon.2bpp.lz"
+
+SECTION "FlareonEon Mini Icon", ROMX
+FlareonEonMini::     INCBIN "gfx/minis/flareon_eon.2bpp.lz"
+FlareonEonMiniMask:: INCBIN "gfx/minis/flareon_eon_mask.1bpp.lz"
+FlareonEonIcon::     INCBIN "gfx/icons/flareon_eon.2bpp.lz"
+
+SECTION "EspeonEon Mini Icon", ROMX
+EspeonEonMini::     INCBIN "gfx/minis/espeon_eon.2bpp.lz"
+EspeonEonMiniMask:: INCBIN "gfx/minis/espeon_eon_mask.1bpp.lz"
+EspeonEonIcon::     INCBIN "gfx/icons/espeon_eon.2bpp.lz"
+
+SECTION "UmbreonEon Mini Icon", ROMX
+UmbreonEonMini::     INCBIN "gfx/minis/umbreon_eon.2bpp.lz"
+UmbreonEonMiniMask:: INCBIN "gfx/minis/umbreon_eon_mask.1bpp.lz"
+UmbreonEonIcon::     INCBIN "gfx/icons/umbreon_eon.2bpp.lz"
+
+SECTION "LeafeonEon Mini Icon", ROMX
+LeafeonEonMini::     INCBIN "gfx/minis/leafeon_eon.2bpp.lz"
+LeafeonEonMiniMask:: INCBIN "gfx/minis/leafeon_eon_mask.1bpp.lz"
+LeafeonEonIcon::     INCBIN "gfx/icons/leafeon_eon.2bpp.lz"
+
+SECTION "GlaceonEon Mini Icon", ROMX
+GlaceonEonMini::     INCBIN "gfx/minis/glaceon_eon.2bpp.lz"
+GlaceonEonMiniMask:: INCBIN "gfx/minis/glaceon_eon_mask.1bpp.lz"
+GlaceonEonIcon::     INCBIN "gfx/icons/glaceon_eon.2bpp.lz"
+
+SECTION "SylveonEon Mini Icon", ROMX
+SylveonEonMini::     INCBIN "gfx/minis/sylveon_eon.2bpp.lz"
+SylveonEonMiniMask:: INCBIN "gfx/minis/sylveon_eon_mask.1bpp.lz"
+SylveonEonIcon::     INCBIN "gfx/icons/sylveon_eon.2bpp.lz"
+
+SECTION "Eeveeon Mini Icon", ROMX
+EeveeonMini::     INCBIN "gfx/minis/eeveeon.2bpp.lz"
+EeveeonMiniMask:: INCBIN "gfx/minis/eeveeon_mask.1bpp.lz"
+EeveeonIcon::     INCBIN "gfx/icons/eeveeon.2bpp.lz"
+

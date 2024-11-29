@@ -132,10 +132,10 @@ FramesPointers:
 	dw GyaradosPlainFrames
 	dw LaprasFrames
 	dw DittoFrames
-	dw EeveeFrames
-	dw VaporeonFrames
-	dw JolteonFrames
-	dw FlareonFrames
+	dw EeveePlainFrames
+	dw VaporeonPlainFrames
+	dw JolteonPlainFrames
+	dw FlareonPlainFrames
 	dw PorygonFrames
 	dw OmanyteFrames
 	dw OmastarFrames
@@ -195,8 +195,8 @@ FramesPointers:
 	dw YanmaFrames
 	dw WooperPlainFrames
 	dw QuagsireFrames
-	dw EspeonFrames
-	dw UmbreonFrames
+	dw EspeonPlainFrames
+	dw UmbreonPlainFrames
 	dw MurkrowFrames
 	dw SlowkingPlainFrames
 	dw MisdreavusFrames
@@ -272,25 +272,26 @@ FramesPointers:
 	dw MagmortarFrames
 	dw TogekissFrames
 	dw YanmegaFrames
-	dw LeafeonFrames
-	dw GlaceonFrames
+	dw LeafeonPlainFrames
+	dw GlaceonPlainFrames
 	dw GliscorFrames
 	dw MamoswineFrames
 	dw PorygonZFrames
-	dw SylveonFrames
+	dw SylveonPlainFrames
 	dw PerrserkerFrames
 	dw CursolaFrames
 	dw SirfetchDFrames
 	dw MrRimeFrames
 	dw WyrdeerFrames
 	dw KleavorFrames
-	dw UrsalunaFrames
+	dw UrsalunaPlainFrames
 	dw SneaslerFrames
 	dw OverqwilFrames
 	dw DudunsparceTwoSegmentFrames
 	dw FarigirafFrames
 	dw ClodsireFrames
 	dw AnnihilapeFrames
+	dw EeveeonFrames
 	assert_table_length NUM_SPECIES
 
 	dw UnownBFrames
@@ -408,4 +409,15 @@ FramesPointers:
 	dw TaurosPaldeanFireFrames
 	dw TaurosPaldeanWaterFrames
 
+	dw UrsalunaBloodmoonFrames
+
+	dw EeveeEonFrames
+	dw VaporeonEonFrames
+	dw JolteonEonFrames
+	dw FlareonEonFrames
+	dw EspeonEonFrames
+	dw UmbreonEonFrames
+	dw LeafeonEonFrames
+	dw GlaceonEonFrames
+	dw SylveonEonFrames
 	assert_table_length NUM_UNIQUE_POKEMON
