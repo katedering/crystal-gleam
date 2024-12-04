@@ -135,10 +135,12 @@ ElmsLab_AutoAideSpeech:
 ProfElmScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_EEVEE_FROM_LALA
+	iftrue ElmEeveeEonScript
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftruefwd ElmCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue ElmGiveTicketScript
+	iftrue ElmGiveTicketScript	
 ElmCheckMasterBall:
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iftruefwd ElmCheckOddSouvenir
@@ -406,6 +408,16 @@ ElmGiveOddSouvenirScript:
 	checkevent EVENT_BATTLED_PROF_ELM
 	iffalsefwd ElmAlsoBattleScript
 	endtext
+	
+ElmEeveeEonScript:
+	writetext SpecialEeveeText
+	promptbutton
+	verbosegivekeyitem EON_STONE
+	setevent EVENT_GOT_EON_STONE_FROM_ELM
+	writetext EonStoneText
+	waitbutton
+	closetext
+	end
 
 ElmGiveMasterBallScript:
 	writetext ElmGiveMasterBallText1
@@ -1801,4 +1813,34 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
+	done
+
+SpecialEeveeText:
+	text "Lala called me"
+	line "earlier, and she"
+	cont "said that she gave"
+	cont "you a special"
+	cont "Eevee…"
+	
+	para "I have a stone"
+	line "here that was"
+	cont "given to me by"
+	cont "an old friend."
+	
+	para "It is supposed to"
+	line "have some link"
+	cont "with Eevee, but I"
+	cont "never could get it"
+	cont "to work."
+	
+	para "Perhaps Lala's"
+	line "Eevee will react"
+	cont "to it?"
+	done
+
+EonStoneText:
+	text "Try using this on"
+	line "that special Eevee"
+	cont "of yours, and see"
+	cont "what happens."
 	done

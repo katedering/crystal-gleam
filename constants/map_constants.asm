@@ -574,6 +574,7 @@ ENDM
 	map_const SAFFRON_BOOK_SPEECH_HOUSE,                   4,  4 ; 18
 	map_const SAFFRON_ORRE_SPEECH_HOUSE,                   4,  4 ; 19
 	map_const SAFFRON_RICH_SPEECH_HOUSE,                   4,  4 ; 20
+	map_const LALAS_LAB_1F,                                4,  4
 
 	newgroup                                                     ; 26
 	map_const ROUTE_30,                                   13, 27 ;  1

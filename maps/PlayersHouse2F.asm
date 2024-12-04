@@ -21,10 +21,14 @@ PlayersHouse2F_MapScriptHeader:
 	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDoll, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
+if DEF(DEBUG)
 	object_event  7,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PlayersHouse2FCuteGirlScript, -1
-	
+
 	object_const_def
 	const PLAYERSHOUSE2F_CUTE_GIRL
+else
+endc
+
 
 PlayersHouse2FInitializeRoom:
 	special ToggleDecorationsVisibility
@@ -190,6 +194,8 @@ endr
 	setevent EVENT_BEAT_ELITE_FOUR_AGAIN
 	setevent EVENT_BATTLE_TOWER_OPEN
 	clearevent EVENT_BATTLE_TOWER_CLOSED
+	setevent EVENT_GOT_EEVEE_FROM_LALA
+	setevent EVENT_LISTENED_TO_LALA_INTRO
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
@@ -263,8 +269,8 @@ endr
 	givepoke TYPHLOSION, HISUIAN_FORM, 50
 	loadmem wPartyMon3Shiny, SHINY_MASK
 	; ext species test
-	givepoke URSARING, 50
 	givepoke EEVEE, EON_FORM, 99
+	givepoke EEVEE, EON_FORM, 1
 	loadmem wPartyMon5Shiny, SHINY_MASK
 	givepoke FARIGIRAF, 50
 	; fill pokedex
@@ -410,6 +416,8 @@ PlayerRadioText4:
 	line "#mon Channel…"
 	done
 
+
+if DEF(DEBUG)
 PlayersHouse2FCuteGirlScript:
 	faceplayer
 	opentext
@@ -501,3 +509,5 @@ PlayersHouse2FCuteGirlScript:
 	cont "Debug Services!"
 	done
 
+else
+endc

@@ -24,7 +24,7 @@ sGameDataEnd::
 
 sOptions3:: db
 
-	ds 366 ; unused
+	ds 388 ; unused
 
 sChecksum:: dw
 
@@ -50,7 +50,7 @@ sBackupGameDataEnd::
 
 sBackupOptions3:: db
 
-	ds 393 ; unused
+	ds 388 ; unused
 
 sBackupChecksum:: dw
 
