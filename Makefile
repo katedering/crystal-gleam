@@ -1,6 +1,7 @@
 NAME := crystalgleam
 MODIFIERS :=
-VERSION := 9bit-beta-3c14dae
+VERSION := eon-beta-7c84c9d
+
 
 ROM_NAME = $(NAME)$(MODIFIERS)-$(VERSION)
 EXTENSION := gbc
