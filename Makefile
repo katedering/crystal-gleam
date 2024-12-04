@@ -1,6 +1,6 @@
 NAME := crystalgleam
 MODIFIERS :=
-VERSION := eon-beta-7c84c9d
+VERSION := eon-beta-a4d51f8
 
 
 ROM_NAME = $(NAME)$(MODIFIERS)-$(VERSION)
