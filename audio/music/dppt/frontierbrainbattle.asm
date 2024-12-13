@@ -1595,9 +1595,11 @@ Music_BattleFrontierBrainDPPt_Ch4_Bar37:
 	drum_note 3, 1
 	drum_note 3, 1
 ;Bar 41
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 6, 4
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 4, 2
 	drum_note 3, 2
 	drum_note 4, 2
@@ -1661,17 +1663,21 @@ Music_BattleFrontierBrainDPPt_Ch4_Bar37:
 	sound_call Music_BattleFrontierBrainDPPt_Ch4_Type1
 ;Bar 62
 	sound_call Music_BattleFrontierBrainDPPt_Ch4_Type1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 6, 4
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 63
 	drum_note 12, 4
 	sound_call Music_BattleFrontierBrainDPPt_Ch4_Type1
 ;Bar 64
 	sound_call Music_BattleFrontierBrainDPPt_Ch4_Type1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 6, 4
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 65
 	drum_note 12, 4
 	sound_call Music_BattleFrontierBrainDPPt_Ch4_Type1

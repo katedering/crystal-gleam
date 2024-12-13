@@ -271,8 +271,11 @@ endr
 	; ext species test
 	givepoke EEVEE, EON_FORM, 99
 	givepoke EEVEE, EON_FORM, 1
-	loadmem wPartyMon5Shiny, SHINY_MASK
-	givepoke FARIGIRAF, 50
+	; evolve during battle
+	givepoke PUPITAR, 54
+	loadmem wPartyMon6Exp+2, LOW(207967)
+	loadmem wPartyMon6Exp+1, HIGH(207967)
+	loadmem wPartyMon6Exp+0, 207967 >> 16
 	; fill pokedex
 	callasm FillPokedex
 ;	; new bark events

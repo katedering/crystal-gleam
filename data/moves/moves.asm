@@ -135,7 +135,7 @@ endc
 	move TOXIC,           EFFECT_TOXIC,               0, POISON,     90, 10,   0, STATUS
 	move CONFUSION,       EFFECT_CONFUSE_HIT,        50, PSYCHIC,   100, 25,  10, SPECIAL
 	move PSYCHIC_M,       EFFECT_SP_DEF_DOWN_HIT,    90, PSYCHIC,   100, 10,  10, SPECIAL
-	move HYPNOSIS,        EFFECT_SLEEP,               0, PSYCHIC,    80, 20,   0, STATUS
+	move HYPNOSIS,        EFFECT_SLEEP,               0, PSYCHIC,    75, 20,   0, STATUS
 	move HONE_CLAWS,      EFFECT_HONE_CLAWS,          0, DARK,       -1, 40,   0, STATUS
 	move AGILITY,         EFFECT_SPEED_UP_2,          0, PSYCHIC,    -1, 30,   0, STATUS
 	move QUICK_ATTACK,    EFFECT_PRIORITY_HIT,       40, NORMAL,    100, 30,   0, PHYSICAL

@@ -1240,7 +1240,7 @@ wTimerEventStartDay:: db
 
 wFruitTreeFlags:: flag_array NUM_FRUIT_TREES
 
-wNuzlockeLandmarkFlags:: flag_array NUM_LANDMARKS
+	ds 19 ; previously nuzlocke flags
 
 wHiddenGrottoContents::
 ; dbw content type, content id
@@ -1450,6 +1450,8 @@ SECTION "Sound Stack", WRAMX
 
 wSoundEngineBackup:: ds wChannelsEnd - wMusic
 wBackupMapMusic:: db
+wSoundEngineBattleBackup:: ds wChannelsEnd - wMusic
+wBattleBackupMapMusic:: db
 
 
 SECTION "Music Player RAM", WRAMX

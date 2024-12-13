@@ -1225,15 +1225,19 @@ Music_WildBattleDPPt_Ch4:
 ;Bar 3
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 2, 2
 ;Bar 4
 	sound_call Music_WildBattleDPPt_Ch4_Bar4
@@ -1242,16 +1246,20 @@ Music_WildBattleDPPt_Ch4:
 ;Bar 6
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 4, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 ;Bar 7
 	sound_call Music_WildBattleDPPt_Ch4_Bar5
 ;Bar 8
@@ -1260,20 +1268,25 @@ Music_WildBattleDPPt_Ch4:
 	sound_call Music_WildBattleDPPt_Ch4_Bar4
 ;Bar 10
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 4, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 ;Bar 11
 Music_WildBattleDPPt_Ch4_loop:
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_call Music_WildBattleDPPt_Ch4_Bar11
 ;Bar 12
 	sound_call Music_WildBattleDPPt_Ch4_Bar12
@@ -1329,16 +1342,20 @@ Music_WildBattleDPPt_Ch4_loop:
 	drum_note 6, 2
 	drum_note 12, 4
 ;Bar 36
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
 ;Bar 37
@@ -1380,133 +1397,169 @@ Music_WildBattleDPPt_Ch4_rest:
 ;Bar 54
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 9, 4
 	sound_jump Music_WildBattleDPPt_Ch4_loop
 
 Music_WildBattleDPPt_Ch4_Bar4:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
 	drum_note 2, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar5:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar12:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 4, 2
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar13:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 4
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar14:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
 	drum_note 2, 2
 	drum_note 4, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar11:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 4
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar18:
 	drum_note 12, 2
 	drum_note 2, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 2, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 Music_WildBattleDPPt_Ch4_Bar26:
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	drum_note 12, 2
 	drum_note 12, 2
-	noisesampleset 0
+	toggle_noise
+	toggle_noise 0
 	drum_note 10, 2
 	drum_note 10, 2
 	drum_note 10, 2
-	noisesampleset 5
+	toggle_noise
+	toggle_noise 5
 	sound_ret
 
 ; ============================================================================================================

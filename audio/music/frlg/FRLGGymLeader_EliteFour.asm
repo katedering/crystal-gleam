@@ -1092,56 +1092,70 @@ Music_KantoGymLeaderFRLG_Ch4:
 ;Bar 4
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 	drum_note 9, 2
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 6
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 5
 	drum_note 9, 2
 	drum_note 9, 1
 	drum_note 9, 1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 1
 	drum_note 9, 1
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 ;Bar 6
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 	drum_note 9, 2
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 6
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 7
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 ;Bar 8
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 	drum_note 9, 2
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 6
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 9
 	drum_note 9, 2
 	drum_note 9, 1
 	drum_note 9, 1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 1
 	drum_note 9, 1
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 ;Bar 10
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type2
 	drum_note 9, 2
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 6
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 11
 Music_KantoGymLeaderFRLG_Ch4_loop:
 Music_KantoGymLeaderFRLG_Ch4_bar11_18:
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 2
 	drum_note 9, 2
 	drum_note 9, 2
@@ -1151,9 +1165,11 @@ Music_KantoGymLeaderFRLG_Ch4_bar11_18:
 	drum_note 9, 2
 	sound_loop 8, Music_KantoGymLeaderFRLG_Ch4_bar11_18
 ;Bar 19
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 7, 2
 	drum_note 9, 1
 	drum_note 9, 1
@@ -1162,16 +1178,20 @@ Music_KantoGymLeaderFRLG_Ch4_bar11_18:
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type1
 ;Bar 20
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 1
 	drum_note 9, 1
 	drum_note 9, 1
 	drum_note 9, 1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 ;Bar 21
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type1
 	sound_call Music_KantoGymLeaderFRLG_Ch4_Type1
@@ -1209,21 +1229,27 @@ Music_KantoGymLeaderFRLG_Ch4_Bar39_44:
 	drum_note 9, 2
 	drum_note 9, 1
 	drum_note 9, 1
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 1
 	drum_note 9, 1
 	sound_loop 12, Music_KantoGymLeaderFRLG_Ch4_Bar39_44
 	sound_jump Music_KantoGymLeaderFRLG_Ch4_loop
 
 Music_KantoGymLeaderFRLG_Ch4_Type1:
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3;
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 3;
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 1
 	drum_note 9, 1
 	drum_note 9, 1
@@ -1271,9 +1297,11 @@ Music_KantoGymLeaderFRLG_Ch4_Bar22_23:
 
 Music_KantoGymLeaderFRLG_Ch4_Bar29_38:
 ;Bar 29;
-	noisesampleset 1
+	toggle_noise
+	toggle_noise 1
 	drum_note 5, 2
-	noisesampleset 3
+	toggle_noise
+	toggle_noise 3
 	drum_note 9, 2
 	drum_note 9, 2
 ;Bar 31
