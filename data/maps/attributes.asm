@@ -928,3 +928,4 @@ ENDM
 	map_attributes StrongChamber, STRONG_CHAMBER, $9, 0
 	map_attributes WickedChamber, WICKED_CHAMBER, $9, 0
 	map_attributes VioletHauntedHouse, VIOLET_HAUNTED_HOUSE, $0, 0
+	map_attributes LalasLab1F, LALAS_LAB_1F, $0, 0

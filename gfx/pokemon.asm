@@ -404,21 +404,21 @@ SECTION "Ditto Pics", ROMX
 DittoFrontpic: INCBIN "gfx/pokemon/ditto/front.animated.2bpp.lz"
 DittoBackpic:  INCBIN "gfx/pokemon/ditto/back.2bpp.lz"
 
-SECTION "Eevee Pics", ROMX
-EeveeFrontpic: INCBIN "gfx/pokemon/eevee/front.animated.2bpp.lz"
-EeveeBackpic:  INCBIN "gfx/pokemon/eevee/back.2bpp.lz"
+SECTION "EeveePlain Pics", ROMX
+EeveePlainFrontpic: INCBIN "gfx/pokemon/eevee_plain/front.animated.2bpp.lz"
+EeveePlainBackpic:  INCBIN "gfx/pokemon/eevee_plain/back.2bpp.lz"
 
-SECTION "Vaporeon Pics", ROMX
-VaporeonFrontpic: INCBIN "gfx/pokemon/vaporeon/front.animated.2bpp.lz"
-VaporeonBackpic:  INCBIN "gfx/pokemon/vaporeon/back.2bpp.lz"
+SECTION "VaporeonPlain Pics", ROMX
+VaporeonPlainFrontpic: INCBIN "gfx/pokemon/vaporeon_plain/front.animated.2bpp.lz"
+VaporeonPlainBackpic:  INCBIN "gfx/pokemon/vaporeon_plain/back.2bpp.lz"
 
-SECTION "Jolteon Pics", ROMX
-JolteonFrontpic: INCBIN "gfx/pokemon/jolteon/front.animated.2bpp.lz"
-JolteonBackpic:  INCBIN "gfx/pokemon/jolteon/back.2bpp.lz"
+SECTION "JolteonPlain Pics", ROMX
+JolteonPlainFrontpic: INCBIN "gfx/pokemon/jolteon_plain/front.animated.2bpp.lz"
+JolteonPlainBackpic:  INCBIN "gfx/pokemon/jolteon_plain/back.2bpp.lz"
 
-SECTION "Flareon Pics", ROMX
-FlareonFrontpic: INCBIN "gfx/pokemon/flareon/front.animated.2bpp.lz"
-FlareonBackpic:  INCBIN "gfx/pokemon/flareon/back.2bpp.lz"
+SECTION "FlareonPlain Pics", ROMX
+FlareonPlainFrontpic: INCBIN "gfx/pokemon/flareon_plain/front.animated.2bpp.lz"
+FlareonPlainBackpic:  INCBIN "gfx/pokemon/flareon_plain/back.2bpp.lz"
 
 SECTION "Porygon Pics", ROMX
 PorygonFrontpic: INCBIN "gfx/pokemon/porygon/front.animated.2bpp.lz"
@@ -620,13 +620,13 @@ SECTION "Quagsire Pics", ROMX
 QuagsireFrontpic: INCBIN "gfx/pokemon/quagsire/front.animated.2bpp.lz"
 QuagsireBackpic:  INCBIN "gfx/pokemon/quagsire/back.2bpp.lz"
 
-SECTION "Espeon Pics", ROMX
-EspeonFrontpic: INCBIN "gfx/pokemon/espeon/front.animated.2bpp.lz"
-EspeonBackpic:  INCBIN "gfx/pokemon/espeon/back.2bpp.lz"
+SECTION "EspeonPlain Pics", ROMX
+EspeonPlainFrontpic: INCBIN "gfx/pokemon/espeon_plain/front.animated.2bpp.lz"
+EspeonPlainBackpic:  INCBIN "gfx/pokemon/espeon_plain/back.2bpp.lz"
 
-SECTION "Umbreon Pics", ROMX
-UmbreonFrontpic: INCBIN "gfx/pokemon/umbreon/front.animated.2bpp.lz"
-UmbreonBackpic:  INCBIN "gfx/pokemon/umbreon/back.2bpp.lz"
+SECTION "UmbreonPlain Pics", ROMX
+UmbreonPlainFrontpic: INCBIN "gfx/pokemon/umbreon_plain/front.animated.2bpp.lz"
+UmbreonPlainBackpic:  INCBIN "gfx/pokemon/umbreon_plain/back.2bpp.lz"
 
 SECTION "Murkrow Pics", ROMX
 MurkrowFrontpic: INCBIN "gfx/pokemon/murkrow/front.animated.2bpp.lz"
@@ -916,17 +916,17 @@ SECTION "Lickilicky Pics", ROMX
 LickilickyFrontpic: INCBIN "gfx/pokemon/lickilicky/front.animated.2bpp.lz"
 LickilickyBackpic:  INCBIN "gfx/pokemon/lickilicky/back.2bpp.lz"
 
-SECTION "Leafeon Pics", ROMX
-LeafeonFrontpic: INCBIN "gfx/pokemon/leafeon/front.animated.2bpp.lz"
-LeafeonBackpic:  INCBIN "gfx/pokemon/leafeon/back.2bpp.lz"
+SECTION "LeafeonPlain Pics", ROMX
+LeafeonPlainFrontpic: INCBIN "gfx/pokemon/leafeon_plain/front.animated.2bpp.lz"
+LeafeonPlainBackpic:  INCBIN "gfx/pokemon/leafeon_plain/back.2bpp.lz"
 
-SECTION "Glaceon Pics", ROMX
-GlaceonFrontpic: INCBIN "gfx/pokemon/glaceon/front.animated.2bpp.lz"
-GlaceonBackpic:  INCBIN "gfx/pokemon/glaceon/back.2bpp.lz"
+SECTION "GlaceonPlain Pics", ROMX
+GlaceonPlainFrontpic: INCBIN "gfx/pokemon/glaceon_plain/front.animated.2bpp.lz"
+GlaceonPlainBackpic:  INCBIN "gfx/pokemon/glaceon_plain/back.2bpp.lz"
 
-SECTION "Sylveon Pics", ROMX
-SylveonFrontpic: INCBIN "gfx/pokemon/sylveon/front.animated.2bpp.lz"
-SylveonBackpic:  INCBIN "gfx/pokemon/sylveon/back.2bpp.lz"
+SECTION "SylveonPlain Pics", ROMX
+SylveonPlainFrontpic: INCBIN "gfx/pokemon/sylveon_plain/front.animated.2bpp.lz"
+SylveonPlainBackpic:  INCBIN "gfx/pokemon/sylveon_plain/back.2bpp.lz"
 
 SECTION "Wyrdeer Pics", ROMX
 WyrdeerFrontpic: INCBIN "gfx/pokemon/wyrdeer/front.animated.2bpp.lz"
@@ -936,9 +936,13 @@ SECTION "Kleavor Pics", ROMX
 KleavorFrontpic: INCBIN "gfx/pokemon/kleavor/front.animated.2bpp.lz"
 KleavorBackpic:  INCBIN "gfx/pokemon/kleavor/back.2bpp.lz"
 
-SECTION "Ursaluna Pics", ROMX
-UrsalunaFrontpic: INCBIN "gfx/pokemon/ursaluna/front.animated.2bpp.lz"
-UrsalunaBackpic:  INCBIN "gfx/pokemon/ursaluna/back.2bpp.lz"
+SECTION "UrsalunaPlain Pics", ROMX
+UrsalunaPlainFrontpic: INCBIN "gfx/pokemon/ursaluna_plain/front.animated.2bpp.lz"
+UrsalunaPlainBackpic:  INCBIN "gfx/pokemon/ursaluna_plain/back.2bpp.lz"
+
+SECTION "UrsalunaBloodmoon Pics", ROMX
+UrsalunaBloodmoonFrontpic: INCBIN "gfx/pokemon/ursaluna_bloodmoon/front.animated.2bpp.lz"
+UrsalunaBloodmoonBackpic:  INCBIN "gfx/pokemon/ursaluna_bloodmoon/back.2bpp.lz"
 
 SECTION "EggPic", ROMX
 EggPic: INCBIN "gfx/pokemon/egg/front.animated.2bpp.lz"
@@ -1552,3 +1556,43 @@ TaurosPaldeanFireBackpic:  INCBIN "gfx/pokemon/tauros_paldean_fire/back.2bpp.lz"
 SECTION "TaurosPaldeanWater Pics", ROMX
 TaurosPaldeanWaterFrontpic: INCBIN "gfx/pokemon/tauros_paldean_water/front.animated.2bpp.lz"
 TaurosPaldeanWaterBackpic:  INCBIN "gfx/pokemon/tauros_paldean_water/back.2bpp.lz"
+
+SECTION "EeveeEon Pics", ROMX
+EeveeEonFrontpic: INCBIN "gfx/pokemon/eevee_eon/front.animated.2bpp.lz"
+EeveeEonBackpic:  INCBIN "gfx/pokemon/eevee_eon/back.2bpp.lz"
+
+SECTION "VaporeonEon Pics", ROMX
+VaporeonEonFrontpic: INCBIN "gfx/pokemon/vaporeon_eon/front.animated.2bpp.lz"
+VaporeonEonBackpic:  INCBIN "gfx/pokemon/vaporeon_eon/back.2bpp.lz"
+
+SECTION "JolteonEon Pics", ROMX
+JolteonEonFrontpic: INCBIN "gfx/pokemon/jolteon_eon/front.animated.2bpp.lz"
+JolteonEonBackpic:  INCBIN "gfx/pokemon/jolteon_eon/back.2bpp.lz"
+
+SECTION "FlareonEon Pics", ROMX
+FlareonEonFrontpic: INCBIN "gfx/pokemon/flareon_eon/front.animated.2bpp.lz"
+FlareonEonBackpic:  INCBIN "gfx/pokemon/flareon_eon/back.2bpp.lz"
+
+SECTION "EspeonEon Pics", ROMX
+EspeonEonFrontpic: INCBIN "gfx/pokemon/espeon_eon/front.animated.2bpp.lz"
+EspeonEonBackpic:  INCBIN "gfx/pokemon/espeon_eon/back.2bpp.lz"
+
+SECTION "UmbreonEon Pics", ROMX
+UmbreonEonFrontpic: INCBIN "gfx/pokemon/umbreon_eon/front.animated.2bpp.lz"
+UmbreonEonBackpic:  INCBIN "gfx/pokemon/umbreon_eon/back.2bpp.lz"
+
+SECTION "LeafeonEon Pics", ROMX
+LeafeonEonFrontpic: INCBIN "gfx/pokemon/leafeon_eon/front.animated.2bpp.lz"
+LeafeonEonBackpic:  INCBIN "gfx/pokemon/leafeon_eon/back.2bpp.lz"
+
+SECTION "GlaceonEon Pics", ROMX
+GlaceonEonFrontpic: INCBIN "gfx/pokemon/glaceon_eon/front.animated.2bpp.lz"
+GlaceonEonBackpic:  INCBIN "gfx/pokemon/glaceon_eon/back.2bpp.lz"
+
+SECTION "SylveonEon Pics", ROMX
+SylveonEonFrontpic: INCBIN "gfx/pokemon/sylveon_eon/front.animated.2bpp.lz"
+SylveonEonBackpic:  INCBIN "gfx/pokemon/sylveon_eon/back.2bpp.lz"
+
+SECTION "Eeveeon Pics", ROMX
+EeveeonFrontpic: INCBIN "gfx/pokemon/eeveeon/front.animated.2bpp.lz"
+EeveeonBackpic:  INCBIN "gfx/pokemon/eeveeon/back.2bpp.lz"

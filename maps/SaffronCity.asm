@@ -25,6 +25,7 @@ SaffronCity_MapScriptHeader:
 	warp_event 13, 29, SAFFRON_BOOK_SPEECH_HOUSE, 1
 	warp_event 21, 29, SAFFRON_HITMONTOP_KID_HOUSE, 1
 	warp_event 13, 11, SAFFRON_RICH_SPEECH_HOUSE, 1
+	warp_event 27, 21, LALAS_LAB_1F, 1
 
 	def_coord_events
 

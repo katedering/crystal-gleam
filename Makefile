@@ -1,6 +1,7 @@
 NAME := crystalgleam
 MODIFIERS :=
-VERSION := 9bit-beta-3c14dae
+VERSION := eon-beta-a4d51f8
+
 
 ROM_NAME = $(NAME)$(MODIFIERS)-$(VERSION)
 EXTENSION := gbc
@@ -30,10 +31,6 @@ RGBFIX_FLAGS     = -csjv -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -
 ifeq ($(filter faithful,$(MAKECMDGOALS)),faithful)
 MODIFIERS := $(MODIFIERS)-faithful
 RGBASM_FLAGS += -DFAITHFUL
-endif
-ifeq ($(filter nortc,$(MAKECMDGOALS)),nortc)
-MODIFIERS := $(MODIFIERS)-nortc
-RGBASM_FLAGS += -DNO_RTC
 endif
 ifeq ($(filter monochrome,$(MAKECMDGOALS)),monochrome)
 MODIFIERS := $(MODIFIERS)-monochrome
@@ -88,14 +85,13 @@ crystal_obj    := $(rom_obj:.o=.o)
 crystal_vc_obj :=$(rom_obj:.o=_vc.o)
 
 .SUFFIXES:
-.PHONY: clean tidy crystal faithful nortc pocket debug monochrome freespace tools bsp huffman vc
+.PHONY: clean tidy crystal faithful pocket debug monochrome freespace tools bsp huffman vc
 .PRECIOUS: %.2bpp %.1bpp
 .SECONDARY:
 .DEFAULT_GOAL: crystal
 
 crystal: $$(ROM_NAME).$$(EXTENSION)
 faithful: crystal
-nortc: crystal
 monochrome: crystal
 noir: crystal
 hgss: crystal

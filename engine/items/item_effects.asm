@@ -315,6 +315,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; HARSH_LURE
 	dw IsntTheTimeMessage ; POTENT_LURE
 	dw IsntTheTimeMessage ; MALIGN_LURE
+	dw EvoStoneEffect     ; EON_STONE
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
@@ -441,15 +442,6 @@ PokeBallEffect:
 	call PrintText
 
 	call ClearSprites
-
-	; Get current landmark
-	call GetCurrentLandmark
-
-	; Use landmark as index into flag array
-	ld c, a
-	ld hl, wNuzlockeLandmarkFlags
-	ld b, SET_FLAG
-	predef FlagPredef
 
 	farcall GiveExperiencePointsAfterCatch
 

@@ -1088,5 +1088,6 @@ INCLUDE "maps/WickedChamber.asm"
 SECTION "Other Custom Map Scripts", ROMX
 
 INCLUDE "maps/VioletHauntedHouse.asm"
+INCLUDE "maps/LalasLab1F.asm"
 
 ENDSECTION

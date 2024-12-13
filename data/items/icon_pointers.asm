@@ -293,6 +293,7 @@ KeyItemIconPointers:
 	dba HarshLureIcon
 	dba PotentLureIcon
 	dba MalignLureIcon
+	dba EonStoneIcon
 	dba ShinyCharmIcon
 	dba OvalCharmIcon
 	dba CatchCharmIcon

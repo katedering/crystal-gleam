@@ -602,10 +602,10 @@ if !DEF(DEBUG)
 	call FadeToWhite
 	call ClearTileMap
 
-	ld a, LOW(GLACEON)
+	ld a, LOW(PORYGON)
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	ld a, HIGH(GLACEON) << MON_EXTSPECIES_F
+	ld a, HIGH(PORYGON) << MON_EXTSPECIES_F
 	ld [wCurForm], a
 	ld [wTempMonForm], a
 	call GetBaseData
@@ -679,7 +679,7 @@ ElmText2:
 	xor a
 	ld [wStereoPanningMask], a
 	ld [wCryTracks], a
-	ld de, GLACEON - 1
+	ld de, PORYGON - 1
 	call PlayCryHeader
 	call WaitSFX
 	ld hl, ElmText3

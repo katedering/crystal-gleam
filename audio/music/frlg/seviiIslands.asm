@@ -498,10 +498,12 @@ Music_SeviiIslands_Ch4:
 	drum_speed 12
 ;Bar 1
 	drum_note 4, 2
-	noisesampleset $1
+	toggle_noise
+	toggle_noise $1
 	drum_note 10, 1
 	drum_note 10, 1
-	noisesampleset $3
+	toggle_noise
+	toggle_noise $3
 	drum_note 4, 2
 	drum_note 8, 1
 	drum_note 8, 1

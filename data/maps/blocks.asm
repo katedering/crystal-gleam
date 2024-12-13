@@ -1936,4 +1936,8 @@ SECTION "VioletHauntedHouse_BlockData", ROMX
 VioletHauntedHouse_BlockData:
 	INCBIN "maps/VioletHauntedHouse.ablk.lz"
 
+SECTION "LalasLab1F_BlockData", ROMX
+LalasLab1F_BlockData:
+	INCBIN "maps/LalasLab1F.ablk.lz"
+	
 ENDSECTION
