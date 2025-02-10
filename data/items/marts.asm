@@ -1,5 +1,5 @@
 Marts:
-	table_width 2, Marts
+	table_width 2
 	dw CherrygroveMart
 	dw CherrygroveMartAfterDex
 	dw VioletMart
@@ -80,7 +80,7 @@ VioletMart:
 	db -1
 
 AzaleaMart:
-	db 10 ; # items
+	db 13 ; # items
 	db LURE_BALL
 	db FRIEND_BALL
 	db FAST_BALL
@@ -90,6 +90,9 @@ AzaleaMart:
 	db CHARCOAL
 	db SUPER_POTION
 	db FULL_HEAL
+	db REPEL
+	db ANTIDOTE
+	db PARALYZEHEAL
 	db FLOWER_MAIL
 	db -1
 

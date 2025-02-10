@@ -25,6 +25,7 @@ Route27_MapScriptHeader:
 	object_event 37,  6, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerCooltrainerfMegan, -1
 	object_event 65,  7, SPRITE_PSYCHIC, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPsychicGilbert, -1
 	object_event 58, 13, SPRITE_BIRD_KEEPER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerBird_keeperJose1, -1
+	object_event 67,  4, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 2, GenericTrainerPokefanfKristi, -1
 	itemball_event 53, 12, RARE_CANDY, 1, EVENT_ROUTE_27_RARE_CANDY
 	itemball_event 71,  4, DESTINY_KNOT, 1, EVENT_ROUTE_27_DESTINY_KNOT
 	fruittree_event 60, 12, FRUITTREE_ROUTE_27, LUM_BERRY, PAL_NPC_GREEN
@@ -550,4 +551,25 @@ TohjoFallsSignText:
 
 	para "The Link Between"
 	line "Kanto and Johto"
+	done
+
+GenericTrainerPokefanfKristi:
+	generictrainer POKEFANF, KRISTI, EVENT_BEAT_POKEFANF_KRISTI, PokefanFKristiSeenText, PokefanFKristiBeatenText
+	
+	text "It's the sound of"
+	line "Metronome!"
+	
+	para "It's a super fun"
+	line "move to use."
+	
+	para "The results are"
+	line "completely random!"
+	done
+	
+PokefanFKristiSeenText:
+	text "Tch-tch-tch!"
+	done
+
+PokefanFKristiBeatenText:
+	text "Tch?"
 	done

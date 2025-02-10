@@ -6,10 +6,6 @@ DarkCaveBlackthornEntrance_MapScriptHeader:
 	def_warp_events
 	warp_event 23,  3, ROUTE_45, 1
 	warp_event  3, 25, DARK_CAVE_VIOLET_ENTRANCE, 2
-	warp_event  9, 15, DARK_CAVE_BLACKTHORN_ENTRANCE, 4
-	warp_event 11, 35, DARK_CAVE_BLACKTHORN_ENTRANCE, 3
-	warp_event 17, 33, WICKED_CHAMBER, 1
-	
 
 	def_coord_events
 
@@ -19,7 +15,6 @@ DarkCaveBlackthornEntrance_MapScriptHeader:
 	object_event  7,  3, SPRITE_PHARMACIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, DarkCaveBlackthornEntrancePharmacistScript, -1
 	itemball_event 21, 24, REVIVE, 1, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_REVIVE
 	tmhmball_event  7, 22, TM_DARK_PULSE, EVENT_DARK_CAVE_BLACKTHORN_ENTRANCE_TM_DARK_PULSE
-	object_event 14, 36, SPRITE_N64, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_COPY_BG_GRAY, OBJECTTYPE_COMMAND, jumptext, WickedChamberSealstoneText, EVENT_BEAT_ELITE_FOUR
 
 DarkCaveBlackthornEntrancePharmacistScript:
 	faceplayer
@@ -59,9 +54,4 @@ DarkCaveBlackthornEntrancePharmacistScript:
 	line "pair of Black-"
 	cont "Glasses, so forget"
 	cont "you saw me, OK?"
-	done
-
-WickedChamberSealstoneText:
-	text "An odd stone"
-	line "blocks your path."
 	done

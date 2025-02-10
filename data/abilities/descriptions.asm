@@ -1,5 +1,5 @@
 AbilityDescriptions:
-	table_width 2, AbilityDescriptions
+	table_width 2
 	dw NoAbilityDescription
 	dw StenchDescription
 	dw DrizzleDescription
@@ -155,6 +155,7 @@ AbilityDescriptions:
 	dw SharpnessDescription
 	dw ArmorTailDescription
 	dw MindsEyeDescription
+	dw EonForceDescription
 	assert_table_length NUM_ABILITIES
 
 NoAbilityDescription:
@@ -914,4 +915,9 @@ ArmorTailDescription:
 MindsEyeDescription:
 	text  "Bypass evasion and"
 	next1 "Ghost immunity."
+	done
+
+EonForceDescription:
+	text  "Boosts all moves"
+	next1 "of Eeveeon."
 	done

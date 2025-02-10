@@ -212,9 +212,6 @@ VioletCityLassText:
 	line "that there's a"
 	cont "ghost that lives"
 	cont "north of town…"
-	
-	para "but that it only"
-	line "appears at night."
 	done
 
 VioletCityCooltrainerM1Text:

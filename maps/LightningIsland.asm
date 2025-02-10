@@ -56,4 +56,15 @@ LightningIsland_MapScriptHeader:
 	object_event 24, 25, SPRITE_SNES, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_LIGHTNING_CRYSTAL, OBJECTTYPE_SCRIPT, 0, LightningIslandCrystalScript, -1
 
 LightningIslandCrystalScript:
+	opentext
+	writetext LightningIslandCrystalText
+	waitbutton
+	closetext
 	end
+
+LightningIslandCrystalText:
+	text "It's a crystal!"
+	para "<PLAYER> polished"
+	line "the crystal."
+	para "That looks better!"
+	done

@@ -3346,7 +3346,7 @@ TaurosPaldeanWaterPokedexEntry::
 	page "horns. Its high"
 	next "body fat allows it"
 	next "to float easily.@"
-	
+
 SECTION "UrsalunaBloodmoonPokedexEntry", ROMX
 UrsalunaBloodmoonPokedexEntry::
 	db "Peat@"

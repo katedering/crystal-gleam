@@ -545,7 +545,6 @@ TryObjectEvent:
 	farcall CheckFacingObject
 	ret nc
 
-	call PlayTalkObject
 	ldh a, [hObjectStructIndexBuffer]
 	call GetObjectStruct
 	ld hl, OBJECT_MAP_OBJECT_INDEX
@@ -558,20 +557,28 @@ TryObjectEvent:
 	add hl, bc
 	ld a, [hl]
 
-	cp NUM_OBJECT_TYPES
+	cp NUM_OBJECT_TYPES - 1
 	ret nc
 
+	cp OBJECTTYPE_SCRIPT_NOCLICKSFX
+	jr z, .skip_click_sfx
+	
+	push af
+	call PlayTalkObject
+	pop af
+.skip_click_sfx
 	call StackJumpTable
 
 ObjectEventTypeArray:
-	table_width 2, ObjectEventTypeArray
+	table_width 2
 	dw .script   ; OBJECTTYPE_SCRIPT
 	dw .itemball ; OBJECTTYPE_ITEMBALL
 	dw .trainer  ; OBJECTTYPE_TRAINER
 	dw .trainer  ; OBJECTTYPE_GENERICTRAINER
 	dw .pokemon  ; OBJECTTYPE_POKEMON
 	dw .command  ; OBJECTTYPE_COMMAND
-	assert_table_length NUM_OBJECT_TYPES
+	dw .script   ; OBJECTTYPE_SCRIPT_NOCLICKSFX
+	assert_table_length NUM_OBJECT_TYPES - 1
 
 .script:
 	ld hl, MAPOBJECT_SCRIPT_POINTER
@@ -658,7 +665,7 @@ TryBGEvent:
 	call StackJumpTable
 
 BGEventJumptable:
-	table_width 2, BGEventJumptable
+	table_width 2
 	dw .read     ; BGEVENT_READ
 	dw .up       ; BGEVENT_UP
 	dw .down     ; BGEVENT_DOWN
@@ -795,7 +802,7 @@ PlayerMovement:
 
 PlayerMovementPointers:
 ; entries correspond to PLAYERMOVEMENT_* constants
-	table_width 2, PlayerMovementPointers
+	table_width 2
 	dw .normal
 	dw .warp
 	dw .turn
@@ -1041,7 +1048,7 @@ DoPlayerEvent:
 
 PlayerEventScriptPointers:
 ; entries correspond to PLAYEREVENT_* constants
-	table_width 3, PlayerEventScriptPointers
+	table_width 3
 	dba InvalidEventScript       ; PLAYEREVENT_NONE
 	dba SeenByTrainerScript      ; PLAYEREVENT_SEENBYTRAINER
 	dba TalkToTrainerScript      ; PLAYEREVENT_TALKTOTRAINER

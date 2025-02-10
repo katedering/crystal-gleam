@@ -312,6 +312,11 @@ Diploma:
 	farcall _Diploma
 	jmp ExitAllMenus
 
+PrintDiploma:
+	call FadeToMenu_BackupSprites
+	farcall _PrintDiploma
+	jmp ExitAllMenus
+
 Special_GetOvercastIndex::
 	call GetOvercastIndex
 	ldh [hScriptVar], a
@@ -376,13 +381,6 @@ RespawnOneOffs:
 	eventflagreset EVENT_SEAFOAM_ISLANDS_ARTICUNO
 .CaughtArticuno
 
-    ld de, ENGINE_PLAYER_CAUGHT_GARTICUNO
-	farcall EngineFlagAction
-	jr nz, .CaughtGArticuno
-	eventflagreset EVENT_BATTLED_GARTICUNO
-	eventflagreset EVENT_GARTICUNO_GONE
-.CaughtGArticuno
-
 	ld de, ENGINE_PLAYER_CAUGHT_ZAPDOS
 	farcall EngineFlagAction
 	jr nz, .CaughtZapdos
@@ -390,30 +388,16 @@ RespawnOneOffs:
 	eventflagreset EVENT_ZAPDOS_GONE
 .CaughtZapdos
 
-    ld de, ENGINE_PLAYER_CAUGHT_GZAPDOS
-	farcall EngineFlagAction
-	jr nz, .CaughtGZapdos
-	eventflagreset EVENT_BATTLED_GZAPDOS
-	eventflagreset EVENT_GZAPDOS_GONE
-.CaughtGZapdos
-
 	ld de, ENGINE_PLAYER_CAUGHT_MOLTRES
 	farcall EngineFlagAction
 	jr nz, .CaughtMoltres
 	eventflagreset EVENT_CINNABAR_VOLCANO_MOLTRES
 .CaughtMoltres
 
-    ld de, ENGINE_PLAYER_CAUGHT_GMOLTRES
-	farcall EngineFlagAction
-	jr nz, .CaughtGMoltres
-	eventflagreset EVENT_BATTLED_GMOLTRES
-	eventflagreset EVENT_GMOLTRES_GONE
-.CaughtGMoltres
-
 	ld de, ENGINE_PLAYER_CAUGHT_GHOST
 	farcall EngineFlagAction
 	jr nz, .CaughtGhost
-	eventflagreset EVENT_VIOLET_HAUNTED_HOUSE_GHOST
+	eventflagreset EVENT_VIOLET_OUTSKIRTS_GHOST
 .CaughtGhost
 
 	ld de, ENGINE_PLAYER_CAUGHT_MEWTWO
@@ -466,10 +450,28 @@ RespawnOneOffs:
 
 	ld de, ENGINE_PLAYER_CAUGHT_HO_OH
 	farcall EngineFlagAction
-	ret nz
+	jr nz, .CaughtHoOh
 	eventflagreset EVENT_TIN_TOWER_ROOF_HO_OH
 	eventflagreset EVENT_FOUGHT_HO_OH
 	eventflagreset EVENT_EUSINES_HOUSE_EUSINE
+.CaughtHoOh
+
+	ld de, ENGINE_PLAYER_CAUGHT_GALARIAN_ARTICUNO
+	farcall EngineFlagAction
+	jr nz, .CaughtGalarianArticuno
+	eventflagreset EVENT_CHERRYGROVE_BAY_FOUGHT_GALARIAN_ARTICUNO
+.CaughtGalarianArticuno
+
+	ld de, ENGINE_PLAYER_CAUGHT_GALARIAN_ZAPDOS
+	farcall EngineFlagAction
+	jr nz, .CaughtGalarianZapdos
+	eventflagreset EVENT_CHERRYGROVE_BAY_FOUGHT_GALARIAN_ZAPDOS
+.CaughtGalarianZapdos
+
+	ld de, ENGINE_PLAYER_CAUGHT_GALARIAN_MOLTRES
+	farcall EngineFlagAction
+	ret nz
+	eventflagreset EVENT_CHERRYGROVE_BAY_FOUGHT_GALARIAN_MOLTRES
 	ret
 
 RespawnRoamingRaikou:

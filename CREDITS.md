@@ -28,6 +28,10 @@ Pokémon Polished Crystal would never have been finished without the help of man
 * SadisticMystic, sinusoidal, TKOWL and Kate Dering for vanilla battle engine testing and documentation.
 * ax6 and NieDzejkob for developing and optimizing lzcomp.
 * Kurausukun and earthoul for translating battle mechanics information from the Japanese Pokémon wiki.
+* vulcandth for implementing weather effects in the overworld, to include rain, lightning, snow, and sandstorm.
+* vulcandth for implementing the dynamic palettes for objects in the overworld.
+* vulcandth for adding compatibility to build the virtual console patches.
+* VermilionCosmos for various bug fixes and improvements (including PC cursor adjustments, the TownMap_InitFlyPossible fix, making Throat Spray work for non-damaging moves, and palette fixes after swapping Pokémon).
 
 
 ## Music
@@ -93,6 +97,7 @@ Pokémon Polished Crystal would never have been finished without the help of man
 * Kuroko Aizawa, bloodless, and metalflygon08 for help with Pikachu's sprites.
 * jpmac26 for editing the Pokémon Center signs and fixing a typo.
 * Sea for Crys's fishing sprites.
+* SoupPotato (aka SourApple) for the overworld weather sprites.
 
 
 ## Content

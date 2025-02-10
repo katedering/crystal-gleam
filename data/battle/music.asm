@@ -51,9 +51,7 @@ BattleMusic_Trainers:
 	db ASH,              MUSIC_PALETTE_BATTLE_PRISM
 	db TRIP,             MUSIC_UNDERTALE_MEGALOVANIA
 	db FEDMAE,           MUSIC_DPPT_FRONTIERBRAIN
-	db CUTE,             MUSIC_RBY_TRAINERBATTLE
 	db ROCKET,           MUSIC_ROCKET_BATTLE
-	db UNKNOWN,          MUSIC_RBY_GYMLEADERBATTLE
 	db -1
 
 BattleMusic_Legendaries:

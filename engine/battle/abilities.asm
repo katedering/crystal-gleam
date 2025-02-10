@@ -909,7 +909,7 @@ CheckNullificationAbilities:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	cp b
-	jr z, .ability_ok
+	jr z, .check_forcedmiss
 	ret
 
 .damp
@@ -940,6 +940,13 @@ CheckNullificationAbilities:
 	cp EFFECT_BURN
 	jr nz, .check_others
 
+.check_forcedmiss
+	; These have higher priority for specific abilities.
+	ld a, [wAttackMissed]
+	dec a ; cp ATKFAIL_MISSED
+	ret z
+	dec a ; cp ATKFAIL_PROTECT
+	ret z
 .ability_ok
 	ld a, ATKFAIL_ABILITY
 	ld [wAttackMissed], a
@@ -1641,6 +1648,7 @@ OffensiveDamageAbilities:
 	dbw GORILLA_TACTICS, GorillaTacticsAbility
 	dbw STEELY_SPIRIT, SteelySpiritAbility
 	dbw SHARPNESS, SharpnessAbility
+	dbw EON_FORCE, EonForceAbility
 	dbw -1, -1
 
 DefensiveDamageAbilities:
@@ -1863,6 +1871,16 @@ AteAbilities:
 	; here, because this is done after the game has already figured out whether
 	; the move is physical or special.
 	ln a, 6, 5 ; x1.2
+	jmp MultiplyAndDivide
+
+EonForceAbility:
+	ld b, UNKNOWN_T
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVarAddr
+	ld a, [hl]
+	ret nz
+	ld [hl], b
+	ln a, 10, 5 ; x2
 	jmp MultiplyAndDivide
 
 EnemyMultiscaleAbility:

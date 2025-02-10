@@ -1,4 +1,4 @@
-	db  65,  65,  60, 130, 110,  95 ; 525 BST
+	db  80,  80,  75, 145, 125, 110 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for JOLTEON_EON, VOLT_ABSORB, VOLT_ABSORB, QUICK_FEET
+	abilities_for JOLTEON_EON, VOLT_ABSORB, VOLT_ABSORB, EON_FORCE
 else
-	abilities_for JOLTEON_EON, VOLT_ABSORB, STATIC, QUICK_FEET
+	abilities_for JOLTEON_EON, VOLT_ABSORB, STATIC, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

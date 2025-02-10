@@ -258,8 +258,11 @@ DragonTamerPic: INCBIN "gfx/trainers/dragon_tamer.2bpp.lz"
 SECTION "EngineerPic", ROMX
 EngineerPic: INCBIN "gfx/trainers/engineer.2bpp.lz"
 
-SECTION "TeacherPic", ROMX
-TeacherPic: INCBIN "gfx/trainers/teacher.2bpp.lz"
+SECTION "TeacherFPic", ROMX
+TeacherFPic: INCBIN "gfx/trainers/teacher_f.2bpp.lz"
+
+SECTION "TeacherMPic", ROMX
+TeacherMPic: INCBIN "gfx/trainers/teacher_m.2bpp.lz"
 
 SECTION "GuitaristmPic", ROMX
 GuitaristmPic: INCBIN "gfx/trainers/guitarist_m.2bpp.lz"
@@ -449,10 +452,7 @@ KatePic: INCBIN "gfx/trainers/kate.2bpp.lz"
 AshPic: INCBIN "gfx/trainers/ash.2bpp.lz"
 TripPic: INCBIN "gfx/trainers/trip.2bpp.lz"
 FedmaePic: INCBIN "gfx/trainers/fedmae.2bpp.lz"
-SECTION "BonusTrainerPics2", ROMX
-CutePic: INCBIN "gfx/trainers/cute.2bpp.lz"
 RocketPic: INCBIN "gfx/trainers/rocket.2bpp.lz"
-UnknownPic: INCBIN "gfx/trainers/unknown.2bpp.lz"
 
 SECTION "OmastarFossilPic", ROMX
 OmastarFossilPic: INCBIN "gfx/trainers/omastar_fossil.2bpp.lz"

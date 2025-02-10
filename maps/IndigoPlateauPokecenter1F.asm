@@ -22,6 +22,7 @@ IndigoPlateauPokecenter1F_MapScriptHeader:
 	object_event 14,  9, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_INDIGO_PLATEAU_POKECENTER_LYRA
 	object_event 10,  9, SPRITE_YELLOW, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauYellowScript, EVENT_INDIGO_PLATEAU_POKECENTER_YELLOW
 	pc_nurse_event  9, 7
+	object_event 10,  7, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauCheatClubScript, -1
 	mart_clerk_event  1,  9, MARTTYPE_STANDARD, MART_INDIGO_PLATEAU
 	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTeleportGuyScript, -1
 	pokemon_event  5,  9, ABRA, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, IndigoPlateauAbraText, -1
@@ -719,3 +720,26 @@ IndigoPlateauGuideGirl_MenuHeader:
 	db "Fedmae@"
 	db "No One@"
 
+IndigoPlateauCheatClubScript:
+	faceplayer
+	opentext
+	writetext IndigoPlateauCheatClubText
+	waitbutton
+	closetext
+	end
+
+IndigoPlateauCheatClubText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "I'm sorry, but"
+	line "this branch of the"
+	cont "Club is currently"
+	cont "closed."
+	
+	para "Feel free to"
+	line "check our other"
+	cont "locations!"
+	
+	para "Goodbye for now!"
+	done

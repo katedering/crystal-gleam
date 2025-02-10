@@ -35,7 +35,6 @@ BossTrainers:
 	db TRIP
 	db FEDMAE
 	db ROCKET
-	db UNKNOWN
 JohtoGymLeaders:
 	db FALKNER
 	db WHITNEY

@@ -1,6 +1,6 @@
 TMHMMoves:
 ; entries correspond to *_TMNUM constants (see constants/item_constants.asm)
-	table_width 1, TMHMMoves
+	table_width 1
 	db DYNAMICPUNCH ; TM01 (Chuck)
 	db DRAGON_CLAW  ; TM02 (Route 27)
 	db CURSE        ; TM03 (Celadon Mansion)
@@ -116,5 +116,5 @@ TMHMMoves:
 	db ZAP_CANNON   ; MT30 (Power Plant)
 	db ZEN_HEADBUTT ; MT31 (Saffron City)
 	assert_table_length NUM_TM_HM_TUTOR
-; TODO: Agility, Baton Pass, Charm, Trick Room
+; TODO: Agility, Baton Pass, Charm, Trick Room, Metronome
 	db 0 ; end

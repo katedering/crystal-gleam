@@ -601,6 +601,7 @@ ENDM
 	map_attributes VioletNicknameSpeechHouse, VIOLET_NICKNAME_SPEECH_HOUSE, $0, 0
 	map_attributes VioletPokeCenter1F, VIOLET_POKECENTER_1F, $0, 0
 	map_attributes VioletOnixTradeHouse, VIOLET_ONIX_TRADE_HOUSE, $0, 0
+	map_attributes VioletOutskirtsHouse, VIOLET_OUTSKIRTS_HOUSE, $0, 0
 	map_attributes Route32RuinsOfAlphGate, ROUTE_32_RUINS_OF_ALPH_GATE, $0, 0
 	map_attributes Route32PokeCenter1F, ROUTE_32_POKECENTER_1F, $0, 0
 	map_attributes Route32CoastHouse, ROUTE_32_COAST_HOUSE, $0, 0
@@ -924,8 +925,4 @@ ENDM
 	map_attributes IvysHouse, IVYS_HOUSE, $0, 0
 	map_attributes ValenciaHouse, VALENCIA_HOUSE, $0, 0
 	map_attributes ValenciaPort, VALENCIA_PORT, $0, 0
-	map_attributes CruelChamber, CRUEL_CHAMBER, $9, 0
-	map_attributes StrongChamber, STRONG_CHAMBER, $9, 0
-	map_attributes WickedChamber, WICKED_CHAMBER, $9, 0
-	map_attributes VioletHauntedHouse, VIOLET_HAUNTED_HOUSE, $0, 0
 	map_attributes LalasLab1F, LALAS_LAB_1F, $0, 0

@@ -218,7 +218,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, EVERSTONE, LUXURY_BALL
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -258,7 +258,7 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke TOTODILE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, EVERSTONE, LUXURY_BALL
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -296,7 +296,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CHIKORITA, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, EVERSTONE, LUXURY_BALL
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -322,6 +322,7 @@ if !DEF(DEBUG)
 	showtext ElmDirectionsText1
 endc
 	addcellnum PHONE_ELM
+	giveitem ABILITYPATCH, 2
 	opentext
 	writetext GotElmsNumberText
 	playsound SFX_REGISTER_PHONE_NUMBER
@@ -1451,18 +1452,6 @@ ElmGiveTicketText2:
 	para "A champ like you"
 	line "should do well"
 	cont "competing there!"
-	
-	para "And before I"
-	line "forget, there"
-	cont "also seem to be"
-	cont "sightings of new"
-	
-    para "and extremely rare"
-	line "#mon in Johto."
-	
-	para "Perhaps you can"
-	line "find and catch"
-	cont "them, <PLAYER>."
 	done
 
 LyraAnnouncesGymChallengeText:

@@ -1,4 +1,4 @@
-	db  65,  60, 110,  65, 130,  95 ; 525 BST
+	db  80,  75, 125,  80, 145, 110 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db ICE, ICE ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for GLACEON_EON, SNOW_CLOAK, SNOW_CLOAK, ICE_BODY
+	abilities_for GLACEON_EON, SNOW_CLOAK, SNOW_CLOAK, EON_FORCE
 else
-	abilities_for GLACEON_EON, SNOW_CLOAK, SNOW_WARNING, ICE_BODY
+	abilities_for GLACEON_EON, SNOW_CLOAK, SNOW_WARNING, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

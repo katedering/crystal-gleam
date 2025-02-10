@@ -1,4 +1,4 @@
-	db 255, 255, 255, 255, 255, 255 ; 1530 BST
+	db 121, 118, 122, 141, 141, 122 ; 765 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db UNKNOWN_T, UNKNOWN_T ; type
@@ -7,7 +7,7 @@
 	db NO_ITEM, NO_ITEM ; held items
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
-	abilities_for EEVEEON, SCRAPPY, ADAPTABILITY, TECHNICIAN
+	abilities_for EEVEEON, EON_FORCE, EON_FORCE, EON_FORCE
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
 

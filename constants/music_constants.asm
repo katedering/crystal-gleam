@@ -185,31 +185,32 @@
 	const MUSIC_CHAMPION_BATTLE_B2W2           ; b5
 	const MUSIC_CREDITS                        ; b6
 	const MUSIC_POST_CREDITS                   ; b7
-	const MUSIC_TITLE_XY                       ; b8
-	const MUSIC_DEWFORD_TOWN_RSE               ; b9 ; unused
-	const MUSIC_MARINE_TUBE_B2W2               ; ba ; unused
-	const MUSIC_LEGENDARY_BATTLE_XY            ; bb ; unused
-	const MUSIC_WILD_BATTLE_PRISM              ; bc ; unused
-	const MUSIC_TRAINER_BATTLE_PRISM           ; bd ; unused
-	const MUSIC_GYM_LEADER_BATTLE_PRISM        ; be ; unused
-	const MUSIC_PALETTE_BATTLE_PRISM           ; bf ; unused
-	const MUSIC_UNDERTALE_MEGALOVANIA          ; c0 ; unused
-	const MUSIC_RBY_TITLESCREEN                ; c1 ; unused
-	const MUSIC_RBY_WILDBATTLE                 ; c2 ; unused
-	const MUSIC_RBY_TRAINERBATTLE              ; c3 ; unused
-	const MUSIC_RBY_GYMLEADERBATTLE            ; c4 ; unused
-	const MUSIC_RBY_FINALBATTLE                ; c5 ; unused
-	const MUSIC_RBY_MEETRIVAL                  ; c6 ; unused
-	const MUSIC_RBY_FAREWELLRIVAL              ; c7 ; unused
-	const MUSIC_FRLG_WILDBATTLE                ; c8 ; unused
-	const MUSIC_FRLG_GYMLEADER                 ; c9 ; unused
-	const MUSIC_FRLG_ELITEFOUR                 ; ca ; unused
-	const MUSIC_FRLG_SEVIIISLANDS              ; cb ; unused
-	const MUSIC_DPPT_WILDBATTLE                ; cc ; unused
-	const MUSIC_DPPT_BATTLECYNTHIA             ; cd ; unused
-	const MUSIC_DPPT_FRONTIERBRAIN             ; ce ; unused
-	const MUSIC_SM_GIOVANNIBATTLE              ; cf ; unused
-	const MUSIC_HGSS_ICEPATH                   ; d0 ; unused
+	const MUSIC_PRINTER                        ; b8
+	const MUSIC_TITLE_XY                       ; b9
+	const MUSIC_DEWFORD_TOWN_RSE               ; ba ; unused
+	const MUSIC_MARINE_TUBE_B2W2               ; bb ; unused
+	const MUSIC_LEGENDARY_BATTLE_XY            ; bc ; unused
+	const MUSIC_WILD_BATTLE_PRISM              ; bd ; unused
+	const MUSIC_TRAINER_BATTLE_PRISM           ; be ; unused
+	const MUSIC_GYM_LEADER_BATTLE_PRISM        ; bf ; unused
+	const MUSIC_PALETTE_BATTLE_PRISM           ; c0 ; unused
+	const MUSIC_UNDERTALE_MEGALOVANIA          ; c1 ; unused
+	const MUSIC_RBY_TITLESCREEN                ; c2 ; unused
+	const MUSIC_RBY_WILDBATTLE                 ; c3 ; unused
+	const MUSIC_RBY_TRAINERBATTLE              ; c4 ; unused
+	const MUSIC_RBY_GYMLEADERBATTLE            ; c5 ; unused
+	const MUSIC_RBY_FINALBATTLE                ; c6 ; unused
+	const MUSIC_RBY_MEETRIVAL                  ; c7 ; unused
+	const MUSIC_RBY_FAREWELLRIVAL              ; c8 ; unused
+	const MUSIC_FRLG_WILDBATTLE                ; c9 ; unused
+	const MUSIC_FRLG_GYMLEADER                 ; ca ; unused
+	const MUSIC_FRLG_ELITEFOUR                 ; cb ; unused
+	const MUSIC_FRLG_SEVIIISLANDS              ; cc ; unused
+	const MUSIC_DPPT_WILDBATTLE                ; cd ; unused
+	const MUSIC_DPPT_BATTLECYNTHIA             ; ce ; unused
+	const MUSIC_DPPT_FRONTIERBRAIN             ; cf ; unused
+	const MUSIC_SM_GIOVANNIBATTLE              ; d0 ; unused
+	const MUSIC_HGSS_ICEPATH                   ; d1 ; unused
 DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for these values (see data/maps/special_map_music.asm)

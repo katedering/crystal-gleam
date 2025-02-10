@@ -1,4 +1,4 @@
-	db  95,  65,  65,  60, 110, 130 ; 525 BST
+	db 110,  80,  80,  75, 125, 145 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db FAIRY, FAIRY ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for SYLVEON_EON, CUTE_CHARM, CUTE_CHARM, PIXILATE
+	abilities_for SYLVEON_EON, CUTE_CHARM, CUTE_CHARM, EON_FORCE
 else
-	abilities_for SYLVEON_EON, CUTE_CHARM, SERENE_GRACE, PIXILATE
+	abilities_for SYLVEON_EON, CUTE_CHARM, SERENE_GRACE, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

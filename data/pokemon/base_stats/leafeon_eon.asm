@@ -1,4 +1,4 @@
-	db  65, 110, 130,  95,  60,  65 ; 525 BST
+	db  80, 125, 145, 110,  75,  80 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db GRASS, GRASS ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for LEAFEON_EON, LEAF_GUARD, LEAF_GUARD, CHLOROPHYLL
+	abilities_for LEAFEON_EON, LEAF_GUARD, LEAF_GUARD, EON_FORCE
 else
-	abilities_for LEAFEON_EON, LEAF_GUARD, NATURAL_CURE, CHLOROPHYLL
+	abilities_for LEAFEON_EON, LEAF_GUARD, NATURAL_CURE, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

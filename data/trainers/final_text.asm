@@ -45,7 +45,7 @@ FinalText_TeamRocket:
 	dw Giovanni2FinalPkmnText
 
 FinalText_SinglePhrases:
-	table_width 2, FinalText_SinglePhrases
+	table_width 2
 	dw CarrieFinalPkmnText
 	dw CalFinalPkmnText
 	dw JackyFinalPkmnText
@@ -115,8 +115,6 @@ FinalText_SinglePhrases:
 	dw AshFinalPkmnText
 	dw TripFinalPkmnText
 	dw FedmaeFinalPkmnText
-	dw CuteFinalPkmnText
 	dw RocketFinalPkmnText
-	dw UnknownFinalPkmnText
 	; all trainers between LEAF and PROF_OAK are omitted
 	assert_table_length NUM_TRAINER_CLASSES - (PROF_OAK - LEAF - 1)

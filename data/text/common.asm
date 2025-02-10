@@ -4661,3 +4661,10 @@ CantChangeTradedMonBallTextData::
 	line "the Ball a traded"
 	cont "#mon is in."
 	prompt
+
+SECTION "_CheaterCardText", ROMX
+_CheaterCardText::
+	text "OAK: <PLAYER>!"
+	line "You're a cheater?"
+	cont "I'm ashamed!"
+	prompt

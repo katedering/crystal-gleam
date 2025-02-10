@@ -1,6 +1,6 @@
 # Features
 
-These are *most* of the new features as of 2.2.0. Some would be spoilers.
+These are *some* of the new features as of 2.2.0. Some would be spoilers.
 
 > We've been greedy in the amount of gameplay elements we've squeezed in there. There's so much included that I even had colleagues saying to me: "Are you sure you should be going this far with a remake?" In that sense, it's not simply a remake—I think it's more than that. For that reason, I would like to see these games enjoyed by as large a number of people as possible.
 >
@@ -77,17 +77,6 @@ These are *most* of the new features as of 2.2.0. Some would be spoilers.
 * Maximum $9,999,999 money and 50,000 coins.
 * Maximum 30 items and 16 Balls in your bag pocket.
 * Bill calls to switch boxes when one is full.
-
-
-## Nuzlocke Mode
-
-* Available in the Option menu at any time.
-* A fainted Pokémon can't be revived, by items, Pokémon Centers, or events. The only exception is your first rival battle, when you just have your starter. (Also when you deposit them into the PC, since current HP is not stored.)
-* You can only catch the first Pokémon you encounter in a new location. "Location" is defined with the Town Map mechanics, so Sprout Tower is separate from Violet City, but multiple floors of Union Cave or multiple sections of the Safari Zone count as one location. And nothing is counted until you receive your first five Poké Balls.
-* Every Pokémon gets a nickname, no asking whether you want to or not. Of course, you can cancel out to give the default name.
-* The dupes clause is in effect. If you've caught a Pidgey and encounter one on a new route, it won't count unless you catch it.
-* The shiny clause is also in effect. Shinies can always be caught.
-* Gift Pokémon do not count as encounters. Static encounters like Sudowoodo, Snorlax, and Suicune do.
 
 
 ## Maps

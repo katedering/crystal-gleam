@@ -785,6 +785,9 @@ OvalCharmIcon:: INCBIN "gfx/items/oval_charm.2bpp.lz"
 SECTION "CatchCharmIcon", ROMX
 CatchCharmIcon:: INCBIN "gfx/items/catch_charm.2bpp.lz"
 
+SECTION "CandyJarIcon", ROMX
+CandyJarIcon:: INCBIN "gfx/items/candy_jar.2bpp.lz"
+
 SECTION "WingCaseIcon", ROMX
 WingCaseIcon:: INCBIN "gfx/items/wing_case.2bpp.lz"
 
@@ -805,5 +808,26 @@ HarshLureIcon::
 PotentLureIcon::
 MalignLureIcon:: INCBIN "gfx/items/lure.2bpp.lz"
 
+SECTION "ExpCandyXSIcon", ROMX
+ExpCandyXSIcon:: INCBIN "gfx/items/exp_candy_xs.2bpp.lz"
+
+SECTION "ExpCandySIcon", ROMX
+ExpCandySIcon:: INCBIN "gfx/items/exp_candy_s.2bpp.lz"
+
+SECTION "ExpCandyMIcon", ROMX
+ExpCandyMIcon:: INCBIN "gfx/items/exp_candy_m.2bpp.lz"
+
+SECTION "ExpCandyLIcon", ROMX
+ExpCandyLIcon:: INCBIN "gfx/items/exp_candy_l.2bpp.lz"
+
+SECTION "ExpCandyXLIcon", ROMX
+ExpCandyXLIcon:: INCBIN "gfx/items/exp_candy_xl.2bpp.lz"
+
+SECTION "LiftKeyIcon", ROMX
+LiftKeyIcon:: INCBIN "gfx/items/lift_key.2bpp.lz"
+
 SECTION "EonStoneIcon", ROMX
 EonStoneIcon:: INCBIN "gfx/items/eon_stone.2bpp.lz"
+
+SECTION "CheaterCardIcon", ROMX
+CheaterCardIcon:: INCBIN "gfx/items/cheater_card.2bpp.lz"

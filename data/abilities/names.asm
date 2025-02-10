@@ -1,5 +1,5 @@
 AbilityNames:
-	table_width 2, AbilityNames
+	table_width 2
 	dw NoAbility
 	dw Stench
 	dw Drizzle
@@ -155,6 +155,7 @@ AbilityNames:
 	dw Sharpness
 	dw ArmorTail
 	dw MindsEye
+	dw EonForce
 	assert_table_length NUM_ABILITIES
 
 NoAbility:       rawchar "---@"
@@ -312,3 +313,4 @@ CudChew:         rawchar "Cud Chew@"
 Sharpness:       rawchar "Sharpness@"
 ArmorTail:       rawchar "Armor Tail@"
 MindsEye:        rawchar "Mind's Eye@"
+EonForce:        rawchar "Eon Force@"

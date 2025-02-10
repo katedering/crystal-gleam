@@ -24,6 +24,7 @@ data/tilesets/*_collision.bin
 
 # compiled patch
 *.bsp
+*.ips
 
 # rgbds extras
 *.map
@@ -61,9 +62,3 @@ bank_ends.txt
 # local tools
 rgbds/
 deploy.sh
-
-# backups
-*.bak
-soundbug.mp4
-soundbug2.mp4
-maps/PlayersHouse2F.asm.bak

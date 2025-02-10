@@ -1,4 +1,4 @@
-	db  65, 130,  60,  65,  95, 110 ; 525 BST
+	db  80, 145,  75,  80, 110, 125 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db FIRE, FIRE ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for FLAREON_EON, FLASH_FIRE, FLASH_FIRE, GUTS
+	abilities_for FLAREON_EON, FLASH_FIRE, FLASH_FIRE, EON_FORCE
 else
-	abilities_for FLAREON_EON, FLASH_FIRE, DROUGHT, GUTS
+	abilities_for FLAREON_EON, FLASH_FIRE, DROUGHT, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

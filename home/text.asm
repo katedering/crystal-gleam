@@ -367,7 +367,11 @@ _PlaceBattleNickname:
 	rst PlaceString
 	ld h, b
 	ld l, c
+	ld a, [wBattleType]
+	cp BATTLETYPE_GHOST
 	ld de, wEnemyMonNickname
+	jr nz, PlaceCommandCharacter
+	ld de, GhostNicknameText
 	jr PlaceCommandCharacter
 
 .EnemyText:
@@ -376,7 +380,10 @@ SpaceText::
 	db " " ; fallthrough, no "@"
 EmptyString::
 	db "@"
-
+	
+GhostNicknameText:
+	db "Ghost@"
+	
 PlaceEnemysName::
 	push de
 	ld de, wOTClassName
@@ -495,7 +502,7 @@ DoTextUntilTerminator::
 	ret
 
 TextCommands::
-	table_width 2, TextCommands
+	table_width 2
 	dw TextCommand_START         ; $00 <START>
 	dw TextCommand_RAM           ; $01 <RAM>
 	dw TextCommand_PROMPT_BUTTON ; $02 <WAIT>

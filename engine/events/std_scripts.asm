@@ -56,6 +56,7 @@ StdScripts::
 	dw VendingMachineScript
 	dw TreeGrottoScript
 	dw CaveGrottoScript
+	dw CheatClubScript
 
 PokeCenterNurseScript:
 	opentext
@@ -1553,6 +1554,7 @@ CoinVendor_IntroScript:
 	closewindow
 	ifequalfwd $1, .Buy100
 	ifequalfwd $2, .Buy1000
+	ifequalfwd $3, .Buy5000
 	sjumpfwd .Cancel
 
 .Buy100:
@@ -1564,7 +1566,7 @@ CoinVendor_IntroScript:
 	takemoney $0, 1000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy50CoinsText
+	farwritetext CoinVendor_Buy100CoinsText
 	waitbutton
 	sjump .loop
 
@@ -1577,7 +1579,20 @@ CoinVendor_IntroScript:
 	takemoney $0, 10000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy500CoinsText
+	farwritetext CoinVendor_Buy1000CoinsText
+	waitbutton
+	sjump .loop
+	
+.Buy5000
+	checkcoins 45000
+	ifequalfwd $0, .CoinCaseFull
+	checkmoney $0, 50000
+	ifequalfwd $2, .NotEnoughMoney
+	givecoins 5000
+	takemoney $0, 50000
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext CoinVendor_Buy5000CoinsText
 	waitbutton
 	sjump .loop
 
@@ -1595,15 +1610,16 @@ CoinVendor_IntroScript:
 
 .MenuDataHeader:
 	db MENU_BACKUP_TILES
-	menu_coords 0, 4, 15, 11
+	menu_coords 0, 5, 16, 11
 	dw .MenuData2
 	db 1 ; default option
 
 .MenuData2:
 	db $80 ; flags
 	db 3 ; items
-	db " 50 :  ¥1000@"
-	db "500 : ¥10000@"
+	db " 100 :  ¥1000@"
+	db "1000 : ¥10000@"
+	db "5000 : ¥50000@"
 	db "Cancel@"
 
 HappinessCheckScript:
@@ -1772,3 +1788,100 @@ _HiddenGrottoBackupMap:
 	ld a, [wMapNumber]
 	ld [wBackupMapNumber], a
 	ret
+
+CheatClubScript:
+	faceplayer
+	opentext
+	checkevent EVENT_YOU_ARE_A_DIRTY_CHEATER
+	iftruefwd .Cheater
+	farwritetext AreYouACheaterText
+	yesorno
+	iffalsefwd .NotCheater
+	farwritetext YouAreACheaterText
+	waitbutton
+	waitsfx
+	verbosegivekeyitem CHEATER_CARD
+	setevent EVENT_YOU_ARE_A_DIRTY_CHEATER
+	sjumpfwd .Cheater
+
+.NotCheater:
+	farwritetext YouAreNotACheaterText
+	waitbutton
+	closetext
+	end
+	
+.Cheater:
+	farwritetext CheatClubText1
+	promptbutton
+.CheatMenu:
+	farwritetext CheatClubText2
+	loadmenu .CheatMenuData
+	verticalmenu
+	closewindow
+	ifequalfwd $1, .CatchPack
+	ifequalfwd $2, .TrainPack
+	ifequalfwd $3, .MoneyPack
+	sjumpfwd .CheatClubCancel
+
+.CatchPack:
+	giveitem MASTER_BALL, 99
+	giveitem CHERISH_BALL, 99
+	giveitem SWEET_HONEY, 99
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext CheatClubCatchPackText
+	waitbutton
+	sjump .CheatMenu
+
+.TrainPack:
+	giveitem RARE_CANDY, 99
+	giveitem HP_UP, 99
+	giveitem PROTEIN, 99
+	giveitem IRON, 99
+	giveitem CALCIUM, 99
+	giveitem ZINC, 99
+	giveitem CARBOS, 99
+	giveitem PP_MAX, 99
+	giveitem ABILITYPATCH, 99
+	giveitem ABILITY_CAP, 99
+	giveitem SILVER_LEAF, 99
+	giveitem GOLD_LEAF, 99
+	giveitem MINT_LEAF, 99
+	giveitem BOTTLE_CAP, 99
+	giveitem FULL_RESTORE, 99
+	giveitem MAX_REVIVE, 99
+	giveitem MAX_ELIXIR, 99
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext CheatClubTrainPackText
+	waitbutton
+	sjump .CheatMenu
+
+.MoneyPack:
+	giveitem BIG_NUGGET, 99
+	giveitem BIG_NUGGET, 99
+	giveitem BIG_NUGGET, 99
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext CheatClubMoneyPackText
+	waitbutton
+	sjump .CheatMenu
+
+.CheatClubCancel:
+	farwritetext CheatClubCancelText
+	waitendtext
+	
+.CheatMenuData:
+	db MENU_BACKUP_TILES
+	menu_coords 0, 2, 15, 11
+	dw .CheatMenuData2
+	db 4 ; default option
+
+.CheatMenuData2:
+	db $80 ; flags
+	db 4 ; items
+	db "Catching Pack@"
+	db "Training Pack@"
+	db "Shopping Pack@"
+	db "Cancel@"
+	

@@ -1,7 +1,6 @@
 NAME := crystalgleam
 MODIFIERS :=
-VERSION := eon-beta-73833a1
-
+VERSION := 3.2.0-beta
 
 ROM_NAME = $(NAME)$(MODIFIERS)-$(VERSION)
 EXTENSION := gbc
@@ -22,11 +21,11 @@ Q :=
 
 .SECONDEXPANSION:
 
-RGBASM_FLAGS     = -E -Q8 -P includes.asm -Weverything -Wnumeric-string=2 -Wtruncation=1
+RGBASM_FLAGS     = -E -Q8 -P includes.asm -Weverything -Wtruncation=1
 RGBASM_VC_FLAGS  = $(RGBASM_FLAGS) -DVIRTUAL_CONSOLE
 RGBLINK_FLAGS    = -M -n $(ROM_NAME).sym    -m $(ROM_NAME).map    -p $(FILLER)
 RGBLINK_VC_FLAGS = -M -n $(ROM_NAME)_vc.sym -m $(ROM_NAME)_vc.map -p $(FILLER)
-RGBFIX_FLAGS     = -csjv -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m 0x10 -r 3
+RGBFIX_FLAGS     = -csjv -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m MBC5+RAM+BATTERY -r 3
 
 ifeq ($(filter faithful,$(MAKECMDGOALS)),faithful)
 MODIFIERS := $(MODIFIERS)-faithful
@@ -53,7 +52,7 @@ MODIFIERS :=
 NAME := pkpc
 EXTENSION := pocket
 RGBASM_FLAGS += -DANALOGUE_POCKET -DNO_RTC
-RGBFIX_FLAGS = -csj -f hg -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m 0x1b -r 3
+RGBFIX_FLAGS = -csj -f hg -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m MBC5+RAM+BATTERY -r 3
 endif
 ifeq ($(filter huffman,$(MAKECMDGOALS)),huffman)
 Q := @
@@ -168,6 +167,7 @@ $(ROM_NAME)_vc.gbc: $(crystal_vc_obj) layout.link
 gfx/battle/lyra_back.2bpp: rgbgfx += -Z
 gfx/battle/substitute-back.2bpp: rgbgfx += -Z
 gfx/battle/substitute-front.2bpp: rgbgfx += -Z
+gfx/battle/ghost.2bpp: rgbgfx += -Z
 
 gfx/battle_anims/angels.2bpp: tools/gfx += --trim-whitespace
 gfx/battle_anims/beam.2bpp: tools/gfx += --remove-xflip --remove-yflip --remove-whitespace

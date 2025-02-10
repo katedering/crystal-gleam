@@ -735,8 +735,13 @@ ClefableEvosAttacks:
 	db 1, PLAY_ROUGH ; LGPE TM move
 	db 1, SING
 	db 1, MINIMIZE
-	db 1, METRONOME
 	db 1, DOUBLE_SLAP
+	db 1, BELLY_DRUM
+	db 18, SWEET_KISS
+	db 27, TRI_ATTACK
+	db 36, METRONOME
+	db 45, BODY_SLAM
+	db 60, MOONBLAST
 	db -1 ; no more level-up moves
 
 VulpixPlainEvosAttacks:
@@ -5107,10 +5112,10 @@ TeddiursaEvosAttacks:
 	db -1 ; no more level-up moves
 
 UrsaringEvosAttacks:
-	evo_data EVOLVE_HOLDING, RAZOR_CLAW, TR_EVENITE, URSALUNA, URSALUNA_BLOODMOON_FORM
 	evo_data EVOLVE_ITEM, MOON_STONE, URSALUNA
 	evo_data EVOLVE_LOCATION, SINJOH_RUINS, URSALUNA
 	evo_data EVOLVE_LOCATION, MYSTRI_STAGE, URSALUNA
+	evo_data EVOLVE_LOCATION, MURKY_SWAMP, URSALUNA, URSALUNA_BLOODMOON_FORM
 	db -1 ; no more evolutions
 	db 1, GUNK_SHOT ; HGSS tutor move
 	db 1, THIEF ; Covet → TM move
@@ -6461,6 +6466,29 @@ UrsalunaPlainEvosAttacks:
 	db 85, GUNK_SHOT ; SV TM move
 	db -1 ; no more level-up moves
 
+UrsalunaBloodmoonEvosAttacks:
+	db -1 ; no more evolutions
+	db 1, BULLDOZE ; evolution move
+	db 1, GUNK_SHOT ; HGSS tutor move
+	db 1, THIEF ; Covet → TM move
+	db 1, SCRATCH
+	db 1, LEER
+	db 1, LICK
+	db 1, HEALINGLIGHT ; Moonlight → similar move
+	db 8, FURY_STRIKES ; Fury Swipes → similar move
+	db 15, FEINT_ATTACK
+	db 22, DEFENSE_CURL ; Harden → similar move
+	db 25, SHADOW_BALL ; new move
+	db 29, SLASH
+	db 38, SCARY_FACE
+	db 47, REST
+	db 49, NIGHT_SLASH ; Snore → egg move
+	db 58, MOONBLAST
+	db 67, FOCUS_BLAST ; Hammer Arm → SV TM move
+	db 76, HYPER_BEAM ; Blood Moon → SV TM move
+	db 85, GUNK_SHOT ; SV TM move
+	db -1 ; no more level-up moves
+
 SneaslerEvosAttacks:
 	db -1 ; no more evolutions
 	db 1, SCRATCH
@@ -6573,28 +6601,6 @@ AnnihilapeEvosAttacks:
 	db 44, SCREECH
 	db 48, GUNK_SHOT ; Stomping Tantrum → HGSS tutor move
 	db 53, OUTRAGE
-	db -1 ; no more level-up moves
-	
-UrsalunaBloodmoonEvosAttacks:
-	db -1 ; no more evolutions
-	db 1, BULLDOZE ; evolution move
-	db 1, GUNK_SHOT ; HGSS tutor move
-	db 1, THIEF ; Covet → TM move
-	db 1, SCRATCH
-	db 1, LEER
-	db 1, LICK
-	db 1, HEALINGLIGHT ; Moonlight → similar move
-	db 8, FURY_STRIKES ; Fury Swipes → similar move
-	db 15, FEINT_ATTACK
-	db 22, DEFENSE_CURL ; Harden → similar move
-	db 25, SHADOW_BALL ; new move
-	db 29, SLASH
-	db 38, SCARY_FACE
-	db 47, REST
-	db 49, NIGHT_SLASH ; Snore → egg move
-	db 58, MOONBLAST
-	db 67, FOCUS_BLAST ; Hammer Arm → SV TM move
-	db 76, HYPER_BEAM ; Blood Moon → SV TM move
 	db 85, GUNK_SHOT ; SV TM move
 	db -1 ; no more level-up moves
 
@@ -6611,8 +6617,6 @@ EeveeEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6630,10 +6634,16 @@ EeveeEonEvosAttacks:
 	db 37, DOUBLE_EDGE
 	db 41, GROWTH ; Last Resort → event move
 	db 45, REVERSAL ; Trump Card → new move
+	db 50, PROTECT
+	db 58, FALSE_SWIPE
+	db 70, HEADBUTT
+	db 80, HYPER_VOICE
+	db 95, HYPER_BEAM
 	db -1 ; no more level-up moves
 
 VaporeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
 	evo_data EVOLVE_ITEM, FIRE_STONE, FLAREON, EON_FORM
@@ -6644,8 +6654,6 @@ VaporeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6662,10 +6670,12 @@ VaporeonEonEvosAttacks:
 	db 37, SCALD ; Muddy Water → TM move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, HYDRO_PUMP
+	db 51, AQUA_TAIL
 	db -1 ; no more level-up moves
 
 JolteonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
 	evo_data EVOLVE_ITEM, FIRE_STONE, FLAREON, EON_FORM
@@ -6676,8 +6686,6 @@ JolteonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6694,10 +6702,12 @@ JolteonEonEvosAttacks:
 	db 37, THUNDERBOLT ; Discharge → TM move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, THUNDER
+	db 51, RAIN_DANCE
 	db -1 ; no more level-up moves
 
 FlareonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
@@ -6708,8 +6718,6 @@ FlareonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6726,10 +6734,12 @@ FlareonEonEvosAttacks:
 	db 37, FLAMETHROWER ; Lava Plume → new move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, FLARE_BLITZ
+	db 51, WILL_O_WISP
 	db -1 ; no more level-up moves
 
 EspeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
@@ -6740,7 +6750,6 @@ EspeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6757,10 +6766,12 @@ EspeonEonEvosAttacks:
 	db 37, PSYCHIC_M
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, POWER_GEM ; Power Swap → SV TM move
+	db 51, AURA_SPHERE
 	db -1 ; no more level-up moves
 
 UmbreonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
@@ -6771,7 +6782,6 @@ UmbreonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6788,10 +6798,12 @@ UmbreonEonEvosAttacks:
 	db 37, SUCKER_PUNCH ; Mean Look → tutor move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, MEAN_LOOK ; Guard Swap → Mean Look
+	db 51, DARK_PULSE
 	db -1 ; no more level-up moves
 
 LeafeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
@@ -6801,8 +6813,6 @@ LeafeonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, ICE_STONE, GLACEON, EON_FORM
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6819,10 +6829,12 @@ LeafeonEonEvosAttacks:
 	db 37, SEED_BOMB ; Sunny Day → tutor move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, SUNNY_DAY ; Leaf Blade → Sunny Day
+	db 51, POWER_WHIP
 	db -1 ; no more level-up moves
 
 GlaceonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
@@ -6832,8 +6844,6 @@ GlaceonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, LEAF_STONE, LEAFEON, EON_FORM
 	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6850,10 +6860,12 @@ GlaceonEonEvosAttacks:
 	db 37, ICE_BEAM ; Hail → TM move
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, BLIZZARD
+	db 51, EXTRASENSORY
 	db -1 ; no more level-up moves
 
 SylveonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
+	evo_data EVOLVE_ITEM, EVERSTONE, EEVEE, EON_FORM
 	evo_data EVOLVE_LEVEL, 100, EEVEEON
 	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
 	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
@@ -6864,8 +6876,6 @@ SylveonEonEvosAttacks:
 	evo_data EVOLVE_ITEM, ICE_STONE, GLACEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
 	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, GROWL
 	db 1, TACKLE
@@ -6882,22 +6892,11 @@ SylveonEonEvosAttacks:
 	db 37, MOONBLAST
 	db 41, DOUBLE_EDGE ; Last Resort → tutor move
 	db 45, PLAY_ROUGH ; Psych Up → new move
+	db 51, REFLECT
 	db -1 ; no more level-up moves
 	
 EeveeonEvosAttacks:
 	evo_data EVOLVE_ITEM, EON_STONE, EEVEE, EON_FORM
-	evo_data EVOLVE_ITEM, WATER_STONE, VAPOREON, EON_FORM
-	evo_data EVOLVE_ITEM, THUNDERSTONE, JOLTEON, EON_FORM
-	evo_data EVOLVE_ITEM, FIRE_STONE, FLAREON, EON_FORM
-	evo_data EVOLVE_ITEM, SUN_STONE, ESPEON, EON_FORM
-	evo_data EVOLVE_ITEM, MOON_STONE, UMBREON, EON_FORM
-	evo_data EVOLVE_ITEM, LEAF_STONE, LEAFEON, EON_FORM
-	evo_data EVOLVE_ITEM, ICE_STONE, GLACEON, EON_FORM
-	evo_data EVOLVE_ITEM, SHINY_STONE, SYLVEON, EON_FORM
-	evo_data EVOLVE_LOCATION, ILEX_FOREST, LEAFEON, EON_FORM
-	evo_data EVOLVE_LOCATION, ICE_PATH, GLACEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON, EON_FORM
-	evo_data EVOLVE_HAPPINESS, TR_EVENITE, UMBREON, EON_FORM
 	db -1 ; no more evolutions
 	db 1, METRONOME ; Evolution move
 	db 1, GROWL

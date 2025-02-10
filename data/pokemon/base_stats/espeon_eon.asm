@@ -1,4 +1,4 @@
-	db  65,  65,  60, 110, 130,  95 ; 525 BST
+	db  80,  80,  75, 125, 145, 110 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db PSYCHIC, PSYCHIC ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for ESPEON_EON, SYNCHRONIZE, SYNCHRONIZE, MAGIC_BOUNCE
+	abilities_for ESPEON_EON, SYNCHRONIZE, SYNCHRONIZE, EON_FORCE
 else
-	abilities_for ESPEON_EON, SYNCHRONIZE, MAGIC_GUARD, MAGIC_BOUNCE
+	abilities_for ESPEON_EON, SYNCHRONIZE, MAGIC_GUARD, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

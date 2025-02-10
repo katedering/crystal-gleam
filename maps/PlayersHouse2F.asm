@@ -21,13 +21,6 @@ PlayersHouse2F_MapScriptHeader:
 	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1, EVENT_PLAYERS_HOUSE_2F_DOLL_1
 	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2, EVENT_PLAYERS_HOUSE_2F_DOLL_2
 	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDoll, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
-if DEF(DEBUG)
-	object_event  7,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PlayersHouse2FCuteGirlScript, -1
-
-	object_const_def
-	const PLAYERSHOUSE2F_CUTE_GIRL
-else
-endc
 
 
 PlayersHouse2FInitializeRoom:
@@ -109,6 +102,7 @@ endr
 	giveitem MAX_REPEL, 99
 	giveitem MAX_REPEL, 99
 	giveitem ESCAPE_ROPE, 99
+	giveitem ABILITYPATCH, 99
 	giveitem ABILITY_CAP, 99
 	giveitem LEAF_STONE, 99
 	giveitem FIRE_STONE, 99
@@ -266,7 +260,7 @@ endr
 	loadmem wPartyMon2PP+2, 10
 	loadmem wPartyMon2PP+3, 10
 	; variant form test
-	givepoke TYPHLOSION, HISUIAN_FORM, 50
+	givepoke SYLVEON, 50
 	loadmem wPartyMon3Shiny, SHINY_MASK
 	; ext species test
 	givepoke EEVEE, EON_FORM, 99
@@ -325,6 +319,7 @@ endr
 	setmapscene VERMILION_CITY, $1
 	closetext
 	warpfacing DOWN, GOLDENROD_CITY, 13, 14
+	clearevent EVENT_VIOLET_OUTSKIRTS_GHOST
 	end
 
 FillPokedex:
@@ -418,99 +413,3 @@ PlayerRadioText4:
 	text "#mon!"
 	line "#mon Channel…"
 	done
-
-
-if DEF(DEBUG)
-PlayersHouse2FCuteGirlScript:
-	faceplayer
-	opentext
-	checkevent EVENT_CUTE_INTRO
-	iffalsefwd .CuteGirlIntro
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftruefwd .ContinueCuteGirl
-	writetext .NeedToGetYourStarterText
-	waitbutton
-	closetext
-	end
-
-.CuteGirlIntro
-	writetext .CuteGirlIntroText
-	setevent EVENT_CUTE_INTRO
-	waitbutton
-	closetext
-	end
-
-.ContinueCuteGirl:
-	writetext .CuteGirlBattleText
-	yesorno
-	iffalse_jumpopenedtext .DontNeedItText
-	writetext .AcceptedText
-	waitbutton
-	closetext
-	winlosstext .BeatenCuteGirlText, .HowDidYouLoseText
-	setlasttalked PLAYERSHOUSE2F_CUTE_GIRL
-	loadtrainer CUTE, 1
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	reloadmapafterbattle
-	opentext
-	writetext .CuteGirlAfterBattleText
-	closetext
-	end
-
-.CuteGirlIntroText
-	text "Hello!"
-	
-	para "I'm your cute"
-	line "little Debug Girl!"
-	done
-
-.NeedToGetYourStarterText
-	text "I'm sorry, but"
-	line "you really need"
-	cont "to go downstairs"
-	cont "first!"
-	done
-
-.CuteGirlBattleText
-	text "Would you like"
-	line "some fairly"
-	cont "easy experience"
-	cont "points and money?"
-	done
-
-.DontNeedItText
-	text "Wow! You must be"
-	line "really sure of"
-	cont "yourself!"
-	done
-	
-.AcceptedText
-	text "OK! Debug Battle"
-	line "Start Now!"
-	done
-
-.BeatenCuteGirlText
-	text "You won!"
-	line "Congratulations!"
-	done
-
-.HowDidYouLoseText
-	text "Oh? I'm not quite"
-	line "sure how you lost,"
-	cont "but you can always"
-	cont "try again!"
-	done
-
-.CuteGirlAfterBattleText
-	text "Feel free to"
-	line "battle again at"
-	cont "any time!"
-	
-	para "Thank you for"
-	line "using Cute Girl"
-	cont "Debug Services!"
-	done
-
-else
-endc

@@ -1,4 +1,4 @@
-	db  95,  65, 110,  65,  60, 130 ; 525 BST
+	db 110,  80, 125,  80,  75, 145 ; 615 BST
 	;   hp  atk  def  spe  sat  sdf
 
 	db DARK, DARK ; type
@@ -8,9 +8,9 @@
 	dn GENDER_F12_5, HATCH_SLOWER ; gender ratio, step cycles to hatch
 
 if DEF(FAITHFUL)
-	abilities_for UMBREON_EON, SYNCHRONIZE, SYNCHRONIZE, INNER_FOCUS
+	abilities_for UMBREON_EON, SYNCHRONIZE, SYNCHRONIZE, EON_FORCE
 else
-	abilities_for UMBREON_EON, SYNCHRONIZE, MAGIC_GUARD, INNER_FOCUS
+	abilities_for UMBREON_EON, SYNCHRONIZE, MAGIC_GUARD, EON_FORCE
 endc
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups
