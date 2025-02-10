@@ -1,0 +1,99 @@
+Custom Change Log for Crystal Gleam
+> Halved price of Game Corner Coins.
+> Changed some text in Azalea Town mart (to reflect it now selling Apricorn Balls).
+> Changed Azalea Mart - now sells all Apricorn Balls for 300 Poké each.
+> Changed prices on some items:
+=== (Apricorn and Devon Corp. balls to 300/500 each respectively - except Heal Ball)
+=== Cherish Ball price to 50000 for repurchasing purposes
+=== Premier Ball to 200 also for direct purchase purpose
+=== Ability Patch/Capsule to 10000/5000 respectively
+> Changed some text in Celadon Dept. Store to reflect shop change
+> Changed some shops:
+=== Azalea now stocks Apricorn Balls and fancy Leaves
+=== Goldenrod 2F now stocks Premier and Ultra Balls
+=== Goldenrod 4F / Celadon 5F now also sell Reverse EV Berries
+=== Yellow Forest guy now also sells Premier Balls
+=== Indigo Plateau now sells Max Elixir, Max Revive, Rare Candy, PP Max, Sacred Ash, EXP Share, Eviolite, and Ability Capsules/Patches
+=== Mount Moon now sells Moon Stones
+=== Celadon 2F now stocks all Devon Corp. Balls
+=== Celadon 4F now stocks ALL evolution stones and the Odd Souvenir (Souvenir also for sale in Mahogany!)
+=== Silph Co. Mart now also sells Cherish Balls and evolution hold items
+=== Maybe other shops have changed? (try saving up a lot of BP!)
+> Changed Wild Pokemon encounter table for Johto / Kanto grass, and Johto Surf
+===JOHTO===
+=== Added A-Rattata / Misdreavus to Sprout Tower
+=== Added A-Raticate / Misdreavus to Tin Tower (plus Haunter on the later floors)
+=== Added Cyndaquil to Burned Tower B1F
+=== Added Mr. Mime (morn) / Mankey (day) / Heracross (night) to National Park 2% slot
+=== Added Spearow to Ruins of Alph outside
+=== Added Tyrogue (morn) / Cubone (day) / Gligar (night) to Union Cave 1F
+=== Added Totodile to Union Cave B1F North
+=== Added G-Slowpoke (all times) / G-Slowbro to Slowpoke Well B2F
+=== Added Chikorita (all times) / Bonsly (night) to Ilex Forest
+=== Changed up a few encounters to Ice Path, added Smoochum to 1F, and added H-Sneasel to B3F
+=== Returned Sunkern to Route 29 from 3.0.0 and added Eevee (day) / A-Rattata (night)
+=== Returned Sunkern to Route 30 from 3.0.0 and added Spinarak (day) / A-Rattata (night)
+=== Returned Sunkern to Route 31 from 3.0.0 and added Eevee (day)
+=== Added Slowpoke to Route 33 (night)
+=== Added Igglybuff (morn) / Togepi (day) / Cleffa / A-Rattata (night) to Route 34
+=== Added Happiny (morn) to Route 35
+=== Added Scyther (morn) / Vulpix and Pichu (day) / Houndour and Pinsir (night) to Route 36
+=== Added G-Ponyta (morn) / K-Ponyta (day) / A-Meowth (night) to Route 38
+=== Added A-Raticate / A-Meowth to Route 39 night
+=== Added G-Farfetch'd to Route 43 night
+=== Changed Bellsprout/Weepinbell to Oddish/Gloom for Route 44 (night) and returned Furret to the route from 3.0
+=== Added Larvitar to route 45
+=== Added Larvitar (all times) / Skarmory (day) / Clefairy/A-Rattata/Gligar (night) to Route 46
+=== Added Aerodactyl to Silver Cave Outside night
+=== Added Heracross to Yellow Forest night
+=== Added A-Marowak to Quiet cave B3F
+=== Added J-Qwilfish to Route 32 water
+=== Added Mantyke to Route 41 water
+=== Significantly increased the levels of the Magikarp in Blackthorn City
+===KANTO===
+=== Added A-Raticate to Routes 3/4/9/18/21/22/23/26 Night
+=== Added A-Diglett / A-Dugtrio to Diglett's Cave
+=== Added A-Graveler (all times) / Electabuzz (morn/day) to Rock Tunnel 2F
+=== Added Bulbasaur (all times) / Yanmega (night) to Viridian Forest
+=== Added Porygon (morn/day) to Route 7
+=== Added Espeon (morn/day) and Eevee (night) to route 8
+=== Added Jolteon to Route 10 North
+=== Added Eevee (morn/day) and Umbreon (night) to Route 15
+=== Added Charmander to Route 16 NW
+=== Added Sylveon to Cerulean Cape day
+=== Added A-Golem / A-Raichu to Cerulean Cave B1F morn
+=== Added A-Exeggutor to Safari Zone Hub
+=== Added Squirtle to Seafoam Islands 1F
+=== Added Vaporeon (morn) / Glaceon (night) to Seafoam Islands B4F
+=== Added Flareon to Pokemon Mansion 1F
+=== Added G-Weezing to Cinnabar Volcano 1F
+=== Added H-Qwilfish to Vermilion Port
+===OTHER===
+=== Added Omanyte / Kabuto (1%!) to Rock Smash rocks (good luck!)
+> Buffed some Pokemon
+=== Meganium now has 113 Sp.Atk and 535 BST because why not.
+=== It also can learn Dragon Pulse now.
+=== Typhlosion can now learn Ancientpower.
+=== Feraligatr can now learn Leech Life.
+=== Significantly buffed a certain legendary 'mon.
+> Added parties to all the TODO Bulbasaur trainers on Shamouti Island, etc.
+> Added new events after some Gym Battles (free Pokemon, yay!)
+> Added new re-battleable Rocket trainer so you can always have that awesome battle music.
+> Added the "Elite Faux" trainers outside of Indigo Plateau Gate.
+=== Rematch them all daily!
+=== Good luck.
+> Added event pokemon after you beat Red in Mount Silver. Check his house in Pallet town.
+> Added event battle in Violet Outskirts. (Not yet in.)
+> Added event pokemon in Saffron City. Check the houses!
+
+============
+
+Changes made on Nov.13 '23:
+
+Significantly buffed the level range of the wild pokemon and trainers on Shamouti Island (and related areas) to strenghten it's position as a true side-game/endgame area. If you tackle it as soon as you can, you'll expect to see trainers in the 55-60 range. If you wait as late as possible (16 badges), expect them to be around 85-90! Good luck!
+
+============
+
+Changes made on Nov.14 '24:
+
+Removed all in-game references to Polished Crystal.
