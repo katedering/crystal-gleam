@@ -166,7 +166,7 @@ VioletPokeCenter1FElmsAideScript:
 
 VioletPokeCenter1FGameboyKidText:
 	text "I heard a rumor"
-	line "about the graveyard"
+	line "about those graves"
 	cont "north of town."
 
 	para "They say that if"
