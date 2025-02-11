@@ -1437,7 +1437,7 @@
 	wildmon 7, MAREEP
 	wildmon 8, MAREEP
 	wildmon 7, HOPPIP
-	wildmon 8, HOPPIP
+	wildmon 8, AZURILL
 	; day
 	wildmon 5, EKANS, ARBOK_JOHTO_FORM
 	wildmon 6, RATTATA
@@ -1465,7 +1465,7 @@
 	wildmon 10, HOPPIP
 	wildmon 10, EKANS, ARBOK_JOHTO_FORM
 	wildmon 9, SUNKERN
-	wildmon 10, SUNKERN
+	wildmon 10, MARILL
 	; day
 	wildmon 9, RATTATA
 	wildmon 9, SPEAROW
