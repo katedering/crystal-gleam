@@ -83,7 +83,7 @@ Custom Change Log for Crystal Gleam
 === Rematch them all daily!
 === Good luck.
 > Added event pokemon after you beat Red in Mount Silver. Check his house in Pallet town.
-> Added event battle in Violet Outskirts. (Not yet in.)
+> Added event battle in Violet Outskirts.
 > Added event pokemon in Saffron City. Check the houses!
 
 ============
@@ -97,3 +97,15 @@ Significantly buffed the level range of the wild pokemon and trainers on Shamout
 Changes made on Nov.14 '24:
 
 Removed all in-game references to Polished Crystal.
+
+============
+
+Changes made on Feb.10 '25:
+
+Updated to latest Polished Crystal release (3.1.1 - 9bit master) as well as ported many fixes from 3.2.0 beta
+> Added "buy 5000" option to Coin Vendor
+> Added "Cheater's Club" for those that keep begging for cheat codes.
+> Added a new trainer to fight on Route 27
+> Significantly buffed the Eon Form Eevee/Eeveelutions
+> Significantly nerfed Eeveeon (oh well, you had your chance to play with ultimate power)
+> Added Azurill and Marill to early-ish routes, since I can't figure out how to add it to the Odd Egg table currently.
