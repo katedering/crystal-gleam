@@ -60,6 +60,7 @@ CeladonGameCorner_MapScriptHeader:
 	object_event 11,  3, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonGymGuyText, -1
 	object_event  2,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGrampsScript, -1
 	object_event  9,  1, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, CeladonGameCornerRichBoyTobin, EVENT_RICH_BOY_TOBIN
+	object_event  1,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerCheaterClubScript, -1
 
 	object_const_def
 	const CELADONGAMECORNER_CLERK
@@ -408,4 +409,71 @@ CeladonGameCornerSodaCanText:
 	line "coming back…"
 
 	para "Huh? It's empty!"
+	done
+
+CeladonGameCornerCheaterClubScript:
+	faceplayer
+	opentext
+	checkkeyitem CHEATER_CARD
+	iftruefwd .Cheater
+	writetext .NotCheaterText
+	waitbutton
+	closetext
+	end
+	
+.Cheater
+	writetext .CheaterText
+	yesorno
+	iffalse_jumpopenedtext .NoCoinText
+	loadmem wCoins+0, 0
+	loadmem wCoins+1, 0
+	givecoins 50000
+	playsound SFX_TRANSACTION
+	writetext .GotCoinsText
+	waitbutton
+	closetext
+	end
+
+.NotCheaterText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "Oh? You don't have"
+	line "a membership card?"
+	
+	para "Sorry, we cannot"
+	line "help you here."
+	cont "Goodbye!"
+	done
+
+.CheaterText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "<PLAYER> flashed"
+	line "the Cheater Card…"
+	
+	para "Oh, you're a mem-"
+	line "ber here? Do you"
+	cont "want to max out"
+	cont "your Coins?"
+	done
+
+.NoCoinText:
+	text "Okay, thank you"
+	line "for visiting the"
+	cont "Cheater's Club!"
+	
+	para "Goodbye!"
+	done
+
+.GotCoinsText:
+	text "Your Coin Case"
+	line "has been filled!"
+	
+	para "Thank you for"
+	line "visiting the"
+	cont "Cheater's Club!"
+	
+	para "Goodbye!"
 	done

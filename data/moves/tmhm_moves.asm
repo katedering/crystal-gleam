@@ -102,6 +102,7 @@ TMHMMoves:
 	db ICY_WIND     ; MT16 (Ice Path)
 	db IRON_HEAD    ; MT17 (Route 4)
 	db KNOCK_OFF    ; MT18 (Route 40)
+	db METRONOME	; MT32 (Goldenrod Band House)
 	db PAY_DAY      ; MT20 (Goldenrod Game Corner)
 	db ROLLOUT      ; MT19 (Route 46)
 	db SEED_BOMB    ; MT21 (Yellow Forest)

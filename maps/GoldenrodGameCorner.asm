@@ -62,6 +62,7 @@ GoldenrodGameCorner_MapScriptHeader:
 	object_event 11, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM1Script, -1
 	object_event 17, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerPokefanM3Script, -1
 	object_event  2,  9, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, GoldenrodGameCornerPokefanM2Text, EVENT_BEAT_WHITNEY
+	object_event  5,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, GoldenrodGameCornerCheaterClubScript, -1
 
 GoldenrodGameCornerPokefanM3Script:
 	showtextfaceplayer GoldenrodGameCornerPokefanM3Text
@@ -481,3 +482,71 @@ GoldenrodGameCornerLeftTheirDrinkText:
 
 	para "It smells sweet."
 	done
+
+GoldenrodGameCornerCheaterClubScript:
+	faceplayer
+	opentext
+	checkkeyitem CHEATER_CARD
+	iftruefwd .Cheater
+	writetext .NotCheaterText
+	waitbutton
+	closetext
+	end
+	
+.Cheater
+	writetext .CheaterText
+	yesorno
+	iffalse_jumpopenedtext .NoCoinText
+	loadmem wCoins+0, 0
+	loadmem wCoins+1, 0
+	givecoins 50000
+	playsound SFX_TRANSACTION
+	writetext .GotCoinsText
+	waitbutton
+	closetext
+	end
+
+.NotCheaterText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "Oh? You don't have"
+	line "a membership card?"
+	
+	para "Sorry, we cannot"
+	line "help you here."
+	cont "Goodbye!"
+	done
+
+.CheaterText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "<PLAYER> flashed"
+	line "the Cheater Card…"
+	
+	para "Oh, you're a mem-"
+	line "ber here? Do you"
+	cont "want to max out"
+	cont "your Coins?"
+	done
+
+.NoCoinText:
+	text "Okay, thank you"
+	line "for visiting the"
+	cont "Cheater's Club!"
+	
+	para "Goodbye!"
+	done
+
+.GotCoinsText:
+	text "Your Coin Case"
+	line "has been filled!"
+	
+	para "Thank you for"
+	line "visiting the"
+	cont "Cheater's Club!"
+	
+	para "Goodbye!"
+	done
+

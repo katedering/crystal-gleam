@@ -490,6 +490,7 @@ LaprasEggMoves:
 
 EeveeEggMoves:
 	db CHARM
+	db METRONOME
 	db $ff
 
 OmanyteEggMoves:
@@ -628,6 +629,7 @@ CleffaEggMoves:
 	db AMNESIA
 	db SPLASH
 	db FRESH_SNACK
+	db METRONOME
 	db $ff
 
 IgglybuffEggMoves:
@@ -759,6 +761,7 @@ SnubbullEggMoves:
 	db HEAL_BELL
 	db LICK
 	db CLOSE_COMBAT
+	db METRONOME
 	db $ff
 
 QwilfishEggMoves:
@@ -978,6 +981,7 @@ MimeJrEggMoves:
 
 HappinyEggMoves:
 	db HEAL_BELL
+	db METRONOME
 	db $ff
 
 MantykeEggMoves:

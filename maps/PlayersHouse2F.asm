@@ -260,8 +260,9 @@ endr
 	loadmem wPartyMon2PP+2, 10
 	loadmem wPartyMon2PP+3, 10
 	; variant form test
-	givepoke SYLVEON, 50
+	givepoke RHYPERIOR, 50
 	loadmem wPartyMon3Shiny, SHINY_MASK
+	loadmem wPartyMon2Moves+0, MAGNITUDE
 	; ext species test
 	givepoke EEVEE, EON_FORM, 99
 	givepoke EEVEE, EON_FORM, 1
