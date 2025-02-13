@@ -321,8 +321,6 @@ ElmDirectionsScript:
 if !DEF(DEBUG)
 	showtext ElmDirectionsText1
 endc
-	addcellnum PHONE_ELM
-	giveitem ABILITYPATCH, 2
 	opentext
 	writetext GotElmsNumberText
 	playsound SFX_REGISTER_PHONE_NUMBER
