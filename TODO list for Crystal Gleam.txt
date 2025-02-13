@@ -1,0 +1,27 @@
+TODO list for Crystal Gleam:
+
+Add missing move tutors from Polished.
+Add new move tutors.
+Tweak move effects.
+Add new abilities.
+Add Partner Pikachu.
+Add Gorochu.
+Add Missingno. (and extreme form)
+GET EON FORM / GOROCHU / MISSINGNO SPRITES AND ANIMATION ART!!! (BIG THING TO DO HERE THANKS)
+Redo Eon Eevee event.
+Rearrange Pokémon list to allow for custom battle music for Bloodmoon Ursaluna event battle. (As well as Missingno. and a few others?)
+Add evolution method for H-Typhlosion (why was this a 1-off but not Bloodmoon?)
+More custom music (port over other things from TriteHexagon (commission music?) and RBY/etc)
+Sweeping balance pass over the entire 'dex.
+
+LERN2CODE and MAKE A PROPER RANDOMIZER *yeah this isn't happening any time soon, stretch goals folks!*
+
+Once everything is nice and tidy:
+
+Port over Summary Screen / Sour Sprites / Sour Anims / etc.
+
+Longterm goal: Custom cries?
+
+----------------------------------
+
+Far Future Goals: Make a stripped-down ROM to start work on Project: LEGENDZ
