@@ -1025,7 +1025,7 @@ Route32QwilfishSalesmanScript:
 	special PlaceMoneyTopRight
 	yesorno
 	iffalse_jumpopenedtext .MaybeLaterText
-	checkmoney $0, 5000
+	checkmoney $0, 1000
 	ifequalfwd $2, .NotEnoughCash
 	readvar VAR_PARTYCOUNT
 	ifequalfwd PARTY_LENGTH, .NoRoom
@@ -1033,7 +1033,7 @@ Route32QwilfishSalesmanScript:
 	setevent EVENT_BOUGHT_HISUIAN_QWILFISH
 	waitsfx
 	playsound SFX_TRANSACTION
-	takemoney $0, 5000
+	takemoney $0, 1000
 	special PlaceMoneyTopRight
 	jumpthisopenedtext
 
@@ -1073,7 +1073,7 @@ Route32QwilfishSalesmanScript:
 	
 	para "You want it? I can"
 	line "sell it to you for"
-	cont "¥5000, right now."
+	cont "¥1000, right now."
 	done
 
 .MaybeLaterText
