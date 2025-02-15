@@ -3748,7 +3748,7 @@ CyndaquilEvosAttacks:
 	db -1 ; no more level-up moves
 
 QuilavaEvosAttacks:
-	evo_data EVOLVE_LOCATION, ECRUTEAK_SHRINE, TYPHLOSION, HISUIAN_FORM
+	evo_data EVOLVE_MOVE, SHADOW_CLAW, TYPHLOSION, HISUIAN_FORM
 	evo_data EVOLVE_LEVEL, 36, TYPHLOSION
 	db -1 ; no more evolutions
 	db 1, TACKLE
@@ -3793,7 +3793,7 @@ TyphlosionPlainEvosAttacks:
 
 TyphlosionHisuianEvosAttacks:
 	db -1 ; no more evolutions
-	db 1, SHADOW_CLAW ; evolution move
+	db 1, DARK_PULSE ; evolution move
 	db 1, ASTONISH ; new move
 	db 1, TACKLE
 	db 1, LEER
@@ -3809,7 +3809,7 @@ TyphlosionHisuianEvosAttacks:
 	db 56, SHADOW_BALL
 	db 61, ROLLOUT
 	db 69, DOUBLE_EDGE
-	db 74, DARK_PULSE ; Infernal Parade → new move
+	db 74, SHADOW_CLAW ; Infernal Parade → new move
 	db 81, FLARE_BLITZ ; Eruption → egg move
 	db 90, ANCIENTPOWER ; Because why not!
 	db -1 ; no more level-up moves
