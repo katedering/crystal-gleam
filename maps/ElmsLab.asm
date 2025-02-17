@@ -135,8 +135,11 @@ ElmsLab_AutoAideSpeech:
 ProfElmScript:
 	faceplayer
 	opentext
+	checkkeyitem EON_STONE
+	iftruefwd GotEonStone
 	checkevent EVENT_GOT_EEVEE_FROM_LALA
 	iftrue ElmEeveeEonScript
+GotEonStone:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftruefwd ElmCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
