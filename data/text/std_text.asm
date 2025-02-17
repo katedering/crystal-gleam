@@ -155,6 +155,34 @@ PokeComNursePokerusText:
 	line "you anything more."
 	done
 
+NurseCheatText:
+	text "Welcome to our…"
+	
+	para "Oh! A Club member!"
+	
+	para "Wait a moment,"
+	line "please."
+	done
+	
+NurseCheatDoneText:
+	text "Your #mon"
+	line "are all healed up!"
+	done
+
+NurseCheatGoodbyeText:
+	text "Good luck out"
+	line "there, cheater!"
+	done
+
+NurseCheatPokerusText:
+	text "Oh! Your #mon"
+	line "seems to have"
+	cont "#rus."
+	
+	para "That's not a bad"
+	line "thing, at least."
+	done
+
 DifficultBookshelfText:
 	text "It's full of"
 	line "difficult books."

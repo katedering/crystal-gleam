@@ -60,6 +60,8 @@ StdScripts::
 
 PokeCenterNurseScript:
 	opentext
+	checkkeyitem CHEATER_CARD
+	iftruefwd .cheat_center
 	checkevent EVENT_NURSE_SAW_TRAINER_STAR
 	iftruefwd .star_center
 	checktime 1 << MORN
@@ -204,7 +206,46 @@ PokeCenterNurseScript:
 .done
 	turnobject PLAYER, DOWN
 	end
+	
+.cheat_center
+	farwritetext NurseCheatText
+	promptbutton
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	checkphonecall ; elm already called about pokerus
+	iftruefwd .no2
+	checkflag ENGINE_CAUGHT_POKERUS ; nurse already talked about pokerus
+	iftruefwd .no2
+	special SpecialCheckPokerus
+	iftruefwd .pokerus2
+.no2
+	farwritetext NurseCheatDoneText
+	pause 40
+	farwritetext NurseCheatGoodbyeText
+	pause 40
+	closetext
+	sjumpfwd .done2
 
+.pokerus2
+	; already cleared earlier in the script
+	farwritetext NurseCheatPokerusText
+	waitbutton
+	closetext
+	sjumpfwd .pokerus_done2
+
+.pokerus_done2
+	setflag ENGINE_CAUGHT_POKERUS
+	specialphonecall SPECIALCALL_POKERUS
+.done2
+	turnobject PLAYER, DOWN
+	end
+	
+	
 DifficultBookshelfScript:
 	farjumptext DifficultBookshelfText
 
