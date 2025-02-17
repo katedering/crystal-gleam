@@ -48,11 +48,11 @@ GoldenrodBandHouseCooltrainerFText:
 GoldenrodBandHouseTutorScript:
 	faceplayer
 	opentext
-	checkevent EVENT_LISTENED_TO_IRON_HEAD_INTRO
+;	checkevent EVENT_LISTENED_TO_METRONOME_INTRO
 	iftruefwd GoldenrodBandHouseTutorMetronomeScript
 	writetext GoldenrodBandHouseTutorText
 	waitbutton
-	setevent EVENT_LISTENED_TO_IRON_HEAD_INTRO
+;	setevent EVENT_LISTENED_TO_METRONOME_INTRO
 GoldenrodBandHouseTutorMetronomeScript:
 	writetext Text_GoldenrodBandHouseTutorMetronome
 	waitbutton
