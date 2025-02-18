@@ -43,6 +43,9 @@ _InitSound::
 	xor a
 	rst ByteFill
 
+    dec a ; already 0
+    ld [wCh3LoadedWaveform], a ; fixes the audio error in MUSIC_RBY_TITLESCREEN - remind darsh if this comes up in PC proper
+	
 	ld a, MAX_VOLUME
 	ld [wVolume], a
 	call MusicOn

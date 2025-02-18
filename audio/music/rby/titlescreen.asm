@@ -11,6 +11,7 @@ Music_RBYTitleScreen_Ch1: ; 7e4c0 (1f:64c0)
 	vibrato 9, 3, 4
 	duty_cycle 3
 	note_type 12, 12, 1
+	pitch_sweep 0, 0
 	octave 2
 	note E_, 1
 	note G_, 1
