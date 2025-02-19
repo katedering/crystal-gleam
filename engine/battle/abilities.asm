@@ -1657,6 +1657,7 @@ DefensiveDamageAbilities:
 	dbw THICK_FAT, EnemyThickFatAbility
 	dbw DRY_SKIN, EnemyDrySkinAbility
 	dbw FUR_COAT, EnemyFurCoatAbility
+	dbw FLUFFY, EnemyFluffyAbility
 	dbw -1, -1
 
 TechnicianAbility:
@@ -1929,6 +1930,21 @@ EnemyDrySkinAbility:
 	cp FIRE
 	ret nz
 	ln a, 5, 4 ; x1.25
+	jmp MultiplyAndDivide
+
+EnemyFluffyAbility:
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	cp FIRE
+	jr nz, .notFire
+	call CheckContactMove
+	ret nc
+	ln a, 2, 1 ; x2
+	jmp MultiplyAndDivide
+.notFire
+	call CheckContactMove
+	ret c
+	ln a, 1, 2 ; x0.5
 	jmp MultiplyAndDivide
 
 EnemyFurCoatAbility:

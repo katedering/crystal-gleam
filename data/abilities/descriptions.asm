@@ -156,6 +156,7 @@ AbilityDescriptions:
 	dw ArmorTailDescription
 	dw MindsEyeDescription
 	dw EonForceDescription
+	dw FluffyDescription
 	assert_table_length NUM_ABILITIES
 
 NoAbilityDescription:
@@ -918,6 +919,12 @@ MindsEyeDescription:
 	done
 
 EonForceDescription:
-	text  "Boosts all moves"
-	next1 "of Eeveeon."
+	text  "Moves ignore type"
+	next1 "effectiveness."
 	done
+
+FluffyDescription:
+	text  "Half contact dmg."
+	next1 "Double fire dmg."
+	done
+	

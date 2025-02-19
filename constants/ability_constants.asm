@@ -159,4 +159,5 @@
 	const ARMOR_TAIL
 	const MINDS_EYE
 	const EON_FORCE
+	const FLUFFY
 DEF NUM_ABILITIES EQU const_value
