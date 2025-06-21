@@ -9,8 +9,8 @@ Add Gorochu.
 Add Missingno. (and extreme form)
 GET EON FORM / GOROCHU / MISSINGNO SPRITES AND ANIMATION ART!!! (BIG THING TO DO HERE THANKS)
 Redo Eon Eevee event.
-Rearrange Pokémon list to allow for custom battle music for Bloodmoon Ursaluna event battle. (As well as Missingno. and a few others?)
-Add evolution method for H-Typhlosion (why was this a 1-off but not Bloodmoon?)
+FOUND WORKAROUND // Rearrange Pokémon list to allow for custom battle music for Bloodmoon Ursaluna event battle. (As well as Missingno. and a few others?)
+DONE // Add evolution method for H-Typhlosion (why was this a 1-off but not Bloodmoon?) DONE
 More custom music (port over other things from TriteHexagon (commission music?) and RBY/etc)
 Sweeping balance pass over the entire 'dex.
 
