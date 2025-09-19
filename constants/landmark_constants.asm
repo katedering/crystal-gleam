@@ -33,7 +33,6 @@
 	const ROUTE_36           ; 1d
 	const ROUTE_37           ; 1e
 	const ECRUTEAK_CITY      ; 1f
-	const ECRUTEAK_SHRINE    ; extra
 	const BELLCHIME_TRAIL    ; 20
 	const TIN_TOWER          ; 21
 	const BURNED_TOWER       ; 22

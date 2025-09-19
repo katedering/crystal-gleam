@@ -1,7 +1,7 @@
 MACRO ev_yield
 	def_evs \#
-	db (EV_HP << 6) | (EV_ATK << 4) | (EV_DEF << 2) | EV_SPE
-	db (EV_SAT << 6) | (EV_SDF << 4)
+	db (VV_HP << 6) | (VV_ATK << 4) | (VV_DEF << 2) | VV_SPE
+	db (VV_SAT << 6) | (VV_SDF << 4)
 ENDM
 
 MACRO abilities_for
@@ -167,10 +167,10 @@ INCLUDE "data/pokemon/base_stats/magikarp.asm"
 INCLUDE "data/pokemon/base_stats/gyarados.asm"
 INCLUDE "data/pokemon/base_stats/lapras.asm"
 INCLUDE "data/pokemon/base_stats/ditto.asm"
-INCLUDE "data/pokemon/base_stats/eevee_plain.asm"
-INCLUDE "data/pokemon/base_stats/vaporeon_plain.asm"
-INCLUDE "data/pokemon/base_stats/jolteon_plain.asm"
-INCLUDE "data/pokemon/base_stats/flareon_plain.asm"
+INCLUDE "data/pokemon/base_stats/eevee.asm"
+INCLUDE "data/pokemon/base_stats/vaporeon.asm"
+INCLUDE "data/pokemon/base_stats/jolteon.asm"
+INCLUDE "data/pokemon/base_stats/flareon.asm"
 INCLUDE "data/pokemon/base_stats/porygon.asm"
 INCLUDE "data/pokemon/base_stats/omanyte.asm"
 INCLUDE "data/pokemon/base_stats/omastar.asm"
@@ -230,8 +230,8 @@ INCLUDE "data/pokemon/base_stats/sunflora.asm"
 INCLUDE "data/pokemon/base_stats/yanma.asm"
 INCLUDE "data/pokemon/base_stats/wooper_plain.asm"
 INCLUDE "data/pokemon/base_stats/quagsire.asm"
-INCLUDE "data/pokemon/base_stats/espeon_plain.asm"
-INCLUDE "data/pokemon/base_stats/umbreon_plain.asm"
+INCLUDE "data/pokemon/base_stats/espeon.asm"
+INCLUDE "data/pokemon/base_stats/umbreon.asm"
 INCLUDE "data/pokemon/base_stats/murkrow.asm"
 INCLUDE "data/pokemon/base_stats/slowking_plain.asm"
 INCLUDE "data/pokemon/base_stats/misdreavus.asm"
@@ -307,12 +307,12 @@ INCLUDE "data/pokemon/base_stats/electivire.asm"
 INCLUDE "data/pokemon/base_stats/magmortar.asm"
 INCLUDE "data/pokemon/base_stats/togekiss.asm"
 INCLUDE "data/pokemon/base_stats/yanmega.asm"
-INCLUDE "data/pokemon/base_stats/leafeon_plain.asm"
-INCLUDE "data/pokemon/base_stats/glaceon_plain.asm"
+INCLUDE "data/pokemon/base_stats/leafeon.asm"
+INCLUDE "data/pokemon/base_stats/glaceon.asm"
 INCLUDE "data/pokemon/base_stats/gliscor.asm"
 INCLUDE "data/pokemon/base_stats/mamoswine.asm"
 INCLUDE "data/pokemon/base_stats/porygon_z.asm"
-INCLUDE "data/pokemon/base_stats/sylveon_plain.asm"
+INCLUDE "data/pokemon/base_stats/sylveon.asm"
 INCLUDE "data/pokemon/base_stats/perrserker.asm"
 INCLUDE "data/pokemon/base_stats/cursola.asm"
 INCLUDE "data/pokemon/base_stats/sirfetch_d.asm"
@@ -326,7 +326,6 @@ INCLUDE "data/pokemon/base_stats/dudunsparce.asm"
 INCLUDE "data/pokemon/base_stats/farigiraf.asm"
 INCLUDE "data/pokemon/base_stats/clodsire.asm"
 INCLUDE "data/pokemon/base_stats/annihilape.asm"
-INCLUDE "data/pokemon/base_stats/eeveeon.asm"
 	assert_table_length NUM_SPECIES
 
 INCLUDE "data/pokemon/base_stats/gyarados.asm" ; red
@@ -383,13 +382,4 @@ INCLUDE "data/pokemon/base_stats/tauros_paldean_water.asm"
 
 INCLUDE "data/pokemon/base_stats/ursaluna_bloodmoon.asm"
 
-INCLUDE "data/pokemon/base_stats/eevee_eon.asm"
-INCLUDE "data/pokemon/base_stats/vaporeon_eon.asm"
-INCLUDE "data/pokemon/base_stats/jolteon_eon.asm"
-INCLUDE "data/pokemon/base_stats/flareon_eon.asm"
-INCLUDE "data/pokemon/base_stats/espeon_eon.asm"
-INCLUDE "data/pokemon/base_stats/umbreon_eon.asm"
-INCLUDE "data/pokemon/base_stats/leafeon_eon.asm"
-INCLUDE "data/pokemon/base_stats/glaceon_eon.asm"
-INCLUDE "data/pokemon/base_stats/sylveon_eon.asm"
 	assert_table_length NUM_EXT_POKEMON

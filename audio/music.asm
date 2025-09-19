@@ -565,46 +565,4 @@ INCLUDE "audio/music/m02/lugiassong.asm"
 SECTION "Song - undertale/megalovania", ROMX
 INCLUDE "audio/music/undertale/megalovania.asm"
 
-SECTION "Song - rby/titlescreen", ROMX
-INCLUDE "audio/music/rby/titlescreen.asm"
-
-SECTION "Song - rby/wildbattle", ROMX
-INCLUDE "audio/music/rby/wildbattle.asm"
-
-SECTION "Song - rby/trainerbattle", ROMX
-INCLUDE "audio/music/rby/trainerbattle.asm"
-
-SECTION "Song - rby/gymleaderbattle", ROMX
-INCLUDE "audio/music/rby/gymleaderbattle.asm"
-
-SECTION "Song - rby/finalbattle", ROMX
-INCLUDE "audio/music/rby/finalbattle.asm"
-
-SECTION "Song - rby/meetrival + rby/farewellrival", ROMX
-INCLUDE "audio/music/rby/meetrival.asm"
-
-SECTION "Song - frlg/wildbattle", ROMX
-INCLUDE "audio/music/frlg/wildbattle.asm"
-
-SECTION "Song - frlg/gymleader + frlg/elitefour", ROMX
-INCLUDE "audio/music/frlg/FRLGGymLeader_EliteFour.asm"
-
-SECTION "Song - frlg/seviiIslands", ROMX
-INCLUDE "audio/music/frlg/seviiIslands.asm"
-
-SECTION "Song - dppt/wildbattle", ROMX
-INCLUDE "audio/music/dppt/wildbattle.asm"
-
-SECTION "Song - dppt/battleCynthia", ROMX
-INCLUDE "audio/music/dppt/battleCynthia.asm"
-
-SECTION "Song - dppt/frontierbrainbattle", ROMX
-INCLUDE "audio/music/dppt/frontierbrainbattle.asm"
-
-SECTION "Song - sm/giovannibattle", ROMX
-INCLUDE "audio/music/sm/giovannibattle.asm"
-
-SECTION "Song - hgss/icepath", ROMX
-INCLUDE "audio/music/hgss/icepath.asm"
-
 ENDSECTION

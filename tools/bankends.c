@@ -4,7 +4,7 @@
 
 #include "parsemap.h"
 
-#define BANKS 256
+#define BANKS 128
 #define BANKSIZE 0x4000
 #define ROMSIZE (BANKS * BANKSIZE)
 

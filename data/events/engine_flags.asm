@@ -149,8 +149,8 @@ EngineFlags:
 	engine_flag wDailyFlags4, DAILYFLAGS4_BOUGHT_MOOMOO_MILK_F
 	engine_flag wDailyFlags4, DAILYFLAGS4_CHANGED_TRENDY_PHRASE_F
 	engine_flag wDailyFlags4, DAILYFLAGS4_ALL_HIDDEN_GROTTOES_F
-	engine_flag wDailyFlags4, DAILYFLAGS4_DAILY_CLIFF_GATE_RESET_F
-	engine_flag wDailyFlags4, DAILYFLAGS4_DAILY_ELITE_FAUX_RESET_F
+	engine_flag wDailyFlags4, 6 ; unused
+	engine_flag wDailyFlags4, 7 ; unused
 
 	engine_flag wWeeklyFlags, WEEKLYFLAGS_MT_MOON_SQUARE_CLEFAIRY_F
 	engine_flag wWeeklyFlags, WEEKLYFLAGS_UNION_CAVE_LAPRAS_F
@@ -290,5 +290,6 @@ EngineFlags:
 	engine_flag wPlayerCaught2, PLAYER_CAUGHT_GALARIAN_ARTICUNO_F
 	engine_flag wPlayerCaught2, PLAYER_CAUGHT_GALARIAN_ZAPDOS_F
 	engine_flag wPlayerCaught2, PLAYER_CAUGHT_GALARIAN_MOLTRES_F
-	engine_flag wPlayerCaught2, PLAYER_CAUGHT_GHOST_F
+	engine_flag wPlayerCaught2, PLAYER_CAUGHT_BLOODMOON_URSALUNA_F
+
 	assert_table_length NUM_ENGINE_FLAGS

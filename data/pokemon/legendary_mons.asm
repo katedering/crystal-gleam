@@ -12,5 +12,4 @@ UberMons::
 	dp LUGIA
 	dp HO_OH
 	dp CELEBI
-	dp EEVEEON
 	db 0

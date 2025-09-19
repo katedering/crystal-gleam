@@ -523,8 +523,11 @@ WillOWispDescription:
 	next "burn the foe."
 	done
 
-StunSporeDescription:
 ThunderWaveDescription:
+	db   "A move that"
+	next "paralyzes the foe.@"
+
+StunSporeDescription:
 GlareDescription:
 	text "A move that may"
 	next "paralyze the foe."
@@ -741,8 +744,8 @@ FlyDescription:
 
 HyperBeamDescription:
 GigaImpactDescription:
-	text "Attack, then skip"
-	next "a turn if no KO."
+	text "1st turn: Attack"
+	next "2nd turn: Rest"
 	done
 
 DigDescription:

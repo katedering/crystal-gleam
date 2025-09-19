@@ -136,10 +136,10 @@ EvosAttacksPointers::
 	dw GyaradosEvosAttacks
 	dw LaprasEvosAttacks
 	dw DittoEvosAttacks
-	dw EeveePlainEvosAttacks
-	dw VaporeonPlainEvosAttacks
-	dw JolteonPlainEvosAttacks
-	dw FlareonPlainEvosAttacks
+	dw EeveeEvosAttacks
+	dw VaporeonEvosAttacks
+	dw JolteonEvosAttacks
+	dw FlareonEvosAttacks
 	dw PorygonEvosAttacks
 	dw OmanyteEvosAttacks
 	dw OmastarEvosAttacks
@@ -199,8 +199,8 @@ EvosAttacksPointers::
 	dw YanmaEvosAttacks
 	dw WooperPlainEvosAttacks
 	dw QuagsireEvosAttacks
-	dw EspeonPlainEvosAttacks
-	dw UmbreonPlainEvosAttacks
+	dw EspeonEvosAttacks
+	dw UmbreonEvosAttacks
 	dw MurkrowEvosAttacks
 	dw SlowkingPlainEvosAttacks
 	dw MisdreavusEvosAttacks
@@ -276,12 +276,12 @@ EvosAttacksPointers::
 	dw MagmortarEvosAttacks
 	dw TogekissEvosAttacks
 	dw YanmegaEvosAttacks
-	dw LeafeonPlainEvosAttacks
-	dw GlaceonPlainEvosAttacks
+	dw LeafeonEvosAttacks
+	dw GlaceonEvosAttacks
 	dw GliscorEvosAttacks
 	dw MamoswineEvosAttacks
 	dw PorygonZEvosAttacks
-	dw SylveonPlainEvosAttacks
+	dw SylveonEvosAttacks
 	dw PerrserkerEvosAttacks
 	dw CursolaEvosAttacks
 	dw SirfetchDEvosAttacks
@@ -295,7 +295,6 @@ EvosAttacksPointers::
 	dw FarigirafEvosAttacks
 	dw ClodsireEvosAttacks
 	dw AnnihilapeEvosAttacks
-	dw EeveeonEvosAttacks
 	assert_table_length NUM_SPECIES
 
 	dw GyaradosEvosAttacks
@@ -305,7 +304,7 @@ EvosAttacksPointers::
 	dw DudunsparceEvosAttacks
 
 	dw RattataAlolanEvosAttacks
-	dw RaticateAlolanEvosAttacks
+	dw RaticatePlainEvosAttacks ; RaticateAlolan
 	dw RaichuAlolanEvosAttacks
 	dw SandshrewAlolanEvosAttacks
 	dw SandslashAlolanEvosAttacks
@@ -351,14 +350,5 @@ EvosAttacksPointers::
 	dw TaurosPaldeanWaterEvosAttacks
 
 	dw UrsalunaBloodmoonEvosAttacks
-	
-	dw EeveeEonEvosAttacks
-	dw VaporeonEonEvosAttacks
-	dw JolteonEonEvosAttacks
-	dw FlareonEonEvosAttacks
-	dw EspeonEonEvosAttacks
-	dw UmbreonEonEvosAttacks
-	dw LeafeonEonEvosAttacks
-	dw GlaceonEonEvosAttacks
-	dw SylveonEonEvosAttacks
+
 	assert_table_length NUM_EXT_POKEMON

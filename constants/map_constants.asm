@@ -704,6 +704,5 @@ ENDM
 	newgroup                                                     ; 37
 	map_const ECRUTEAK_SHRINE_OUTSIDE,                     8, 11 ;  1
 	map_const ECRUTEAK_SHRINE_INSIDE,                      6,  6 ;  2
-	map_const LALAS_LAB_1F,                                4,  4
 
 DEF NUM_MAP_GROUPS EQU const_value ; 37

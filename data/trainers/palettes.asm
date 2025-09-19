@@ -1,6 +1,6 @@
 TrainerPalettes:
 ; entries correspond to trainer classes
-	table_width PAL_COLOR_SIZE * 2
+	table_width COLOR_SIZE * 2
 
 if !DEF(MONOCHROME)
 KrisPalette:
@@ -161,11 +161,6 @@ INCLUDE "gfx/trainers/walker.pal"
 INCLUDE "gfx/trainers/imakuni.pal"
 INCLUDE "gfx/trainers/lawrence.pal"
 INCLUDE "gfx/trainers/rei.pal"
-INCLUDE "gfx/trainers/kate.pal"
-INCLUDE "gfx/trainers/ash.pal"
-INCLUDE "gfx/trainers/trip.pal"
-INCLUDE "gfx/trainers/fedmae.pal"
-INCLUDE "gfx/trainers/rocket.pal"
 INCLUDE "gfx/trainers/omastar_fossil.pal"
 INCLUDE "gfx/trainers/kabutops_fossil.pal"
 INCLUDE "gfx/trainers/aerodactyl_fossil.pal"

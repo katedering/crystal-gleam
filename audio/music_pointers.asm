@@ -195,20 +195,4 @@ Music:
 	dba Music_GymLeaderBattlePrism
 	dba Music_PaletteBattlePrism
 	dba Music_Megalovania
-	dba Music_RBYTitleScreen
-	dba Music_RBYWildBattle
-	dba Music_RBYTrainerBattle
-	dba Music_RBYGymLeaderBattle
-	dba Music_RBYFinalBattle
-	dba Music_RBYMeetRival
-	dba Music_RBYFarewellRival
-	dba Music_KantoWildBattleFRLG
-	dba Music_KantoGymLeaderFRLG
-	dba Music_KantoEliteFourFRLG
-	dba Music_SeviiIslands
-	dba Music_WildBattleDPPt
-	dba Music_BattleCynthia
-	dba Music_BattleFrontierBrainDPPt
-	dba Music_GiovanniBattle
-	dba Music_IcePathHGSS
 	assert_table_length NUM_MUSIC_SONGS

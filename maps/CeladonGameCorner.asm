@@ -51,16 +51,15 @@ CeladonGameCorner_MapScriptHeader:
 	bg_event  9,  0, BGEVENT_READ, CeladonGameCornerPosterScript
 
 	def_object_events
-	object_event  5,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, gamecornercoinvendor, -1
-	object_event  3,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonGameCornerReceptionistText, -1
-	object_event 14, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanMScript, -1
-	object_event 17,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerTeacherScript, -1
-	object_event 11,  7, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFishingGuruScript, -1
-	object_event  8, 10, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, (1 << DAY) | (1 << NITE), PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFisherScript, -1
-	object_event 11,  3, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonGymGuyText, -1
-	object_event  2,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGrampsScript, -1
-	object_event  9,  1, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, CeladonGameCornerRichBoyTobin, EVENT_RICH_BOY_TOBIN
-	object_event  1,  2, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerCheaterClubScript, -1
+	object_event  5,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, gamecornercoinvendor, -1
+	object_event  3,  2, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonGameCornerReceptionistText, -1
+	object_event 14, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerPokefanMScript, -1
+	object_event 17,  7, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerTeacherScript, -1
+	object_event 11,  7, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFishingGuruScript, -1
+	object_event  8, 10, SPRITE_FAT_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, (1 << DAY) | (1 << NITE), PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerFisherScript, -1
+	object_event 11,  3, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonGymGuyText, -1
+	object_event  2,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonGameCornerGrampsScript, -1
+	object_event  9,  1, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 1, CeladonGameCornerRichBoyTobin, EVENT_CELADON_GAME_CORNER_RICH_BOY_TOBIN
 
 	object_const_def
 	const CELADONGAMECORNER_CLERK
@@ -104,10 +103,11 @@ CeladonGameCornerFisherScript:
 	promptbutton
 	checkkeyitem COIN_CASE
 	iffalsefwd .NoCoinCase
-	checkcoins 49999
-	ifequalfwd $0, .FullCoinCase
-	getstring .coinname, $1
-	callstd receiveitem
+	checkcoins MAX_COINS - 18
+	ifequalfwd HAVE_MORE, .FullCoinCase
+	writetext CeladonGameCornerReceived18CoinsText ; TODO load coins icon
+	playsound SFX_ITEM
+	waitsfx
 	givecoins 18
 	setevent EVENT_GOT_COINS_FROM_GAMBLER_AT_CELADON
 .FisherOffer:
@@ -115,7 +115,7 @@ CeladonGameCornerFisherScript:
 	yesorno
 	iffalsefwd .GotCoins
 	checkcoins 50
-	ifequalfwd $2, .FisherNotEnough
+	ifequalfwd HAVE_LESS, .FisherNotEnough
 	takecoins 50
 	playsound SFX_TRANSACTION
 	scall MapCeladonGameCornerSignpost16Script
@@ -130,9 +130,6 @@ CeladonGameCornerFisherScript:
 	closetext
 	turnobject LAST_TALKED, LEFT
 	end
-
-.coinname
-	db "Coin@"
 
 .NoCoinCase:
 	writetext CeladonGameCornerFisherNoCoinCaseText
@@ -325,6 +322,11 @@ CeladonGameCornerFisherFullCoinCaseText:
 	cont "too."
 	done
 
+CeladonGameCornerReceived18CoinsText:
+	text "<PLAYER> received"
+	line "18 Coins!"
+	done
+
 FisherOfferText:
 	text "Hm? What, kid? You"
 	line "still want to"
@@ -409,71 +411,4 @@ CeladonGameCornerSodaCanText:
 	line "coming back…"
 
 	para "Huh? It's empty!"
-	done
-
-CeladonGameCornerCheaterClubScript:
-	faceplayer
-	opentext
-	checkkeyitem CHEATER_CARD
-	iftruefwd .Cheater
-	writetext .NotCheaterText
-	waitbutton
-	closetext
-	end
-	
-.Cheater
-	writetext .CheaterText
-	yesorno
-	iffalse_jumpopenedtext .NoCoinText
-	loadmem wCoins+0, 0
-	loadmem wCoins+1, 0
-	givecoins 50000
-	playsound SFX_TRANSACTION
-	writetext .GotCoinsText
-	waitbutton
-	closetext
-	end
-
-.NotCheaterText:
-	text "Welcome to the"
-	line "Cheater's Club!"
-	
-	para "Oh? You don't have"
-	line "a membership card?"
-	
-	para "Sorry, we cannot"
-	line "help you here."
-	cont "Goodbye!"
-	done
-
-.CheaterText:
-	text "Welcome to the"
-	line "Cheater's Club!"
-	
-	para "<PLAYER> flashed"
-	line "the Cheater Card…"
-	
-	para "Oh, you're a mem-"
-	line "ber here? Do you"
-	cont "want to max out"
-	cont "your Coins?"
-	done
-
-.NoCoinText:
-	text "Okay, thank you"
-	line "for visiting the"
-	cont "Cheater's Club!"
-	
-	para "Goodbye!"
-	done
-
-.GotCoinsText:
-	text "Your Coin Case"
-	line "has been filled!"
-	
-	para "Thank you for"
-	line "visiting the"
-	cont "Cheater's Club!"
-	
-	para "Goodbye!"
 	done

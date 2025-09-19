@@ -217,8 +217,8 @@ DEF CRYS EQU __trainer_class__
 	const ZANE
 
 	trainerclass TWINS ; 24
-	const AMYANDMAY1
-	const AMYANDMAY2
+	const AMYANDMIMI1
+	const AMYANDMIMI2
 	const ANNANDANNE1
 	const ANNANDANNE2
 	const JOANDZOE1
@@ -369,7 +369,6 @@ DEF CRYS EQU __trainer_class__
 	const JAIME
 	const BOONE
 	const ELEANOR
-	const KRISTI
 
 	trainerclass OFFICERM ; 2c
 	const KEITH
@@ -401,6 +400,7 @@ DEF CRYS EQU __trainer_class__
 	const ISSAC
 	const DONALD
 	const ZACH
+	const ENZO
 	const MILLER
 	const AIDAN
 
@@ -432,7 +432,6 @@ DEF CRYS EQU __trainer_class__
 	const FOOTE
 	const DAVE
 	const KOUTA
-	const HERB
 
 	trainerclass LASS ; 32
 	const DANA1
@@ -451,6 +450,7 @@ DEF CRYS EQU __trainer_class__
 	const ELLEN
 	const IRIS
 	const MIRIAM
+	const ABIGAIL
 	const LAYLA
 	const ROSE
 	const MEADOW
@@ -998,7 +998,7 @@ DEF CRYS EQU __trainer_class__
 	const LOIS
 	const FRAN
 	const LOLA
-	const KIMI
+	const KATE
 	const IRENE
 	const KELLY
 	const JOYCE
@@ -1137,16 +1137,6 @@ DEF CRYS EQU __trainer_class__
 	trainerclass LAWRENCE ; 99
 
 	trainerclass REI ; 9a
-
-	trainerclass KATE
-	
-	trainerclass ASH
-	
-	trainerclass TRIP
-	
-	trainerclass FEDMAE
-	
-	trainerclass ROCKET
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
 
