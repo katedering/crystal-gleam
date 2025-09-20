@@ -46,23 +46,21 @@ TeamRocketBaseB2F_MapScriptHeader:
 	bg_event 17,  7, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
 	bg_event 17,  8, BGEVENT_READ, TeamRocketBaseB2FTransmitterScript
 	bg_event 26,  7, BGEVENT_ITEM + FULL_HEAL, EVENT_TEAM_ROCKET_BASE_B2F_HIDDEN_FULL_HEAL
-	bg_event 25,  8, BGEVENT_READ, TeamRocketBaseB2FHackingMonitorScript
-	bg_event 24,  8, BGEVENT_READ, TeamRocketBaseB2FHackingMachineScript
 
 	def_object_events
-	object_event 20, 16, SPRITE_PETREL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_PETREL
-	object_event 20, 16, SPRITE_ARIANA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_ARIANA
-	object_event  5, 13, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_LANCE
-	object_event  9, 13, SPRITE_DRAGONITE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_TEAL, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_DRAGONITE
-	object_event  7,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode1, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-	object_event  7,  7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode2, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-	object_event  7,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode3, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-	pokemon_event 22,  5, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
-	pokemon_event 22,  7, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
-	pokemon_event 22,  9, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
-	object_event 25, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGruntM17, EVENT_TEAM_ROCKET_BASE_POPULATION
-	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerGruntM18, EVENT_TEAM_ROCKET_BASE_POPULATION
-	object_event 21, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerGruntM19, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event 20, 16, SPRITE_PETREL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_PETREL
+	object_event 20, 16, SPRITE_ARIANA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_ARIANA
+	object_event  5, 13, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_LANCE
+	object_event  9, 13, SPRITE_DRAGONITE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B2F_DRAGONITE
+	object_event  7,  5, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode1, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
+	object_event  7,  7, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode2, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
+	object_event  7,  9, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, ELECTRODE, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, NO_FORM, RocketElectrode3, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
+	pokemon_event 22,  5, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_1
+	pokemon_event 22,  7, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_2
+	pokemon_event 22,  9, ELECTRODE, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_RED, ClearText, EVENT_TEAM_ROCKET_BASE_B2F_ELECTRODE_3
+	object_event 25, 13, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerGruntM17, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event  4,  1, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerGruntM18, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event 21, 14, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 4, GenericTrainerGruntM19, EVENT_TEAM_ROCKET_BASE_POPULATION
 	itemball_event  3, 10, HYPER_POTION, 1, EVENT_TEAM_ROCKET_BASE_B2F_HYPER_POTION
 
 	object_const_def
@@ -824,189 +822,3 @@ RocketBaseDoorKnowPasswordText:
 
 	para "The door opened!"
 	done
-
-
-TeamRocketBaseB2FHackingMonitorScript:
-if DEF(DEBUG)
-	checkflag ENGINE_RISINGBADGE
-	iftrue_jumptext .MachineWorkingText
-	jumpthistext
-	
-	text "There's some odd"
-	line "lines of code on"
-	cont "the screen…"
-	done
-	
-.MachineWorkingText:
-	text "Experimental"
-	line "#mon hacking"
-	cont "program v0.1a"
-	
-	para "That's what's"
-	line "displayed on the"
-	cont "screen now…"
-	done
-else
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptext .ClearedHideoutText
-	jumpthistext
-	
-	text "There's some odd"
-	line "lines of code on"
-	cont "the screen…"
-	done
-
-.ClearedHideoutText:
-	text "The screen is"
-	line "blank…"
-	done
-endc
-
-TeamRocketBaseB2FHackingMachineScript:
-if DEF(DEBUG)
-	opentext
-	checkflag ENGINE_RISINGBADGE
-	iffalsefwd .MachineNotWorking
-	writetext .HackingMachineMenuText
-	yesorno
-	iffalse_jumpopenedtext .NoNeedItText
-	writetext .WhatToDoText
-	promptbutton
-	loadmenu TeamRocketBaseB2FHackingMachine_MenuHeader
-	verticalmenu
-	closewindow
-	ifequalfwd $1, .MaxEffort
-	ifequalfwd $2, .MaxDVs
-	ifequalfwd $3, .Shiny
-	ifequalfwd $4, .LeaveMenu
-	end
-.MachineNotWorking:
-	writetext .MachineNotWorkingText
-	waitbutton
-	closetext
-	end
-
-.MachineNotWorkingText:
-	text "It doesn't seem"
-	line "to be working"
-	cont "right now…"
-	done
-
-.HackingMachineMenuText:
-	text "Experimental"
-	line "#mon hacking"
-	cont "program v0.1a"
-	
-	para "Continue?"
-	done
-
-.WhatToDoText:
-	text "Ensure that the"
-	line "#mon you want"
-	cont "modified is at the"
-	cont "head of your party"
-	cont "and then make a"
-	cont "selection………"
-	done
-
-.MaxEffort
-	loadmem wPartyMon1EVs+0, 252
-	loadmem wPartyMon1EVs+1, 252
-	loadmem wPartyMon1EVs+2, 252
-	loadmem wPartyMon1EVs+3, 252
-	loadmem wPartyMon1EVs+4, 252
-	loadmem wPartyMon1EVs+5, 252
-	writetext .MaxEffortText
-	waitbutton
-	closetext
-	end
-
-.MaxDVs
-	loadmem wPartyMon1DVs+0, $ff
-	loadmem wPartyMon1DVs+1, $ff
-	loadmem wPartyMon1DVs+2, $ff
-	writetext .MaxDVsText
-	waitbutton
-	closetext
-	end
-	
-.Shiny
-	writetext .ShinyText
-	yesorno
-	iffalse_jumpopenedtext .NoShinyText
-	loadmem wPartyMon1Shiny, SHINY_MASK
-	writetext .ShinyText2
-	waitbutton
-	closetext
-	end
-
-.LeaveMenu
-	writetext .NoNeedItText
-	waitbutton
-	closetext
-	end
-	
-.MaxEffortText:
-	text "#mon Slot 1"
-	line "Effort Values"
-	cont "set to maximum."
-	done
-
-.MaxDVsText:
-	text "#mon Slot 1"
-	line "Determinant Values"
-	cont "set to maximum."
-	done
-
-.ShinyText:
-	text "Make #mon in"
-	line "Slot 1 Shiny?"
-	
-	para "This may change"
-	line "it's Nature."
-	done
-
-.NoShinyText:
-	text "#mon Slot 1"
-	line "Shiny Unchanged."
-	done
-	
-.ShinyText2
-	text "#mon Slot 1"
-	line "Shiny Added."
-	done
-
-.NoNeedItText:
-	text "#mon Hacking"
-	line "Complete."
-	done
-
-TeamRocketBaseB2FHackingMachine_MenuHeader:
-	db $40
-	db 00, 09
-	db 10, 19
-	dw .MenuData
-	db 1
-
-.MenuData:
-	db $81
-	db 4
-	db "EVs@"
-	db "DVs@"
-	db "Shiny@"
-	db "Nothing@"
-
-else
-	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
-	iftrue_jumptext .ClearedHideout2Text
-	jumpthistext
-
-	text "The keyboard seems"
-	line "to be disabled…"
-	done
-	
-.ClearedHideout2Text:
-	text "The computer is"
-	line "turned off…"
-	done
-endc

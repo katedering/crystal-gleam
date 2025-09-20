@@ -1,0 +1,49 @@
+IndigoPlateau_MapScriptHeader:
+	def_scene_scripts
+
+	def_callbacks
+	callback MAPCALLBACK_NEWMAP, IndigoPlateauFlyPoint
+	callback MAPCALLBACK_NEWMAP, EliteFauxRematchAvailable
+
+	def_warp_events
+	warp_event 11,  5, INDIGO_PLATEAU_POKECENTER_1F, 1
+	warp_event 12,  5, INDIGO_PLATEAU_POKECENTER_1F, 2
+
+	def_coord_events
+
+	def_bg_events
+	bg_event 13,  7, BGEVENT_JUMPTEXT, IndigoPlateauSignText
+
+	def_object_events
+	object_event  9,  5, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauAshScript, -1
+	object_event  7,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauKateScript, -1
+	object_event 16,  7, SPRITE_VETERAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTripScript, -1
+	object_event 14,  5, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauFedmaeScript, -1
+	
+	object_const_def
+	const INDIGO_PLATEAU_ASH
+	const INDIGO_PLATEAU_KATE
+	const INDIGO_PLATEAU_TRIP
+	const INDIGO_PLATEAU_FEDMAE
+
+IndigoPlateauFlyPoint:
+	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
+EliteFauxRematchAvailable:
+    checkflag ENGINE_DAILY_ELITE_FAUX_RESET
+    iftruefwd .NoRematch
+	clearevent EVENT_BEAT_ASH
+	clearevent EVENT_BEAT_KATE
+	clearevent EVENT_BEAT_FEDMAE
+	clearevent EVENT_BEAT_TRIP
+	setflag ENGINE_DAILY_ELITE_FAUX_RESET
+.NoRematch
+	endcallback
+
+IndigoPlateauSignText:
+	text "Indigo Plateau"
+
+	para "The Ultimate Goal"
+	line "for Trainers!"
+
+	para "#mon League HQ"
+	done

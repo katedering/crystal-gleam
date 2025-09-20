@@ -14,7 +14,7 @@ LalasLab1F_MapScriptHeader:
 	bg_event  5,  1, BGEVENT_UP, RedsHouse1FTVScript
 
 	def_object_events
-	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LalaScript, -1
+	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LalaScript, -1
 
 	object_const_def
 	const LALASLAB1F_LALA

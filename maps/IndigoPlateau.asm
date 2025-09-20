@@ -15,10 +15,10 @@ IndigoPlateau_MapScriptHeader:
 	bg_event 13,  7, BGEVENT_JUMPTEXT, IndigoPlateauSignText
 
 	def_object_events
-	object_event  9,  5, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauAshScript, -1
-	object_event  7,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauKateScript, -1
-	object_event 16,  7, SPRITE_VETERAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTripScript, -1
-	object_event 14,  5, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauFedmaeScript, -1
+	object_event  9,  5, SPRITE_RED, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauAshScript, -1
+	object_event  7,  7, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauKateScript, -1
+	object_event 16,  7, SPRITE_VETERAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTripScript, -1
+	object_event 14,  5, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauFedmaeScript, -1
 	
 	object_const_def
 	const INDIGO_PLATEAU_ASH
@@ -327,7 +327,7 @@ IndigoPlateauKateScript:
 	
 .IntroKateText:
 	text "Hello there,"
-	line "trainer…"
+	line "trainer."
 	
 	para "If you haven't"
 	line "yet beaten the"
@@ -356,11 +356,11 @@ IndigoPlateauKateScript:
 	line "really want to"
 	cont "battle with me."
 	
-	para "But be ready…"
+	para "But be ready."
 
 	para "If you're not"
 	line "completely pre-"
-	cont "pared for this…"
+	cont "pared for this,"
 	
 	para "There's a zero"
 	line "percent chance"
@@ -376,7 +376,7 @@ IndigoPlateauKateScript:
 .RematchKateText:
 	text "Kate: Oh, you are"
 	line "back for more"
-	cont "battles…"
+	cont "battles."
 
 	para "In that case I am"
 	line "more than happy to"
@@ -387,7 +387,7 @@ IndigoPlateauKateScript:
 	done
 	
 .RefusedKateText:
-	text "Kate: Smart kid…"
+	text "Kate: Smart kid."
 	done
 
 .AcceptedKateText:
@@ -419,7 +419,7 @@ IndigoPlateauKateScript:
 .KateFarewellText:
 	text "Kate: Yes, I do"
 	line "believe you are"
-	cont "a contender…"
+	cont "a contender."
 
 	para "Go on then, and"
 	line "challenge the"
@@ -769,10 +769,10 @@ IndigoPlateauTripScript:
 	para "My own party"
 	line "have reached the"
 	cont "final limit of"
-	cont "#mon…"
+	cont "#mon."
 	
 	para "Yes, they are all"
-	line "Level 100…"
+	line "Level 100."
 	
 	para "Are you ready?"
 	done
@@ -817,10 +817,10 @@ IndigoPlateauTripScript:
 	para "My own party"
 	line "have reached the"
 	cont "final limit of"
-	cont "#mon…"
+	cont "#mon."
 	
 	para "Yes, they are all"
-	line "Level 100…"
+	line "Level 100."
 	
 	para "Are you ready?"
 	done
@@ -998,9 +998,9 @@ IndigoPlateauFedmaeScript:
 	end
 	
 .IntroFedmaeText:
-	text "……… ……… ………"
+	text "... ... ..."
 	
-	para "……… ……… ………"
+	para "... ... ..."
 	
 	para "(You get the"
 	line "feeling that he"
@@ -1011,7 +1011,7 @@ IndigoPlateauFedmaeScript:
 	done
 
 .BattleFedmaeText:
-	text "………Fine."
+	text "...Fine."
 	
 	para "I'll battle you."
 	
@@ -1020,28 +1020,28 @@ IndigoPlateauFedmaeScript:
 	done
 
 .RematchFedmaeText:
-	text "Fedmae: ………"
+	text "Fedmae: ..."
 	line "Oh, it's you?"
 	
-	para "You want………"
-	line "………another battle?"
+	para "You want..."
+	line "...another battle?"
 	done
 
 .RefusedFedmaeText:
-	text "Whatever…"
+	text "Whatever."
 	
 	para "You would have"
 	line "lost anyway."
 	done
 
 .AcceptedFedmaeText:
-	text "Whatever…"
+	text "Whatever."
 	
 	para "Get ready."
 	done
 
 .AcceptedFedmaeRematchText:
-	text "Whatever…"
+	text "Whatever."
 	
 	para "Go ahead, then."
 	done
@@ -1069,7 +1069,7 @@ IndigoPlateauFedmaeScript:
 	done
 
 .FedmaeFarewellText:
-	text "………My name is"
+	text "...My name is"
 	line "Fedmae Vaendin."
 	
 	para "You'll do well to"
@@ -1077,21 +1077,21 @@ IndigoPlateauFedmaeScript:
 	done
 
 .FedmaeFarewellText2:
-	text "Fedmae: ………"
+	text "Fedmae: ..."
 	
-	para "……… ………"
+	para "... ..."
 	
-	para "……… ……… ………"
+	para "... ... ..."
 	
-	para "………Come back"
-	line "tomorrow………"
+	para "...Come back"
+	line "tomorrow..."
 	done
 
 .BattleFedmaeWonText:
-	text "Fedmae: ………"
+	text "Fedmae: ..."
 	
-	para "……… ………"
+	para "... ..."
 	
-	para "……… ………go away."
+	para "... ...go away."
 	done
 

@@ -45,7 +45,6 @@ StdScripts::
 	dw GymStatue1Script
 	dw GymStatue2Script
 	dw GymStatue3Script
-	dw ReceiveItemScript
 	dw PCScript
 	dw GameCornerCoinVendorScript
 	dw HappinessCheckScript
@@ -56,6 +55,7 @@ StdScripts::
 	dw VendingMachineScript
 	dw TreeGrottoScript
 	dw CaveGrottoScript
+	dw KantoPostGymEventsScript
 	dw CheatClubScript
 
 PokeCenterNurseScript:
@@ -361,25 +361,25 @@ DayToTextScript:
 	ifequalfwd THURSDAY, .Thursday
 	ifequalfwd FRIDAY, .Friday
 	ifequalfwd SATURDAY, .Saturday
-	getstring .SundayText, 0
+	getstring .SundayText, STRING_BUFFER_3
 	end
 .Monday:
-	getstring .MondayText, 0
+	getstring .MondayText, STRING_BUFFER_3
 	end
 .Tuesday:
-	getstring .TuesdayText, 0
+	getstring .TuesdayText, STRING_BUFFER_3
 	end
 .Wednesday:
-	getstring .WednesdayText, 0
+	getstring .WednesdayText, STRING_BUFFER_3
 	end
 .Thursday:
-	getstring .ThursdayText, 0
+	getstring .ThursdayText, STRING_BUFFER_3
 	end
 .Friday:
-	getstring .FridayText, 0
+	getstring .FridayText, STRING_BUFFER_3
 	end
 .Saturday:
-	getstring .SaturdayText, 0
+	getstring .SaturdayText, STRING_BUFFER_3
 	end
 .SundayText:
 	db "Sunday@"
@@ -414,12 +414,12 @@ BugContestResultsScript:
 	farwritetext ContestResults_ReadyToJudgeText
 	waitbutton
 	special BugContestJudging
-	getnum $0
+	getnum STRING_BUFFER_3
 	ifequalfwd 1, .FirstPlace
 	ifequalfwd 2, .SecondPlace
 	ifequalfwd 3, .ThirdPlace
 	readmem wBugContestOfficerPrize
-	getitemname $0, $1
+	getitemname USE_SCRIPT_VAR, STRING_BUFFER_4
 	farwritetext ContestResults_ConsolationPrizeText
 	promptbutton
 	waitsfx
@@ -439,7 +439,7 @@ BugContestResultsScript:
 .SecondPlace
 .ThirdPlace
 	readmem wBugContestOfficerPrize
-	getitemname $0, $1
+	getitemname USE_SCRIPT_VAR, STRING_BUFFER_4
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	readmem wBugContestOfficerPrize
@@ -1539,13 +1539,13 @@ RematchGiftFScript:
 	end
 
 GymStatue0Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	waitendtext
 
 GymStatue1Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
@@ -1553,7 +1553,7 @@ GymStatue1Script:
 	waitendtext
 
 GymStatue2Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
@@ -1561,19 +1561,12 @@ GymStatue2Script:
 	waitendtext
 
 GymStatue3Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
 	farwritetext GymStatue_ThreeWinningTrainersText
 	waitendtext
-
-ReceiveItemScript:
-	waitsfx
-	farwritetext ReceivedItemText
-	playsound SFX_ITEM
-	waitsfx
-	end
 
 GameCornerCoinVendorScript:
 	faceplayer
@@ -1703,48 +1696,48 @@ VendingMachineScript:
 	endtext
 
 .FreshWater:
-	checkmoney $0, 200
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 200
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem FRESH_WATER
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 200
-	getitemname FRESH_WATER, $0
+	takemoney YOUR_MONEY, 200
+	getitemname FRESH_WATER, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem FRESH_WATER
 	iffalse .Start
-	getitemname FRESH_WATER, $0
+	getitemname FRESH_WATER, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .SodaPop:
-	checkmoney $0, 300
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 300
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem SODA_POP
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 300
-	getitemname SODA_POP, $0
+	takemoney YOUR_MONEY, 300
+	getitemname SODA_POP, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem SODA_POP
 	iffalse .Start
-	getitemname SODA_POP, $0
+	getitemname SODA_POP, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .Lemonade:
-	checkmoney $0, 350
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 350
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem LEMONADE
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 350
-	getitemname LEMONADE, $0
+	takemoney YOUR_MONEY, 350
+	getitemname LEMONADE, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem LEMONADE
 	iffalse .Start
-	getitemname LEMONADE, $0
+	getitemname LEMONADE, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .VendItem:
@@ -1829,6 +1822,28 @@ _HiddenGrottoBackupMap:
 	ld a, [wMapNumber]
 	ld [wBackupMapNumber], a
 	ret
+
+KantoPostGymEventsScript:
+	readvar VAR_BADGES
+	ifequalfwd 9, .FirstBadge
+	ifequalfwd 10, .SecondBadge
+	ifequalfwd 12, .LyrasEgg
+	end
+
+.FirstBadge:
+	specialphonecall SPECIALCALL_FIRSTBADGE
+	end
+
+.SecondBadge:
+	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	iftruefwd .Done
+	specialphonecall SPECIALCALL_SECONDBADGE
+.Done:
+	end
+
+.LyrasEgg:
+	specialphonecall SPECIALCALL_LYRASEGG
+	end
 
 CheatClubScript:
 	faceplayer

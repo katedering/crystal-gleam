@@ -44,13 +44,13 @@ ElmsLab_MapScriptHeader:
 	bg_event  3,  5, BGEVENT_DOWN, ElmsLabPC
 
 	def_object_events
-	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
-	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
-	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
-	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
-	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
+	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
+	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
+	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
+	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
 
 	object_const_def
 	const ELMSLAB_ELM
@@ -143,7 +143,7 @@ GotEonStone:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftruefwd ElmCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue ElmGiveTicketScript	
+	iftrue ElmGiveTicketScript
 ElmCheckMasterBall:
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iftruefwd ElmCheckOddSouvenir
@@ -154,17 +154,11 @@ ElmCheckOddSouvenir:
 	iftrue ElmCheckBattleScript
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
 	iftrue ElmGiveOddSouvenirScript
+	checkevent EVENT_ELM_WANTS_TO_BATTLE
+	iftrue ElmAskBattleScript
 	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
 	iffalsefwd ElmCheckTogepiEgg
-	setmonval TOGEPI
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGETIC
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGEKISS
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
+	scall ElmEggHatchedScript
 	jumpopenedtext ElmThoughtEggHatchedText
 
 ElmEggHatchedScript:
@@ -221,7 +215,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -261,7 +255,7 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke TOTODILE, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -299,7 +293,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke CHIKORITA, PLAIN_FORM, 5, ORAN_BERRY
+	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -445,6 +439,7 @@ ElmCheckBattleScript:
 	writetext ElmBeforeBattleText
 	waitbutton
 ElmAskBattleScript:
+	setevent EVENT_ELM_WANTS_TO_BATTLE
 	writetext ElmAskBattleText
 	yesorno
 	iffalse_jumpopenedtext ElmRefusedBattleText
@@ -469,6 +464,7 @@ ElmAskBattleScript:
 	loadtrainer PROF_ELM, 3
 .GotTeam:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	clearevent EVENT_ELM_WANTS_TO_BATTLE
 	setevent EVENT_BATTLED_PROF_ELM
 	startbattle
 	reloadmap
@@ -1067,13 +1063,6 @@ ChoseStarterText:
 	cont "#mon too!"
 	done
 
-ReceivedStarterText:
-	text "<PLAYER> received"
-	line ""
-	text_ram wStringBuffer3
-	text "!"
-	done
-
 ElmDirectionsText1:
 	text "Mr.#mon lives a"
 	line "little bit beyond"
@@ -1424,7 +1413,7 @@ ElmGiveTicketText1:
 	line "on new Gyms."
 
 	para "If you earn eight"
-	line "more badges,"
+	line "more Badges,"
 
 	para "the Elite Four"
 	line "will battle you"

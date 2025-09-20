@@ -576,8 +576,8 @@ PowerAnkletIcon:: INCBIN "gfx/items/power_anklet.2bpp.lz"
 SECTION "DragonScaleIcon", ROMX
 DragonScaleIcon:: INCBIN "gfx/items/dragon_scale.2bpp.lz"
 
-SECTION "UpGradeIcon", ROMX
-UpGradeIcon:: INCBIN "gfx/items/up_grade.2bpp.lz"
+SECTION "UpgradeIcon", ROMX
+UpgradeIcon:: INCBIN "gfx/items/upgrade.2bpp.lz"
 
 SECTION "DubiousDiscIcon", ROMX
 DubiousDiscIcon:: INCBIN "gfx/items/dubious_disc.2bpp.lz"
@@ -831,3 +831,9 @@ EonStoneIcon:: INCBIN "gfx/items/eon_stone.2bpp.lz"
 
 SECTION "CheaterCardIcon", ROMX
 CheaterCardIcon:: INCBIN "gfx/items/cheater_card.2bpp.lz"
+
+SECTION "PokedexIcon", ROMX
+PokedexItemIcon:: INCBIN "gfx/items/pokedex.2bpp.lz"
+
+SECTION "PokegearIcon", ROMX
+PokegearItemIcon:: INCBIN "gfx/items/pokegear.2bpp.lz"
