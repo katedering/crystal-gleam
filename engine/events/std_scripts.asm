@@ -59,9 +59,9 @@ StdScripts::
 	dw CheatClubScript
 
 PokeCenterNurseScript:
-	opentext
 	checkkeyitem CHEATER_CARD
 	iftruefwd .cheat_center
+	opentext
 	checkevent EVENT_NURSE_SAW_TRAINER_STAR
 	iftruefwd .star_center
 	checktime 1 << MORN
@@ -207,7 +207,8 @@ PokeCenterNurseScript:
 	turnobject PLAYER, DOWN
 	end
 	
-.cheat_center	special HealParty
+.cheat_center
+	special HealParty
 	playsound SFX_FLASH
 	pause 10
 	checkphonecall ; elm already called about pokerus
@@ -215,8 +216,7 @@ PokeCenterNurseScript:
 	checkflag ENGINE_CAUGHT_POKERUS ; nurse already talked about pokerus
 	iftruefwd .done2
 	special SpecialCheckPokerus
-	iftruefwd .pokerus_done2
-.pokerus_done2
+	iffalsefwd .done2
 	setflag ENGINE_CAUGHT_POKERUS
 	specialphonecall SPECIALCALL_POKERUS
 .done2
