@@ -154,17 +154,17 @@ InitialOptionDescriptions:
 	prompt
 
 .InitialOptionDesc_RTC:
-	text "Use the Real-Time"
-	line "Clock function to"
-	cont "track the time."
+	text "The Real-Time"
+	line "Clock does not"
+	cont "work in Gleam."
 
-	para "If your cartridge"
-	line "or emulator does"
-	cont "not support RTC,"
+	para "Please leave the"
+	line "setting on 'No'"
+	cont "so that the game"
 
 	assert NO_RTC_SPEEDUP == 6
-	para "disable this to"
-	line "make each in-game"
+	cont "will properly"
+	cont "make each in-game"
 	cont "day last 4 hours."
 	prompt
 

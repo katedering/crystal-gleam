@@ -52,7 +52,7 @@ PlaceDiplomaPage2OnScreen:
 	ld hl, DiplomaPage2Tilemap
 	decoord 0, 0
 	call Decompress
-	ld de, .PolishedCrystal
+	ld de, .CrystalGleam
 	hlcoord 2, 1
 	rst PlaceString
 	ld de, .PlayTime
@@ -72,8 +72,8 @@ PlaceDiplomaPage2OnScreen:
 	text "Play Time"
 	done
 
-.PolishedCrystal:
-	text "Polished Crystal"
+.CrystalGleam:
+	text "Crystal Gleam"
 	done
 
 DiplomaGFX:

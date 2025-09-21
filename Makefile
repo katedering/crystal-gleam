@@ -1,12 +1,12 @@
 NAME := crystalgleam
 MODIFIERS :=
-VERSION := 3.2.0-beta
+VERSION := 3.2.0-dev
 
 ROM_NAME = $(NAME)$(MODIFIERS)-$(VERSION)
 EXTENSION := gbc
 
-TITLE := PKPCUSTOM
-MCODE := PKPC
+TITLE := CRYSGLEAM
+MCODE := CRGL
 ROMVERSION := 0x30
 
 FILLER := 0xff
@@ -54,7 +54,7 @@ MODIFIERS :=
 NAME := pkpc
 EXTENSION := pocket
 RGBASM_FLAGS += -DANALOGUE_POCKET -DNO_RTC
-RGBFIX_FLAGS = -Weverything -csjv -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m MBC5+RAM+BATTERY -r 3 -L $(POCKET_LOGO)
+RGBFIX_FLAGS = -Weverything -csjv -t $(TITLE) -i $(MCODE) -n $(ROMVERSION) -p $(FILLER) -k 01 -l 0x33 -m MBC5+RAM+BATTERY -r 4 -L $(POCKET_LOGO)
 endif
 ifeq ($(filter huffman,$(MAKECMDGOALS)),huffman)
 Q := @

@@ -187,7 +187,7 @@ InitialOptionsString1:
 
 InitialOptionsString2:
 	text  "Real-time clock"
-	next1 "            :"
+	next1 "(LEAVE OFF) :"
 	next1 "Perfect stats"
 	next1 "            :"
 	next1 "Traded <PK><MN> obey"
