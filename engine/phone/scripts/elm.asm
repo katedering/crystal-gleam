@@ -104,6 +104,8 @@ ElmPhoneScript_EvolutionMethodsTable:
 	dw .EvolveUrsaring
 	dw .EvolveStantler
 	dw .EvolveDunsparce
+	dw .EvolveEonForm
+	dw .EvolveEeveeon
 	assert_table_length NUM_EVOLVE_METHODS
 .EvolveNone:
 	farwritetext ElmPhoneEvoText_None
@@ -213,6 +215,12 @@ ElmPhoneScript_EvolutionMethodsTable:
 	loadmem wStringBuffer4, 32
 	farwritetext ElmPhoneEvoText_Level
 	farwritetext ElmPhoneEvoText_DunsparceSegments
+	end
+.EvolveEonForm:
+	farwritetext ElmPhoneEvoText_EeveeEon
+	end
+.EvolveEeveeon:
+	farwritetext ElmPhoneEvoText_Eeveeon
 	end
 
 ElmPhone_GetFirstMonEvolutionData:

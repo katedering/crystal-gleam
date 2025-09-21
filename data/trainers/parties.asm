@@ -3113,32 +3113,32 @@ PokefanFGroup:
 	end_trainer
 
 	def_trainer KRISTI, "Kristi"
-	tr_mon 38, CLEFABLE @ METRONOME_I, FEMALE
+	tr_mon 36, CLEFABLE @ METRONOME_I, FEMALE
 		tr_extra SPE_UP_ATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Def, 128 SDf, 124 Spe
 		tr_moves METRONOME, METRONOME, METRONOME, METRONOME
-	tr_mon 39, BLISSEY @ METRONOME_I, FEMALE
+	tr_mon 37, BLISSEY @ METRONOME_I, FEMALE
 		tr_extra SDEF_UP_ATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Def, 128 SDf, 124 Spe
 		tr_moves METRONOME, METRONOME, METRONOME, METRONOME
-	tr_mon 40, JYNX @ METRONOME_I, FEMALE
+	tr_mon 38, JYNX @ METRONOME_I, FEMALE
 		tr_extra SATK_UP_ATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Def, 128 SAt, 124 Spe
 		tr_moves METRONOME, METRONOME, METRONOME, METRONOME
-	tr_mon 41, SNORLAX @ METRONOME_I, MALE
+	tr_mon 39, SNORLAX @ METRONOME_I, MALE
 		tr_extra DEF_UP_SATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Atk, 128 Def, 124 SAt
 		tr_moves METRONOME, METRONOME, METRONOME, METRONOME
-	tr_mon 42, TOGEKISS @ METRONOME_I, FEMALE
+	tr_mon 40, TOGEKISS @ METRONOME_I, FEMALE
 		tr_extra SDEF_UP_ATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Def, 128 SAt, 124 SDf
 		tr_moves METRONOME, METRONOME, METRONOME, METRONOME
-	tr_mon 43, MR__RIME @ METRONOME_I, MALE
+	tr_mon 41, MR__RIME @ METRONOME_I, MALE
 		tr_extra ATK_UP_SATK_DOWN
 		tr_dvs 15 All
 		tr_evs 128 HP, 128 Atk, 128 Def, 124 SDf
@@ -3197,7 +3197,7 @@ NurseGroup:
 	end_trainer
 
 	def_trainer JOY, "Joy"
-	tr_mon LEVEL_FROM_BADGES + 6, CHANSEY
+	tr_mon LEVEL_FROM_BADGES + 7, CHANSEY
 	end_trainer
 
 	def_trainer WINIFRED, "Winifred"

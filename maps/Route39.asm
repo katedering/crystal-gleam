@@ -34,6 +34,8 @@ Route39_MapScriptHeader:
 	object_event  4, 44, SPRITE_BEAUTY, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route39BeautyText, -1
 	object_event 15, 11, SPRITE_HIKER, SPRITEMOVEDATA_WALK_UP_DOWN, 2, 0, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route39HikerText, -1
 	object_event 25, 22, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 1, GenericTrainerBeautyOlivia, -1
+	object_event  8, 13, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerSupernerdHerb, -1
+
 	tmhmball_event  1, 21, TM_BULLDOZE, EVENT_ROUTE_39_TM_BULLDOZE
 	smashrock_event 12, 10
 	smashrock_event 15,  8
@@ -145,6 +147,8 @@ Route39CowgirlAnnieScript:
 	checkevent EVENT_BEAT_PSYCHIC_NORMAN
 	iffalse_jumptext .IntroText
 	checkevent EVENT_BEAT_POKEFANF_JAIME
+	iffalse_jumptext .IntroText
+	checkevent EVENT_BEAT_SUPER_NERD_HERB
 	iffalse_jumptext .IntroText
 	opentext
 	writetext .QuestionText
@@ -493,4 +497,28 @@ Route39TrainerTipsText:
 
 	para "Use Headbutt on"
 	line "any tree you see!"
+	done
+
+GenericTrainerSupernerdHerb:
+	generictrainer SUPER_NERD, HERB, EVENT_BEAT_SUPER_NERD_HERB, SupernerdHerbSeenText, SupernerdHerbBeatenText
+
+	text "People used to say"
+	line "Eevee only had"
+	cont "three evolutions."
+	
+	para "Now it's up to"
+	line "eight, and maybe"
+	cont "even more that"
+	
+	para "haven't been dis-"
+	line "covered yet!"
+	done
+	
+SupernerdHerbSeenText:
+	text "Hey, did you know?"
+	done
+
+SupernerdHerbBeatenText:
+	text "You don't have to"
+	line "be so rough!"
 	done

@@ -143,7 +143,7 @@ GotEonStone:
 	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
 	iftruefwd ElmCheckMasterBall
 	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue ElmGiveTicketScript
+	iftrue ElmGiveTicketScript	
 ElmCheckMasterBall:
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iftruefwd ElmCheckOddSouvenir
@@ -215,7 +215,7 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
+	givepoke CYNDAQUIL, PLAIN_FORM 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -255,7 +255,7 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
+	givepoke TOTODILE, PLAIN_FORM 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext
@@ -293,7 +293,7 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	givepoke EEVEE, EON_FORM, 5, SITRUS_BERRY
+	givepoke CHIKORITA, PLAIN_FORM 5, ORAN_BERRY
 	writetext LyraChoosesStarterText
 	waitbutton
 	closetext

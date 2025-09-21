@@ -23,9 +23,10 @@ IndigoPlateauPokecenter1F_MapScriptHeader:
 	object_event 10,  9, SPRITE_YELLOW, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, IndigoPlateauYellowScript, EVENT_INDIGO_PLATEAU_POKECENTER_YELLOW
 	pc_nurse_event  9, 7
 	mart_clerk_event  1,  9, MARTTYPE_STANDARD, MART_INDIGO_PLATEAU
-	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTeleportGuyScript, EVENT_TELEPORT_GUY
-	pokemon_event  5,  9, ABRA, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_BROWN, IndigoPlateauAbraText, EVENT_TELEPORT_GUY
+	object_event  6,  9, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, IndigoPlateauTeleportGuyScript, -1
+	pokemon_event  5,  9, ABRA, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_BROWN, IndigoPlateauAbraText, -1
 	object_event  5, 12, SPRITE_ACE_TRAINER_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, IndigoPlateauCooltrainermText, -1
+	object_event 13, 12, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, IndigoPlateauGirlScript, -1
 
 	object_const_def
 	const INDIGOPLATEAUPOKECENTER1F_RIVAL
@@ -533,4 +534,211 @@ IndigoPlateauCooltrainermText:
 
 	para "lose, you have to"
 	line "start all over!"
+	done
+
+IndigoPlateauGirlScript:
+	faceplayer
+	opentext
+	checkevent EVENT_INDIGO_PLATEAU_GUIDE_GIRL_INTRO
+	iftruefwd .SkipHerIntro
+	writetext .IndigoPlateauGirlIntroText
+	waitbutton
+	setevent EVENT_INDIGO_PLATEAU_GUIDE_GIRL_INTRO
+.SkipHerIntro
+	writetext .WantInfoText
+	yesorno
+	iffalse_jumpopenedtext .NotInterestedText
+	writetext .WhoAskAboutText
+	promptbutton
+	loadmenu IndigoPlateauGuideGirl_MenuHeader
+	verticalmenu
+	closewindow
+	ifequalfwd $1, .AshInfo
+	ifequalfwd $2, .KateInfo
+	ifequalfwd $3, .TripInfo
+	ifequalfwd $4, .FedmaeInfo
+	ifequalfwd $5, .NoInfo
+	end
+	
+.IndigoPlateauGirlIntroText:
+	text "Hello!"
+	
+	para "Have you seen"
+	line "those four"
+	cont "trainers standing"
+	cont "outside?"
+	
+	para "They're really"
+	line "strong, so I don't"
+	cont "stand a chance"
+	cont "against them."
+	
+	para "But I can tell you"
+	line "about them if you"
+	cont "want any info!"
+	
+	para "So how about it?"
+	done
+
+.WantInfoText:
+	text "Would you like any"
+	line "information about"
+	cont "the so-called"
+	cont "Elite Faux?"
+	done
+
+.WhoAskAboutText:
+	text "Who would you like"
+	line "to know about?"
+	done
+
+.AshInfo:
+	writetext .AshInfoText
+	waitbutton
+	closetext
+	end
+	
+.KateInfo:
+	writetext .KateInfoText
+	waitbutton
+	closetext
+	end
+
+.TripInfo:
+	writetext .TripInfoText
+	waitbutton
+	closetext
+	end
+
+.FedmaeInfo:
+	writetext .FedmaeInfoText
+	waitbutton
+	closetext
+	end
+	
+.NoInfo:
+	writetext .NotInterestedText
+	waitbutton
+	closetext
+	end
+
+.AshInfoText:
+	text "Ash Ketchum."
+	
+	para "He's very easily"
+	line "excited when it"
+	cont "comes to seeing"
+	cont "new #mon."
+	
+	para "His team is"
+	line "well balanced"
+	cont "with decent type"
+	cont "coverage."
+	done
+
+.KateInfoText:
+	text "Kate Dering."
+	
+	para "She is quite the"
+	line "impressive #-"
+	cont "mon trainer."
+	
+	para "But she has a bad"
+	line "habit of bragging"
+	cont "too much before a"
+	cont "battle, and so"
+	cont "she is easy to"
+	cont "distract."
+	
+	para "Her team makes"
+	line "use of some more"
+	cont "competitive strat-"
+	cont "egies, and she"
+	cont "has decent type"
+	cont "coverage."
+	done
+
+.TripInfoText:
+	text "Trip Dering."
+	
+	para "He is quite"
+	line "mysterious, even"
+	cont "to me."
+	
+	para "He uses excellent"
+	line "type coverage and"
+	cont "highly trained"
+	cont "#mon."
+	done
+
+.FedmaeInfoText:
+	text "Fedmae Vaendin."
+	
+	para "He considers him-"
+	line "self an Archmage."
+	
+	para "But he is really"
+	line "just a high-level"
+	cont "Psychic trainer."
+	
+	para "He also uses the"
+	line "Fairy-type, so"
+	cont "be prepared for"
+	cont "that as well."
+	
+	para "However, that also"
+	line "means he lacks"
+	cont "the expert type"
+	cont "coverage of the"
+	cont "other three."
+	done
+
+.NotInterestedText:
+	text "Not interested?"
+	
+	para "Okay then! Good"
+	line "luck against them"
+	cont "and also against"
+	cont "the real Elite"
+	cont "Four!"
+	done
+
+IndigoPlateauGuideGirl_MenuHeader:
+	db $40
+	db 00, 11
+	db 11, 19
+	dw .MenuData
+	db 1
+
+.MenuData:
+	db $81
+	db 5
+	db "Ash@"
+	db "Kate@"
+	db "Trip@"
+	db "Fedmae@"
+	db "No One@"
+
+IndigoPlateauCheatClubScript:
+	faceplayer
+	opentext
+	writetext IndigoPlateauCheatClubText
+	waitbutton
+	closetext
+	end
+
+IndigoPlateauCheatClubText:
+	text "Welcome to the"
+	line "Cheater's Club!"
+	
+	para "I'm sorry, but"
+	line "this branch of the"
+	cont "Club is currently"
+	cont "closed."
+	
+	para "Feel free to"
+	line "check our other"
+	cont "locations!"
+	
+	para "Goodbye for now!"
 	done

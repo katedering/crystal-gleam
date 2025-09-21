@@ -559,3 +559,40 @@ ElmPhoneEvolutionRefusedText:
 ElmPhoneEndText:
 	text "Take care!"
 	done
+
+ElmPhoneEvoText_EeveeEon:
+	text "The special Eevee"
+	line "and all of it's"
+	cont "evolved forms can"
+	cont "somehow change"
+	cont "form by evolving."
+
+	para "It can be exposed"
+	line "to a number of"
+	cont "different Stones,"
+
+	para "or gain a level"
+	line "in a certain"
+	cont "location."
+
+	para "Try around Ilex"
+	line "Forest or the Ice"
+	cont "Path."
+
+	para "I've also heard"
+	line "that an Eon Stone"
+	cont "also affects it."
+	prompt
+
+ElmPhoneEvoText_Eeveeon:
+	text "Not much is known"
+	line "about Eeveeon,"
+	
+	para "since you own the"
+	line "only one known to"
+	cont "exist."
+	
+	para "Try using an Eon"
+	line "Stone and see what"
+	cont "happens?"
+	prompt

@@ -15,7 +15,127 @@ Route38EcruteakGate_MapScriptHeader:
 
 	def_object_events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, Route38EcruteakGateOfficerText, -1
+	object_event  1,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route38EcruteakGateLassScript, -1
 	object_event  8,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ProfOaksAide2Script, -1
+
+Route38EcruteakGateLassScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_MORTY
+	iftruefwd .GoodTrainer
+	writetext .OkTrainerText
+	waitbutton
+	closetext
+	end
+.GoodTrainer
+	checkevent EVENT_GOT_GALARIAN_CORSOLA
+	iftruefwd .AlreadyGotIt
+	checkevent EVENT_GALARIAN_CORSOLA_INTRO
+	iftruefwd .ListenedToIntro
+	writetext .GoodTrainerText
+	waitbutton
+	setevent EVENT_GALARIAN_CORSOLA_INTRO
+.ListenedToIntro
+	writetext .QuestionText
+	yesorno
+	iffalse_jumpopenedtext .NoText
+	writetext .YesText
+	promptbutton
+	waitsfx
+	readvar VAR_PARTYCOUNT
+	ifequalfwd PARTY_LENGTH, .NoRoom
+	givepoke CORSOLA, GALARIAN_FORM, 15, LUM_BERRY, PREMIER_BALL
+	setevent EVENT_GOT_GALARIAN_CORSOLA
+	writetext .GoodbyeText
+	waitbutton
+	closetext
+	end
+.AlreadyGotIt
+	writetext .AlreadyHaveText
+	waitbutton
+	closetext
+	end
+	
+.NoRoom
+	jumpthisopenedtext
+
+	text "Oh! Hold on a"
+	line "moment, it seems"
+	cont "that your party"
+	cont "is currently full!"
+	done
+
+.OkTrainerText
+	text "Hello! Oh, you"
+	line "haven't beaten"
+	cont "Morty yet?"
+	
+	para "Talk to me after"
+	line "you have."
+	done
+
+.GoodTrainerText
+	text "Hello! Oh, that's"
+	line "the Badge from"
+	cont "Ecruteak Gym!"
+	
+	para "You've beaten"
+	line "Morty, then?"
+	cont "Congratulations!"
+	done
+	
+	
+.QuestionText
+	text "I think I can"
+	line "trust you with"
+	cont "this #mon then."
+	
+	para "It's a Corsola"
+	line "from the Galar"
+	cont "region. It's"
+	cont "very special, so"
+	cont "it needs a special"
+	cont "trainer to raise"
+	cont "it. Will you take"
+	cont "this #mon?"
+	done
+
+.NoText
+	text "You don't want"
+	line "it? I'll hold it"
+	cont "until you do."
+	done
+
+.YesText
+	text "I'm sure you will"
+	line "take good care of"
+	cont "this #mon!"
+	done
+
+.GoodbyeText
+	text "This Corsola is"
+	line "not like the ones"
+	cont "you find here in"
+	cont "Johto."
+	
+	para "It's a Ghost-type"
+	line "#mon, and very"
+	cont "fragile. So please"
+	cont "take good care of"
+	cont "it, alright?"
+	done
+
+.AlreadyHaveText
+	text "Did you know that"
+	line "Galarian Corsola"
+	cont "can evolve?"
+	
+	para "Normal Corsola"
+	line "from Johto can't"
+	cont "evolve, though."
+	
+	para "I wonder why?"
+	done
 
 ProfOaksAide2Script:
 	faceplayer

@@ -53,6 +53,8 @@ Route32_MapScriptHeader:
 	cuttree_event 10, 19, EVENT_ROUTE_32_CUT_TREE
 	cuttree_event -1, 29, EVENT_MAGNET_TUNNEL_EAST_CUT_TREE
 	cuttree_event 19, 32, EVENT_CHERRYGROVE_BAY_CUT_TREE
+	object_event  9, 44, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, Route32QwilfishSalesmanScript, -1
+
 
 	object_const_def
 	const ROUTE32_COOLTRAINER_M
@@ -394,6 +396,12 @@ Route32LyraIntroducesHiddenGrottoesOutroScript:
 	para "<PLAYER>, keep an"
 	line "eye out for more"
 	cont "Hidden Grottoes!"
+	
+	para "You may have even"
+	line "encountered one"
+	cont "before now, and"
+	cont "just didn't notice"
+	cont "it right away."
 	done
 
 .LeaveMovement1:
@@ -1006,4 +1014,69 @@ Route32AdvancedTips2Text:
 	para "them money based"
 	line "on how many Badges"
 	cont "you own!"
+	done
+
+Route32QwilfishSalesmanScript:
+	faceplayer
+	checkevent EVENT_BOUGHT_HISUIAN_QWILFISH
+	iftrue_jumptext .NoRefundsText
+	opentext
+	writetext .HeyKidWantToBuyThisMonText
+	special PlaceMoneyTopRight
+	yesorno
+	iffalse_jumpopenedtext .MaybeLaterText
+	checkmoney YOUR_MONEY, 1000
+	ifequalfwd HAVE_LESS, .NotEnoughCash
+	readvar VAR_PARTYCOUNT
+	ifequalfwd PARTY_LENGTH, .NoRoom
+	givepoke QWILFISH, HISUIAN_FORM, 5, SITRUS_BERRY, DIVE_BALL
+	setevent EVENT_BOUGHT_HISUIAN_QWILFISH
+	waitsfx
+	playsound SFX_TRANSACTION
+	takemoney YOUR_MONEY, 1000
+	special PlaceMoneyTopRight
+	jumpthisopenedtext
+
+	text "It's all yours"
+	line "now. No refunds."
+	done
+
+.NotEnoughCash
+	jumpthisopenedtext
+	
+	text "You don't have"
+	line "enough cash, kid."
+	done
+
+
+.NoRoom
+	jumpthisopenedtext
+	
+	text "Make room in your"
+	line "party for this,"
+	cont "then come back."
+	done
+
+.NoRefundsText
+	text "I don't give out"
+	line "refunds. It's"
+	cont "your problem now."
+	done
+
+.HeyKidWantToBuyThisMonText
+	text "Hey, you. I just"
+	line "caught this weird"
+	cont "Qwilfish. It looks"
+	cont "different than any"
+	cont "other one I've"
+	cont "ever seen."
+	
+	para "You want it? I can"
+	line "sell it to you for"
+	cont "¥1000, right now."
+	done
+
+.MaybeLaterText
+	text "I won't hang onto"
+	line "it forever, now."
 	done
