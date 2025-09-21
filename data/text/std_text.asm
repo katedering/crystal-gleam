@@ -527,6 +527,11 @@ YouAreACheaterText:
 	
 	para "Here's your member-"
 	line "ship card!"
+
+	para "As a bonus, you can"
+	line "now get much faster"
+	cont "service at any"
+	cont "#mon Center!"
 	done
 
 YouAreNotACheaterText:

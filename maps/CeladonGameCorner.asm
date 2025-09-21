@@ -428,6 +428,7 @@ CeladonGameCornerCheaterClubScript:
 	writetext .CheaterText
 	yesorno
 	iffalse_jumpopenedtext .NoCoinText
+	setevent EVENT_USED_CHEAT_CLUB
 	loadmem wCoins+0, 0
 	loadmem wCoins+1, 0
 	givecoins 50000
@@ -446,7 +447,10 @@ CeladonGameCornerCheaterClubScript:
 	
 	para "Sorry, we cannot"
 	line "help you here."
-	cont "Goodbye!"
+	
+	para "Sign up at any"
+	line "#mon Center!"
+	cont "Goodbye for now!"
 	done
 
 .CheaterText:

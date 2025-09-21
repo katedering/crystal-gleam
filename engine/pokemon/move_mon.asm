@@ -264,6 +264,8 @@ endr
 	ld a, [wBattleType]
 	cp BATTLETYPE_RED_GYARADOS
 	jr z, .not_shiny
+	cp BATTLETYPE_SHINY
+	jr z, .shiny
 
 .shiny_check
 	call Random

@@ -3541,8 +3541,9 @@ endc
 	learnset 64, FLARE_BLITZ ; Eruption → egg move
 
 	evos_attacks Quilava
-	evo_data EVOLVE_LEVEL, 36, TYPHLOSION
+	evo_data EVOLVE_MOVE, SHADOW_CLAW, TYPHLOSION, HISUIAN_FORM
 	evo_data EVOLVE_LOCATION, ECRUTEAK_SHRINE, TYPHLOSION, HISUIAN_FORM
+	evo_data EVOLVE_LEVEL, 36, TYPHLOSION
 	learnset 1, TACKLE
 	learnset 1, LEER
 	learnset 6, SMOKESCREEN
@@ -3581,7 +3582,7 @@ endc
 	learnset 90, ANCIENTPOWER ; Because why not!
 
 	evos_attacks TyphlosionHisuian
-	learnset 1, SHADOW_CLAW ; evolution move
+	learnset 1, DARK_PULSE ; evolution move
 	learnset 1, ASTONISH ; new move
 	learnset 1, TACKLE
 	learnset 1, LEER
@@ -3597,7 +3598,7 @@ endc
 	learnset 56, SHADOW_BALL
 	learnset 61, ROLLOUT
 	learnset 69, DOUBLE_EDGE
-	learnset 74, DARK_PULSE ; Infernal Parade → new move
+	learnset 74, SHADOW_CLAW ; Infernal Parade → new move
 	learnset 81, FLARE_BLITZ ; Eruption → egg move
 
 	evos_attacks Totodile

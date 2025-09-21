@@ -207,37 +207,15 @@ PokeCenterNurseScript:
 	turnobject PLAYER, DOWN
 	end
 	
-.cheat_center
-	farwritetext NurseCheatText
-	promptbutton
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	playmusic MUSIC_HEAL
-	special HealParty
-	pause 60
-	special Special_FadeInQuickly
-	special RestartMapMusic
+.cheat_center	special HealParty
+	playsound SFX_FLASH
+	pause 10
 	checkphonecall ; elm already called about pokerus
-	iftruefwd .no2
+	iftruefwd .done2
 	checkflag ENGINE_CAUGHT_POKERUS ; nurse already talked about pokerus
-	iftruefwd .no2
+	iftruefwd .done2
 	special SpecialCheckPokerus
-	iftruefwd .pokerus2
-.no2
-	farwritetext NurseCheatDoneText
-	pause 40
-	farwritetext NurseCheatGoodbyeText
-	pause 40
-	closetext
-	sjumpfwd .done2
-
-.pokerus2
-	; already cleared earlier in the script
-	farwritetext NurseCheatPokerusText
-	waitbutton
-	closetext
-	sjumpfwd .pokerus_done2
-
+	iftruefwd .pokerus_done2
 .pokerus_done2
 	setflag ENGINE_CAUGHT_POKERUS
 	specialphonecall SPECIALCALL_POKERUS
@@ -1848,7 +1826,7 @@ KantoPostGymEventsScript:
 CheatClubScript:
 	faceplayer
 	opentext
-	checkevent EVENT_YOU_ARE_A_DIRTY_CHEATER
+	checkkeyitem CHEATER_CARD
 	iftruefwd .Cheater
 	farwritetext AreYouACheaterText
 	yesorno
@@ -1857,7 +1835,6 @@ CheatClubScript:
 	waitbutton
 	waitsfx
 	verbosegivekeyitem CHEATER_CARD
-	setevent EVENT_YOU_ARE_A_DIRTY_CHEATER
 	sjumpfwd .Cheater
 
 .NotCheater:
@@ -1880,6 +1857,7 @@ CheatClubScript:
 	sjumpfwd .CheatClubCancel
 
 .CatchPack:
+	setevent EVENT_USED_CHEAT_CLUB
 	giveitem MASTER_BALL, 99
 	giveitem CHERISH_BALL, 99
 	giveitem SWEET_HONEY, 99
@@ -1890,6 +1868,7 @@ CheatClubScript:
 	sjump .CheatMenu
 
 .TrainPack:
+	setevent EVENT_USED_CHEAT_CLUB
 	giveitem RARE_CANDY, 99
 	giveitem HP_UP, 99
 	giveitem PROTEIN, 99
@@ -1914,6 +1893,7 @@ CheatClubScript:
 	sjump .CheatMenu
 
 .MoneyPack:
+	setevent EVENT_USED_CHEAT_CLUB
 	giveitem BIG_NUGGET, 99
 	giveitem BIG_NUGGET, 99
 	giveitem BIG_NUGGET, 99

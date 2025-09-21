@@ -61,7 +61,7 @@ HallOfFameEntranceTrigger:
 	writetext .GoldTrophySentText
 	waitbutton
 .NoTrophy
-	checkkeyitem CHEATER_CARD
+	checkevent EVENT_USED_CHEAT_CLUB
 	iffalsefwd .NotACheater
 	writetext .LanceTextCheater
 	sjumpfwd .KeepGoing
