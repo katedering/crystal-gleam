@@ -51,6 +51,7 @@ ElmsLab_MapScriptHeader:
 	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
 	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
+	object_event  8, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, EeveePokeBallScript, EVENT_GOT_EEVEE_FROM_LALA
 
 	object_const_def
 	const ELMSLAB_ELM
@@ -60,6 +61,7 @@ ElmsLab_MapScriptHeader:
 	const ELMSLAB_POKE_BALL3
 	const ELMSLAB_OFFICER
 	const ELMSLAB_LYRA
+	const ELMSLAB_POKE_BALL4
 
 ElmsLabTrigger0:
 	sdefer ElmsLab_AutowalkUpToElm
@@ -1681,6 +1683,12 @@ ElmsLabLyraLossText:
 	done
 
 ElmsLabLyraText_YouWon:
+	text "That was an"
+	line "exciting battle,"
+	cont "even though I"
+	cont "lost."
+	done
+
 ElmsLabLyraText_YouLost:
 	text "That was an"
 	line "exciting battle!"
@@ -1796,11 +1804,12 @@ ElmsLabPCText:
 	done
 
 SpecialEeveeText:
-	text "Lala called me"
-	line "earlier, and she"
-	cont "said that she gave"
-	cont "you a special"
-	cont "Eevee…"
+	text "Oh! You picked up"
+	line "that Eevee on the"
+	cont "table out there?"
+	
+	para "The one from"
+	line "Lala?"
 	
 	para "I have a stone"
 	line "here that was"
@@ -1823,4 +1832,52 @@ EonStoneText:
 	line "that special Eevee"
 	cont "of yours, and see"
 	cont "what happens."
+	done
+	
+EeveePokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse_jumptext EeveePokeBallText
+	opentext
+	setevent EVENT_GOT_EEVEE_FROM_LALA
+	writetext EeveePokeBallText1
+	promptbutton
+	disappear ELMSLAB_POKE_BALL4
+	waitsfx
+	givepoke EEVEE, EON_FORM, 5, ABILITYPATCH
+	writetext EeveePokeBallText2
+	waitbutton
+	closetext
+	end
+
+EeveePokeBallText:
+	text "Better talk to"
+	line "the professor"
+	cont "first."
+	done
+	
+EeveePokeBallText1:
+	text "There's a note"
+	line "here:"
+	
+	para "Please raise this"
+	line "Eevee with care."
+	
+	para "It has unknown"
+	line "potential, and I"
+	cont "want you to have"
+	cont "it for your jour-"
+	cont "ney, <PLAYER>."
+	
+	para "Signed, Lala."
+	done
+
+EeveePokeBallText2:
+	text "There's another"
+	line "note:"
+	
+	para "Eevee is holding"
+	line "a useful item,"
+	cont "if you really"
+	cont "want to bring out"
+	cont "it's potential."
 	done

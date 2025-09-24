@@ -316,7 +316,7 @@ MACRO checkpoke
 ENDM
 
 	const givepoke_command
-MACRO givepoke
+MACRO givepoke ; pokemon, form, level, item, ball, move, trainer flag, nickname, ot name, ot id
 	db givepoke_command
 	if _NARG >= 3
 		dp \1, \2 ; pokemon
