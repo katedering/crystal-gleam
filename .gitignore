@@ -63,4 +63,5 @@ bank_ends.txt
 rgbds/
 deploy.sh
 *.bak
-*.bak
+*.*.bak
+*.asm.bak
