@@ -42,7 +42,13 @@ CherrygroveGuideGentTrigger:
 	applymovement PLAYER, GuideGentPlayerMovement
 	setlasttalked CHERRYGROVECITY_GRAMPS
 CherrygroveCityGuideGent:
-	showtextfaceplayer GuideGentIntroText
+	faceplayer
+	opentext
+	writetext GuideGentIntroText1
+	yesorno
+	iffalsefwd .NoGuide
+	closetext
+	showtextfaceplayer GuideGentIntroText2
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
@@ -84,6 +90,55 @@ CherrygroveCityGuideGent:
 	setscene $2
 	waitsfx
 	end
+
+.NoGuide
+	writetext GuideGentFarewellText
+	promptbutton
+	givespecialitem MAP_CARD
+	setflag ENGINE_MAP_CARD
+	writetext GotMapCardText
+	promptbutton
+	writetext GuideGentPokegearText
+	waitbutton
+	closetext
+	turnobject PLAYER, LEFT
+	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement7
+	disappear CHERRYGROVECITY_GRAMPS
+	clearevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+	setscene $2
+	waitsfx
+	end
+
+GuideGentIntroText1:
+	text "You're a rookie"
+	line "trainer, aren't"
+	cont "you? I can tell!"
+
+	para "That's OK! Every-"
+	line "one is a rookie"
+	cont "at some point!"
+
+	para "I can teach you"
+	line "a few things."
+	done
+
+GuideGentFarewellText:
+	text "That's fine, too!"
+	
+	para "At least let me"
+	line "give you a small"
+	
+	para "gift, since you're"
+	line "still a rookie."
+	done
+
+GuideGentMovement7:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
 
 CherrygroveRivalTriggerSouth:
 	moveobject CHERRYGROVECITY_RIVAL, 39, 7
@@ -270,18 +325,8 @@ CherrygroveCity_RivalComesBack:
 	turn_head_down
 	step_end
 
-GuideGentIntroText:
-	text "You're a rookie"
-	line "trainer, aren't"
-	cont "you? I can tell!"
-
-	para "That's OK! Every-"
-	line "one is a rookie"
-	cont "at some point!"
-
-	para "I can teach you"
-	line "a few things."
-	cont "Follow me!"
+GuideGentIntroText2:
+	text "Follow me!"
 	done
 
 GuideGentPokeCenterText:
@@ -471,3 +516,4 @@ CherrygroveCityAdvancedTipsSignText:
 	line "every purchase of"
 	cont "ten # Balls!"
 	done
+
