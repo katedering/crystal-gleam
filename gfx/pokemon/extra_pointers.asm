@@ -292,6 +292,8 @@ AnimationExtraPointers:
 	dw ClodsireAnimationExtra
 	dw AnnihilapeAnimationExtra
 	dw EeveeonAnimationExtra
+	dw MissingnoAnimationExtra
+	dw GorochuAnimationExtra
 	assert_table_length NUM_SPECIES
 
 	dw UnownBAnimationExtra
@@ -329,7 +331,6 @@ AnimationExtraPointers:
 
 	dw PikachuFlyAnimationExtra
 	dw PikachuSurfAnimationExtra
-	dw PikachuPikaAnimationExtra
 	dw PikachuChuchuAnimationExtra
 	dw PikachuSparkAnimationExtra
 
@@ -420,4 +421,7 @@ AnimationExtraPointers:
 	dw LeafeonEonAnimationExtra
 	dw GlaceonEonAnimationExtra
 	dw SylveonEonAnimationExtra
+	
+	dw PikachuPartnerAnimationExtra
+	dw RaichuPartnerAnimationExtra
 	assert_table_length NUM_UNIQUE_POKEMON

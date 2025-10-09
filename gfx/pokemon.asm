@@ -1062,12 +1062,10 @@ UnownQuestionBackpic:  INCBIN "gfx/pokemon/unown_question/back.2bpp.lz"
 SECTION "Pikachu Pics", ROMX
 PikachuPlainFrontpic: INCBIN "gfx/pokemon/pikachu_plain/front.animated.2bpp.lz"
 PikachuSurfFrontpic:  INCBIN "gfx/pokemon/pikachu_surf/front.animated.2bpp.lz"
-PikachuPikaFrontpic:  INCBIN "gfx/pokemon/pikachu_pika/front.animated.2bpp.lz"
 PikachuSparkFrontpic: INCBIN "gfx/pokemon/pikachu_spark/front.animated.2bpp.lz"
 PikachuPlainBackpic:
 PikachuSurfBackpic:
 PikachuSparkBackpic:  INCBIN "gfx/pokemon/pikachu_plain/back.2bpp.lz"
-PikachuPikaBackpic:   INCBIN "gfx/pokemon/pikachu_pika/back.2bpp.lz"
 
 SECTION "PikachuFly Pics", ROMX
 PikachuFlyFrontpic: INCBIN "gfx/pokemon/pikachu_fly/front.animated.2bpp.lz"
@@ -1596,3 +1594,19 @@ SylveonEonBackpic:  INCBIN "gfx/pokemon/sylveon_eon/back.2bpp.lz"
 SECTION "Eeveeon Pics", ROMX
 EeveeonFrontpic: INCBIN "gfx/pokemon/eeveeon/front.animated.2bpp.lz"
 EeveeonBackpic:  INCBIN "gfx/pokemon/eeveeon/back.2bpp.lz"
+
+SECTION "PikachuPartner Pics", ROMX
+PikachuPartnerFrontpic: INCBIN "gfx/pokemon/pikachu_partner/front.animated.2bpp.lz"
+PikachuPartnerBackpic:  INCBIN "gfx/pokemon/pikachu_partner/back.2bpp.lz"
+
+SECTION "Missingno Pics", ROMX
+MissingnoFrontpic: INCBIN "gfx/pokemon/missingno/front.animated.2bpp.lz"
+MissingnoBackpic:  INCBIN "gfx/pokemon/missingno/back.2bpp.lz"
+
+SECTION "Gorochu Pics", ROMX
+GorochuFrontpic: INCBIN "gfx/pokemon/gorochu/front.animated.2bpp.lz"
+GorochuBackpic:  INCBIN "gfx/pokemon/gorochu/back.2bpp.lz"
+
+SECTION "RaichuPartner Pics", ROMX
+RaichuPartnerFrontpic: INCBIN "gfx/pokemon/raichu_partner/front.animated.2bpp.lz"
+RaichuPartnerBackpic:  INCBIN "gfx/pokemon/raichu_partner/back.2bpp.lz"

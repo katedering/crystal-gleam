@@ -65,3 +65,4 @@ deploy.sh
 *.bak
 *.*.bak
 *.asm.bak
+*.mp4

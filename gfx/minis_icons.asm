@@ -1457,6 +1457,11 @@ AnnihilapeMini::     INCBIN "gfx/minis/annihilape.2bpp.lz"
 AnnihilapeMiniMask:: INCBIN "gfx/minis/annihilape_mask.1bpp.lz"
 AnnihilapeIcon::     INCBIN "gfx/icons/annihilape.2bpp.lz"
 
+SECTION "Missingno Mini Icon", ROMX
+MissingnoMini::     INCBIN "gfx/minis/missingno.2bpp.lz"
+MissingnoMiniMask:: INCBIN "gfx/minis/missingno_mask.1bpp.lz"
+MissingnoIcon::     INCBIN "gfx/icons/missingno.2bpp.lz"
+
 SECTION "UnownB Mini Icon", ROMX
 UnownBMini::     INCBIN "gfx/minis/unown_b.2bpp.lz"
 UnownBMiniMask:: INCBIN "gfx/minis/unown_b_mask.1bpp.lz"
@@ -1867,3 +1872,17 @@ EeveeonMini::     INCBIN "gfx/minis/eeveeon.2bpp.lz"
 EeveeonMiniMask:: INCBIN "gfx/minis/eeveeon_mask.1bpp.lz"
 EeveeonIcon::     INCBIN "gfx/icons/eeveeon.2bpp.lz"
 
+SECTION "PikachuPartner Mini Icon", ROMX
+PikachuPartnerMini::     INCBIN "gfx/minis/pikachu_partner.2bpp.lz"
+PikachuPartnerMiniMask:: INCBIN "gfx/minis/pikachu_partner_mask.1bpp.lz"
+PikachuPartnerIcon::     INCBIN "gfx/icons/pikachu_partner.2bpp.lz"
+
+SECTION "RaichuPartner Mini Icon", ROMX
+RaichuPartnerMini::     INCBIN "gfx/minis/raichu_partner.2bpp.lz"
+RaichuPartnerMiniMask:: INCBIN "gfx/minis/raichu_partner_mask.1bpp.lz"
+RaichuPartnerIcon::     INCBIN "gfx/icons/raichu_partner.2bpp.lz"
+
+SECTION "Gorochu Mini Icon", ROMX
+GorochuMini::     INCBIN "gfx/minis/gorochu.2bpp.lz"
+GorochuMiniMask:: INCBIN "gfx/minis/gorochu_mask.1bpp.lz"
+GorochuIcon::     INCBIN "gfx/icons/gorochu.2bpp.lz"

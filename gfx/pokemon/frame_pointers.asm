@@ -292,6 +292,8 @@ FramesPointers:
 	dw ClodsireFrames
 	dw AnnihilapeFrames
 	dw EeveeonFrames
+	dw MissingnoFrames
+	dw GorochuFrames
 	assert_table_length NUM_SPECIES
 
 	dw UnownBFrames
@@ -329,7 +331,6 @@ FramesPointers:
 
 	dw PikachuFlyFrames
 	dw PikachuSurfFrames
-	dw PikachuPikaFrames
 	dw PikachuChuchuFrames
 	dw PikachuSparkFrames
 
@@ -420,4 +421,7 @@ FramesPointers:
 	dw LeafeonEonFrames
 	dw GlaceonEonFrames
 	dw SylveonEonFrames
+	
+	dw PikachuPartnerFrames
+	dw RaichuPartnerFrames
 	assert_table_length NUM_UNIQUE_POKEMON

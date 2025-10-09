@@ -673,6 +673,7 @@ DEF NUM_CANDIES EQU const_value - 1
 	const MALIGN_LURE  ; 23
 	const EON_STONE    ;
 	const CHEATER_CARD ;
+	const OLD_KEY      ;
 DEF CHARMS_START EQU const_value
 	; Only charms below this point!
 	const SHINY_CHARM  ; 24
@@ -705,6 +706,7 @@ DEF NUM_KEY_ITEMS EQU const_value - 1
 	const NAM_MALIGN_LURE
 	const NAM_MYSTERY_EGG
 	const NAM_MYSTICTICKET
+	const NAM_OLD_KEY
 	const NAM_OLD_ROD
 	const NAM_OLD_SEA_MAP
 	const NAM_ORANGETICKET

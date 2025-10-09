@@ -599,6 +599,8 @@ KeyItemAttributes:
 	key_item_attribute 0, ITEMMENU_PARTY, ITEMMENU_NOUSE
 ; CHEATER CARD
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
+; OLD KEY
+	key_item_attribute 0, ITEMMENU_NOUSE, ITEMMENU_NOUSE
 ; SHINY CHARM
 	key_item_attribute 0, ITEMMENU_CURRENT, ITEMMENU_NOUSE
 ; OVAL CHARM

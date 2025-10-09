@@ -27,7 +27,7 @@ PokemonMansionB1F_MapScriptHeader:
 	itemball_event 13,  5, CARBOS, 1, EVENT_POKEMON_MANSION_B1F_CARBOS
 	itemball_event  7,  6, CALCIUM, 1, EVENT_POKEMON_MANSION_B1F_CALCIUM
 	itemball_event 16, 27, HP_UP, 1, EVENT_POKEMON_MANSION_B1F_HP_UP
-	keyitemball_event  4, 23, OLD_SEA_MAP, EVENT_POKEMON_MANSION_B1F_OLD_SEA_MAP
+	keyitemball_event  4, 23, OLD_KEY, EVENT_POKEMON_MANSION_B1F_OLD_KEY
 
 GenericTrainerScientistBraydon:
 	generictrainer SCIENTIST, BRAYDON, EVENT_BEAT_SCIENTIST_BRAYDON, ScientistBraydonSeenText, ScientistBraydonBeatenText
@@ -76,4 +76,77 @@ PokemonMansionDiaryText:
 	para "We have failed to"
 	line "curb its vicious"
 	cont "tendencies…"
+	done
+
+PokemonMansionB1FMissingnoScript:
+	opentext
+	checkevent EVENT_HEARD_ABOUT_GLITCH
+	iffalsefwd .OddRock
+	checkflag ENGINE_PLAYER_CAUGHT_GLITCH
+	iftruefwd .OddRock2
+	checkevent EVENT_MISSINGNO
+	iftruefwd .end
+	writetext .GlitchText
+	cry MISSINGNO_
+	setevent EVENT_MISSINGNO
+	pause 15
+	loadwildmon MISSINGNO_, PLAIN_FORM, 100
+	loadvar VAR_BATTLETYPE, BATTLETYPE_LEGENDARY
+	startbattle
+	reloadmapafterbattle
+	special CheckBattleCaughtResult
+	iffalsefwd .nocatch
+	setflag ENGINE_PLAYER_CAUGHT_GLITCH
+.nocatch
+	opentext
+	writetext .GlitchStillThereText
+	waitbutton
+	closetext
+	end
+
+.end
+	opentext
+	writetext .GlitchStillThereText
+	waitbutton
+	closetext
+	end
+	
+.OddRock
+	writetext .OddRockText
+	waitbutton
+	closetext
+	end
+	
+.OddRock2
+	writetext .OddRock2Text
+	waitbutton
+	closetext
+	end
+
+.OddRockText
+	text "This rock seems"
+	line "odd… like it's"
+	cont "silently judging"
+	cont "you."
+	done
+
+.OddRock2Text
+	text "This rock seems"
+	line "odd… but it's"
+	cont "just a rock."
+	done
+
+.GlitchText
+	text "This rock seems"
+	line "odd… like it's"
+	cont "silently judging"
+	cont "you."
+	
+	para "!"
+	done
+
+.GlitchStillThereText
+	text "The rock seems to"
+	line "still be judging"
+	cont "you…"
 	done

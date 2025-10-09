@@ -474,7 +474,7 @@ endc
 	learnset 56, BULK_UP ; Coil → TM move
 	learnset 63, GUNK_SHOT
 
-	evos_attacks Pikachu
+	evos_attacks PikachuPlain
 	evo_data EVOLVE_ITEM, THUNDERSTONE, RAICHU, PLAIN_FORM
 	evo_data EVOLVE_ITEM, ODD_SOUVENIR, RAICHU, ALOLAN_FORM
 	learnset 1, THUNDERSHOCK
@@ -495,12 +495,48 @@ endc
 	learnset 50, WILD_CHARGE
 	learnset 53, LIGHT_SCREEN
 	learnset 58, THUNDER
+	
+	evos_attacks PikachuPartner
+	evo_data EVOLVE_ITEM, THUNDERSTONE, RAICHU, RAICHU_PARTNER_FORM
+	learnset 1, THUNDERSHOCK
+	learnset 1, LEER ; Tail Whip → similar move
+	learnset 5, GROWL
+	learnset 7, CHARM ; Play Nice → Pichu move
+	learnset 10, QUICK_ATTACK
+	learnset 13, DOUBLE_KICK ; Electro Ball → LGPE move
+	learnset 18, THUNDER_WAVE
+	learnset 21, MUD_SLAP ; Feint → GSC TM move
+	learnset 23, DOUBLE_TEAM
+	learnset 26, SPARK
+	learnset 29, IRON_TAIL ; Nuzzle → TM move
+	learnset 34, EXTREMESPEED ; Discharge → event move
+	learnset 37, BODY_SLAM ; Slam → TM move
+	learnset 42, THUNDERBOLT
+	learnset 45, AGILITY
+	learnset 50, WILD_CHARGE
+	learnset 53, LIGHT_SCREEN
+	learnset 58, THUNDER
+	learnset 64, VOLT_SWITCH
+	learnset 72, RAIN_DANCE
+	learnset 80, ZAP_CANNON
 
 	evos_attacks RaichuPlain
 	learnset 1, THUNDERSHOCK
 	learnset 1, LEER ; Tail Whip → similar move
 	learnset 1, QUICK_ATTACK
 	learnset 1, THUNDERBOLT ; evolution move
+	learnset 1, REVERSAL ; Sw/Sh move
+	learnset 26, THUNDER_WAVE
+	learnset 34, SPARK
+	learnset 50, THUNDERBOLT
+	learnset 64, THUNDER
+	
+	evos_attacks RaichuPartner
+	evo_data EVOLVE_TRADE, LINKING_CORD, GOROCHU
+	learnset 1, THUNDERSHOCK
+	learnset 1, LEER ; Tail Whip → similar move
+	learnset 1, QUICK_ATTACK
+	learnset 1, THUNDER ; evolution move
 	learnset 1, REVERSAL ; Sw/Sh move
 	learnset 26, THUNDER_WAVE
 	learnset 34, SPARK
@@ -6276,6 +6312,23 @@ endc
 	learnset 80, HEADBUTT
 	learnset 90, HYPER_VOICE
 	learnset 99, HYPER_BEAM
+	
+	evos_attacks Missingno
+	learnset 1, PAY_DAY
+	learnset 1, WRAP
+	learnset 1, WATER_GUN
+	learnset 1, FLY
+	
+	evos_attacks Gorochu
+	learnset 1, WILD_CHARGE ; evolution move
+	learnset 1, THUNDERSHOCK
+	learnset 1, LEER ; Tail Whip → similar move
+	learnset 1, QUICK_ATTACK
+	learnset 1, REVERSAL ; Sw/Sh move
+	learnset 26, THUNDER_WAVE
+	learnset 34, SPARK
+	learnset 50, THUNDERBOLT
+	learnset 64, THUNDER
 
 	; Also terminates previous mon's learnset
 	EggEvosAttacks:

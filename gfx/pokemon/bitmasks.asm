@@ -231,6 +231,8 @@ FarigirafBitmasks:  INCLUDE "gfx/pokemon/farigiraf/bitmask.asm"
 ClodsireBitmasks:   INCLUDE "gfx/pokemon/clodsire/bitmask.asm"
 AnnihilapeBitmasks: INCLUDE "gfx/pokemon/annihilape/bitmask.asm"
 EeveeonBitmasks:    INCLUDE "gfx/pokemon/eeveeon/bitmask.asm"
+MissingnoBitmasks:  INCLUDE "gfx/pokemon/missingno/bitmask.asm"
+GorochuBitmasks:    INCLUDE "gfx/pokemon/gorochu/bitmask.asm"
 
 EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"
 
@@ -269,7 +271,6 @@ PichuSpikyBitmasks: INCLUDE "gfx/pokemon/pichu_spiky/bitmask.asm"
 PikachuPlainBitmasks:  INCLUDE "gfx/pokemon/pikachu_plain/bitmask.asm"
 PikachuFlyBitmasks:    INCLUDE "gfx/pokemon/pikachu_fly/bitmask.asm"
 PikachuSurfBitmasks:   INCLUDE "gfx/pokemon/pikachu_surf/bitmask.asm"
-PikachuPikaBitmasks:   INCLUDE "gfx/pokemon/pikachu_pika/bitmask.asm"
 PikachuChuchuBitmasks: INCLUDE "gfx/pokemon/pikachu_chuchu/bitmask.asm"
 PikachuSparkBitmasks:  INCLUDE "gfx/pokemon/pikachu_spark/bitmask.asm"
 
@@ -450,3 +451,6 @@ GlaceonPlainBitmasks:    INCLUDE "gfx/pokemon/glaceon_plain/bitmask.asm"
 GlaceonEonBitmasks:      INCLUDE "gfx/pokemon/glaceon_eon/bitmask.asm"
 SylveonPlainBitmasks:    INCLUDE "gfx/pokemon/sylveon_plain/bitmask.asm"
 SylveonEonBitmasks:      INCLUDE "gfx/pokemon/sylveon_eon/bitmask.asm"
+
+PikachuPartnerBitmasks:  INCLUDE "gfx/pokemon/pikachu_partner/bitmask.asm"
+RaichuPartnerBitmasks:   INCLUDE "gfx/pokemon/raichu_partner/bitmask.asm"

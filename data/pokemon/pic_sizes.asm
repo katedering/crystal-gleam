@@ -310,6 +310,8 @@ INCLUDE "gfx/pokemon/farigiraf/front.dimensions"
 INCLUDE "gfx/pokemon/clodsire/front.dimensions"
 INCLUDE "gfx/pokemon/annihilape/front.dimensions"
 INCLUDE "gfx/pokemon/eeveeon/front.dimensions"
+INCLUDE "gfx/pokemon/missingno/front.dimensions"
+INCLUDE "gfx/pokemon/gorochu/front.dimensions"
 	assert_list_length NUM_SPECIES
 
 INCLUDE "gfx/pokemon/unown_b/front.dimensions"
@@ -347,7 +349,6 @@ INCLUDE "gfx/pokemon/arbok_ariana/front.dimensions"
 
 INCLUDE "gfx/pokemon/pikachu_fly/front.dimensions"
 INCLUDE "gfx/pokemon/pikachu_surf/front.dimensions"
-INCLUDE "gfx/pokemon/pikachu_pika/front.dimensions"
 INCLUDE "gfx/pokemon/pikachu_chuchu/front.dimensions"
 INCLUDE "gfx/pokemon/pikachu_spark/front.dimensions"
 
@@ -439,6 +440,8 @@ INCLUDE "gfx/pokemon/leafeon_eon/front.dimensions"
 INCLUDE "gfx/pokemon/glaceon_eon/front.dimensions"
 INCLUDE "gfx/pokemon/sylveon_eon/front.dimensions"
 
+INCLUDE "gfx/pokemon/pikachu_partner/front.dimensions"
+INCLUDE "gfx/pokemon/raichu_partner/front.dimensions"
 	if list_index % 2
 		db size_value << 4
 	endc

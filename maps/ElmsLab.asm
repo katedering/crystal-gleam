@@ -51,7 +51,7 @@ ElmsLab_MapScriptHeader:
 	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
 	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
-	object_event  8, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, EeveePokeBallScript, EVENT_GOT_EEVEE_FROM_LALA
+	object_event  8, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, PikachuPokeBallScript, EVENT_GOT_EEVEE_FROM_LALA
 
 	object_const_def
 	const ELMSLAB_ELM
@@ -1834,33 +1834,32 @@ EonStoneText:
 	cont "what happens."
 	done
 	
-EeveePokeBallScript:
+PikachuPokeBallScript:
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iffalse_jumptext EeveePokeBallText
+	iffalse_jumptext PikachuPokeBallText
 	opentext
-	setevent EVENT_GOT_EEVEE_FROM_LALA
-	writetext EeveePokeBallText1
+	writetext PikachuPokeBallText1
 	promptbutton
 	disappear ELMSLAB_POKE_BALL4
 	waitsfx
-	givepoke EEVEE, EON_FORM, 5, ABILITYPATCH
-	writetext EeveePokeBallText2
+	givepoke PIKACHU, PIKACHU_PARTNER_FORM, 5, ABILITYPATCH
+	writetext PikachuPokeBallText2
 	waitbutton
 	closetext
 	end
 
-EeveePokeBallText:
+PikachuPokeBallText:
 	text "Better talk to"
 	line "the professor"
 	cont "first."
 	done
 	
-EeveePokeBallText1:
+PikachuPokeBallText1:
 	text "There's a note"
 	line "here:"
 	
 	para "Please raise this"
-	line "Eevee with care."
+	line "Pikachu with care."
 	
 	para "It has unknown"
 	line "potential, and I"
@@ -1871,11 +1870,11 @@ EeveePokeBallText1:
 	para "Signed, Lala."
 	done
 
-EeveePokeBallText2:
+PikachuPokeBallText2:
 	text "There's another"
 	line "note:"
 	
-	para "Eevee is holding"
+	para "Pikachu is holding"
 	line "a useful item,"
 	cont "if you really"
 	cont "want to bring out"

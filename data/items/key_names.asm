@@ -38,6 +38,7 @@ KeyItemNames::
 	li "Malign Lure"
 	li "Eon Stone"
 	li "Cheater Card"
+	li "Old Key"
 	li "Shiny Charm"
 	li "Oval Charm"
 	li "Catch Charm"

@@ -88,6 +88,7 @@ AlphabeticalPokedexOrder:
 	dp GOLDEEN
 	dp GOLDUCK
 	dp GOLEM
+	dp GOROCHU
 	dp GRANBULL
 	dp GRAVELER
 	dp GRIMER
@@ -159,6 +160,7 @@ AlphabeticalPokedexOrder:
 	dp MIME_JR_
 	dp MISDREAVUS
 	dp MISMAGIUS
+	dp MISSINGNO_
 	dp MOLTRES
 	dp MR__MIME
 	dp MR__RIME

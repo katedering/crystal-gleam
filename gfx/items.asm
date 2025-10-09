@@ -832,6 +832,9 @@ EonStoneIcon:: INCBIN "gfx/items/eon_stone.2bpp.lz"
 SECTION "CheaterCardIcon", ROMX
 CheaterCardIcon:: INCBIN "gfx/items/cheater_card.2bpp.lz"
 
+SECTION "OldKeyIcon", ROMX
+OldKeyIcon:: INCBIN "gfx/items/basement_key.2bpp.lz"
+
 SECTION "PokedexIcon", ROMX
 PokedexItemIcon:: INCBIN "gfx/items/pokedex.2bpp.lz"
 

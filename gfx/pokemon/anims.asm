@@ -231,6 +231,8 @@ FarigirafAnimation:  INCLUDE "gfx/pokemon/farigiraf/anim.asm"
 ClodsireAnimation:   INCLUDE "gfx/pokemon/clodsire/anim.asm"
 AnnihilapeAnimation: INCLUDE "gfx/pokemon/annihilape/anim.asm"
 EeveeonAnimation:    INCLUDE "gfx/pokemon/eeveeon/anim.asm"
+MissingnoAnimation:  INCLUDE "gfx/pokemon/missingno/anim.asm"
+GorochuAnimation:    INCLUDE "gfx/pokemon/gorochu/anim.asm"
 
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
 
@@ -269,7 +271,6 @@ PichuSpikyAnimation: INCLUDE "gfx/pokemon/pichu_spiky/anim.asm"
 PikachuPlainAnimation:  INCLUDE "gfx/pokemon/pikachu_plain/anim.asm"
 PikachuFlyAnimation:    INCLUDE "gfx/pokemon/pikachu_fly/anim.asm"
 PikachuSurfAnimation:   INCLUDE "gfx/pokemon/pikachu_surf/anim.asm"
-PikachuPikaAnimation:   INCLUDE "gfx/pokemon/pikachu_pika/anim.asm"
 PikachuChuchuAnimation: INCLUDE "gfx/pokemon/pikachu_chuchu/anim.asm"
 PikachuSparkAnimation:  INCLUDE "gfx/pokemon/pikachu_spark/anim.asm"
 
@@ -450,3 +451,6 @@ GlaceonPlainAnimation:    INCLUDE "gfx/pokemon/glaceon_plain/anim.asm"
 GlaceonEonAnimation:      INCLUDE "gfx/pokemon/glaceon_eon/anim.asm"
 SylveonPlainAnimation:    INCLUDE "gfx/pokemon/sylveon_plain/anim.asm"
 SylveonEonAnimation:      INCLUDE "gfx/pokemon/sylveon_eon/anim.asm"
+
+PikachuPartnerAnimation:  INCLUDE "gfx/pokemon/pikachu_partner/anim.asm"
+RaichuPartnerAnimation:   INCLUDE "gfx/pokemon/raichu_partner/anim.asm"

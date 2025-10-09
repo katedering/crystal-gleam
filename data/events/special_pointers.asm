@@ -174,3 +174,5 @@ SpecialsPointers::
 	add_special FixPlayerEVsAndStats
 	add_special FadeInPalettes_EnableDynNoApply
 	add_special PrintDiploma
+	
+; Crystal Gleam

@@ -13,4 +13,5 @@ UberMons::
 	dp HO_OH
 	dp CELEBI
 	dp EEVEEON
+	dp MISSINGNO_
 	db 0

@@ -319,6 +319,7 @@ DoKeyItemEffect::
 	dw IsntTheTimeMessage ; MALIGN_LURE
 	dw EvoStoneEffect     ; EON_STONE
 	dw CheaterCardMessage ; CHEATER_CARD
+	dw IsntTheTimeMessage ; OLD_KEY
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM

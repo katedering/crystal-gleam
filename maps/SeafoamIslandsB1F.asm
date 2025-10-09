@@ -25,3 +25,89 @@ SeafoamIslandsB1F_MapScriptHeader:
 	strengthboulder_event 12,  8
 	strengthboulder_event  7, 11
 	strengthboulder_event 13, 15
+	object_event 12,  5, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, SeafoamIslandsB1FScientistScript, -1
+	
+	object_const_def
+	const SEAFOAMISLANDSB1F_SCIENTIST
+	
+SeafoamIslandsB1FScientistScript:
+	faceplayer
+	opentext
+	checkevent EVENT_HEARD_ABOUT_GLITCH
+	iffalsefwd .ScientistIntro
+	checkflag ENGINE_PLAYER_CAUGHT_GLITCH
+	iftruefwd .StrangeMon
+	writetext .HaveYouSeenItText
+	waitbutton
+	closetext
+	end
+	
+.ScientistIntro:
+	writetext .ScientistIntroText
+	setevent EVENT_HEARD_ABOUT_GLITCH
+	waitbutton
+	closetext
+	end
+
+.StrangeMon:
+	writetext .StrangeMonText
+	waitbutton
+	closetext
+
+.ScientistIntroText
+	text "Hello! Cold in"
+	line "here, isn't it?"
+	
+	para "I'm researching"
+	line "reports of an odd"
+	cont "phenomena that"
+	cont "used to be found"
+	cont "on Cinnabar."
+	
+	para "But since the vol-"
+	line "cano erupted, my"
+	cont "research hasn't"
+	cont "had much success,"
+	
+	para "since I'm not sup-"
+	line "posed to be there"
+	cont "without proper"
+	cont "authorization."
+	done
+	
+.HaveYouSeenItText
+	text "From what I heard,"
+	line "it used to be seen"
+	cont "along Cinnabar's"
+	cont "east coast, but"
+	cont "ever since the"
+	cont "volcano eruption,"
+	cont "it seems to have"
+	cont "vanished."
+	
+	para "Perhaps it's gone"
+	line "into hiding within"
+	cont "that old mansion"
+	cont "there?"
+	
+	para "If you happen to"
+	line "go check it out,"
+	cont "be sure to prepare"
+	cont "to battle."
+	
+	para "The rumors all say"
+	line "things about a"
+	cont "crazy powerful"
+	cont "#mon."
+	done
+	
+.StrangeMonText
+	text "So you ran into"
+	line "that mysterious"
+	cont "#mon? Did you"
+	cont "catch it? Wow."
+	
+	para "You must be the"
+	line "best trainer in"
+	cont "the whole world."
+	done

@@ -75,6 +75,7 @@ BattleMusic_Legendaries:
 	music_legendary LUGIA,    PLAIN_FORM,    MUSIC_LUGIA_BATTLE_HGSS
 	music_legendary CELEBI,   PLAIN_FORM,    MUSIC_SUICUNE_BATTLE
 	music_legendary URSALUNA, URSALUNA_BLOODMOON_FORM, MUSIC_DPPT_WILDBATTLE
+	music_legendary MISSINGNO_, PLAIN_FORM,  MUSIC_RBY_WILDBATTLE
 	dw -1
 
 BattleMusic_RegionalTrainers:

@@ -374,6 +374,19 @@ RespawnOneOffs:
 	eventflagreset EVENT_MURKY_SWAMP_BLOODMOON_URSALUNA
 .CaughtBloodmoonUrsaluna
 
+; Gleam Events (TODO: Rearrange)
+	ld de, ENGINE_PLAYER_CAUGHT_GHOST
+	farcall EngineFlagAction
+	jr nz, .CaughtGhost
+	eventflagreset EVENT_VIOLET_OUTSKIRTS_GHOST
+.CaughtGhost
+
+	ld de, ENGINE_PLAYER_CAUGHT_GLITCH
+	farcall EngineFlagAction
+	jr nz, .CaughtGlitch
+	eventflagreset EVENT_MISSINGNO
+.CaughtGlitch
+
 	ld de, ENGINE_PLAYER_CAUGHT_ARTICUNO
 	farcall EngineFlagAction
 	jr nz, .CaughtArticuno

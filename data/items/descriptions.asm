@@ -295,6 +295,7 @@ KeyItemDescriptions:
 	dw MalignLureDesc
 	dw EonStoneDesc
 	dw CheaterCardDesc
+	dw OldKeyDesc
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
@@ -1711,6 +1712,11 @@ EonStoneDesc:
 CheaterCardDesc:
 	text "Allows access to"
 	next "the Cheater's Club."
+	done
+
+OldKeyDesc:
+	text "An old key for an"
+	next "old vehicle."
 	done
 	
 CandyJarDesc:

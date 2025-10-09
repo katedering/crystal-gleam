@@ -175,6 +175,8 @@ endr
 	setevent EVENT_BEAT_ELITE_FOUR_AGAIN
 	setevent EVENT_BATTLE_TOWER_OPEN
 	clearevent EVENT_BATTLE_TOWER_CLOSED
+	setevent EVENT_GOT_EEVEE_FROM_LALA
+	setevent EVENT_LISTENED_TO_LALA_INTRO
 	; fly anywhere
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	setflag ENGINE_FLYPOINT_CHERRYGROVE
@@ -246,17 +248,26 @@ endr
 	loadmem wPartyMon2PP+3, 10
 	loadmem wPartyMon2PokerusStatus, 1
 	; variant form test
-	givepoke RHYPERIOR, 50
-	loadmem wPartyMon3Shiny, SHINY_MASK
-	loadmem wPartyMon2Moves+0, MAGNITUDE
+	givepoke PIKACHU, PIKACHU_PARTNER_FORM, 50
+	loadmem wPartyMon3Moves+0, MAGNITUDE
 	; ext species test
 	givepoke EEVEE, EON_FORM, 99
-	givepoke EEVEE, EON_FORM, 1
 	; evolve during battle
 	givepoke PUPITAR, 54
 	loadmem wPartyMon6Exp+2, LOW(207967)
 	loadmem wPartyMon6Exp+1, HIGH(207967)
-	loadmem wPartyMon6Exp+0, 207967 >> 16
+	loadmem wPartyMon5Exp+0, 207967 >> 16
+	givepoke MISSINGNO_, 100
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, ABILITY_1 | NAT_ATK_UP_SATK_DOWN
 	; fill pokedex
 	callasm FillPokedex
 ;	; new bark events

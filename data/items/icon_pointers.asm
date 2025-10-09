@@ -297,6 +297,7 @@ KeyItemIconPointers:
 	dba MalignLureIcon
 	dba EonStoneIcon
 	dba CheaterCardIcon
+	dba OldKeyIcon
 	dba ShinyCharmIcon
 	dba OvalCharmIcon
 	dba CatchCharmIcon

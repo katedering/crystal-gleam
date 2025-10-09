@@ -296,6 +296,8 @@ PokemonPicPointers::
 	pics Clodsire
 	pics Annihilape
 	pics Eeveeon
+	pics Missingno
+	pics Gorochu
 	assert_table_length NUM_SPECIES
 
 	pics UnownB
@@ -333,7 +335,6 @@ PokemonPicPointers::
 
 	pics PikachuFly
 	pics PikachuSurf
-	pics PikachuPika
 	pics PikachuChuchu
 	pics PikachuSpark
 
@@ -424,5 +425,7 @@ PokemonPicPointers::
 	pics LeafeonEon
 	pics GlaceonEon
 	pics SylveonEon
-
+	
+	pics PikachuPartner
+	pics RaichuPartner
 	assert_table_length NUM_UNIQUE_POKEMON

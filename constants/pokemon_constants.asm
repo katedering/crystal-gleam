@@ -315,7 +315,9 @@
 	const FARIGIRAF  ; 121
 	const CLODSIRE   ; 122
 	const ANNIHILAPE ; 123
-	const EEVEEON    ; 124
+	const EEVEEON    ; 194
+	const MISSINGNO_ ; 196
+	const GOROCHU    ; 198
 DEF NUM_SPECIES EQU const_value - 1 ; 123
 DEF NUM_POKEMON EQU NUM_SPECIES - (2 * HIGH(NUM_SPECIES)) ; 121
 
@@ -392,7 +394,6 @@ DEF NUM_ARBOK EQU ext_const_value - 1
 	ext_const_def 2
 	ext_const PIKACHU_FLY_FORM    ; 143 (2)
 	ext_const PIKACHU_SURF_FORM   ; 144 (3)
-	ext_const PIKACHU_RED_FORM    ; 145 (4)
 	ext_const PIKACHU_YELLOW_FORM ; 146 (5)
 	ext_const PIKACHU_SPARK_FORM  ; 147 (6)
 DEF NUM_PIKACHU EQU ext_const_value - 1
@@ -512,6 +513,12 @@ DEF EON_FORM EQU 6
 	const_skip ; 191 leafeon
 	const_skip ; 192 glaceon
 	const_skip ; 193 sylveon
+
+	ext_const_def 6
+	ext_const PIKACHU_PARTNER_FORM ; 195
+
+	ext_const_def 3
+	ext_const RAICHU_PARTNER_FORM  ; 197
 
 DEF NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 2e
 

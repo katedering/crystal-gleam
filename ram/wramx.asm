@@ -1191,7 +1191,7 @@ wNeededPalIndex:: db
 
 wEmotePal:: db
 
-	ds 64 ; unused
+	ds 60 ; unused
 
 wCandyAmounts::
 wExpCandyXSAmount:: db
