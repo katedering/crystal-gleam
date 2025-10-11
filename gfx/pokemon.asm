@@ -1994,7 +1994,6 @@ SylveonEonFrontpic: INCBIN "gfx/pokemon/sylveon_eon/front.animated.2bpp.lz"
 SylveonEonBackpic:  INCBIN "gfx/pokemon/sylveon_eon/back.2bpp.lz"
 SylveonEonFrames:   INCLUDE "gfx/pokemon/sylveon_eon/frames.asm"
 
-
 SECTION "Eeveeon Pics", ROMX
 EeveeonFrontpic: INCBIN "gfx/pokemon/eeveeon/front.animated.2bpp.lz"
 EeveeonBackpic:  INCBIN "gfx/pokemon/eeveeon/back.2bpp.lz"
