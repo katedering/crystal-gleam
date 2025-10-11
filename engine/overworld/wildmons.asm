@@ -1100,10 +1100,10 @@ RandomPhoneMon:
 	inc c
 .no_moves
 	; bc == size of mon sub-struct
-	ld b, c
+	ld b, 0
 
-	; b currently holds party size in bytes
-	ld a, b
+	; c currently holds party size in bytes
+	ld a, c
 	add l
 	ld e, 0
 	push hl
