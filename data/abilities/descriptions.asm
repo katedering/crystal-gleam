@@ -915,16 +915,16 @@ ArmorTailDescription:
 
 MindsEyeDescription:
 	text  "Bypass evasion and"
-	next1 "Ghost immunity."
+	next "Ghost immunity."
 	done
 
 EonForceDescription:
 	text  "Moves ignore type"
-	next1 "effectiveness."
+	next "effectiveness."
 	done
 
 FluffyDescription:
 	text  "Half contact dmg."
-	next1 "Double fire dmg."
+	next "Double fire dmg."
 	done
 	
