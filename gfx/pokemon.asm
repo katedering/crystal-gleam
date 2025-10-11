@@ -1998,3 +1998,23 @@ SECTION "Eeveeon Pics", ROMX
 EeveeonFrontpic: INCBIN "gfx/pokemon/eeveeon/front.animated.2bpp.lz"
 EeveeonBackpic:  INCBIN "gfx/pokemon/eeveeon/back.2bpp.lz"
 EeveeonFrames:   INCLUDE "gfx/pokemon/eeveeon/frames.asm"
+
+SECTION "PikachuPartner Pics", ROMX
+PikachuPartnerFrontpic: INCBIN "gfx/pokemon/pikachu_partner/front.animated.2bpp.lz"
+PikachuPartnerBackpic:  INCBIN "gfx/pokemon/pikachu_partner/back.2bpp.lz"
+PikachuPartnerFrames:   INCLUDE "gfx/pokemon/pikachu_partner/frames.asm"
+
+SECTION "Missingno Pics", ROMX
+MissingnoFrontpic: INCBIN "gfx/pokemon/missingno/front.animated.2bpp.lz"
+MissingnoBackpic:  INCBIN "gfx/pokemon/missingno/back.2bpp.lz"
+MissingnoFrames:   INCLUDE "gfx/pokemon/missingno/frames.asm"
+
+SECTION "Gorochu Pics", ROMX
+GorochuFrontpic: INCBIN "gfx/pokemon/gorochu/front.animated.2bpp.lz"
+GorochuBackpic:  INCBIN "gfx/pokemon/gorochu/back.2bpp.lz"
+GorochuFrames:   INCLUDE "gfx/pokemon/gorochu/frames.asm"
+
+SECTION "RaichuPartner Pics", ROMX
+RaichuPartnerFrontpic: INCBIN "gfx/pokemon/raichu_partner/front.animated.2bpp.lz"
+RaichuPartnerBackpic:  INCBIN "gfx/pokemon/raichu_partner/back.2bpp.lz"
+RaichuPartnerFrames:   INCLUDE "gfx/pokemon/raichu_partner/frames.asm"
