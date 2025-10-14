@@ -607,4 +607,9 @@ INCLUDE "audio/music/sm/giovannibattle.asm"
 SECTION "Song - hgss/icepath", ROMX
 INCLUDE "audio/music/hgss/icepath.asm"
 
+SECTION "Song - sv/areazero", ROMX
+INCLUDE "audio/music/sv/areazero.asm"
+
+SECTION "Song - dppt/fightarea + dppt/fightareanight", ROMX
+INCLUDE "audio/music/dppt/fightarea.asm"
 ENDSECTION

@@ -3446,3 +3446,43 @@ SylveonEonPokedexEntry::
 	page "special Eevee."
 	next "It has a calming"
 	next "aura.@"
+	
+SECTION "PikachuPartnerPokedexEntry", ROMX
+PikachuPartnerPokedexEntry::
+	db "Mouse@"
+	db   "This special type"
+	next "of Pikachu seems"
+	next "to have a slightly"
+	page "higher energy out-"
+	next "put compared to"
+	next "normal Pikachu.@"
+	
+SECTION "MissingnoPokedexEntry", ROMX
+MissingnoPokedexEntry::
+	db "Glitch@"
+	db   "No data."
+	next " "
+	next " "
+	page "No data."
+	next " "
+	next " @"
+	
+SECTION "RaichuPartnerPokedexEntry", ROMX
+RaichuPartnerPokedexEntry::
+	db "Mouse@"
+	db   "This breed of"
+	next "Raichu shows signs"
+	next "of being capable"
+	page "of evolving even"
+	next "further than most"
+	next "normal Raichu.@"
+	
+SECTION "GorochuPokedexEntry", ROMX
+GorochuPokedexEntry::
+	db "Voltage@"
+	db   "Energizes itself"
+	next "by drawing in"
+	next "lightning. It"
+	page "boasts incredible"
+	next "electrical and"
+	next "physical strength.@"

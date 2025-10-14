@@ -214,7 +214,7 @@ ItemDescriptions:
 	dw PowerBandDesc
 	dw PowerAnkletDesc
 	dw DragonScaleDesc
-	dw UpGradeDesc
+	dw UpgradeDesc
 	dw DubiousDiscDesc
 	dw ProtectorDesc
 	dw ElectirizerDesc
@@ -295,6 +295,7 @@ KeyItemDescriptions:
 	dw MalignLureDesc
 	dw EonStoneDesc
 	dw CheaterCardDesc
+	dw OldKeyDesc
 	dw ShinyCharmDesc
 	dw OvalCharmDesc
 	dw CatchCharmDesc
@@ -1272,7 +1273,7 @@ DragonScaleDesc:
 	next "item."
 	done
 
-UpGradeDesc:
+UpgradeDesc:
 	text "A mysterious box"
 	next "made by Silph Co."
 	done
@@ -1461,11 +1462,6 @@ LaggingTailDesc:
 IronBallDesc:
 	text "Lowers Speed and"
 	next "grounds. (Hold)"
-	done
-
-RingTargetDesc:
-	text "Loses type immun-"
-	next "ities. (Hold)"
 	done
 
 RedCardDesc:
@@ -1717,6 +1713,11 @@ CheaterCardDesc:
 	text "Allows access to"
 	next "the Cheater's Club."
 	done
+
+OldKeyDesc:
+	text "An old key for an"
+	next "old vehicle."
+	done
 	
 CandyJarDesc:
 	text "Holds up to 99 of"
@@ -1729,5 +1730,5 @@ ExpCandyMDesc:
 ExpCandyLDesc:
 ExpCandyXLDesc:
 	text "A candy that"
-	next "gives Exp. Points."
+	next "gives Exp.Points."
 	done

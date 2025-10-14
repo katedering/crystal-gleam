@@ -1,5 +1,5 @@
 PokemonPalettes:
-	table_width PAL_COLOR_SIZE * 2 * 2
+	table_width COLOR_SIZE * 2 * 2
 
 if DEF(MONOCHROME)
 rept NUM_EXT_POKEMON + 1
@@ -595,6 +595,10 @@ INCLUDE "gfx/pokemon/annihilape/normal.pal"
 INCLUDE "gfx/pokemon/annihilape/shiny.pal"
 INCLUDE "gfx/pokemon/eeveeon/normal.pal"
 INCLUDE "gfx/pokemon/eeveeon/shiny.pal"
+INCLUDE "gfx/pokemon/missingno/normal.pal"
+INCLUDE "gfx/pokemon/missingno/shiny.pal"
+INCLUDE "gfx/pokemon/gorochu/normal.pal"
+INCLUDE "gfx/pokemon/gorochu/shiny.pal"
 	assert_table_length NUM_SPECIES + 1
 
 INCLUDE "gfx/pokemon/gyarados_red/normal.pal"
@@ -715,6 +719,11 @@ INCLUDE "gfx/pokemon/glaceon_eon/normal.pal"
 INCLUDE "gfx/pokemon/glaceon_eon/shiny.pal"
 INCLUDE "gfx/pokemon/sylveon_eon/normal.pal"
 INCLUDE "gfx/pokemon/sylveon_eon/shiny.pal"
+
+INCLUDE "gfx/pokemon/pikachu_partner/normal.pal"
+INCLUDE "gfx/pokemon/pikachu_partner/shiny.pal"
+INCLUDE "gfx/pokemon/raichu_partner/normal.pal"
+INCLUDE "gfx/pokemon/raichu_partner/shiny.pal"
 	assert_table_length NUM_EXT_POKEMON + 1
 
 endc

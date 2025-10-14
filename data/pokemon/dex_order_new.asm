@@ -25,6 +25,7 @@ NewPokedexOrder:
 	dp PICHU
 	dp PIKACHU
 	dp RAICHU
+	dp GOROCHU
 	dp CATERPIE
 	dp METAPOD
 	dp BUTTERFREE
@@ -292,4 +293,5 @@ NewPokedexOrder:
 	dp MEWTWO
 	dp MEW
 	dp CELEBI
+	dp MISSINGNO_
 	assert_table_length NUM_POKEMON

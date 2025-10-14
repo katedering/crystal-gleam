@@ -28,4 +28,5 @@ SongArtists:
 	li "NotFroggestSpirit"
 	li "Toby Fox"
 	li "ShinkoNetCavy,      ShockSlayer"
+	li "Toby Fox,           Go Ichinose"
 	assert_list_length NUM_SONG_ARTISTS

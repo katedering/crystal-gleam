@@ -17,11 +17,10 @@ PlayersHouse2F_MapScriptHeader:
 	bg_event  6,  0, BGEVENT_IFSET, PlayersHousePoster
 
 	def_object_events
-	object_event  4,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, GameConsole, EVENT_PLAYERS_HOUSE_2F_CONSOLE
-	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1, EVENT_PLAYERS_HOUSE_2F_DOLL_1
-	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2, EVENT_PLAYERS_HOUSE_2F_DOLL_2
-	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDoll, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
-
+	object_event  4,  2, SPRITE_CONSOLE, SPRITEMOVEDATA_STILL, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, GameConsole, EVENT_PLAYERS_HOUSE_2F_CONSOLE
+	object_event  4,  4, SPRITE_DOLL_1, SPRITEMOVEDATA_STILL, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll1, EVENT_PLAYERS_HOUSE_2F_DOLL_1
+	object_event  5,  4, SPRITE_DOLL_2, SPRITEMOVEDATA_STILL, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, Doll2, EVENT_PLAYERS_HOUSE_2F_DOLL_2
+	object_event  0,  1, SPRITE_BIG_DOLL, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, BigDoll, EVENT_PLAYERS_HOUSE_2F_BIG_DOLL
 
 PlayersHouse2FInitializeRoom:
 	special ToggleDecorationsVisibility
@@ -94,15 +93,12 @@ endr
 	giveitem CALCIUM, 99
 	giveitem ZINC, 99
 	giveitem RARE_CANDY, 99
-	giveitem RARE_CANDY, 99
-	giveitem RARE_CANDY, 99
 	giveitem PP_UP, 99
 	giveitem PP_MAX, 99
 	giveitem SACRED_ASH, 99
 	giveitem MAX_REPEL, 99
 	giveitem MAX_REPEL, 99
 	giveitem ESCAPE_ROPE, 99
-	giveitem ABILITYPATCH, 99
 	giveitem ABILITY_CAP, 99
 	giveitem LEAF_STONE, 99
 	giveitem FIRE_STONE, 99
@@ -124,30 +120,21 @@ endr
 	giveitem BOTTLE_CAP, 99
 	giveitem BIG_NUGGET, 99
 	giveitem ARMOR_SUIT, 1
-	giveitem QUICK_CLAW, 1
-	giveitem WATER_STONE, 99
-	giveitem THUNDERSTONE, 99
-	giveitem FIRE_STONE, 99
-	giveitem SUN_STONE, 99
-	giveitem MOON_STONE, 99
-	giveitem LEAF_STONE, 99
-	giveitem ICE_STONE, 99
-	giveitem SHINY_STONE, 99
 	; all decorations except Diploma
 for x, EVENT_DECO_BED_1, EVENT_DECO_BIG_LAPRAS_DOLL + 1
 	setevent x
 endr
 	; max money
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 1000000
-	givemoney $0, 999999
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 1000000
+	givemoney YOUR_MONEY, 999999
 	givecoins 50000
 	loadmem wBattlePoints+0, 0
 	loadmem wBattlePoints+1, 250
@@ -259,18 +246,28 @@ endr
 	loadmem wPartyMon2PP+1, 15
 	loadmem wPartyMon2PP+2, 10
 	loadmem wPartyMon2PP+3, 10
+	loadmem wPartyMon2PokerusStatus, 1
 	; variant form test
-	givepoke RHYPERIOR, 50
-	loadmem wPartyMon3Shiny, SHINY_MASK
-	loadmem wPartyMon2Moves+0, MAGNITUDE
+	givepoke PIKACHU, PIKACHU_PARTNER_FORM, 50
+	loadmem wPartyMon3Moves+0, MAGNITUDE
 	; ext species test
 	givepoke EEVEE, EON_FORM, 99
-	givepoke EEVEE, EON_FORM, 1
 	; evolve during battle
 	givepoke PUPITAR, 54
 	loadmem wPartyMon6Exp+2, LOW(207967)
 	loadmem wPartyMon6Exp+1, HIGH(207967)
-	loadmem wPartyMon6Exp+0, 207967 >> 16
+	loadmem wPartyMon5Exp+0, 207967 >> 16
+	givepoke MISSINGNO_, 100
+	loadmem wPartyMon6EVs+0, 252
+	loadmem wPartyMon6EVs+1, 252
+	loadmem wPartyMon6EVs+2, 252
+	loadmem wPartyMon6EVs+3, 252
+	loadmem wPartyMon6EVs+4, 252
+	loadmem wPartyMon6EVs+5, 252
+	loadmem wPartyMon6DVs+0, $ff
+	loadmem wPartyMon6DVs+1, $ff
+	loadmem wPartyMon6DVs+2, $ff
+	loadmem wPartyMon6Personality, ABILITY_1 | NAT_ATK_UP_SATK_DOWN
 	; fill pokedex
 	callasm FillPokedex
 ;	; new bark events
@@ -320,7 +317,6 @@ endr
 	setmapscene VERMILION_CITY, $1
 	closetext
 	warpfacing DOWN, GOLDENROD_CITY, 13, 14
-	clearevent EVENT_VIOLET_OUTSKIRTS_GHOST
 	end
 
 FillPokedex:

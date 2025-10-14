@@ -28,7 +28,7 @@ EvosAttacksPointers::
 	dw FearowEvosAttacks
 	dw EkansEvosAttacks
 	dw ArbokEvosAttacks
-	dw PikachuEvosAttacks
+	dw PikachuPlainEvosAttacks
 	dw RaichuPlainEvosAttacks
 	dw SandshrewPlainEvosAttacks
 	dw SandslashPlainEvosAttacks
@@ -296,6 +296,8 @@ EvosAttacksPointers::
 	dw ClodsireEvosAttacks
 	dw AnnihilapeEvosAttacks
 	dw EeveeonEvosAttacks
+	dw MissingnoEvosAttacks
+	dw GorochuEvosAttacks
 	assert_table_length NUM_SPECIES
 
 	dw GyaradosEvosAttacks
@@ -305,7 +307,7 @@ EvosAttacksPointers::
 	dw DudunsparceEvosAttacks
 
 	dw RattataAlolanEvosAttacks
-	dw RaticateAlolanEvosAttacks
+	dw RaticatePlainEvosAttacks ; RaticateAlolan
 	dw RaichuAlolanEvosAttacks
 	dw SandshrewAlolanEvosAttacks
 	dw SandslashAlolanEvosAttacks
@@ -361,4 +363,7 @@ EvosAttacksPointers::
 	dw LeafeonEonEvosAttacks
 	dw GlaceonEonEvosAttacks
 	dw SylveonEonEvosAttacks
+	
+	dw PikachuPartnerEvosAttacks
+	dw RaichuPartnerEvosAttacks
 	assert_table_length NUM_EXT_POKEMON

@@ -292,6 +292,8 @@ BitmasksPointers:
 	dw ClodsireBitmasks
 	dw AnnihilapeBitmasks
 	dw EeveeonBitmasks
+	dw MissingnoBitmasks
+	dw GorochuBitmasks
 	assert_table_length NUM_SPECIES
 
 	dw UnownBBitmasks
@@ -329,7 +331,6 @@ BitmasksPointers:
 
 	dw PikachuFlyBitmasks
 	dw PikachuSurfBitmasks
-	dw PikachuPikaBitmasks
 	dw PikachuChuchuBitmasks
 	dw PikachuSparkBitmasks
 
@@ -420,4 +421,7 @@ BitmasksPointers:
 	dw LeafeonEonBitmasks
 	dw GlaceonEonBitmasks
 	dw SylveonEonBitmasks
+	
+	dw PikachuPartnerBitmasks
+	dw RaichuPartnerBitmasks
 	assert_table_length NUM_UNIQUE_POKEMON

@@ -1,12 +1,12 @@
 TODO list for Crystal Gleam:
 
-Add missing move tutors from Polished.
+DONE // Add missing move tutors from Polished.
 Add new move tutors.
 Tweak move effects.
 Add new abilities.
-Add Partner Pikachu.
-Add Gorochu.
-Add Missingno. (and extreme form)
+DONE // Add Partner Pikachu.
+DONE // Add Gorochu.
+Half DONE // Add Missingno. (and extreme form)
 GET EON FORM / GOROCHU / MISSINGNO SPRITES AND ANIMATION ART!!! (BIG THING TO DO HERE THANKS)
 Redo Eon Eevee event.
 FOUND WORKAROUND // Rearrange Pokémon list to allow for custom battle music for Bloodmoon Ursaluna event battle. (As well as Missingno. and a few others?)

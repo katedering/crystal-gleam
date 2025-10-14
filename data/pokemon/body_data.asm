@@ -299,6 +299,9 @@ PokemonBodyData:
 	body_data  18, 2230, QUADRUPED,    BROWN  ; CLODSIRE
 	body_data  12,  560, BIPEDAL_TAIL, GRAY   ; ANNIHILAPE
 	body_data   6,  165, QUADRUPED,    BROWN  ; EEVEEON
+	body_data   3, 15907, HEAD,         GRAY   ; MISSINGNO_
+	body_data  18,  889, BIPEDAL_TAIL, YELLOW ; GOROCHU
+	
 	assert_table_length NUM_SPECIES
 
 	body_data  65, 2350, SERPENTINE,   RED    ; GYARADOS (GYARADOS_RED_FORM)
@@ -364,4 +367,8 @@ PokemonBodyData:
 	body_data  10,  255, QUADRUPED,    GREEN  ; LEAFEON (EON_FORM)
 	body_data   8,  259, QUADRUPED,    BLUE   ; GLACEON (EON_FORM)
 	body_data  10,  235, QUADRUPED,    PINK   ; SYLVEON (EON_FORM)
+	
+	body_data   4,   60, QUADRUPED,    YELLOW ; PIKACHU
+	body_data   8,  300, BIPEDAL_TAIL, YELLOW ; RAICHU
+
 	assert_table_length NUM_EXT_POKEMON

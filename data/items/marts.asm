@@ -89,7 +89,7 @@ AzaleaMart:
 	db LOVE_BALL
 	db CHARCOAL
 	db SUPER_POTION
-	db FULL_HEAL
+	db ESCAPE_ROPE
 	db REPEL
 	db ANTIDOTE
 	db PARALYZEHEAL
@@ -185,13 +185,14 @@ Goldenrod5FTMMart:
 	db -1
 
 GoldenrodHarborMart:
-	db 12 ; # items
+	db 13 ; # items
 	db ETHER
 	db ELIXIR
 	db DESTINY_KNOT
 	db SCOPE_LENS
 	db WIDE_LENS
 	db ZOOM_LENS
+	db EVERSTONE
 	db BRIGHTPOWDER
 	db LINKING_CORD
 	db MIRROR_HERB
@@ -265,7 +266,7 @@ MahoganyMart1:
 	db -1
 
 MahoganyMart2:
-	db 12 ; # items
+	db 11 ; # items
 	db RAGECANDYBAR
 	db AIR_BALLOON
 	db QUICK_CLAW
@@ -277,7 +278,6 @@ MahoganyMart2:
 	db SUPER_REPEL
 	db REVIVE
 	db FLOWER_MAIL
-	db ODD_SOUVENIR
 	db -1
 
 BlackthornMart:
@@ -480,7 +480,7 @@ SilphCoMart:
 	db MAX_REPEL
 	db DREAM_BALL
 	db CHERISH_BALL
-	db UP_GRADE
+	db UPGRADE
 	db DUBIOUS_DISC
 	db DRAGON_SCALE
 	db METAL_COAT

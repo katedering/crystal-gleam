@@ -11,10 +11,11 @@ LalasLab1F_MapScriptHeader:
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  1, BGEVENT_UP, RedsHouse1FTVScript
+	bg_event  5,  1, BGEVENT_UP, LalasLab1FTVScript
+	bg_event  7,  1, BGEVENT_JUMPTEXT, LalasLab1FPlantPotText
 
 	def_object_events
-	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LalaScript, -1
+	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, LalaScript, -1
 
 	object_const_def
 	const LALASLAB1F_LALA
@@ -38,7 +39,7 @@ LalaScript:
 	waitsfx
 	readvar VAR_PARTYCOUNT
 	ifequalfwd PARTY_LENGTH, .NoRoom
-	givepoke EEVEE, EON_FORM, 15, EVERSTONE, LUXURY_BALL
+	givepoke EEVEE, EON_FORM, 5, EVERSTONE, LUXURY_BALL
 	setevent EVENT_GOT_EEVEE_FROM_LALA
 	writetext .GoodbyeText
 	waitbutton
@@ -135,4 +136,20 @@ LalaScript:
 
 .NoText:
 	text "Oh… are you sure?"
+	done
+	
+LalasLab1FPlantPotText:
+	text "There's a plant"
+	line "pot in the way."
+	
+	para "You can't go up"
+	line "right now."
+	done
+	
+LalasLab1FTVScript:
+	jumpthistext
+
+	text "They have programs"
+	line "that aren't shown"
+	cont "in Johto…"
 	done

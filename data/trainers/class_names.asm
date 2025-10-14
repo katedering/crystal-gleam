@@ -1,6 +1,5 @@
 TrainerClassNames::
 	list_start
-	li "?"                ; TRAINER_NONE
 	li "<PK><MN> Trainer" ; CARRIE
 	li "<PK><MN> Trainer" ; CAL
 	li "<PK><MN> Trainer" ; JACKY
@@ -160,4 +159,4 @@ TrainerClassNames::
 	li "<PK><MN> Master"  ; TRIP
 	li "Archmage"         ; FEDMAE
 	li "Ex-Rocket"        ; ROCKET
-	assert_list_length NUM_TRAINER_CLASSES + 1
+	assert_list_length NUM_TRAINER_CLASSES

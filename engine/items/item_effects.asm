@@ -8,7 +8,7 @@ _DoItemEffect::
 	ld a, [wCurItem]
 	call StackJumpTable
 
-ItemEffects:
+.ItemEffects:
 ; entries correspond to item ids (see constants/item_constants.asm)
 	table_width 2
 	dw PokeBallEffect     ; PARK_BALL
@@ -130,7 +130,7 @@ ItemEffects:
 	dw EvoStoneEffect     ; SUN_STONE
 	dw EvoStoneEffect     ; DUSK_STONE
 	dw EvoStoneEffect     ; SHINY_STONE
-	dw IsntTheTimeMessage ; EVERSTONE
+	dw EvoStoneEffect     ; EVERSTONE
 	dw IsntTheTimeMessage ; EXP_SHARE
 	dw IsntTheTimeMessage ; SILK_SCARF
 	dw IsntTheTimeMessage ; BLACK_BELT
@@ -226,7 +226,7 @@ ItemEffects:
 	dw IsntTheTimeMessage ; POWER_BAND
 	dw IsntTheTimeMessage ; POWER_ANKLET
 	dw IsntTheTimeMessage ; DRAGON_SCALE
-	dw IsntTheTimeMessage ; UP_GRADE
+	dw IsntTheTimeMessage ; UPGRADE
 	dw IsntTheTimeMessage ; DUBIOUS_DISC
 	dw IsntTheTimeMessage ; PROTECTOR
 	dw IsntTheTimeMessage ; ELECTIRIZER
@@ -279,7 +279,7 @@ DoKeyItemEffect::
 	dec a
 	call StackJumpTable
 
-KeyItemEffects:
+.KeyItemEffects:
 ; entries correspond to key item ids (see constants/item_constants.asm)
 	table_width 2
 	dw BikeFunction       ; BICYCLE
@@ -319,6 +319,7 @@ KeyItemEffects:
 	dw IsntTheTimeMessage ; MALIGN_LURE
 	dw EvoStoneEffect     ; EON_STONE
 	dw CheaterCardMessage ; CHEATER_CARD
+	dw IsntTheTimeMessage ; OLD_KEY
 	dw IsntTheTimeMessage ; SHINY_CHARM
 	dw IsntTheTimeMessage ; OVAL_CHARM
 	dw IsntTheTimeMessage ; CATCH_CHARM
@@ -697,24 +698,10 @@ PokeBallEffect:
 
 	ld a, [wEnemyMonStatus]
 	and (1 << FRZ) | SLP_MASK
-	jr nz, .skip_cry
-	farcall CheckBattleEffects
-	jr c, .cry_no_anim
-	hlcoord 12, 0
-	lb de, $0, ANIM_MON_SLOW
-	predef AnimateFrontpic
-	jr .skip_cry
+	jr nz, .skip_anim
+	farcall BattleAnimateFrontpic
 
-.cry_no_anim
-	ld a, $f
-	ld [wCryTracks], a
-	ld a, [wTempEnemyMonSpecies]
-	ld c, a
-	ld a, [wCurForm]
-	ld b, a
-	call PlayStereoCry
-
-.skip_cry
+.skip_anim
 	pop af
 	ld [wTempEnemyMonSpecies], a
 	pop hl
@@ -832,12 +819,20 @@ EvoStoneEffect:
 	ld a, MON_ITEM
 	call GetPartyParamLocationAndValue
 	cp EVERSTONE
-	jr z, .no_effect
+	jmp z, WontHaveAnyEffectMessage
 
 .force_evolution
 	ld a, PARTYMENUACTION_CHOOSE_POKEMON
 	ld [wPartyMenuActionText], a
-	ld a, $1
+
+	; Linking Cord forces a trade evolution.
+	ld a, [wCurItem]
+	cp LINKING_CORD
+	ld a, EVOLVE_TRADE
+	jr z, InduceEvolutionWithItem
+	ld a, EVOLVE_ITEM
+	; fallthrough
+InduceEvolutionWithItem:
 	ld [wForceEvolution], a
 	farcall EvolvePokemon
 
@@ -1023,8 +1018,15 @@ RareCandy:
 	ld a, MON_LEVEL
 	call GetPartyParamLocationAndValue
 	cp MAX_LEVEL
-	jmp nc, EvoStoneEffect.force_evolution
+	jr c, .not_max_level
 
+	; This evolution check isn't limited to level-based evolution, but covers
+	; everything that can be induced by a level up. And we want to force the
+	; evolution!
+	ld a, EVOLVE_LEVEL
+	jmp InduceEvolutionWithItem
+
+.not_max_level
 	inc a
 	ld [hl], a
 	ld [wCurPartyLevel], a
@@ -1194,16 +1196,6 @@ RevivalHerb:
 	predef ChangeHappiness
 	jmp LooksBitterMessage
 
-ReviveEffect:
-	ld b, PARTYMENUACTION_HEALING_ITEM
-	call UseItem_SelectMon
-	jmp c, ItemNotUsed_ExitMenu
-
-	call RevivePokemon
-	and a
-	jmp nz, WontHaveAnyEffectMessage
-	ret
-
 RevivePokemon:
 	call IsMonFainted
 	ld a, 1
@@ -1352,6 +1344,10 @@ CandyJar:
 	ld hl, CandyJar_MonSelected
 	jr UseItem_SelectMon_Loop
 
+ReviveEffect:
+	ld hl, RevivePokemon
+	jr UseItem_SelectMon_Loop
+
 RestoreHPEffect:
 	ld hl, ItemRestoreHP
 	; fallthrough
@@ -1489,7 +1485,7 @@ ItemActionTextWaitButton:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, wTilemapEnd - wTilemap
-	ld a, " "
+	ld a, ' '
 	rst ByteFill
 	ld a, [wPartyMenuActionText]
 	call ItemActionText
@@ -1886,7 +1882,7 @@ WingCase_MonSelected:
 	pop af
 	ldh [hBGMapMode], a
 	ld a, [wMenuJoypad]
-	sub B_BUTTON
+	sub PAD_B
 	ret z
 
 	; Which wing was chosen? -1 is cancel
@@ -2043,7 +2039,7 @@ WingCase_MonSelected:
 	call SwapHLDE
 	ld bc, SCREEN_WIDTH
 	add hl, bc
-	ld a, "×"
+	ld a, '×'
 	ld [hli], a
 	lb bc, 2, 3
 	jmp PrintNum
@@ -2122,7 +2118,7 @@ CandyJar_MonSelected:
 	pop af
 	ldh [hBGMapMode], a
 	ld a, [wMenuJoypad]
-	sub B_BUTTON
+	sub PAD_B
 	ret z
 
 	; Which candy was chosen? -1 is cancel
@@ -2381,7 +2377,7 @@ CandyJar_MonSelected:
 	jmp WingCase_MonSelected.DisplayNthString
 
 .CandyNames:
-	list_start .CandyNames
+	list_start
 	li "XS"
 	li "S"
 	li "M"
@@ -2397,7 +2393,7 @@ CandyJar_MonSelected:
 	call SwapHLDE
 	ld bc, SCREEN_WIDTH - 3
 	add hl, bc
-	ld a, "×"
+	ld a, '×'
 	ld [hli], a
 	lb bc, 1, 2
 	jmp PrintNum
@@ -2427,7 +2423,7 @@ CandyJar_MonSelected:
 	jmp PlaceWholeStringInBoxAtOnce
 
 .CandyExpAmounts:
-	table_width 2, .CandyExpAmounts
+	table_width 2
 	bigdw 100
 	bigdw 800
 	bigdw 3000
@@ -2542,7 +2538,7 @@ CalcCandies:
 	ret
 
 .CandyDivisionAmounts:
-	table_width 1, .CandyDivisionAmounts
+	table_width 1
 	db 800 / 100
 	db 3000 / 100
 	db 10000 / 100
@@ -3002,7 +2998,6 @@ Ball_MonCantBeCaughtMessage:
 ItemWasntUsedMessage:
 	; Item wasn't used.
 	call PrintText
-_ItemWasntUsedMessage:
 	ld a, $2
 	ld [wItemEffectSucceeded], a
 	ret

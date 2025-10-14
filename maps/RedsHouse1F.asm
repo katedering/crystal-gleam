@@ -14,7 +14,7 @@ RedsHouse1F_MapScriptHeader:
 	bg_event  5,  1, BGEVENT_UP, RedsHouse1FTVScript
 
 	def_object_events
-	object_event  5,  3, SPRITE_REDS_MOM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RedsMom, -1
+	object_event  5,  3, SPRITE_REDS_MOM, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, RedsMom, -1
 
 RedsMom:
     checkevent EVENT_GOT_MYSTICTICKET_FROM_RED
@@ -75,7 +75,7 @@ RedsMom:
 	waitsfx
 	readvar VAR_PARTYCOUNT
 	ifequalfwd PARTY_LENGTH, .PikaNoRoom
-	givepoke PIKACHU, PIKACHU_RED_FORM, 50, LIGHT_BALL, CHERISH_BALL, FLASH_CANNON
+	givepoke PIKACHU, PIKACHU_PARTNER_FORM, 5, LIGHT_BALL, CHERISH_BALL, FLASH_CANNON
 	setevent EVENT_GOT_REDS_PIKACHU
 	writetext .PikaGoodbyeText
 	waitbutton
@@ -108,8 +108,8 @@ RedsMom:
 	
 	para "It's a special"
 	line "Pikachu that he"
-	cont "raised himself"
-	cont "from an Egg."
+	cont "hatched from an"
+	cont "Egg."
 	done
 	
 	

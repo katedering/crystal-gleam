@@ -17,7 +17,6 @@ FarChangeStat:
 	jr z, .player
 	call HasOpponentFainted
 	ret z
-	jr z, .not_fainted
 .player
 	call HasUserFainted
 	ret z
@@ -108,7 +107,6 @@ FarChangeStat:
 	ld c, ACCURACY
 	jr z, .ability_check
 	cp ILLUMINATE
-	ld c, ACCURACY
 	jr z, .ability_check
 	cp MINDS_EYE
 	jr nz, .check_item
@@ -123,12 +121,12 @@ FarChangeStat:
 	farcall CheckAlreadyExecuted
 	ret nz
 	farcall ShowPotentialAbilityActivation
-	farcall DisableAnimations
+	farcall BeginAbility
 	farcall ShowEnemyAbilityActivation
 	farcall AnimateFailedMove
 	ld hl, DoesntAffectText
 	call StdBattleTextbox
-	farjp EnableAnimations
+	farjp EndAbility
 
 .check_item
 	push bc
@@ -292,7 +290,7 @@ UseStatItemText:
 
 GetStatName:
 	ld hl, StatNames
-	ld c, "@"
+	ld c, '@'
 .CheckName:
 	dec b
 	jr z, .Copy
@@ -444,6 +442,3 @@ PlayStatChangeAnim:
 	ld a, b
 	ld [wBattleAnimParam], a
 	jmp PopBCDEHL
-
-StatPals: ; similar to X items
-INCLUDE "gfx/battle/stats.pal"
