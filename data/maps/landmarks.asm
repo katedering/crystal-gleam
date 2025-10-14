@@ -38,6 +38,7 @@ Landmarks:
 	landmark  64,  60, Route36Name
 	landmark  68,  52, Route37Name
 	landmark  68,  44, EcruteakCityName
+	landmark  68,  42, EcruteakShrineName
 	landmark  69,  42, BellchimeTrailName
 	landmark  70,  42, TinTowerName
 	landmark  66,  42, BurnedTowerName

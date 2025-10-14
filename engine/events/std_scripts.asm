@@ -1564,33 +1564,47 @@ CoinVendor_IntroScript:
 	loadmenu .MenuDataHeader
 	verticalmenu
 	closewindow
-	ifequalfwd $1, .Buy50
-	ifequalfwd $2, .Buy500
+	ifequalfwd $1, .Buy100
+	ifequalfwd $2, .Buy1000
+	ifequalfwd $3, .Buy5000
 	sjumpfwd .Cancel
 
-.Buy50:
-	checkcoins MAX_COINS - 50
-	ifequalfwd HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 1000
-	ifequalfwd HAVE_LESS, .NotEnoughMoney
-	givecoins 50
-	takemoney YOUR_MONEY, 1000
+.Buy100:
+	checkcoins 49900
+	ifequalfwd $0, .CoinCaseFull
+	checkmoney $0, 1000
+	ifequalfwd $2, .NotEnoughMoney
+	givecoins 100
+	takemoney $0, 1000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy50CoinsText
+	farwritetext CoinVendor_Buy100CoinsText
 	waitbutton
 	sjump .loop
 
-.Buy500:
-	checkcoins MAX_COINS - 500
-	ifequalfwd HAVE_MORE, .CoinCaseFull
-	checkmoney YOUR_MONEY, 10000
-	ifequalfwd HAVE_LESS, .NotEnoughMoney
-	givecoins 500
-	takemoney YOUR_MONEY, 10000
+.Buy1000:
+	checkcoins 49000
+	ifequalfwd $0, .CoinCaseFull
+	checkmoney $0, 10000
+	ifequalfwd $2, .NotEnoughMoney
+	givecoins 1000
+	takemoney $0, 10000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy500CoinsText
+	farwritetext CoinVendor_Buy1000CoinsText
+	waitbutton
+	sjump .loop
+	
+.Buy5000
+	checkcoins 45000
+	ifequalfwd $0, .CoinCaseFull
+	checkmoney $0, 50000
+	ifequalfwd $2, .NotEnoughMoney
+	givecoins 5000
+	takemoney $0, 50000
+	waitsfx
+	playsound SFX_TRANSACTION
+	farwritetext CoinVendor_Buy5000CoinsText
 	waitbutton
 	sjump .loop
 
@@ -1608,15 +1622,16 @@ CoinVendor_IntroScript:
 
 .MenuDataHeader:
 	db MENU_BACKUP_TILES
-	menu_coords 0, 4, 15, 11
+	menu_coords 0, 5, 16, 11
 	dw .MenuData2
 	db 1 ; default option
 
 .MenuData2:
 	db $80 ; flags
 	db 3 ; items
-	db " 50 :  ¥1000@"
-	db "500 : ¥10000@"
+	db " 100 :  ¥1000@"
+	db "1000 : ¥10000@"
+	db "5000 : ¥50000@"
 	db "Cancel@"
 
 HappinessCheckScript:
@@ -1826,6 +1841,20 @@ CheatClubScript:
 	farwritetext YouAreNotACheaterText
 	waitbutton
 	closetext
+	end
+	
+.Cheater:
+	farwritetext CheatClubText1
+	promptbutton
+.CheatMenu:
+	farwritetext CheatClubText2
+	loadmenu .CheatMenuData
+	verticalmenu
+	closewindow
+	ifequalfwd $1, .CatchPack
+	ifequalfwd $2, .TrainPack
+	ifequalfwd $3, .MoneyPack
+	sjumpfwd .CheatClubCancel
 
 .CatchPack:
 	setevent EVENT_USED_CHEAT_CLUB
@@ -1891,3 +1920,4 @@ CheatClubScript:
 	db "Training Pack@"
 	db "Shopping Pack@"
 	db "Cancel@"
+	

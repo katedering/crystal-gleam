@@ -744,8 +744,8 @@ FlyDescription:
 
 HyperBeamDescription:
 GigaImpactDescription:
-	text "1st turn: Attack"
-	next "2nd turn: Rest"
+	text "Attack, then skip"
+	next "a turn if no KO."
 	done
 
 DigDescription:

@@ -10,7 +10,7 @@
 	def_water_wildmons VERMILION_PORT
 	db 2 percent ; encounter rate
 	wildmon  45, TENTACOOL
-	wildmon  40, TENTACOOL
+	wildmon  40, QWILFISH, HISUIAN_FORM
 	wildmon  45, TENTACRUEL
 	end_water_wildmons
 

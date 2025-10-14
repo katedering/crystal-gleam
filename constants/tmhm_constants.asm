@@ -140,6 +140,7 @@ ENDM
 	add_mt ICY_WIND     ; $60
 	add_mt IRON_HEAD    ; $61
 	add_mt KNOCK_OFF    ; $62
+	add_mt METRONOME	;
 	add_mt PAY_DAY      ; $63
 	add_mt ROLLOUT      ; $64
 	add_mt SEED_BOMB    ; $65

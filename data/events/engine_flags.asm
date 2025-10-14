@@ -149,8 +149,8 @@ EngineFlags:
 	engine_flag wDailyFlags4, DAILYFLAGS4_BOUGHT_MOOMOO_MILK_F
 	engine_flag wDailyFlags4, DAILYFLAGS4_CHANGED_TRENDY_PHRASE_F
 	engine_flag wDailyFlags4, DAILYFLAGS4_ALL_HIDDEN_GROTTOES_F
-	engine_flag wDailyFlags4, 6 ; unused
-	engine_flag wDailyFlags4, 7 ; unused
+	engine_flag wDailyFlags4, DAILYFLAGS4_DAILY_CLIFF_GATE_RESET_F
+	engine_flag wDailyFlags4, DAILYFLAGS4_DAILY_ELITE_FAUX_RESET_F
 
 	engine_flag wWeeklyFlags, WEEKLYFLAGS_MT_MOON_SQUARE_CLEFAIRY_F
 	engine_flag wWeeklyFlags, WEEKLYFLAGS_UNION_CAVE_LAPRAS_F

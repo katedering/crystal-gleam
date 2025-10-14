@@ -6074,6 +6074,8 @@ Confuse_CheckSwagger_ConfuseHit:
 	jmp PrintDidntAffect2
 
 BattleCommand_rechargenextturn:
+	call HasOpponentFainted
+	ret z
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVarAddr
 	set SUBSTATUS_RECHARGE, [hl]

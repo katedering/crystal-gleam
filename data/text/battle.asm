@@ -2108,3 +2108,52 @@ LawrenceFinalPkmnText:
 ReiFinalPkmnText:
 	text "I'm not done yet."
 	prompt
+
+KateFinalPkmnText:
+	text "Such power…"
+
+	para "You truly are a"
+	line "great trainer."
+	prompt
+	
+AshFinalPkmnText:
+	text "This is great!"
+	
+	para "You're really"
+	line "strong!"
+	prompt
+	
+TripFinalPkmnText:
+	text "…"
+	
+	para "……"
+	
+	para "………"
+	
+	para "………!"
+	
+	para "Impressive!"
+	prompt
+	
+FedmaeFinalPkmnText:
+	text "…I see…"
+	prompt
+	
+CuteFinalPkmnText:
+	text "Almost done!"
+	
+	para "Are you enjoying"
+	line "the battle?"
+	prompt
+	
+RocketFinalPkmnText:
+	text "Nearly over now…"
+	line "You're pretty"
+	cont "good, trainer."
+	prompt
+
+UnknownFinalPkmnText:
+	text "Now, witness the"
+	line "power of an"
+	cont "ancient #mon!"
+	prompt

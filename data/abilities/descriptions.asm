@@ -155,6 +155,8 @@ AbilityDescriptions:
 	dw SharpnessDescription
 	dw ArmorTailDescription
 	dw MindsEyeDescription
+	dw EonForceDescription
+	dw FluffyDescription
 	assert_table_length NUM_ABILITIES
 
 NoAbilityDescription:
@@ -925,3 +927,4 @@ FluffyDescription:
 	text  "Half contact dmg."
 	next "Double fire dmg."
 	done
+	

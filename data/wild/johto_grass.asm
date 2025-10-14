@@ -7,7 +7,7 @@
 	wildmon 4, RATTATA
 	wildmon 5, RATTATA
 	wildmon 3, BELLSPROUT
-	wildmon 6, RATTATA
+	wildmon 6, RATTATA, ALOLAN_FORM
 	wildmon 5, BELLSPROUT
 	wildmon 6, BELLSPROUT
 	; day
@@ -15,7 +15,7 @@
 	wildmon 4, RATTATA
 	wildmon 5, RATTATA
 	wildmon 3, BELLSPROUT
-	wildmon 6, RATTATA
+	wildmon 6, RATTATA, ALOLAN_FORM
 	wildmon 5, BELLSPROUT
 	wildmon 6, BELLSPROUT
 	; nite
@@ -25,35 +25,35 @@
 	wildmon 3, BELLSPROUT
 	wildmon 6, GASTLY
 	wildmon 5, BELLSPROUT
-	wildmon 6, BELLSPROUT
+	wildmon 4, MISDREAVUS
 	end_grass_wildmons
 
 	def_grass_wildmons SPROUT_TOWER_3F
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
+	wildmon 3, RATTATA
 	wildmon 4, RATTATA
 	wildmon 5, RATTATA
-	wildmon 6, RATTATA
-	wildmon 4, BELLSPROUT
-	wildmon 7, RATTATA
+	wildmon 3, BELLSPROUT
+	wildmon 6, RATTATA, ALOLAN_FORM
+	wildmon 5, BELLSPROUT
 	wildmon 6, BELLSPROUT
-	wildmon 7, BELLSPROUT
 	; day
+	wildmon 3, RATTATA
 	wildmon 4, RATTATA
 	wildmon 5, RATTATA
-	wildmon 6, RATTATA
-	wildmon 4, BELLSPROUT
-	wildmon 7, RATTATA
+	wildmon 3, BELLSPROUT
+	wildmon 6, RATTATA, ALOLAN_FORM
+	wildmon 5, BELLSPROUT
 	wildmon 6, BELLSPROUT
-	wildmon 7, BELLSPROUT
 	; nite
+	wildmon 3, RATTATA
 	wildmon 4, RATTATA
-	wildmon 5, RATTATA
-	wildmon 6, GASTLY
-	wildmon 4, BELLSPROUT
-	wildmon 7, GASTLY
-	wildmon 6, BELLSPROUT
+	wildmon 5, GASTLY
 	wildmon 7, BELLSPROUT
+	wildmon 6, GASTLY
+	wildmon 5, MISDREAVUS
+	wildmon 4, GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons TIN_TOWER_2F
@@ -64,7 +64,7 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; day
 	wildmon 20, RATTATA
@@ -72,15 +72,15 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; nite
 	wildmon 20, GASTLY
 	wildmon 21, GASTLY
-	wildmon 22, GASTLY
+	wildmon 22, MISDREAVUS
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	end_grass_wildmons
 
@@ -92,7 +92,7 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; day
 	wildmon 20, RATTATA
@@ -100,15 +100,15 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; nite
 	wildmon 20, GASTLY
 	wildmon 21, GASTLY
-	wildmon 22, GASTLY
+	wildmon 22, MISDREAVUS
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	end_grass_wildmons
 
@@ -120,7 +120,7 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; day
 	wildmon 20, RATTATA
@@ -128,15 +128,15 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; nite
 	wildmon 20, GASTLY
 	wildmon 21, GASTLY
-	wildmon 22, GASTLY
+	wildmon 22, MISDREAVUS
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	end_grass_wildmons
 
@@ -148,7 +148,7 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; day
 	wildmon 20, RATTATA
@@ -156,15 +156,15 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; nite
 	wildmon 20, GASTLY
 	wildmon 21, GASTLY
-	wildmon 22, GASTLY
+	wildmon 22, MISDREAVUS
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	end_grass_wildmons
 
@@ -176,7 +176,7 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; day
 	wildmon 20, RATTATA
@@ -184,15 +184,15 @@
 	wildmon 22, RATTATA
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	; nite
 	wildmon 20, GASTLY
 	wildmon 21, GASTLY
-	wildmon 22, GASTLY
+	wildmon 22, MISDREAVUS
 	wildmon 22, RATICATE
 	wildmon 23, RATICATE
-	wildmon 24, RATICATE
+	wildmon 24, RATICATE, ALOLAN_FORM
 	wildmon 24, RATICATE
 	end_grass_wildmons
 
@@ -202,7 +202,7 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
@@ -210,17 +210,17 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
 	; nite
 	wildmon 20, GASTLY
-	wildmon 21, GASTLY
+	wildmon 21, HAUNTER
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
-	wildmon 24, MURKROW
+	wildmon 24, MISDREAVUS
 	wildmon 24, MURKROW
 	end_grass_wildmons
 
@@ -230,7 +230,7 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
@@ -238,17 +238,17 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
 	; nite
 	wildmon 20, GASTLY
-	wildmon 21, GASTLY
+	wildmon 21, HAUNTER
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
-	wildmon 24, MURKROW
+	wildmon 24, MISDREAVUS
 	wildmon 24, MURKROW
 	end_grass_wildmons
 
@@ -258,7 +258,7 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
@@ -266,17 +266,17 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
 	; nite
 	wildmon 20, GASTLY
-	wildmon 21, GASTLY
+	wildmon 21, HAUNTER
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
-	wildmon 24, MURKROW
+	wildmon 24, MISDREAVUS
 	wildmon 24, MURKROW
 	end_grass_wildmons
 
@@ -286,7 +286,7 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
@@ -294,17 +294,17 @@
 	wildmon 20, RATTATA
 	wildmon 21, RATTATA
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
 	wildmon 24, MURKROW
 	wildmon 24, MURKROW
 	; nite
 	wildmon 20, GASTLY
-	wildmon 21, GASTLY
+	wildmon 21, HAUNTER
 	wildmon 22, RATICATE
-	wildmon 22, RATICATE
+	wildmon 22, RATICATE, ALOLAN_FORM
 	wildmon 23, MURKROW
-	wildmon 24, MURKROW
+	wildmon 24, MISDREAVUS
 	wildmon 24, MURKROW
 	end_grass_wildmons
 
@@ -344,7 +344,7 @@
 	wildmon 16, KOFFING
 	wildmon 15, ZUBAT
 	wildmon 12, SLUGMA
-	wildmon 15, SLUGMA
+	wildmon 15, CYNDAQUIL
 	wildmon 15, MAGBY
 	; day
 	wildmon 14, KOFFING
@@ -352,7 +352,7 @@
 	wildmon 16, KOFFING
 	wildmon 15, ZUBAT
 	wildmon 12, SLUGMA
-	wildmon 15, SLUGMA
+	wildmon 15, CYNDAQUIL
 	wildmon 15, MAGBY
 	; nite
 	wildmon 14, KOFFING
@@ -360,7 +360,7 @@
 	wildmon 16, KOFFING
 	wildmon 15, ZUBAT
 	wildmon 12, SLUGMA
-	wildmon 15, SLUGMA
+	wildmon 15, CYNDAQUIL
 	wildmon 15, MAGBY
 	end_grass_wildmons
 
@@ -370,26 +370,26 @@
 	wildmon 12, NIDORAN_M
 	wildmon 13, NIDORAN_F
 	wildmon 14, LEDYBA
-	wildmon 14, PIDGEY
+	wildmon 15, PIDGEY
 	wildmon 10, CATERPIE
 	wildmon 12, WEEDLE
-	wildmon 12, WEEDLE
+	wildmon 12, MIME_JR_
 	; day
 	wildmon 12, NIDORAN_F
 	wildmon 13, NIDORAN_M
 	wildmon 14, SUNKERN
-	wildmon 14, PIDGEY
+	wildmon 15, PIDGEY
 	wildmon 10, CATERPIE
 	wildmon 12, WEEDLE
-	wildmon 12, WEEDLE
+	wildmon 12, MANKEY
 	; nite
 	wildmon 12, PSYDUCK
 	wildmon 13, HOOTHOOT
 	wildmon 14, SPINARAK
-	wildmon 14, HOOTHOOT
+	wildmon 15, HOOTHOOT
 	wildmon 10, VENONAT
 	wildmon 12, VENONAT
-	wildmon 12, VENONAT
+	wildmon 12, HERACROSS
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
@@ -397,7 +397,7 @@
 	; morn
 	wildmon 20, NATU
 	wildmon 22, NATU
-	wildmon 18, NATU
+	wildmon 18, SPEAROW
 	wildmon 24, NATU
 	wildmon 20, SMEARGLE
 	wildmon 22, SMEARGLE
@@ -405,7 +405,7 @@
 	; day
 	wildmon 20, NATU
 	wildmon 22, NATU
-	wildmon 18, NATU
+	wildmon 18, SPEAROW
 	wildmon 24, NATU
 	wildmon 20, SMEARGLE
 	wildmon 22, SMEARGLE
@@ -413,7 +413,7 @@
 	; nite
 	wildmon 22, NATU
 	wildmon 24, NATU
-	wildmon 20, NATU
+	wildmon 20, SPEAROW
 	wildmon 18, WOOPER
 	wildmon 22, QUAGSIRE
 	wildmon 25, XATU
@@ -444,8 +444,8 @@
 	wildmon 10, UNOWN
 	wildmon 10, UNOWN
 	wildmon 10, UNOWN
-	wildmon 10, UNOWN
 	wildmon 15, UNOWN
+	wildmon 20, UNOWN
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_INNER_CHAMBER
@@ -472,36 +472,36 @@
 	wildmon 10, UNOWN
 	wildmon 10, UNOWN
 	wildmon 10, UNOWN
-	wildmon 10, UNOWN
 	wildmon 15, UNOWN
+	wildmon 20, UNOWN
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 8, GEODUDE
-	wildmon 8, SANDSHREW
+	wildmon 6, GEODUDE
+	wildmon 6, SANDSHREW
+	wildmon 5, ZUBAT
+	wildmon 4, RATTATA
 	wildmon 7, ZUBAT
-	wildmon 6, RATTATA
-	wildmon 9, ZUBAT
-	wildmon 8, ONIX
-	wildmon 8, ONIX
+	wildmon 6, ONIX
+	wildmon 6, TYROGUE
 	; day
-	wildmon 8, GEODUDE
-	wildmon 8, SANDSHREW
+	wildmon 6, GEODUDE
+	wildmon 6, SANDSHREW
+	wildmon 5, ZUBAT
+	wildmon 4, RATTATA
 	wildmon 7, ZUBAT
-	wildmon 6, RATTATA
-	wildmon 9, ZUBAT
-	wildmon 8, ONIX
-	wildmon 8, ONIX
+	wildmon 6, ONIX
+	wildmon 6, TYROGUE
 	; nite
-	wildmon 8, GEODUDE
-	wildmon 8, RATTATA
-	wildmon 7, WOOPER
+	wildmon 6, GEODUDE
 	wildmon 6, RATTATA
-	wildmon 9, ZUBAT
-	wildmon 8, ONIX
-	wildmon 8, ONIX
+	wildmon 5, WOOPER
+	wildmon 4, RATTATA
+	wildmon 7, ZUBAT
+	wildmon 6, ONIX
+	wildmon 6, GLIGAR
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B1F_NORTH
@@ -512,7 +512,7 @@
 	wildmon 8, ZUBAT
 	wildmon 8, ONIX
 	wildmon 6, RATTATA
-	wildmon 8, RATTATA
+	wildmon 10, TOTODILE
 	wildmon 8, RATTATA
 	; day
 	wildmon 8, GEODUDE
@@ -520,7 +520,7 @@
 	wildmon 8, ZUBAT
 	wildmon 8, ONIX
 	wildmon 6, RATTATA
-	wildmon 8, RATTATA
+	wildmon 10, TOTODILE
 	wildmon 8, RATTATA
 	; nite
 	wildmon 8, GEODUDE
@@ -528,7 +528,7 @@
 	wildmon 8, WOOPER
 	wildmon 8, ONIX
 	wildmon 6, RATTATA
-	wildmon 8, RATTATA
+	wildmon 10, TOTODILE
 	wildmon 8, RATTATA
 	end_grass_wildmons
 
@@ -653,7 +653,7 @@
 	wildmon 21, SLOWPOKE
 	wildmon 23, GOLBAT
 	wildmon 23, SLOWPOKE
-	wildmon 23, SLOWPOKE
+	wildmon 23, SLOWPOKE, GALARIAN_FORM
 	; day
 	wildmon 21, ZUBAT
 	wildmon 23, ZUBAT
@@ -661,43 +661,43 @@
 	wildmon 21, SLOWPOKE
 	wildmon 23, GOLBAT
 	wildmon 23, SLOWPOKE
-	wildmon 23, SLOWPOKE
+	wildmon 23, SLOWPOKE, GALARIAN_FORM
 	; nite
 	wildmon 21, ZUBAT
 	wildmon 23, ZUBAT
 	wildmon 19, ZUBAT
 	wildmon 21, SLOWPOKE
 	wildmon 23, GOLBAT
-	wildmon 23, SLOWPOKE
-	wildmon 23, SLOWPOKE
+	wildmon 23, SLOWPOKE, GALARIAN_FORM
+	wildmon 23, SLOWBRO, GALARIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 9, CATERPIE
-	wildmon 9, WEEDLE
-	wildmon 10, METAPOD
-	wildmon 10, KAKUNA
-	wildmon 10, PIDGEY
-	wildmon 9, PARAS
-	wildmon 10, PARAS
+	wildmon 7, CATERPIE
+	wildmon 7, WEEDLE
+	wildmon 9, METAPOD
+	wildmon 9, KAKUNA
+	wildmon 9, PIDGEY
+	wildmon 10, CHIKORITA
+	wildmon 8, PARAS
 	; day
-	wildmon 9, CATERPIE
-	wildmon 9, WEEDLE
-	wildmon 10, METAPOD
-	wildmon 10, KAKUNA
-	wildmon 9, PARAS
-	wildmon 8, ODDISH
-	wildmon 10, PIDGEY
-	; nite
+	wildmon 7, CATERPIE
+	wildmon 7, WEEDLE
+	wildmon 9, METAPOD
+	wildmon 9, KAKUNA
+	wildmon 8, PARAS
+	wildmon 10, CHIKORITA
 	wildmon 9, ODDISH
-	wildmon 9, VENONAT
-	wildmon 10, ODDISH
-	wildmon 10, PSYDUCK
-	wildmon 10, HOOTHOOT
+	; nite
+	wildmon 7, ODDISH
+	wildmon 7, VENONAT
 	wildmon 9, PARAS
-	wildmon 10, PARAS
+	wildmon 9, PSYDUCK
+	wildmon 9, HOOTHOOT
+	wildmon 10, CHIKORITA
+	wildmon 8, BONSLY
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
@@ -820,8 +820,8 @@
 	wildmon 32, VULPIX, ALOLAN_FORM
 	wildmon 32, SWINUB
 	wildmon 34, GOLBAT
-	wildmon 32, GOLBAT
-	wildmon 34, VULPIX, ALOLAN_FORM
+	wildmon 32, SMOOCHUM
+	wildmon 32, NINETALES, ALOLAN_FORM
 	; day
 	wildmon 30, SWINUB
 	wildmon 32, ZUBAT
@@ -829,7 +829,7 @@
 	wildmon 32, SWINUB
 	wildmon 34, GOLBAT
 	wildmon 32, GOLBAT
-	wildmon 34, VULPIX, ALOLAN_FORM
+	wildmon 32, NINETALES, ALOLAN_FORM
 	; nite
 	wildmon 30, DELIBIRD
 	wildmon 31, ZUBAT
@@ -837,7 +837,7 @@
 	wildmon 33, DELIBIRD
 	wildmon 34, GOLBAT
 	wildmon 32, GOLBAT
-	wildmon 32, GOLBAT
+	wildmon 30, VULPIX, ALOLAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_B1F
@@ -848,7 +848,7 @@
 	wildmon 33, VULPIX, ALOLAN_FORM
 	wildmon 34, SWINUB
 	wildmon 35, GOLBAT
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 33, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	; day
 	wildmon 32, SWINUB
@@ -856,7 +856,7 @@
 	wildmon 33, VULPIX, ALOLAN_FORM
 	wildmon 34, SWINUB
 	wildmon 35, GOLBAT
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 33, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	; nite
 	wildmon 32, DELIBIRD
@@ -864,7 +864,7 @@
 	wildmon 33, GOLBAT
 	wildmon 34, DELIBIRD
 	wildmon 35, GOLBAT
-	wildmon 33, GOLBAT
+	wildmon 33, JYNX
 	wildmon 32, SNEASEL
 	end_grass_wildmons
 
@@ -875,7 +875,7 @@
 	wildmon 34, ZUBAT
 	wildmon 34, VULPIX, ALOLAN_FORM
 	wildmon 35, SWINUB
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 35, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	wildmon 34, JYNX
 	; day
@@ -883,7 +883,7 @@
 	wildmon 34, ZUBAT
 	wildmon 34, VULPIX, ALOLAN_FORM
 	wildmon 35, SWINUB
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 35, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	wildmon 34, JYNX
 	; nite
@@ -903,7 +903,7 @@
 	wildmon 34, ZUBAT
 	wildmon 34, VULPIX, ALOLAN_FORM
 	wildmon 35, SWINUB
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 35, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	wildmon 34, JYNX
 	; day
@@ -911,7 +911,7 @@
 	wildmon 34, ZUBAT
 	wildmon 34, VULPIX, ALOLAN_FORM
 	wildmon 35, SWINUB
-	wildmon 35, VULPIX, ALOLAN_FORM
+	wildmon 35, NINETALES, ALOLAN_FORM
 	wildmon 32, JYNX
 	wildmon 34, JYNX
 	; nite
@@ -920,7 +920,7 @@
 	wildmon 34, GOLBAT
 	wildmon 35, DELIBIRD
 	wildmon 35, GOLBAT
-	wildmon 32, SNEASEL
+	wildmon 32, JYNX
 	wildmon 34, SNEASEL
 	end_grass_wildmons
 
@@ -948,8 +948,8 @@
 	wildmon 35, GOLBAT
 	wildmon 35, GOLBAT
 	wildmon 32, SNEASEL
-	wildmon 34, SNEASEL
-	wildmon 36, SNEASEL
+	wildmon 34, JYNX
+	wildmon 36, SNEASEL, HISUIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_NW
@@ -1311,8 +1311,8 @@
 	wildmon 2, ZUBAT
 	wildmon 2, GEODUDE
 	wildmon 4, GEODUDE
-	wildmon 2, ZUBAT
-	wildmon 4, ZUBAT
+	wildmon 5, ZUBAT
+	wildmon 3, WYNAUT
 	wildmon 4, DUNSPARCE
 	end_grass_wildmons
 
@@ -1352,7 +1352,7 @@
 	wildmon 3, PIDGEY
 	wildmon 3, SENTRET
 	wildmon 2, RATTATA
-	wildmon 3, HOPPIP
+	wildmon 3, SUNKERN
 	wildmon 3, HOPPIP
 	; day
 	wildmon 2, PIDGEY
@@ -1360,8 +1360,8 @@
 	wildmon 3, PIDGEY
 	wildmon 3, SENTRET
 	wildmon 2, RATTATA
-	wildmon 3, HOPPIP
-	wildmon 3, HOPPIP
+	wildmon 3, SUNKERN
+	wildmon 3, EEVEE
 	; nite
 	wildmon 2, HOOTHOOT
 	wildmon 2, RATTATA
@@ -1369,7 +1369,7 @@
 	wildmon 3, RATTATA
 	wildmon 2, RATTATA
 	wildmon 3, HOOTHOOT
-	wildmon 3, HOOTHOOT
+	wildmon 3, RATTATA, ALOLAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
@@ -1381,15 +1381,15 @@
 	wildmon 4, PIDGEY
 	wildmon 3, WEEDLE
 	wildmon 4, HOPPIP
-	wildmon 4, HOPPIP
+	wildmon 4, SUNKERN
 	; day
 	wildmon 3, PIDGEY
 	wildmon 3, CATERPIE
-	wildmon 4, CATERPIE
-	wildmon 4, PIDGEY
-	wildmon 3, WEEDLE
+	wildmon 4, WEEDLE
 	wildmon 4, HOPPIP
-	wildmon 4, HOPPIP
+	wildmon 3, SUNKERN
+	wildmon 4, LEDYBA
+	wildmon 4, SPINARAK
 	; nite
 	wildmon 3, SPINARAK
 	wildmon 3, HOOTHOOT
@@ -1397,7 +1397,7 @@
 	wildmon 4, HOOTHOOT
 	wildmon 3, ZUBAT
 	wildmon 4, HOOTHOOT
-	wildmon 4, HOOTHOOT
+	wildmon 4, RATTATA, ALOLAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_31
@@ -1409,15 +1409,15 @@
 	wildmon 5, PIDGEY
 	wildmon 4, WEEDLE
 	wildmon 5, HOPPIP
-	wildmon 5, HOPPIP
+	wildmon 5, SUNKERN
 	; day
 	wildmon 4, PIDGEY
 	wildmon 4, CATERPIE
 	wildmon 5, BELLSPROUT
-	wildmon 5, PIDGEY
+	wildmon 5, HOPPIP
 	wildmon 4, WEEDLE
-	wildmon 5, HOPPIP
-	wildmon 5, HOPPIP
+	wildmon 5, SUNKERN
+	wildmon 5, EEVEE
 	; nite
 	wildmon 4, SPINARAK
 	wildmon 4, POLIWAG
@@ -1437,7 +1437,7 @@
 	wildmon 7, MAREEP
 	wildmon 8, MAREEP
 	wildmon 7, HOPPIP
-	wildmon 8, HOPPIP
+	wildmon 8, AZURILL
 	; day
 	wildmon 5, EKANS, ARBOK_JOHTO_FORM
 	wildmon 6, RATTATA
@@ -1453,7 +1453,7 @@
 	wildmon 8, HOOTHOOT
 	wildmon 7, MAREEP
 	wildmon 7, GASTLY
-	wildmon 7, GASTLY
+	wildmon 7, WOOPER, PALDEAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33
@@ -1465,7 +1465,7 @@
 	wildmon 10, HOPPIP
 	wildmon 10, EKANS, ARBOK_JOHTO_FORM
 	wildmon 9, SUNKERN
-	wildmon 10, SUNKERN
+	wildmon 10, MARILL
 	; day
 	wildmon 9, RATTATA
 	wildmon 9, SPEAROW
@@ -1481,61 +1481,61 @@
 	wildmon 10, ZUBAT
 	wildmon 10, RATTATA
 	wildmon 9, ODDISH
-	wildmon 10, ODDISH
+	wildmon 10, SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 12, SNUBBULL
-	wildmon 12, RATTATA, ALOLAN_FORM
-	wildmon 13, PIDGEY
+	wildmon 13, RATTATA
+	wildmon 14, PIDGEY
 	wildmon 10, ABRA
-	wildmon 13, JIGGLYPUFF
+	wildmon 14, JIGGLYPUFF
 	wildmon 10, DITTO
-	wildmon 10, DITTO
+	wildmon 10, IGGLYBUFF
 	; day
 	wildmon 12, SNUBBULL
-	wildmon 12, RATTATA, ALOLAN_FORM
-	wildmon 13, PIDGEY
+	wildmon 13, RATTATA
+	wildmon 14, PIDGEY
 	wildmon 10, ABRA
-	wildmon 13, JIGGLYPUFF
+	wildmon 14, JIGGLYPUFF
 	wildmon 10, DITTO
-	wildmon 10, DITTO
+	wildmon 10, TOGEPI
 	; nite
-	wildmon 12, DROWZEE
+	wildmon 13, DROWZEE
 	wildmon 12, RATTATA, ALOLAN_FORM
-	wildmon 13, HOOTHOOT
+	wildmon 14, HOOTHOOT
 	wildmon 10, ABRA
-	wildmon 13, JIGGLYPUFF
+	wildmon 14, JIGGLYPUFF
 	wildmon 10, DITTO
-	wildmon 10, DITTO
+	wildmon 10, CLEFFA
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon 13, SNUBBULL
-	wildmon 14, PIDGEY
+	wildmon 15, PIDGEY
 	wildmon 14, NIDORAN_F
 	wildmon 14, NIDORAN_M
-	wildmon 12, JIGGLYPUFF
+	wildmon 13, JIGGLYPUFF
 	wildmon 10, DITTO
-	wildmon 13, YANMA
+	wildmon 13, HAPPINY
 	; day
 	wildmon 13, SNUBBULL
-	wildmon 14, PIDGEY
+	wildmon 15, PIDGEY
 	wildmon 14, NIDORAN_M
 	wildmon 14, NIDORAN_F
-	wildmon 12, JIGGLYPUFF
+	wildmon 13, JIGGLYPUFF
 	wildmon 10, DITTO
 	wildmon 13, YANMA
 	; nite
 	wildmon 13, DROWZEE
-	wildmon 14, HOOTHOOT
+	wildmon 15, HOOTHOOT
 	wildmon 14, PSYDUCK
 	wildmon 14, HOOTHOOT
-	wildmon 12, JIGGLYPUFF
+	wildmon 13, JIGGLYPUFF
 	wildmon 10, DITTO
 	wildmon 13, YANMA
 	end_grass_wildmons
@@ -1549,23 +1549,23 @@
 	wildmon 7, GROWLITHE
 	wildmon 6, PIDGEY
 	wildmon 7, PIDGEY
-	wildmon 7, PIDGEY
+	wildmon 7, SCYTHER
 	; day
 	wildmon 5, PIDGEY
 	wildmon 5, PIDGEY
 	wildmon 6, BELLSPROUT
 	wildmon 7, GROWLITHE
-	wildmon 6, PIDGEY
+	wildmon 6, VULPIX
 	wildmon 7, PIDGEY
-	wildmon 7, PIDGEY
+	wildmon 7, PICHU
 	; nite
 	wildmon 5, SPINARAK
 	wildmon 5, HOOTHOOT
 	wildmon 6, BELLSPROUT
 	wildmon 7, VULPIX
-	wildmon 6, HOOTHOOT
+	wildmon 6, HOUNDOUR
 	wildmon 7, GASTLY
-	wildmon 7, GASTLY
+	wildmon 7, PINSIR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_37
@@ -1585,7 +1585,7 @@
 	wildmon 16, GROWLITHE
 	wildmon 14, SMEARGLE
 	wildmon 15, PIDGEY
-	wildmon 16, PIDGEOTTO
+	wildmon 16, GROWLITHE, HISUIAN_FORM
 	; nite
 	wildmon 13, SPINARAK
 	wildmon 15, STANTLER
@@ -1593,7 +1593,7 @@
 	wildmon 16, STANTLER
 	wildmon 16, ARIADOS
 	wildmon 15, HOUNDOUR
-	wildmon 16, HOUNDOUR
+	wildmon 16, CUBONE
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_38
@@ -1605,7 +1605,7 @@
 	wildmon 16, PIDGEOTTO
 	wildmon 13, TAUROS
 	wildmon 13, MILTANK
-	wildmon 13, MILTANK
+	wildmon 13, PONYTA, GALARIAN_FORM
 	; day
 	wildmon 16, RATTATA
 	wildmon 16, RATICATE
@@ -1613,15 +1613,15 @@
 	wildmon 16, PIDGEOTTO
 	wildmon 13, TAUROS
 	wildmon 13, MILTANK
-	wildmon 13, MILTANK
+	wildmon 13, PONYTA
 	; nite
 	wildmon 16, MEOWTH
 	wildmon 16, RATICATE
 	wildmon 16, MAGNEMITE
 	wildmon 16, NOCTOWL
-	wildmon 16, MEOWTH
+	wildmon 16, MEOWTH, ALOLAN_FORM
 	wildmon 16, MURKROW
-	wildmon 16, MURKROW
+	wildmon 18, MURKROW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
@@ -1644,10 +1644,10 @@
 	wildmon 15, TAUROS
 	; nite
 	wildmon 16, MEOWTH
-	wildmon 16, RATICATE
-	wildmon 16, MAGNEMITE
+	wildmon 16, RATICATE, ALOLAN_FORM
+	wildmon 15, ELEKID
 	wildmon 16, NOCTOWL
-	wildmon 18, MEOWTH
+	wildmon 18, MEOWTH, ALOLAN_FORM
 	wildmon 18, MURKROW
 	wildmon 18, MURKROW
 	end_grass_wildmons
@@ -1697,7 +1697,7 @@
 	wildmon 24, FARFETCH_D
 	wildmon 23, MAREEP
 	wildmon 23, MAREEP
-	wildmon 23, MAREEP
+	wildmon 23, FARFETCH_D, GALARIAN_FORM
 	; nite
 	wildmon 25, VENONAT
 	wildmon 23, GIRAFARIG
@@ -1705,7 +1705,7 @@
 	wildmon 24, NOCTOWL
 	wildmon 23, VENOMOTH
 	wildmon 23, MAREEP
-	wildmon 23, MAREEP
+	wildmon 23, FARFETCH_D, GALARIAN_FORM
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_44
@@ -1717,20 +1717,20 @@
 	wildmon 32, WEEPINBELL
 	wildmon 32, LICKITUNG
 	wildmon 34, LICKITUNG
-	wildmon 34, LICKITUNG
+	wildmon 34, FURRET
 	; day
 	wildmon 31, TANGELA
 	wildmon 29, LICKITUNG
 	wildmon 30, BELLSPROUT
 	wildmon 32, WEEPINBELL
 	wildmon 32, LICKITUNG
-	wildmon 34, LICKITUNG
+	wildmon 34, FURRET
 	wildmon 34, LICKITUNG
 	; nite
 	wildmon 31, TANGELA
 	wildmon 29, POLIWAG
-	wildmon 30, BELLSPROUT
-	wildmon 32, WEEPINBELL
+	wildmon 30, ODDISH
+	wildmon 32, GLOOM
 	wildmon 32, POLIWHIRL
 	wildmon 34, GLIGAR
 	wildmon 34, GLIGAR
@@ -1739,29 +1739,29 @@
 	def_grass_wildmons ROUTE_45
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon 33, GEODUDE
+	wildmon 34, GEODUDE
 	wildmon 35, GRAVELER
 	wildmon 34, DONPHAN
 	wildmon 34, URSARING
 	wildmon 34, DONPHAN
 	wildmon 36, SKARMORY
-	wildmon 37, SKARMORY
+	wildmon 37, LARVITAR
 	; day
-	wildmon 33, GEODUDE
+	wildmon 34, GEODUDE
 	wildmon 35, GRAVELER
 	wildmon 34, URSARING
 	wildmon 34, DONPHAN
 	wildmon 34, URSARING
-	wildmon 36, SKARMORY
+	wildmon 36, LARVITAR
 	wildmon 37, SKARMORY
 	; nite
-	wildmon 33, GEODUDE
+	wildmon 34, GEODUDE
 	wildmon 35, GRAVELER
 	wildmon 34, GLIGAR
-	wildmon 34, GLIGAR
+	wildmon 35, GLIGAR
 	wildmon 34, GRAVELER
-	wildmon 36, GRAVELER
-	wildmon 37, GRAVELER
+	wildmon 36, SKARMORY
+	wildmon 37, LARVITAR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_46
@@ -1773,23 +1773,23 @@
 	wildmon 2, PHANPY
 	wildmon 2, RATTATA
 	wildmon 3, RATTATA
-	wildmon 3, RATTATA
+	wildmon 3, LARVITAR
 	; day
 	wildmon 2, GEODUDE
 	wildmon 2, SPEAROW
 	wildmon 3, GEODUDE
 	wildmon 2, JIGGLYPUFF
 	wildmon 2, RATTATA
-	wildmon 3, RATTATA
-	wildmon 3, RATTATA
+	wildmon 3, LARVITAR
+	wildmon 3, SKARMORY
 	; nite
 	wildmon 2, GEODUDE
 	wildmon 2, RATTATA
 	wildmon 3, GEODUDE
-	wildmon 2, RATTATA
-	wildmon 2, RATTATA
-	wildmon 3, RATTATA
-	wildmon 3, RATTATA
+	wildmon 2, CLEFAIRY
+	wildmon 2, RATTATA, ALOLAN_FORM
+	wildmon 3, GLIGAR
+	wildmon 3, LARVITAR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_47
@@ -1901,35 +1901,35 @@
 	wildmon 74, POLIWHIRL
 	wildmon 73, HOUNDOOM
 	wildmon 75, SNEASEL
-	wildmon 75, SNEASEL
+	wildmon 75, AERODACTYL
 	end_grass_wildmons
 
 	def_grass_wildmons VIOLET_OUTSKIRTS
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon LEVEL_FROM_BADGES - 2, RATTATA
+	wildmon LEVEL_FROM_BADGES - 2, RATTATA, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES - 2, PIDGEY
 	wildmon LEVEL_FROM_BADGES - 0, BELLSPROUT
 	wildmon LEVEL_FROM_BADGES - 3, GROWLITHE
 	wildmon LEVEL_FROM_BADGES - 1, PIDGEOTTO
-	wildmon LEVEL_FROM_BADGES - 3, RATICATE
-	wildmon LEVEL_FROM_BADGES - 1, RATICATE
+	wildmon LEVEL_FROM_BADGES - 3, RATICATE, ALOLAN_FORM
+	wildmon LEVEL_FROM_BADGES - 1, RATICATE, ALOLAN_FORM
 	; day
-	wildmon LEVEL_FROM_BADGES - 2, RATTATA
+	wildmon LEVEL_FROM_BADGES - 2, RATTATA, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES - 2, PIDGEY
 	wildmon LEVEL_FROM_BADGES - 0, BELLSPROUT
 	wildmon LEVEL_FROM_BADGES - 3, GROWLITHE
 	wildmon LEVEL_FROM_BADGES - 1, PIDGEOTTO
-	wildmon LEVEL_FROM_BADGES - 3, RATICATE
-	wildmon LEVEL_FROM_BADGES - 1, RATICATE
+	wildmon LEVEL_FROM_BADGES - 3, RATICATE, ALOLAN_FORM
+	wildmon LEVEL_FROM_BADGES - 1, RATICATE, ALOLAN_FORM
 	; nite
-	wildmon LEVEL_FROM_BADGES - 2, RATTATA
+	wildmon LEVEL_FROM_BADGES - 2, RATTATA, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES - 2, HOOTHOOT
 	wildmon LEVEL_FROM_BADGES - 0, GASTLY
 	wildmon LEVEL_FROM_BADGES - 3, VULPIX
 	wildmon LEVEL_FROM_BADGES - 1, NOCTOWL
-	wildmon LEVEL_FROM_BADGES - 3, RATICATE
-	wildmon LEVEL_FROM_BADGES - 1, RATICATE
+	wildmon LEVEL_FROM_BADGES - 3, RATICATE, ALOLAN_FORM
+	wildmon LEVEL_FROM_BADGES + 1, HOUNDOUR
 	end_grass_wildmons
 
 	def_grass_wildmons CHERRYGROVE_BAY
@@ -2013,7 +2013,7 @@
 	wildmon LEVEL_FROM_BADGES - 1, SPINARAK
 	wildmon LEVEL_FROM_BADGES + 0, PSYDUCK
 	wildmon LEVEL_FROM_BADGES + 1, NOCTOWL
-	wildmon LEVEL_FROM_BADGES + 1, NOCTOWL
+	wildmon LEVEL_FROM_BADGES + 2, HERACROSS
 	end_grass_wildmons
 
 	def_grass_wildmons QUIET_CAVE_1F
@@ -2096,7 +2096,7 @@
 	wildmon LEVEL_FROM_BADGES + 0, GOLBAT
 	wildmon LEVEL_FROM_BADGES - 1, GASTLY
 	wildmon LEVEL_FROM_BADGES + 0, HAUNTER
-	wildmon LEVEL_FROM_BADGES + 1, MAROWAK
+	wildmon LEVEL_FROM_BADGES + 1, MAROWAK, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES + 2, ONIX
 	end_grass_wildmons
 
@@ -2124,7 +2124,7 @@
 	wildmon LEVEL_FROM_BADGES + 1, GOLBAT
 	wildmon LEVEL_FROM_BADGES + 0, GASTLY
 	wildmon LEVEL_FROM_BADGES + 1, HAUNTER
-	wildmon LEVEL_FROM_BADGES + 2, MAROWAK
+	wildmon LEVEL_FROM_BADGES + 2, MAROWAK, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES + 3, STEELIX
 	end_grass_wildmons
 
@@ -2185,14 +2185,14 @@
 	end_grass_wildmons
 
 	def_grass_wildmons MAGNET_TUNNEL_INSIDE
-	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	wildmon LEVEL_FROM_BADGES - 2, VOLTORB
 	wildmon LEVEL_FROM_BADGES - 2, GEODUDE, ALOLAN_FORM
 	wildmon LEVEL_FROM_BADGES - 0, ZUBAT
 	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
 	wildmon LEVEL_FROM_BADGES - 1, MAGNEMITE
-	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
+	wildmon LEVEL_FROM_BADGES - 3, VOLTORB, HISUIAN_FORM
 	wildmon LEVEL_FROM_BADGES - 1, ELEKID
 	; day
 	wildmon LEVEL_FROM_BADGES - 2, VOLTORB
@@ -2200,7 +2200,7 @@
 	wildmon LEVEL_FROM_BADGES - 0, ZUBAT
 	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
 	wildmon LEVEL_FROM_BADGES - 1, MAGNEMITE
-	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
+	wildmon LEVEL_FROM_BADGES - 3, VOLTORB, HISUIAN_FORM
 	wildmon LEVEL_FROM_BADGES - 1, ELEKID
 	; nite
 	wildmon LEVEL_FROM_BADGES - 0, ZUBAT
@@ -2208,7 +2208,7 @@
 	wildmon LEVEL_FROM_BADGES - 2, VOLTORB
 	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
 	wildmon LEVEL_FROM_BADGES - 1, MAGNEMITE
-	wildmon LEVEL_FROM_BADGES - 3, MAGNEMITE
+	wildmon LEVEL_FROM_BADGES - 3, VOLTORB, HISUIAN_FORM
 	wildmon LEVEL_FROM_BADGES - 1, ELEKID
 	end_grass_wildmons
 
@@ -2237,7 +2237,7 @@
 	wildmon LEVEL_FROM_BADGES - 1, GLIGAR
 	wildmon LEVEL_FROM_BADGES + 0, GLIGAR
 	wildmon LEVEL_FROM_BADGES + 1, HOUNDOUR
-	wildmon LEVEL_FROM_BADGES - 1, HOUNDOUR
+	wildmon LEVEL_FROM_BADGES - 1, DUNSPARCE
 	end_grass_wildmons
 
 	def_grass_wildmons SNOWTOP_MOUNTAIN_INSIDE

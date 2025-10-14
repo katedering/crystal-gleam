@@ -500,11 +500,25 @@ DEF PALDEAN_FORM EQU 5
 ; ursaluna
 	ext_const_def 2
 	ext_const URSALUNA_BLOODMOON_FORM ; 189 (2)
+	
+; crystal gleam exclusive forms
+DEF EON_FORM EQU 6
+	const_skip ; 18b eevee
+	const_skip ; 18c vaporeon
+	const_skip ; 18d jolteon
+	const_skip ; 18e flareon
+	const_skip ; 18f espeon
+	const_skip ; 190 umbreon
+	const_skip ; 191 leafeon
+	const_skip ; 192 glaceon
+	const_skip ; 193 sylveon
+
 	ext_const_def 6
 	ext_const PIKACHU_PARTNER_FORM ; 195
 
 	ext_const_def 3
 	ext_const RAICHU_PARTNER_FORM  ; 197
+
 DEF NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 2e
 
 ; these constants include EGG and a dummy entry as species

@@ -1921,4 +1921,8 @@ SECTION "BattleFactoryBattleRoom_BlockData", ROMX
 BattleFactoryBattleRoom_BlockData:
 	INCBIN "maps/BattleFactoryBattleRoom.ablk.lz"
 
+SECTION "LalasLab1F_BlockData", ROMX
+LalasLab1F_BlockData:
+	INCBIN "maps/LalasLab1F.ablk.lz"
+
 ENDSECTION

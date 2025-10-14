@@ -3060,6 +3060,10 @@ IsntTheTimeMessage:
 	ld hl, IsntTheTimeText
 	jr CantUseItemMessage
 
+CheaterCardMessage:
+	ld hl, CheaterCardText
+	jr CantUseItemMessage
+
 WontHaveAnyEffectMessage:
 	ld hl, WontHaveAnyEffectText
 	; fallthrough
@@ -3094,6 +3098,11 @@ CantChangeTradedMonBallText:
 IsntTheTimeText:
 	; OAK:  ! This isn't the time to use that!
 	text_far _ItemOakWarningText
+	text_end
+
+CheaterCardText:
+	; OAK:  ! You're a cheater? I'm ashamed!
+	text_far _CheaterCardText
 	text_end
 
 WontHaveAnyEffectText:
