@@ -63,3 +63,6 @@ bank_ends.txt
 rgbds/
 deploy.sh
 *.bak
+*.*.bak
+*.asm.bak
+*.mp4

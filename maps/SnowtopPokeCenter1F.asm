@@ -15,7 +15,7 @@ SnowtopPokeCenter1F_MapScriptHeader:
 
 	def_object_events
 	pc_nurse_event  5, 1
-	object_event  6,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, cheatclub, -1
+	object_event  6,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, cheatclub, -1
 
 PokemonJournalProfWillowScript:
 	setflag ENGINE_READ_PROF_WILLOW_JOURNAL

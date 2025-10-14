@@ -44,13 +44,14 @@ ElmsLab_MapScriptHeader:
 	bg_event  3,  5, BGEVENT_DOWN, ElmsLabPC
 
 	def_object_events
-	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
-	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
-	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
-	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
-	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
-	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
-	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
+	object_event  5,  2, SPRITE_ELM, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ProfElmScript, -1
+	object_event  2,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
+	object_event  6,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
+	object_event  7,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_DECO_ITEM, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+	object_event  8,  3, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_KEY_ITEM, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+	object_event  5, 11, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ElmsLabLyraScript, EVENT_LYRA_IN_ELMS_LAB
+	object_event  8, 10, SPRITE_BALL_CUT_FRUIT, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_POKE_BALL, OBJECTTYPE_SCRIPT, 0, PikachuPokeBallScript, EVENT_GOT_EEVEE_FROM_LALA
 
 	object_const_def
 	const ELMSLAB_ELM
@@ -60,6 +61,7 @@ ElmsLab_MapScriptHeader:
 	const ELMSLAB_POKE_BALL3
 	const ELMSLAB_OFFICER
 	const ELMSLAB_LYRA
+	const ELMSLAB_POKE_BALL4
 
 ElmsLabTrigger0:
 	sdefer ElmsLab_AutowalkUpToElm
@@ -154,17 +156,11 @@ ElmCheckOddSouvenir:
 	iftrue ElmCheckBattleScript
 	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
 	iftrue ElmGiveOddSouvenirScript
+	checkevent EVENT_ELM_WANTS_TO_BATTLE
+	iftrue ElmAskBattleScript
 	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
 	iffalsefwd ElmCheckTogepiEgg
-	setmonval TOGEPI
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGETIC
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGEKISS
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
+	scall ElmEggHatchedScript
 	jumpopenedtext ElmThoughtEggHatchedText
 
 ElmEggHatchedScript:
@@ -445,6 +441,7 @@ ElmCheckBattleScript:
 	writetext ElmBeforeBattleText
 	waitbutton
 ElmAskBattleScript:
+	setevent EVENT_ELM_WANTS_TO_BATTLE
 	writetext ElmAskBattleText
 	yesorno
 	iffalse_jumpopenedtext ElmRefusedBattleText
@@ -469,6 +466,7 @@ ElmAskBattleScript:
 	loadtrainer PROF_ELM, 3
 .GotTeam:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	clearevent EVENT_ELM_WANTS_TO_BATTLE
 	setevent EVENT_BATTLED_PROF_ELM
 	startbattle
 	reloadmap
@@ -1067,13 +1065,6 @@ ChoseStarterText:
 	cont "#mon too!"
 	done
 
-ReceivedStarterText:
-	text "<PLAYER> received"
-	line ""
-	text_ram wStringBuffer3
-	text "!"
-	done
-
 ElmDirectionsText1:
 	text "Mr.#mon lives a"
 	line "little bit beyond"
@@ -1424,7 +1415,7 @@ ElmGiveTicketText1:
 	line "on new Gyms."
 
 	para "If you earn eight"
-	line "more badges,"
+	line "more Badges,"
 
 	para "the Elite Four"
 	line "will battle you"
@@ -1692,6 +1683,12 @@ ElmsLabLyraLossText:
 	done
 
 ElmsLabLyraText_YouWon:
+	text "That was an"
+	line "exciting battle,"
+	cont "even though I"
+	cont "lost."
+	done
+
 ElmsLabLyraText_YouLost:
 	text "That was an"
 	line "exciting battle!"
@@ -1807,11 +1804,12 @@ ElmsLabPCText:
 	done
 
 SpecialEeveeText:
-	text "Lala called me"
-	line "earlier, and she"
-	cont "said that she gave"
-	cont "you a special"
-	cont "Eevee…"
+	text "Oh! You picked up"
+	line "that Eevee on the"
+	cont "table out there?"
+	
+	para "The one from"
+	line "Lala?"
 	
 	para "I have a stone"
 	line "here that was"
@@ -1834,4 +1832,51 @@ EonStoneText:
 	line "that special Eevee"
 	cont "of yours, and see"
 	cont "what happens."
+	done
+	
+PikachuPokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	iffalse_jumptext PikachuPokeBallText
+	opentext
+	writetext PikachuPokeBallText1
+	promptbutton
+	disappear ELMSLAB_POKE_BALL4
+	waitsfx
+	givepoke PIKACHU, PIKACHU_PARTNER_FORM, 5, ABILITYPATCH
+	writetext PikachuPokeBallText2
+	waitbutton
+	closetext
+	end
+
+PikachuPokeBallText:
+	text "Better talk to"
+	line "the professor"
+	cont "first."
+	done
+	
+PikachuPokeBallText1:
+	text "There's a note"
+	line "here:"
+	
+	para "Please raise this"
+	line "Pikachu with care."
+	
+	para "It has unknown"
+	line "potential, and I"
+	cont "want you to have"
+	cont "it for your jour-"
+	cont "ney, <PLAYER>."
+	
+	para "Signed, Lala."
+	done
+
+PikachuPokeBallText2:
+	text "There's another"
+	line "note:"
+	
+	para "Pikachu is holding"
+	line "a useful item,"
+	cont "if you really"
+	cont "want to bring out"
+	cont "it's potential."
 	done

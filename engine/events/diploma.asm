@@ -45,14 +45,14 @@ PlaceDiplomaPage1OnScreen:
 
 PlaceDiplomaPage2OnScreen:
 	hlcoord 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld bc, SCREEN_AREA
 	ld a, $7f
 	rst ByteFill
 
 	ld hl, DiplomaPage2Tilemap
 	decoord 0, 0
 	call Decompress
-	ld de, .PolishedCrystal
+	ld de, .CrystalGleam
 	hlcoord 2, 1
 	rst PlaceString
 	ld de, .PlayTime
@@ -62,7 +62,7 @@ PlaceDiplomaPage2OnScreen:
 	ld de, wGameTimeHours
 	lb bc, 2, 4
 	call PrintNum
-	ld a, ":"
+	ld a, ':'
 	ld [hli], a
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
@@ -72,8 +72,8 @@ PlaceDiplomaPage2OnScreen:
 	text "Play Time"
 	done
 
-.PolishedCrystal:
-	text "Polished Crystal"
+.CrystalGleam:
+	text "Crystal Gleam"
 	done
 
 DiplomaGFX:

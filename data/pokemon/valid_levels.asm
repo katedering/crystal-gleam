@@ -181,7 +181,11 @@ ValidPokemonLevels: ; for Wonder Trade
 	db  25, 100 ; Xatu
 	db   1,  14 ; Mareep
 	db  15,  29 ; Flaaffy
+if DEF(FAITHFUL)
 	db  30, 100 ; Ampharos
+else
+	db  36, 100 ; Ampharos
+endc
 	db  32, 100 ; Bellossom
 	db   1,  17 ; Marill
 	db  18, 100 ; Azumarill
@@ -293,4 +297,6 @@ ValidPokemonLevels: ; for Wonder Trade
 	db  20, 100 ; Clodsire
 	db  56, 100 ; Annihilape
 	db 255, 255 ; Eeveeon
+	db 255, 255 ; Missingno.
+	db 255, 255 ; Gorochu
 	assert_table_length NUM_SPECIES

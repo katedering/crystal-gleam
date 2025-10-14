@@ -23,12 +23,12 @@ CherrygroveCity_MapScriptHeader:
 	bg_event 35,  2, BGEVENT_ITEM + NUGGET, EVENT_CHERRYGROVE_CITY_HIDDEN_NUGGET
 
 	def_object_events
-	object_event 32,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
-	object_event 39,  6, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
-	object_event 25, 13, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, CherrygroveTeacherText_HaveMapCard, -1
-	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
-	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
-	pokemon_event 26, 13, PIDGEY, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, CherrygrovePidgeyText, -1
+	object_event 32,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
+	object_event 39,  6, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
+	object_event 25, 13, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_DOWN, 0, 1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, CherrygroveTeacherText_HaveMapCard, -1
+	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
+	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	pokemon_event 26, 13, PIDGEY, SPRITEMOVEDATA_POKEMON, -1, PAL_NPC_BROWN, CherrygrovePidgeyText, -1
 
 	object_const_def
 	const CHERRYGROVECITY_GRAMPS
@@ -42,7 +42,13 @@ CherrygroveGuideGentTrigger:
 	applymovement PLAYER, GuideGentPlayerMovement
 	setlasttalked CHERRYGROVECITY_GRAMPS
 CherrygroveCityGuideGent:
-	showtextfaceplayer GuideGentIntroText
+	faceplayer
+	opentext
+	writetext GuideGentIntroText1
+	yesorno
+	iffalsefwd .NoGuide
+	closetext
+	showtextfaceplayer GuideGentIntroText2
 	playmusic MUSIC_SHOW_ME_AROUND
 	follow CHERRYGROVECITY_GRAMPS, PLAYER
 	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement1
@@ -67,8 +73,7 @@ CherrygroveCityGuideGent:
 	opentext
 	writetext GuideGentGiftText
 	promptbutton
-	getstring .mapcardname, $1
-	callstd receiveitem
+	givespecialitem MAP_CARD
 	setflag ENGINE_MAP_CARD
 	writetext GotMapCardText
 	promptbutton
@@ -86,8 +91,54 @@ CherrygroveCityGuideGent:
 	waitsfx
 	end
 
-.mapcardname
-	db "Map Card@"
+.NoGuide
+	writetext GuideGentFarewellText
+	promptbutton
+	givespecialitem MAP_CARD
+	setflag ENGINE_MAP_CARD
+	writetext GotMapCardText
+	promptbutton
+	writetext GuideGentPokegearText
+	waitbutton
+	closetext
+	turnobject PLAYER, LEFT
+	applymovement CHERRYGROVECITY_GRAMPS, GuideGentMovement7
+	disappear CHERRYGROVECITY_GRAMPS
+	clearevent EVENT_GUIDE_GENT_VISIBLE_IN_CHERRYGROVE
+	setscene $2
+	waitsfx
+	end
+
+GuideGentIntroText1:
+	text "You're a rookie"
+	line "trainer, aren't"
+	cont "you? I can tell!"
+
+	para "That's OK! Every-"
+	line "one is a rookie"
+	cont "at some point!"
+
+	para "I can teach you"
+	line "a few things."
+	done
+
+GuideGentFarewellText:
+	text "That's fine, too!"
+	
+	para "At least let me"
+	line "give you a small"
+	
+	para "gift, since you're"
+	line "still a rookie."
+	done
+
+GuideGentMovement7:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
+	step_end
 
 CherrygroveRivalTriggerSouth:
 	moveobject CHERRYGROVECITY_RIVAL, 39, 7
@@ -274,18 +325,8 @@ CherrygroveCity_RivalComesBack:
 	turn_head_down
 	step_end
 
-GuideGentIntroText:
-	text "You're a rookie"
-	line "trainer, aren't"
-	cont "you? I can tell!"
-
-	para "That's OK! Every-"
-	line "one is a rookie"
-	cont "at some point!"
-
-	para "I can teach you"
-	line "a few things."
-	cont "Follow me!"
+GuideGentIntroText2:
+	text "Follow me!"
 	done
 
 GuideGentPokeCenterText:
@@ -475,3 +516,4 @@ CherrygroveCityAdvancedTipsSignText:
 	line "every purchase of"
 	cont "ten # Balls!"
 	done
+

@@ -298,4 +298,6 @@ PokemonCries::
 	mon_cry CRY_WOOPER,     -$0c6,  $140 ; Clodsire
 	mon_cry CRY_NIDOQUEEN,   $0af,  $0c0 ; Annihilape
 	mon_cry CRY_VENONAT,     $063,  $063 ; Eeveeon
+	mon_cry CRY_NIDORAN_M,   $000,  $081 ; Missingno.
+	mon_cry CRY_GOROCHU,     $031,  $074 ; Gorochu
 	assert_table_length NUM_SPECIES

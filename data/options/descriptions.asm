@@ -6,7 +6,7 @@ InitialOptionDescriptions:
 	dw .InitialOptionDesc_Abilities
 	dw .InitialOptionDesc_PSS
 	dw .InitialOptionDesc_EVs
-	dw .InitialOptionDesc_ExpScaling
+	dw .InitialOptionDesc_Experience
 	dw .InitialOptionDesc_AffectionBonus
 	dw .InitialOptionDesc_NextPage
 
@@ -66,18 +66,31 @@ InitialOptionDescriptions:
 	line "erience in Gen 3."
 	prompt
 
-.InitialOptionDesc_ExpScaling:
-	text "Experience gain"
-	line "is greater from"
+.InitialOptionDesc_Experience:
+	text "The old experience"
+	line "gain formula, in"
 
-	para "defeating higher-"
-	line "leveled foes,"
+	para "Gen 1 to Gen 4,"
+	line "was unscaled."
+
+	para "The new one, in"
+	line "Gen 5 and reintro-"
+	cont "duced in Gen 7,"
+
+	para "gives more Exp. by"
+	line "defeating higher-"
+	cont "leveled foes,"
 
 	para "and less from low-"
 	line "er leveled ones."
 
-	para "Introduced in"
-	line "Gen 5 and 7."
+	para "Exp. gain can also"
+	line "be turned off for"
+	cont "a challenge, but"
+
+	para "Exp.Candy and Rare"
+	line "Candy will still"
+	cont "work if you do so."
 	prompt
 
 .InitialOptionDesc_AffectionBonus:
@@ -136,22 +149,22 @@ InitialOptionDescriptions:
 	line "will obey you and"
 	cont "can be nicknamed,"
 
-	para "but Exp. Points"
+	para "but Exp.Points"
 	line "won't be boosted."
 	prompt
 
 .InitialOptionDesc_RTC:
-	text "Use the Real-Time"
-	line "Clock function to"
-	cont "track the time."
+	text "The Real-Time"
+	line "Clock does not"
+	cont "work in Gleam."
 
-	para "If your cartridge"
-	line "or emulator does"
-	cont "not support RTC,"
+	para "Please leave the"
+	line "setting on 'No'"
+	cont "so that the game"
 
 	assert NO_RTC_SPEEDUP == 6
-	para "disable this to"
-	line "make each in-game"
+	cont "will properly"
+	cont "make each in-game"
 	cont "day last 4 hours."
 	prompt
 

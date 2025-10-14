@@ -72,5 +72,8 @@
 	const CRY_TYROGUE
 	const CRY_DUNSPARCE
 	const CRY_DONPHAN
+	
+; extra
+	const CRY_GOROCHU
 
 DEF NUM_CRIES EQU const_value

@@ -14,12 +14,13 @@ VermilionPort_MapScriptHeader:
 	coord_event  7, 11, 0, VermilionPortWalkUpToShipScript
 
 	def_bg_events
+	bg_event 26, 13, BGEVENT_READ, VermilionPortTruckScript, -1
 	bg_event 27, 13, BGEVENT_ITEM + IRON, EVENT_VERMILION_PORT_HIDDEN_IRON
 
 	def_object_events
-	object_event  7, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorAtGangwayScript, EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
-	object_event  6, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorScript, -1
-	object_event 11, 11, SPRITE_POKEMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VermilionPortSuperNerdText, -1
+	object_event  7, 17, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorAtGangwayScript, EVENT_VERMILION_PORT_SAILOR_AT_GANGWAY
+	object_event  6, 11, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPortSailorScript, -1
+	object_event 11, 11, SPRITE_POKEMANIAC, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, VermilionPortSuperNerdText, -1
 
 	object_const_def
 	const VERMILIONPORT_SAILOR1
@@ -268,4 +269,54 @@ VermilionPortSuperNerdText:
 	para "I hear many rare"
 	line "#mon live over"
 	cont "there."
+	done
+
+VermilionPortTruckScript:
+	opentext
+	checkkeyitem OLD_KEY
+	iftruefwd .OldSeaMap
+	writetext .TruckLockedText
+	waitbutton
+	closetext
+	end
+	
+.OldSeaMap:
+	checkkeyitem OLD_SEA_MAP
+	iftruefwd .AlreadyGot
+	writetext .ThereIsAMapText
+	promptbutton
+	verbosegivekeyitem OLD_SEA_MAP
+	waitbutton
+	closetext
+	end
+
+.AlreadyGot
+	writetext .AlreadyGotText
+	waitbutton
+	closetext
+	end
+
+.TruckLockedText:
+	text "The truck is"
+	line "locked…"
+	done
+
+.ThereIsAMapText:
+	text "The truck is"
+	line "locked…"
+	
+	para "It looks like"
+	line "there is a map"
+	cont "on the seat."
+	
+	para "<PLAYER> used the"
+	line "Old Key on the"
+	cont "truck's door."
+	
+	para "It worked!"
+	done
+
+.AlreadyGotText:
+	text "There's nothing"
+	line "else in the truck…"
 	done

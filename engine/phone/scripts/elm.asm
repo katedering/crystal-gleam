@@ -80,6 +80,7 @@ ElmPhoneScript_EvolutionMethodsTable:
 	dw .EvolveNone
 	dw .EvolveLevel
 	dw .EvolveItem
+	dw .EvolveTrade
 	dw .EvolveHolding
 	dw .EvolveHappiness
 	dw .EvolveStat
@@ -103,6 +104,8 @@ ElmPhoneScript_EvolutionMethodsTable:
 	dw .EvolveUrsaring
 	dw .EvolveStantler
 	dw .EvolveDunsparce
+	dw .EvolveEonForm
+	dw .EvolveEeveeon
 	assert_table_length NUM_EVOLVE_METHODS
 .EvolveNone:
 	farwritetext ElmPhoneEvoText_None
@@ -112,6 +115,14 @@ ElmPhoneScript_EvolutionMethodsTable:
 	end
 .EvolveItem:
 	farwritetext ElmPhoneEvoText_Item
+	end
+.EvolveTrade:
+	readmem wStringBuffer5
+	ifequalfwd LINKING_CORD, .EvolveTradeNoItem
+	farwritetext ElmPhoneEvoText_TradeWithItem
+	end
+.EvolveTradeNoItem:
+	farwritetext ElmPhoneEvoText_TradeNoItem
 	end
 .EvolveHolding:
 	readmem wStringBuffer5
@@ -204,6 +215,12 @@ ElmPhoneScript_EvolutionMethodsTable:
 	loadmem wStringBuffer4, 32
 	farwritetext ElmPhoneEvoText_Level
 	farwritetext ElmPhoneEvoText_DunsparceSegments
+	end
+.EvolveEonForm:
+	farwritetext ElmPhoneEvoText_EeveeEon
+	end
+.EvolveEeveeon:
+	farwritetext ElmPhoneEvoText_Eeveeon
 	end
 
 ElmPhone_GetFirstMonEvolutionData:

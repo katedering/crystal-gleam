@@ -42,6 +42,7 @@ DEF NUM_MP_EDIT_FIELDS EQU const_value
 	const ORIGIN_M02       ; 10
 	const ORIGIN_PRISM     ; 11
 	const ORIGIN_UNDERTALE ; 12
+	const ORIGIN_SV
 DEF NUM_SONG_ORIGINS EQU const_value
 
 ; SongArtists indexes (see data/music_player/song_artists.asm)
@@ -74,4 +75,5 @@ DEF NUM_SONG_ORIGINS EQU const_value
 	const COMPOSER_NOTFROGGESTSPIRIT             ; 19
 	const COMPOSER_TOBY_FOX                      ; 1a
 	const COMPOSER_SHINKONETCAVY_SHOCKSLAYER     ; 1b
+	const COMPOSER_TOBY_FOX_GO_ICHINOSE
 DEF NUM_SONG_ARTISTS EQU const_value

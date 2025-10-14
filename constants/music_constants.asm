@@ -211,9 +211,12 @@
 	const MUSIC_DPPT_FRONTIERBRAIN             ; cf ; unused
 	const MUSIC_SM_GIOVANNIBATTLE              ; d0 ; unused
 	const MUSIC_HGSS_ICEPATH                   ; d1 ; unused
+	const MUSIC_SV_AREAZERO                    ; d2 
+	const MUSIC_DPPT_FIGHTAREA                 ; d3
+	const MUSIC_DPPT_FIGHTAREANIGHT
 DEF NUM_MUSIC_SONGS EQU const_value
 
-; GetMapMusic picks music for these values (see data/maps/special_map_music.asm)
+; GetMapMusic picks music for these values (see data/maps/alternate_music.asm)
 	const_def $ff, -1
 	const MUSIC_RADIO_TOWER   ; ff
 	const MUSIC_MAHOGANY_MART ; fe

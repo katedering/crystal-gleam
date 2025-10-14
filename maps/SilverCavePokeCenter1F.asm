@@ -15,9 +15,9 @@ SilverCavePokeCenter1F_MapScriptHeader:
 
 	def_object_events
 	pc_nurse_event  5, 1
-	object_event  6,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, cheatclub, -1
-	object_event  9,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 1, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SilverCavePokeCenterGrampsScript, -1
-	object_event  2,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 1, 2, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, SilverCavePokeCenter1FGrannyText, -1
+	object_event  6,  1, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumpstd, cheatclub, -1
+	object_event  9,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 1, 2, -1, 0, OBJECTTYPE_SCRIPT, 0, SilverCavePokeCenterGrampsScript, -1
+	object_event  2,  4, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 1, 2, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, SilverCavePokeCenter1FGrannyText, -1
 
 PokemonJournalLanceScript:
 	setflag ENGINE_READ_LANCE_JOURNAL
@@ -49,7 +49,6 @@ SilverCavePokeCenterGrampsScript:
 
 	text "Oh, you've read "
 	text_decimal hScriptVar, 1, 2
-	text ""
 	line "of them?"
 
 	para "Not bad, but I've"

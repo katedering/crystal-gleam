@@ -295,7 +295,9 @@ OverworldMonIconColors::
 	iconpal BROWN, BLUE ; FARIGIRAF
 	iconpal BROWN, BLUE ; CLODSIRE
 	iconpal GRAY, PURPLE ; ANNIHILAPE
-	iconpal BROWN, GRAY ; EEVEE
+	iconpal BROWN, GRAY ; EEVEEON
+	iconpal GRAY, WHITE
+	iconpal ORANGE, AZURE
 	assert_table_length NUM_SPECIES
 
 rept NUM_UNOWN - 1
@@ -381,4 +383,7 @@ endr
 	iconpal GREEN, BROWN ; LEAFEON
 	iconpal AZURE, BLUE ; GLACEON
 	iconpal PINK, AZURE ; SYLVEON
+	
+	iconpal RED, AZURE ; PIKACHU
+	iconpal ORANGE, AZURE ; RAICHU
 	assert_table_length NUM_UNIQUE_POKEMON

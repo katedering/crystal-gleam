@@ -1,7 +1,7 @@
 MACRO ev_yield
 	def_evs \#
-	db (EV_HP << 6) | (EV_ATK << 4) | (EV_DEF << 2) | EV_SPE
-	db (EV_SAT << 6) | (EV_SDF << 4)
+	db (VV_HP << 6) | (VV_ATK << 4) | (VV_DEF << 2) | VV_SPE
+	db (VV_SAT << 6) | (VV_SDF << 4)
 ENDM
 
 MACRO abilities_for
@@ -327,6 +327,8 @@ INCLUDE "data/pokemon/base_stats/farigiraf.asm"
 INCLUDE "data/pokemon/base_stats/clodsire.asm"
 INCLUDE "data/pokemon/base_stats/annihilape.asm"
 INCLUDE "data/pokemon/base_stats/eeveeon.asm"
+INCLUDE "data/pokemon/base_stats/missingno_.asm"
+INCLUDE "data/pokemon/base_stats/gorochu.asm"
 	assert_table_length NUM_SPECIES
 
 INCLUDE "data/pokemon/base_stats/gyarados.asm" ; red
@@ -392,4 +394,7 @@ INCLUDE "data/pokemon/base_stats/umbreon_eon.asm"
 INCLUDE "data/pokemon/base_stats/leafeon_eon.asm"
 INCLUDE "data/pokemon/base_stats/glaceon_eon.asm"
 INCLUDE "data/pokemon/base_stats/sylveon_eon.asm"
+
+INCLUDE "data/pokemon/base_stats/pikachu_partner.asm"
+INCLUDE "data/pokemon/base_stats/raichu_partner.asm"
 	assert_table_length NUM_EXT_POKEMON
