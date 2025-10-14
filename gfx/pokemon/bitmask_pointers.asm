@@ -132,10 +132,10 @@ BitmasksPointers:
 	dw GyaradosPlainBitmasks
 	dw LaprasBitmasks
 	dw DittoBitmasks
-	dw EeveePlainBitmasks
-	dw VaporeonPlainBitmasks
-	dw JolteonPlainBitmasks
-	dw FlareonPlainBitmasks
+	dw EeveeBitmasks
+	dw VaporeonBitmasks
+	dw JolteonBitmasks
+	dw FlareonBitmasks
 	dw PorygonBitmasks
 	dw OmanyteBitmasks
 	dw OmastarBitmasks
@@ -195,8 +195,8 @@ BitmasksPointers:
 	dw YanmaBitmasks
 	dw WooperPlainBitmasks
 	dw QuagsireBitmasks
-	dw EspeonPlainBitmasks
-	dw UmbreonPlainBitmasks
+	dw EspeonBitmasks
+	dw UmbreonBitmasks
 	dw MurkrowBitmasks
 	dw SlowkingPlainBitmasks
 	dw MisdreavusBitmasks
@@ -272,12 +272,12 @@ BitmasksPointers:
 	dw MagmortarBitmasks
 	dw TogekissBitmasks
 	dw YanmegaBitmasks
-	dw LeafeonPlainBitmasks
-	dw GlaceonPlainBitmasks
+	dw LeafeonBitmasks
+	dw GlaceonBitmasks
 	dw GliscorBitmasks
 	dw MamoswineBitmasks
 	dw PorygonZBitmasks
-	dw SylveonPlainBitmasks
+	dw SylveonBitmasks
 	dw PerrserkerBitmasks
 	dw CursolaBitmasks
 	dw SirfetchDBitmasks
@@ -291,7 +291,6 @@ BitmasksPointers:
 	dw FarigirafBitmasks
 	dw ClodsireBitmasks
 	dw AnnihilapeBitmasks
-	dw EeveeonBitmasks
 	assert_table_length NUM_SPECIES
 
 	dw UnownBBitmasks
@@ -411,13 +410,4 @@ BitmasksPointers:
 
 	dw UrsalunaBloodmoonBitmasks
 
-	dw EeveeEonBitmasks
-	dw VaporeonEonBitmasks
-	dw JolteonEonBitmasks
-	dw FlareonEonBitmasks
-	dw EspeonEonBitmasks
-	dw UmbreonEonBitmasks
-	dw LeafeonEonBitmasks
-	dw GlaceonEonBitmasks
-	dw SylveonEonBitmasks
 	assert_table_length NUM_UNIQUE_POKEMON

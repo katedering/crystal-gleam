@@ -45,7 +45,6 @@ StdScripts::
 	dw GymStatue1Script
 	dw GymStatue2Script
 	dw GymStatue3Script
-	dw ReceiveItemScript
 	dw PCScript
 	dw GameCornerCoinVendorScript
 	dw HappinessCheckScript
@@ -56,12 +55,10 @@ StdScripts::
 	dw VendingMachineScript
 	dw TreeGrottoScript
 	dw CaveGrottoScript
-	dw CheatClubScript
+	dw KantoPostGymEventsScript
 
 PokeCenterNurseScript:
 	opentext
-	checkkeyitem CHEATER_CARD
-	iftruefwd .cheat_center
 	checkevent EVENT_NURSE_SAW_TRAINER_STAR
 	iftruefwd .star_center
 	checktime 1 << MORN
@@ -206,46 +203,7 @@ PokeCenterNurseScript:
 .done
 	turnobject PLAYER, DOWN
 	end
-	
-.cheat_center
-	farwritetext NurseCheatText
-	promptbutton
-	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
-	playmusic MUSIC_HEAL
-	special HealParty
-	pause 60
-	special Special_FadeInQuickly
-	special RestartMapMusic
-	checkphonecall ; elm already called about pokerus
-	iftruefwd .no2
-	checkflag ENGINE_CAUGHT_POKERUS ; nurse already talked about pokerus
-	iftruefwd .no2
-	special SpecialCheckPokerus
-	iftruefwd .pokerus2
-.no2
-	farwritetext NurseCheatDoneText
-	pause 40
-	farwritetext NurseCheatGoodbyeText
-	pause 40
-	closetext
-	sjumpfwd .done2
 
-.pokerus2
-	; already cleared earlier in the script
-	farwritetext NurseCheatPokerusText
-	waitbutton
-	closetext
-	sjumpfwd .pokerus_done2
-
-.pokerus_done2
-	setflag ENGINE_CAUGHT_POKERUS
-	specialphonecall SPECIALCALL_POKERUS
-.done2
-	turnobject PLAYER, DOWN
-	end
-	
-	
 DifficultBookshelfScript:
 	farjumptext DifficultBookshelfText
 
@@ -361,25 +319,25 @@ DayToTextScript:
 	ifequalfwd THURSDAY, .Thursday
 	ifequalfwd FRIDAY, .Friday
 	ifequalfwd SATURDAY, .Saturday
-	getstring .SundayText, 0
+	getstring .SundayText, STRING_BUFFER_3
 	end
 .Monday:
-	getstring .MondayText, 0
+	getstring .MondayText, STRING_BUFFER_3
 	end
 .Tuesday:
-	getstring .TuesdayText, 0
+	getstring .TuesdayText, STRING_BUFFER_3
 	end
 .Wednesday:
-	getstring .WednesdayText, 0
+	getstring .WednesdayText, STRING_BUFFER_3
 	end
 .Thursday:
-	getstring .ThursdayText, 0
+	getstring .ThursdayText, STRING_BUFFER_3
 	end
 .Friday:
-	getstring .FridayText, 0
+	getstring .FridayText, STRING_BUFFER_3
 	end
 .Saturday:
-	getstring .SaturdayText, 0
+	getstring .SaturdayText, STRING_BUFFER_3
 	end
 .SundayText:
 	db "Sunday@"
@@ -414,12 +372,12 @@ BugContestResultsScript:
 	farwritetext ContestResults_ReadyToJudgeText
 	waitbutton
 	special BugContestJudging
-	getnum $0
+	getnum STRING_BUFFER_3
 	ifequalfwd 1, .FirstPlace
 	ifequalfwd 2, .SecondPlace
 	ifequalfwd 3, .ThirdPlace
 	readmem wBugContestOfficerPrize
-	getitemname $0, $1
+	getitemname USE_SCRIPT_VAR, STRING_BUFFER_4
 	farwritetext ContestResults_ConsolationPrizeText
 	promptbutton
 	waitsfx
@@ -439,7 +397,7 @@ BugContestResultsScript:
 .SecondPlace
 .ThirdPlace
 	readmem wBugContestOfficerPrize
-	getitemname $0, $1
+	getitemname USE_SCRIPT_VAR, STRING_BUFFER_4
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	readmem wBugContestOfficerPrize
@@ -1539,13 +1497,13 @@ RematchGiftFScript:
 	end
 
 GymStatue0Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	waitendtext
 
 GymStatue1Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
@@ -1553,7 +1511,7 @@ GymStatue1Script:
 	waitendtext
 
 GymStatue2Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
@@ -1561,19 +1519,12 @@ GymStatue2Script:
 	waitendtext
 
 GymStatue3Script:
-	getcurlandmarkname $0
+	getcurlandmarkname STRING_BUFFER_3
 	opentext
 	farwritetext GymStatue_CityGymText
 	promptbutton
 	farwritetext GymStatue_ThreeWinningTrainersText
 	waitendtext
-
-ReceiveItemScript:
-	waitsfx
-	farwritetext ReceivedItemText
-	playsound SFX_ITEM
-	waitsfx
-	end
 
 GameCornerCoinVendorScript:
 	faceplayer
@@ -1593,47 +1544,33 @@ CoinVendor_IntroScript:
 	loadmenu .MenuDataHeader
 	verticalmenu
 	closewindow
-	ifequalfwd $1, .Buy100
-	ifequalfwd $2, .Buy1000
-	ifequalfwd $3, .Buy5000
+	ifequalfwd $1, .Buy50
+	ifequalfwd $2, .Buy500
 	sjumpfwd .Cancel
 
-.Buy100:
-	checkcoins 49900
-	ifequalfwd $0, .CoinCaseFull
-	checkmoney $0, 1000
-	ifequalfwd $2, .NotEnoughMoney
-	givecoins 100
-	takemoney $0, 1000
+.Buy50:
+	checkcoins MAX_COINS - 50
+	ifequalfwd HAVE_MORE, .CoinCaseFull
+	checkmoney YOUR_MONEY, 1000
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
+	givecoins 50
+	takemoney YOUR_MONEY, 1000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy100CoinsText
+	farwritetext CoinVendor_Buy50CoinsText
 	waitbutton
 	sjump .loop
 
-.Buy1000:
-	checkcoins 49000
-	ifequalfwd $0, .CoinCaseFull
-	checkmoney $0, 10000
-	ifequalfwd $2, .NotEnoughMoney
-	givecoins 1000
-	takemoney $0, 10000
+.Buy500:
+	checkcoins MAX_COINS - 500
+	ifequalfwd HAVE_MORE, .CoinCaseFull
+	checkmoney YOUR_MONEY, 10000
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
+	givecoins 500
+	takemoney YOUR_MONEY, 10000
 	waitsfx
 	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy1000CoinsText
-	waitbutton
-	sjump .loop
-	
-.Buy5000
-	checkcoins 45000
-	ifequalfwd $0, .CoinCaseFull
-	checkmoney $0, 50000
-	ifequalfwd $2, .NotEnoughMoney
-	givecoins 5000
-	takemoney $0, 50000
-	waitsfx
-	playsound SFX_TRANSACTION
-	farwritetext CoinVendor_Buy5000CoinsText
+	farwritetext CoinVendor_Buy500CoinsText
 	waitbutton
 	sjump .loop
 
@@ -1651,16 +1588,15 @@ CoinVendor_IntroScript:
 
 .MenuDataHeader:
 	db MENU_BACKUP_TILES
-	menu_coords 0, 5, 16, 11
+	menu_coords 0, 4, 15, 11
 	dw .MenuData2
 	db 1 ; default option
 
 .MenuData2:
 	db $80 ; flags
 	db 3 ; items
-	db " 100 :  ¥1000@"
-	db "1000 : ¥10000@"
-	db "5000 : ¥50000@"
+	db " 50 :  ¥1000@"
+	db "500 : ¥10000@"
 	db "Cancel@"
 
 HappinessCheckScript:
@@ -1703,48 +1639,48 @@ VendingMachineScript:
 	endtext
 
 .FreshWater:
-	checkmoney $0, 200
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 200
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem FRESH_WATER
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 200
-	getitemname FRESH_WATER, $0
+	takemoney YOUR_MONEY, 200
+	getitemname FRESH_WATER, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem FRESH_WATER
 	iffalse .Start
-	getitemname FRESH_WATER, $0
+	getitemname FRESH_WATER, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .SodaPop:
-	checkmoney $0, 300
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 300
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem SODA_POP
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 300
-	getitemname SODA_POP, $0
+	takemoney YOUR_MONEY, 300
+	getitemname SODA_POP, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem SODA_POP
 	iffalse .Start
-	getitemname SODA_POP, $0
+	getitemname SODA_POP, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .Lemonade:
-	checkmoney $0, 350
-	ifequalfwd $2, .NotEnoughMoney
+	checkmoney YOUR_MONEY, 350
+	ifequalfwd HAVE_LESS, .NotEnoughMoney
 	giveitem LEMONADE
 	iffalsefwd .NotEnoughSpace
-	takemoney $0, 350
-	getitemname LEMONADE, $0
+	takemoney YOUR_MONEY, 350
+	getitemname LEMONADE, STRING_BUFFER_3
 	scall .VendItem
 	random $20
 	ifnotequal $0, .Start
 	giveitem LEMONADE
 	iffalse .Start
-	getitemname LEMONADE, $0
+	getitemname LEMONADE, STRING_BUFFER_3
 	sjumpfwd .ExtraItem
 
 .VendItem:
@@ -1830,99 +1766,24 @@ _HiddenGrottoBackupMap:
 	ld [wBackupMapNumber], a
 	ret
 
-CheatClubScript:
-	faceplayer
-	opentext
-	checkevent EVENT_YOU_ARE_A_DIRTY_CHEATER
-	iftruefwd .Cheater
-	farwritetext AreYouACheaterText
-	yesorno
-	iffalsefwd .NotCheater
-	farwritetext YouAreACheaterText
-	waitbutton
-	waitsfx
-	verbosegivekeyitem CHEATER_CARD
-	setevent EVENT_YOU_ARE_A_DIRTY_CHEATER
-	sjumpfwd .Cheater
-
-.NotCheater:
-	farwritetext YouAreNotACheaterText
-	waitbutton
-	closetext
+KantoPostGymEventsScript:
+	readvar VAR_BADGES
+	ifequalfwd 9, .FirstBadge
+	ifequalfwd 10, .SecondBadge
+	ifequalfwd 12, .LyrasEgg
 	end
-	
-.Cheater:
-	farwritetext CheatClubText1
-	promptbutton
-.CheatMenu:
-	farwritetext CheatClubText2
-	loadmenu .CheatMenuData
-	verticalmenu
-	closewindow
-	ifequalfwd $1, .CatchPack
-	ifequalfwd $2, .TrainPack
-	ifequalfwd $3, .MoneyPack
-	sjumpfwd .CheatClubCancel
 
-.CatchPack:
-	giveitem MASTER_BALL, 99
-	giveitem CHERISH_BALL, 99
-	giveitem SWEET_HONEY, 99
-	waitsfx
-	playsound SFX_TRANSACTION
-	farwritetext CheatClubCatchPackText
-	waitbutton
-	sjump .CheatMenu
+.FirstBadge:
+	specialphonecall SPECIALCALL_FIRSTBADGE
+	end
 
-.TrainPack:
-	giveitem RARE_CANDY, 99
-	giveitem HP_UP, 99
-	giveitem PROTEIN, 99
-	giveitem IRON, 99
-	giveitem CALCIUM, 99
-	giveitem ZINC, 99
-	giveitem CARBOS, 99
-	giveitem PP_MAX, 99
-	giveitem ABILITYPATCH, 99
-	giveitem ABILITY_CAP, 99
-	giveitem SILVER_LEAF, 99
-	giveitem GOLD_LEAF, 99
-	giveitem MINT_LEAF, 99
-	giveitem BOTTLE_CAP, 99
-	giveitem FULL_RESTORE, 99
-	giveitem MAX_REVIVE, 99
-	giveitem MAX_ELIXIR, 99
-	waitsfx
-	playsound SFX_TRANSACTION
-	farwritetext CheatClubTrainPackText
-	waitbutton
-	sjump .CheatMenu
+.SecondBadge:
+	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	iftruefwd .Done
+	specialphonecall SPECIALCALL_SECONDBADGE
+.Done:
+	end
 
-.MoneyPack:
-	giveitem BIG_NUGGET, 99
-	giveitem BIG_NUGGET, 99
-	giveitem BIG_NUGGET, 99
-	waitsfx
-	playsound SFX_TRANSACTION
-	farwritetext CheatClubMoneyPackText
-	waitbutton
-	sjump .CheatMenu
-
-.CheatClubCancel:
-	farwritetext CheatClubCancelText
-	waitendtext
-	
-.CheatMenuData:
-	db MENU_BACKUP_TILES
-	menu_coords 0, 2, 15, 11
-	dw .CheatMenuData2
-	db 4 ; default option
-
-.CheatMenuData2:
-	db $80 ; flags
-	db 4 ; items
-	db "Catching Pack@"
-	db "Training Pack@"
-	db "Shopping Pack@"
-	db "Cancel@"
-	
+.LyrasEgg:
+	specialphonecall SPECIALCALL_LYRASEGG
+	end

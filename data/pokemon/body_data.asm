@@ -298,7 +298,6 @@ PokemonBodyData:
 	body_data  32, 1600, QUADRUPED,    YELLOW ; FARIGIRAF
 	body_data  18, 2230, QUADRUPED,    BROWN  ; CLODSIRE
 	body_data  12,  560, BIPEDAL_TAIL, GRAY   ; ANNIHILAPE
-	body_data   6,  165, QUADRUPED,    BROWN  ; EEVEEON
 	assert_table_length NUM_SPECIES
 
 	body_data  65, 2350, SERPENTINE,   RED    ; GYARADOS (GYARADOS_RED_FORM)
@@ -354,14 +353,5 @@ PokemonBodyData:
 	body_data  14, 1100, QUADRUPED,    BLACK  ; TAUROS (TAUROS_PALDEAN_WATER_FORM)
 
 	body_data  27, 3330, BIPEDAL_TAIL, BROWN  ; URSALUNA (URSALUNA_BLOODMOON_FORM)
-	
-	body_data   3,   65, QUADRUPED,    BROWN  ; EEVEE (EON_FORM)
-	body_data  10,  290, QUADRUPED,    BLUE   ; VAPOREON (EON_FORM)
-	body_data   8,  245, QUADRUPED,    YELLOW ; JOLTEON (EON_FORM)
-	body_data   9,  250, QUADRUPED,    RED    ; FLAREON (EON_FORM)
-	body_data   9,  265, QUADRUPED,    PURPLE ; ESPEON (EON_FORM)
-	body_data  10,  270, QUADRUPED,    BLACK  ; UMBREON (EON_FORM)
-	body_data  10,  255, QUADRUPED,    GREEN  ; LEAFEON (EON_FORM)
-	body_data   8,  259, QUADRUPED,    BLUE   ; GLACEON (EON_FORM)
-	body_data  10,  235, QUADRUPED,    PINK   ; SYLVEON (EON_FORM)
+
 	assert_table_length NUM_EXT_POKEMON

@@ -295,7 +295,6 @@ MiniIconPointers:
 	mini_icon Farigiraf
 	mini_icon Clodsire
 	mini_icon Annihilape
-	mini_icon Eeveeon
 	assert_table_length NUM_SPECIES
 
 	mini_icon UnownB
@@ -398,14 +397,5 @@ endr
 	mini_icon TaurosPaldeanWater
 
 	mini_icon UrsalunaBloodmoon
-	
-	mini_icon EeveeEon
-	mini_icon VaporeonEon
-	mini_icon JolteonEon
-	mini_icon FlareonEon
-	mini_icon EspeonEon
-	mini_icon UmbreonEon
-	mini_icon LeafeonEon
-	mini_icon GlaceonEon
-	mini_icon SylveonEon
+
 	assert_table_length NUM_UNIQUE_POKEMON

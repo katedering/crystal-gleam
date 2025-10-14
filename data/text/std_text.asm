@@ -155,34 +155,6 @@ PokeComNursePokerusText:
 	line "you anything more."
 	done
 
-NurseCheatText:
-	text "Welcome to our…"
-	
-	para "Oh! A Club member!"
-	
-	para "Wait a moment,"
-	line "please."
-	done
-	
-NurseCheatDoneText:
-	text "Your #mon"
-	line "are all healed up!"
-	done
-
-NurseCheatGoodbyeText:
-	text "Good luck out"
-	line "there, cheater!"
-	done
-
-NurseCheatPokerusText:
-	text "Oh! Your #mon"
-	line "seems to have"
-	cont "#rus."
-	
-	para "That's not a bad"
-	line "thing, at least."
-	done
-
 DifficultBookshelfText:
 	text "It's full of"
 	line "difficult books."
@@ -299,18 +271,10 @@ ContestResults_ReadyToJudgeText:
 ContestResults_PlayerWonAPrizeText:
 	text "<PLAYER>, the No."
 	text_ram wStringBuffer3
-	text ""
 	line "finisher, wins"
 	cont ""
 	text_ram wStringBuffer4
 	text "!"
-	done
-
-ReceivedItemText:
-	text "<PLAYER> received"
-	line ""
-	text_ram wStringBuffer4
-	text "."
 	done
 
 ContestResults_JoinUsNextTimeText:
@@ -348,7 +312,6 @@ ContestResults_PartyFullText:
 
 GymStatue_CityGymText:
 	text_ram wStringBuffer3
-	text ""
 	line "#mon Gym"
 
 	para "Leader: "
@@ -392,23 +355,18 @@ CoinVendor_IntroText:
 	line "game coins?"
 
 	para "It costs ¥1000 for"
-	line "100 coins. Do you"
+	line "50 coins. Do you"
 	cont "want some?"
 	done
 
-CoinVendor_Buy100CoinsText:
+CoinVendor_Buy50CoinsText:
 	text "Thank you!"
-	line "Here are 100 coins."
+	line "Here are 50 coins."
 	done
 
-CoinVendor_Buy1000CoinsText:
+CoinVendor_Buy500CoinsText:
 	text "Thank you! Here"
-	line "are 1000 coins."
-	done
-
-CoinVendor_Buy5000CoinsText:
-	text "Thank you! Here"
-	line "are 5000 coins."
+	line "are 500 coins."
 	done
 
 CoinVendor_NotEnoughMoneyText:
@@ -483,7 +441,6 @@ VendingMachineClangText:
 
 	para ""
 	text_ram wStringBuffer3
-	text ""
 	line "popped out."
 	done
 
@@ -491,7 +448,6 @@ VendingMachineScoreText:
 	text "Score! An extra"
 	line ""
 	text_ram wStringBuffer3
-	text ""
 	cont "popped out."
 	done
 
@@ -511,79 +467,4 @@ HiddenGrottoText:
 
 	para "Will you follow"
 	line "it?"
-	done
-
-AreYouACheaterText:
-	text "Welcome to the"
-	line "Cheater's Club!"
-	
-	para "Do you want an"
-	line "edge over the"
-	cont "competition?"
-	
-	para "Are you prepared"
-	line "to do whatever it"
-	cont "takes to win?"
-	
-	para "Will you join this"
-	line "prestigious club?"
-	done
-
-YouAreACheaterText:
-	text "Great! We'll get"
-	line "your information"
-	cont "sorted, so you"
-	cont "won't have to ask"
-	cont "next time."
-	
-	para "Here's your member-"
-	line "ship card!"
-	done
-
-YouAreNotACheaterText:
-	text "Oh? You don't want"
-	line "to join? Alright,"
-	cont "that's fine too!"
-	
-	para "We hope you change"
-	line "your mind one day!"
-	
-	para "Goodbye for now!"
-	done
-	
-CheatClubText1:
-	text "Welcome to the"
-	line "Cheater's Club!"
-	done
-
-CheatClubText2:	
-	text "What power-up pack"
-	line "would you like?"
-	done
-
-CheatClubCatchPackText:
-	text "Enjoy catching"
-	line "'em all with this"
-	cont "pack!"
-	done
-
-CheatClubTrainPackText:
-	text "You'll definitely"
-	line "be the very best"
-	cont "with this pack!"
-	done
-
-CheatClubMoneyPackText:
-	text "Look at money-bags"
-	line "over here!"
-	
-	para "Cha-ching!"
-	done
-
-CheatClubCancelText:
-	text "Nothing for you"
-	line "this time?"
-	
-	para "Okay! Enjoy your"
-	line "day! Goodbye!"
 	done

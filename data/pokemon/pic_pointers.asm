@@ -1,9 +1,9 @@
 MACRO pics
-	dbas \1Frontpic, \1Backpic
+	dbas \1Frontpic, \1Backpic, \1Frames
 ENDM
 
 PokemonPicPointers::
-	table_width 5
+	table_width 7
 	pics Bulbasaur
 	pics Ivysaur
 	pics Venusaur
@@ -136,10 +136,10 @@ PokemonPicPointers::
 	pics GyaradosPlain
 	pics Lapras
 	pics Ditto
-	pics EeveePlain
-	pics VaporeonPlain
-	pics JolteonPlain
-	pics FlareonPlain
+	pics Eevee
+	pics Vaporeon
+	pics Jolteon
+	pics Flareon
 	pics Porygon
 	pics Omanyte
 	pics Omastar
@@ -199,8 +199,8 @@ PokemonPicPointers::
 	pics Yanma
 	pics WooperPlain
 	pics Quagsire
-	pics EspeonPlain
-	pics UmbreonPlain
+	pics Espeon
+	pics Umbreon
 	pics Murkrow
 	pics SlowkingPlain
 	pics Misdreavus
@@ -258,8 +258,8 @@ PokemonPicPointers::
 	pics Azurill
 	pics Wynaut
 	pics Ambipom
-	dbas EggPic, EggPic
-	dbas EggPic, EggPic ; $100
+	dbas EggPic, EggPic, EggFrames
+	dbas EggPic, EggPic, EggFrames ; $100
 	pics Mismagius
 	pics Honchkrow
 	pics Bonsly
@@ -276,12 +276,12 @@ PokemonPicPointers::
 	pics Magmortar
 	pics Togekiss
 	pics Yanmega
-	pics LeafeonPlain
-	pics GlaceonPlain
+	pics Leafeon
+	pics Glaceon
 	pics Gliscor
 	pics Mamoswine
 	pics PorygonZ
-	pics SylveonPlain
+	pics Sylveon
 	pics Perrserker
 	pics Cursola
 	pics SirfetchD
@@ -295,7 +295,6 @@ PokemonPicPointers::
 	pics Farigiraf
 	pics Clodsire
 	pics Annihilape
-	pics Eeveeon
 	assert_table_length NUM_SPECIES
 
 	pics UnownB
@@ -414,15 +413,5 @@ PokemonPicPointers::
 	pics TaurosPaldeanWater
 
 	pics UrsalunaBloodmoon
-	
-	pics EeveeEon
-	pics VaporeonEon
-	pics JolteonEon
-	pics FlareonEon
-	pics EspeonEon
-	pics UmbreonEon
-	pics LeafeonEon
-	pics GlaceonEon
-	pics SylveonEon
 
 	assert_table_length NUM_UNIQUE_POKEMON

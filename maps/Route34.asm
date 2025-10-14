@@ -25,20 +25,20 @@ Route34_MapScriptHeader:
 	bg_event 17, 19, BGEVENT_ITEM + SUPER_POTION, EVENT_ROUTE_34_HIDDEN_SUPER_POTION
 
 	def_object_events
-	object_event 11, 20, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34RichBoyIrvingScript, -1
-	object_event 10, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAYCARE_MAN_ON_ROUTE_34
-	object_event  8, 12, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_34
-	object_event 13,  7, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
-	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederJulie, -1
-	object_event 10, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
-	object_event  6, 10, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficerfMaraScript, -1
-	object_event 18, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokefanmBrandon, -1
-	object_event 14, 18, SPRITE_DAYCARE_MON_1, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAYCARE_MON_1
-	object_event 17, 19, SPRITE_DAYCARE_MON_2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAYCARE_MON_2
-	object_event 11, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCooltrainerfIrene, -1
-	object_event  3, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJenn, -1
-	object_event  6, 51, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKimi, -1
-	itemball_event  7, 29, NUGGET, 1, EVENT_ROUTE_34_NUGGET
+	object_event 11, 20, SPRITE_RICH_BOY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, Route34RichBoyIrvingScript, -1
+	object_event 10, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareManScript_Outside, EVENT_DAYCARE_MAN_ON_ROUTE_34
+	object_event  8, 12, SPRITE_LYRA, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_LYRA_ROUTE_34
+	object_event 13,  7, SPRITE_CAMPER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCamperTodd1, -1
+	object_event 15, 32, SPRITE_BREEDER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerBreederJulie, -1
+	object_event 10, 26, SPRITE_PICNICKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerPicnickerGina1, -1
+	object_event  6, 10, SPRITE_OFFICER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, OfficerfMaraScript, -1
+	object_event 18, 28, SPRITE_POKEFAN_M, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, GenericTrainerPokefanmBrandon, -1
+	object_event 14, 18, SPRITE_DAYCARE_MON_1, SPRITEMOVEDATA_POKEMON, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon1Script, EVENT_DAYCARE_MON_1
+	object_event 17, 19, SPRITE_DAYCARE_MON_2, SPRITEMOVEDATA_POKEMON, 0, 0, -1, 0, OBJECTTYPE_SCRIPT, 0, DayCareMon2Script, EVENT_DAYCARE_MON_2
+	object_event 11, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 5, TrainerCooltrainerfIrene, -1
+	object_event  3, 48, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 3, TrainerCooltrainerfJenn, -1
+	object_event  6, 51, SPRITE_ACE_TRAINER_F, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 0, OBJECTTYPE_TRAINER, 2, TrainerCooltrainerfKate, -1
+	itemball_event  7, 30, NUGGET, 1, EVENT_ROUTE_34_NUGGET
 
 	object_const_def
 	const ROUTE34_RICH_BOY
@@ -218,7 +218,7 @@ TrainerCamperTodd1:
 	askforphonenumber PHONE_CAMPER_TODD
 	ifequalfwd $1, .PhoneFull
 	ifequalfwd $2, .NumberDeclined
-	gettrainername CAMPER, TODD1, $0
+	gettrainername CAMPER, TODD1, STRING_BUFFER_3
 	callstd registerednumberm
 	jumpstd numberacceptedm
 
@@ -317,7 +317,7 @@ TrainerPicnickerGina1:
 	askforphonenumber PHONE_PICNICKER_GINA
 	ifequalfwd $1, .PhoneFull
 	ifequalfwd $2, .NumberDeclined
-	gettrainername PICNICKER, GINA1, $0
+	gettrainername PICNICKER, GINA1, STRING_BUFFER_3
 	callstd registerednumberf
 	jumpstd numberacceptedf
 
@@ -558,12 +558,12 @@ TrainerCooltrainerfIrene:
 
 .Script:
 	endifjustbattled
-	checkevent EVENT_GOT_POWER_HERB_FROM_KIMI
+	checkevent EVENT_GOT_POWER_HERB_FROM_KATE
 	iftrue_jumptext CooltrainerfIreneAfterText2
 	jumpthistext
 
 	text "Irene: My sister"
-	line "Kimi will get you"
+	line "Kate will get you"
 	cont "for this!"
 	done
 
@@ -572,32 +572,32 @@ TrainerCooltrainerfJenn:
 
 .Script:
 	endifjustbattled
-	checkevent EVENT_GOT_POWER_HERB_FROM_KIMI
+	checkevent EVENT_GOT_POWER_HERB_FROM_KATE
 	iftrue_jumptext CooltrainerfJennAfterText2
 	jumpthistext
 
 	text "Jenn: Don't get"
 	line "cocky! My sister"
-	cont "Kimi is tough!"
+	cont "Kate is tough!"
 	done
 
-TrainerCooltrainerfKimi:
-	trainer COOLTRAINERF, KIMI, EVENT_BEAT_COOLTRAINERF_KIMI, CooltrainerfKimiSeenText, CooltrainerfKimiBeatenText, 0, .Script
+TrainerCooltrainerfKate:
+	trainer COOLTRAINERF, KATE, EVENT_BEAT_COOLTRAINERF_KATE, CooltrainerfKateSeenText, CooltrainerfKateBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
-	checkevent EVENT_GOT_POWER_HERB_FROM_KIMI
-	iftrue_jumptext CooltrainerfKimiAfterText
+	checkevent EVENT_GOT_POWER_HERB_FROM_KATE
+	iftrue_jumptext CooltrainerfKateAfterText
 	opentext
-	writetext CooltrainerfKimiOfferPowerHerbText
+	writetext CooltrainerfKateOfferPowerHerbText
 	promptbutton
 	verbosegiveitem POWER_HERB
 	iffalse_endtext
-	setevent EVENT_GOT_POWER_HERB_FROM_KIMI
+	setevent EVENT_GOT_POWER_HERB_FROM_KATE
 	jumpthisopenedtext
 
-CooltrainerfKimiAfterText:
-	text "Kimi: I'm sorry we"
+CooltrainerfKateAfterText:
+	text "Kate: I'm sorry we"
 	line "jumped you."
 
 	para "We never expected"
@@ -843,19 +843,19 @@ CooltrainerfJennAfterText2:
 	cont "stronger."
 	done
 
-CooltrainerfKimiSeenText:
-	text "Kimi: You sure"
+CooltrainerfKateSeenText:
+	text "Kate: You sure"
 	line "were mean to my"
 	cont "little sisters!"
 	done
 
-CooltrainerfKimiBeatenText:
-	text "Kimi: No! I can't"
+CooltrainerfKateBeatenText:
+	text "Kate: No! I can't"
 	line "believe I lost."
 	done
 
-CooltrainerfKimiOfferPowerHerbText:
-	text "Kimi: You're too"
+CooltrainerfKateOfferPowerHerbText:
+	text "Kate: You're too"
 	line "strong. I didn't"
 	cont "stand a chance."
 

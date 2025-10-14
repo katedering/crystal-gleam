@@ -8,7 +8,7 @@
 ; indexes for (species + non-cosmetic variants):
 ; - BaseData (see data/pokemon/base_stats.asm)
 ; - EvosAttacksPointers (see data/pokemon/evos_attacks_pointers.asm)
-; - EggMovePointers (see data/pokemon/egg_move_pointers.asm)
+; - EggSpeciesMovesPointers (see data/pokemon/egg_move_pointers.asm)
 ; - EvolutionMoves (see data/pokemon/evolution_moves.asm)
 ; - PokemonBodyData (see data/pokemon/body_data.asm)
 ; - PokemonPalettes (see data/pokemon/palettes.asm)
@@ -22,7 +22,6 @@
 ; - AnimationPointers (see gfx/pokemon/anim_pointers.asm)
 ; - AnimationIdlePointers (see gfx/pokemon/extra_pointers.asm)
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)
-; - FramesPointers (see gfx/pokemon/frame_pointers.asm)
 	const_def 1
 	const BULBASAUR  ; 01
 	const IVYSAUR    ; 02
@@ -315,7 +314,6 @@
 	const FARIGIRAF  ; 121
 	const CLODSIRE   ; 122
 	const ANNIHILAPE ; 123
-	const EEVEEON    ; 124
 DEF NUM_SPECIES EQU const_value - 1 ; 123
 DEF NUM_POKEMON EQU NUM_SPECIES - (2 * HIGH(NUM_SPECIES)) ; 121
 
@@ -500,20 +498,8 @@ DEF PALDEAN_FORM EQU 5
 ; ursaluna
 	ext_const_def 2
 	ext_const URSALUNA_BLOODMOON_FORM ; 189 (2)
-	
-; crystal gleam exclusive forms
-DEF EON_FORM EQU 6
-	const_skip ; 18b eevee
-	const_skip ; 18c vaporeon
-	const_skip ; 18d jolteon
-	const_skip ; 18e flareon
-	const_skip ; 18f espeon
-	const_skip ; 190 umbreon
-	const_skip ; 191 leafeon
-	const_skip ; 192 glaceon
-	const_skip ; 193 sylveon
 
-DEF NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 2d
+DEF NUM_VARIANT_FORMS EQU const_value - FIRST_VARIANT_FORM_MON ; 2e
 
 ; these constants include EGG and a dummy entry as species
 DEF NUM_UNIQUE_POKEMON EQU const_value - 1 ; 189

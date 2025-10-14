@@ -196,25 +196,24 @@ CheckBallOverflow:
 BallMultiplierFunctionTable:
 ; table of routines that increase or decrease the catch rate based on
 ; which ball is used in a certain situation.
-	dbw GREAT_BALL,   GreatBallMultiplier
-	dbw ULTRA_BALL,   UltraBallMultiplier
-	dbw SAFARI_BALL,  SafariBallMultiplier
-	dbw LEVEL_BALL,   LevelBallMultiplier
-	dbw LURE_BALL,    LureBallMultiplier
-	dbw MOON_BALL,    MoonBallMultiplier
-	dbw FAST_BALL,    FastBallMultiplier
-	dbw HEAVY_BALL,   HeavyBallMultiplier
-	dbw LOVE_BALL,    LoveBallMultiplier
-	dbw PARK_BALL,    ParkBallMultiplier
-	dbw REPEAT_BALL,  RepeatBallMultiplier
-	dbw TIMER_BALL,   TimerBallMultiplier
-	dbw NEST_BALL,    NestBallMultiplier
-	dbw NET_BALL,     NetBallMultiplier
-	dbw DIVE_BALL,    DiveBallMultiplier
-	dbw QUICK_BALL,   QuickBallMultiplier
-	dbw DUSK_BALL,    DuskBallMultiplier
-	dbw DREAM_BALL,   DreamBallMultiplier
-	dbw CHERISH_BALL, CherishBallMultiplier
+	dbw GREAT_BALL,  GreatBallMultiplier
+	dbw ULTRA_BALL,  UltraBallMultiplier
+	dbw SAFARI_BALL, SafariBallMultiplier
+	dbw LEVEL_BALL,  LevelBallMultiplier
+	dbw LURE_BALL,   LureBallMultiplier
+	dbw MOON_BALL,   MoonBallMultiplier
+	dbw FAST_BALL,   FastBallMultiplier
+	dbw HEAVY_BALL,  HeavyBallMultiplier
+	dbw LOVE_BALL,   LoveBallMultiplier
+	dbw PARK_BALL,   ParkBallMultiplier
+	dbw REPEAT_BALL, RepeatBallMultiplier
+	dbw TIMER_BALL,  TimerBallMultiplier
+	dbw NEST_BALL,   NestBallMultiplier
+	dbw NET_BALL,    NetBallMultiplier
+	dbw DIVE_BALL,   DiveBallMultiplier
+	dbw QUICK_BALL,  QuickBallMultiplier
+	dbw DUSK_BALL,   DuskBallMultiplier
+	dbw DREAM_BALL,  DreamBallMultiplier
 	db $ff
 
 UltraBallMultiplier:
@@ -423,6 +422,7 @@ RepeatBallMultiplier:
 TimerBallMultiplier:
 ; multiply catch rate by 1 + (turns passed * 3) / 10, capped at 4
 	ld a, [wTotalBattleTurns]
+	dec a
 	ld b, a
 	add a
 	add b
@@ -484,7 +484,7 @@ DiveBallMultiplier:
 QuickBallMultiplier:
 ; multiply catch rate by 5 on first turn
 	ld a, [wTotalBattleTurns]
-	and a
+	dec a
 	ret nz
 
 	ln a, 5, 1 ; x5
@@ -513,9 +513,4 @@ DreamBallMultiplier:
 	ret z
 
 	ln a, 4, 1 ; x4
-	jmp MultiplyAndDivide
-
-CherishBallMultiplier:
-; multiply catch rate by 10
-	ln a, 10, 1 ; x10
 	jmp MultiplyAndDivide
