@@ -1639,7 +1639,6 @@ OffensiveDamageAbilities:
 	dbw GORILLA_TACTICS, GorillaTacticsAbility
 	dbw STEELY_SPIRIT, SteelySpiritAbility
 	dbw SHARPNESS, SharpnessAbility
-	dbw EON_FORCE, EonForceAbility
 	dbw -1, -1
 
 DefensiveDamageAbilities:
@@ -1648,7 +1647,6 @@ DefensiveDamageAbilities:
 	dbw THICK_FAT, EnemyThickFatAbility
 	dbw DRY_SKIN, EnemyDrySkinAbility
 	dbw FUR_COAT, EnemyFurCoatAbility
-	dbw FLUFFY, EnemyFluffyAbility
 	dbw -1, -1
 
 TechnicianAbility:
@@ -1866,16 +1864,6 @@ AteAbilities:
 	ln a, 6, 5 ; x1.2
 	jmp MultiplyAndDivide
 
-EonForceAbility:
-	ld b, UNKNOWN_T
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVarAddr
-	ld a, [hl]
-	ret nz
-	ld [hl], b
-	ln a, 10, 5 ; x2
-	jmp MultiplyAndDivide
-
 EnemyMultiscaleAbility:
 ; 50% damage if user is at full HP
 	farcall CheckOpponentFullHP
@@ -1922,21 +1910,6 @@ EnemyDrySkinAbility:
 	cp FIRE
 	ret nz
 	ln a, 5, 4 ; x1.25
-	jmp MultiplyAndDivide
-
-EnemyFluffyAbility:
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
-	cp FIRE
-	jr nz, .notFire
-	call CheckContactMove
-	ret nc
-	ln a, 2, 1 ; x2
-	jmp MultiplyAndDivide
-.notFire
-	call CheckContactMove
-	ret c
-	ln a, 1, 2 ; x0.5
 	jmp MultiplyAndDivide
 
 EnemyFurCoatAbility:

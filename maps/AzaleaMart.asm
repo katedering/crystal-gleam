@@ -19,16 +19,15 @@ AzaleaMart_MapScriptHeader:
 	object_event  8,  6, SPRITE_ROCKER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, (1 << EVE) | (1 << NITE), PAL_NPC_PURPLE, OBJECTTYPE_COMMAND, jumptextfaceplayer, AzaleaMartRockerText, -1
 
 AzaleaMartCooltrainermText:
-	text "There's no #"
-	line "Balls here."
+	text "There's no Great"
+	line "Ball here. #"
 
-	para "But I do have a"
-	line "bit of good news!"
+	para "Balls will have"
+	line "to do."
 
-	para "Kurt is finally"
-	line "selling some of"
-	cont "his custom Balls"
-	cont "at this shop!"
+	para "I wish Kurt would"
+	line "make me some of"
+	cont "his custom Balls."
 	done
 
 AzaleaMartBugCatcherText:

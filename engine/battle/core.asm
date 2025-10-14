@@ -112,7 +112,7 @@ WildFled_EnemyFled_LinkBattleCanceled:
 	ld a, [wBattleType]
 	cp BATTLETYPE_ROAMING
 	jr z, .print_text
-	cp BATTLETYPE_RED_GYARADOS
+	cp BATTLETYPE_NEVER_SHINY
 	jr nc, .print_text ; also BATTLETYPE_LEGENDARY
 
 	ld hl, BattleText_WildFled
@@ -312,10 +312,7 @@ CheckOpponentForfeit:
 	ret
 
 DetermineMoveOrder:
-	ld a, [wBattlePlayerAction]
-	and a
-	jr nz, .player_first
-
+	; Switching and using an item are NO_MOVE, which has a priority of +10
 	call CompareMovePriority
 	jr z, .equal_priority
 	jr c, .player_first
@@ -6045,7 +6042,7 @@ ApplyLegendaryDVs:
 	push de
 	push bc
 	ld a, [wBattleType]
-	cp BATTLETYPE_RED_GYARADOS
+	cp BATTLETYPE_NEVER_SHINY
 	jr z, .okay
 
 	push hl
@@ -8822,7 +8819,7 @@ BattleStartMessage:
 	ld hl, LegendaryAppearedText
 	cp BATTLETYPE_ROAMING
 	jr z, .PrintBattleStartText
-	cp BATTLETYPE_RED_GYARADOS ; or BATTLETYPE_LEGENDARY
+	cp BATTLETYPE_NEVER_SHINY ; or BATTLETYPE_LEGENDARY
 	jr nc, .PrintBattleStartText
 	ld hl, GhostAppearedText
 	cp BATTLETYPE_GHOST

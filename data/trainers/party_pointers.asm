@@ -157,9 +157,4 @@ TrainerGroups:
 	dba ImakuniGroup
 	dba LawrenceGroup
 	dba ReiGroup
-	dba KateGroup
-	dba AshGroup
-	dba TripGroup
-	dba FedmaeGroup
-	dba RocketGroup
 	assert_table_length NUM_TRAINER_CLASSES

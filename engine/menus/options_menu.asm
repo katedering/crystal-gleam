@@ -560,8 +560,8 @@ Options_Typeface:
 	dw .Bold
 	dw .Italic
 	dw .Serif
-	dw .Scribe
-	dw .Captain
+	dw .Chicago
+	dw .MICR
 	dw .Unown
 
 .Normal:
@@ -574,10 +574,10 @@ Options_Typeface:
 	db "Italic @"
 .Serif:
 	db "Serif  @"
-.Scribe:
-	db "Scribe @"
-.Captain:
-	db "Captain@"
+.Chicago:
+	db "Chicago@"
+.MICR:
+	db "MICR   @"
 .Unown:
 	db "Unown  @"
 

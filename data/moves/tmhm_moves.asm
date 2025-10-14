@@ -84,7 +84,7 @@ TMHMMoves:
 	db WHIRLPOOL    ; HM05 (Route 42)
 	db WATERFALL    ; HM06 (Ice Path)
 	assert_table_length NUM_TMS + NUM_HMS
-	db AGILITY      ; MT01 (Route 35 Coast North)
+	db AGILITY      ; MT01 (Mahogany Mart)
 	db AQUA_TAIL    ; MT02 (Route 4)
 	db BATON_PASS   ; MT03 (Goldenrod Museum)
 	db BODY_SLAM    ; MT04 (Warm Beach)

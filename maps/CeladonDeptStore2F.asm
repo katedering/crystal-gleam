@@ -20,24 +20,26 @@ CeladonDeptStore2F_MapScriptHeader:
 	object_event  6,  2, SPRITE_SCHOOLBOY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, CeladonDeptStore2FYoungsterText, -1
 
 CeladonDeptStore2FPokefanMText:
-	text "This Department"
-	line "Store is great!"
+	text "I just recently"
+	line "became a trainer."
 
-	para "Since Silph and"
-	line "Devon teamed up,"
-	cont "you can now buy"
-	cont "all the fancy"
-	cont "Devon Corp. #"
-	cont "Balls here."
+	para "My son encouraged"
+	line "me to do it."
+
+	para "I'm impressed by"
+	line "the selection of"
+	cont "convenient items."
 	done
 
 CeladonDeptStore2FYoungsterText:
-	text "Devon Corp. has"
-	line "made some really"
-	cont "neat # Balls."
-	cont "They each work"
-	cont "in a different"
-	cont "way."
+	text "My dad's having a"
+	line "hard time learning"
+
+	para "the names of items"
+	line "and how they are"
+
+	para "supposed to be"
+	line "used…"
 	done
 
 CeladonDeptStore2FDirectoryText:

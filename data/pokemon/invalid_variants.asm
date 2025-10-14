@@ -17,13 +17,4 @@ InvalidVariants: ; for Wonder Trade and invalid inherited forms
 	dp GYARADOS,   GYARADOS_RED_FORM
 	dp TYPHLOSION, HISUIAN_FORM
 	dp URSALUNA,   URSALUNA_BLOODMOON_FORM
-	dp EEVEE,      EON_FORM
-	dp VAPOREON,   EON_FORM
-	dp JOLTEON,    EON_FORM
-	dp FLAREON,    EON_FORM
-	dp ESPEON,     EON_FORM
-	dp UMBREON,    EON_FORM
-	dp LEAFEON,    EON_FORM
-	dp GLACEON,    EON_FORM
-	dp SYLVEON,    EON_FORM
 	db 0

@@ -124,9 +124,7 @@ TreeMonSet_NoisyForest:
 	db -1
 
 TreeMonSet_Rock:
-	tree_mon 60, KRABBY,                  15
-	tree_mon 28, GEODUDE,                 15
-	tree_mon 10, SHUCKLE,                 15
-	tree_mon  1, OMANYTE,                 10
-	tree_mon  1, KABUTO,                  10
+	tree_mon 70, KRABBY,     15
+	tree_mon 25, GEODUDE,    15
+	tree_mon  5, SHUCKLE,    15
 	db -1

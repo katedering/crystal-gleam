@@ -80,14 +80,11 @@ VioletMart:
 	db -1
 
 AzaleaMart:
-	db 13 ; # items
-	db LURE_BALL
-	db FRIEND_BALL
-	db FAST_BALL
-	db MOON_BALL
-	db HEAVY_BALL
-	db LOVE_BALL
+	db 10 ; # items
 	db CHARCOAL
+	db POKE_BALL
+	db NET_BALL
+	db POTION
 	db SUPER_POTION
 	db ESCAPE_ROPE
 	db REPEL
@@ -110,11 +107,9 @@ Goldenrod2FMart1:
 	db -1
 
 Goldenrod2FMart2:
-	db 12 ; # items
+	db 10 ; # items
 	db POKE_BALL
-	db PREMIER_BALL
 	db GREAT_BALL
-	db ULTRA_BALL
 	db LUXURY_BALL
 	db TIMER_BALL
 	db QUICK_BALL
@@ -126,11 +121,9 @@ Goldenrod2FMart2:
 	db -1
 
 Goldenrod2FMart2Eevee:
-	db 13 ; # items
+	db 11 ; # items
 	db POKE_BALL
-	db PREMIER_BALL
 	db GREAT_BALL
-	db ULTRA_BALL
 	db LUXURY_BALL
 	db TIMER_BALL
 	db QUICK_BALL
@@ -157,19 +150,13 @@ Celadon5FMart2:
 
 Goldenrod4FMart:
 Celadon5FMart1:
-	db 12 ; # items
+	db 6 ; # items
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
 	db ZINC
 	db HP_UP
-	db POMEG_BERRY
-	db KELPSY_BERRY
-	db QUALOT_BERRY
-	db HONDEW_BERRY
-	db GREPA_BERRY
-	db TAMATO_BERRY
 	db -1
 
 Goldenrod5FTMMart:
@@ -210,10 +197,9 @@ UndergroundMart:
 	db -1
 
 EcruteakMart:
-	db 12 ; # items
+	db 11 ; # items
 	db POKE_BALL
 	db GREAT_BALL
-	db NET_BALL
 	db NEST_BALL
 	db POTION
 	db SUPER_POTION
@@ -249,9 +235,8 @@ CianwoodMart:
 	db -1
 
 YellowForestMart:
-	db 5 ; # items
+	db 4 ; # items
 	db POKE_BALL
-	db PREMIER_BALL
 	db REPEL
 	db FRESH_WATER
 	db FULL_HEAL
@@ -296,22 +281,15 @@ BlackthornMart:
 	db -1
 
 IndigoPlateauMart:
-	db 15 ; # items
+	db 8 ; # items
 	db ULTRA_BALL
-	db TIMER_BALL
-	db QUICK_BALL
 	db MAX_REPEL
-	db MAX_ELIXIR
-	db MAX_REVIVE
+	db HYPER_POTION
+	db MAX_POTION
 	db FULL_RESTORE
-	db RARE_CANDY
-	db PP_MAX
-	db SACRED_ASH
-	db ABILITYPATCH
-	db ABILITY_CAP
+	db REVIVE
+	db FULL_HEAL
 	db EXP_SHARE
-	db LUCKY_EGG
-	db EVIOLITE
 	db -1
 
 ViridianMart:
@@ -342,14 +320,13 @@ PewterMart:
 	db -1
 
 MtMoonMart:
-	db 9 ; # items
+	db 8 ; # items
 	db POKE_DOLL
 	db FRESH_WATER
 	db SODA_POP
 	db LEMONADE
 	db REPEL
 	db SUPER_REPEL
-	db MOON_STONE
 	db MIRAGE_MAIL
 	db PORTRAITMAIL
 	db -1
@@ -395,7 +372,7 @@ VermilionMart:
 	db -1
 
 Celadon2FMart1:
-	db 13 ; # items
+	db 12 ; # items
 	db POTION
 	db SUPER_POTION
 	db HYPER_POTION
@@ -408,25 +385,18 @@ Celadon2FMart1:
 	db FULL_HEAL
 	db REVIVE
 	db MAX_REVIVE
-	db MINT_LEAF
 	db -1
 
 Celadon2FMart2:
-	db 15 ; # items
+	db 9 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
-	db HEAL_BALL
-	db LUXURY_BALL
 	db QUICK_BALL
 	db TIMER_BALL
-	db NEST_BALL
-	db NET_BALL
-	db DIVE_BALL
-	db REPEAT_BALL
-	db DUSK_BALL
-	db LUXURY_BALL
 	db ESCAPE_ROPE
+	db REPEL
+	db SUPER_REPEL
 	db MAX_REPEL
 	db -1
 
@@ -443,18 +413,13 @@ Celadon3FTMMart:
 	db -1
 
 Celadon4FMart:
-	db 15 ; # items
+	db 10 ; # items
 	db POKE_DOLL
-	db ODD_SOUVENIR
 	db FIRE_STONE
 	db WATER_STONE
 	db THUNDERSTONE
 	db LEAF_STONE
 	db ICE_STONE
-	db SUN_STONE
-	db DUSK_STONE
-	db MOON_STONE
-	db SHINY_STONE
 	db LINKING_CORD
 	db EXP_SHARE
 	db LOVELY_MAIL
@@ -475,20 +440,13 @@ SaffronMart:
 	db -1
 
 SilphCoMart:
-	db 13 ; # items
+	db 6 ; # items
 	db MAX_POTION
 	db MAX_REPEL
 	db DREAM_BALL
 	db CHERISH_BALL
 	db UPGRADE
 	db DUBIOUS_DISC
-	db DRAGON_SCALE
-	db METAL_COAT
-	db PROTECTOR
-	db ELECTIRIZER
-	db MAGMARIZER
-	db RAZOR_FANG
-	db RAZOR_CLAW
 	db -1
 
 FuchsiaMart:
@@ -504,22 +462,20 @@ FuchsiaMart:
 	db -1
 
 ShamoutiMart1:
-	db 5 ; # items
+	db 4 ; # items
 	db MENTAL_HERB
 	db POWER_HERB
 	db WHITE_HERB
 	db BIG_ROOT
-	db BOTTLE_CAP
 	db -1
 
 ShamoutiMart1Souvenir:
-	db 6 ; # items
+	db 5 ; # items
 	db ODD_SOUVENIR
 	db MENTAL_HERB
 	db POWER_HERB
 	db WHITE_HERB
 	db BIG_ROOT
-	db BOTTLE_CAP
 	db -1
 
 ShamoutiMart2:
@@ -533,7 +489,7 @@ ShamoutiMart2:
 	db -1
 
 BattleTowerMart1:
-	db 9 ; # items
+	db 7 ; # items
 	db CHOICE_BAND,  48
 	db CHOICE_SCARF, 48
 	db CHOICE_SPECS, 48
@@ -541,8 +497,6 @@ BattleTowerMart1:
 	db MUSCLE_BAND,  32
 	db WISE_GLASSES, 32
 	db METRONOME_I,  32
-	db BINDING_BAND, 32
-	db GRIP_CLAW,    32
 	db -1
 
 BattleTowerMart2:
@@ -559,7 +513,7 @@ BattleTowerMart2:
 	db -1
 
 BattleTowerMart3:
-	db 9 ; # items
+	db 7 ; # items
 	db MACHO_BRACE,  16
 	db POWER_WEIGHT, 24
 	db POWER_BRACER, 24
@@ -567,8 +521,6 @@ BattleTowerMart3:
 	db POWER_LENS,   24
 	db POWER_BAND,   24
 	db POWER_ANKLET, 24
-	db ABILITYPATCH, 96
-	db MASTER_BALL,  96
 	db -1
 
 BattleFactoryMart1:
