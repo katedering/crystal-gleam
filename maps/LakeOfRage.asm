@@ -237,7 +237,7 @@ LakeOfRageRedGyaradosScript:
 	pause 15
 	closetext
 	loadwildmon GYARADOS, GYARADOS_RED_FORM, 35
-	loadvar VAR_BATTLETYPE, BATTLETYPE_NEVER_SHINY
+	loadvar VAR_BATTLETYPE, BATTLETYPE_RED_GYARADOS
 	startbattle
 	ifequalfwd $1, .Continue
 	disappear LAKEOFRAGE_RED_GYARADOS

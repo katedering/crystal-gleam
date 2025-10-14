@@ -8,4 +8,5 @@ RocketTrainerClasses:
 	db ARCHER
 	db ARIANA
 	db GIOVANNI
+	db ROCKET
 	db -1

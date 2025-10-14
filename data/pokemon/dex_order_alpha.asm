@@ -58,6 +58,7 @@ AlphabeticalPokedexOrder:
 	dp DUGTRIO
 	dp DUNSPARCE
 	dp EEVEE
+	dp EEVEEON
 	dp EKANS
 	dp ELECTABUZZ
 	dp ELECTIVIRE

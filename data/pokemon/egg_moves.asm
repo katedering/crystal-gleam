@@ -639,6 +639,7 @@ LaprasEggSpeciesMoves:
 EeveeEggSpeciesMoves:
 	dp EEVEE, PLAIN_FORM
 	db CHARM
+	db METRONOME
 	db $ff
 
 PorygonEggSpeciesMoves:
