@@ -72,7 +72,7 @@ Pokémon Polished Crystal would never have been finished without the help of man
 * octorox for Galarian Rapidash and Galarian Slowking's backpics.
 * Cure for front sprites of Ursaluna, Kleavor, Hisuian Growlithe, and Hisuian Arcanine.
 * mauvesea for Hisuian Growlithe's animation and back sprite back sprites of Paldean Wooper, Hisuian Growlithe, Alolan Rattata, Alolan Raticate, the Pokedex icon and overworld sprite, Crys's fishing sprites and DJ Mary's overworld sprite.
-* ShadowOne333 for Hitmonchan's and Gengar's front sprite and animations, and back sprites of Hitmonchan, Gengar, Suicune, and Alolan Grimer.
+* ShadowOne333 for Raichu-Partner's, Hitmonchan's and Gengar's front sprite and animations, and back sprites of Hitmonchan, Gengar, Suicune, and Alolan Grimer.
 * ShadowOne333 and mauvesea for Annihilape's and Alolan Sandslash's front and back sprites.
 * spritershawn for sprites of Red, Blue, and Green.
 * isamuakai01 for sprites of Steven and Cynthia.

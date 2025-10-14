@@ -211,4 +211,7 @@ Music:
 	dba Music_BattleFrontierBrainDPPt
 	dba Music_GiovanniBattle
 	dba Music_IcePathHGSS
+	dba Music_AreaZero
+	dba Music_FightAreaDay
+	dba Music_FightAreaNight
 	assert_table_length NUM_MUSIC_SONGS

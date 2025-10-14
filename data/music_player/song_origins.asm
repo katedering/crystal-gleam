@@ -19,4 +19,5 @@ SongOrigins:
 	li "M02"
 	li "Prism"
 	li "Undertale"
+	li "S/V"
 	assert_list_length NUM_SONG_ORIGINS
