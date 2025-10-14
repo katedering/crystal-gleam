@@ -156,16 +156,10 @@ ElmCheckOddSouvenir:
 	iftrue ElmGiveOddSouvenirScript
 	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
 	iffalsefwd ElmCheckTogepiEgg
-	setmonval TOGEPI
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGETIC
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	setmonval TOGEKISS
-	special Special_FindThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	jumpopenedtext ElmThoughtEggHatchedText
+	scall ElmEggHatchedScript
+	; need to reopen text boxes since ElmCheckGotEggAgain's
+	; jumpopenedtext will close them.
+	jumptext ElmThoughtEggHatchedText
 
 ElmEggHatchedScript:
 	setmonval TOGEPI
