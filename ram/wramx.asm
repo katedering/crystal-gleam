@@ -160,6 +160,7 @@ wWinTextPointer:: dw
 wGenericTempTrainerHeaderEnd::
 wLossTextPointer:: dw
 wScriptAfterPointer:: dw
+wTrainerPal:: db
 wRunningTrainerBattleScript:: db
 wTempTrainerEnd::
 	ds 1
@@ -1191,7 +1192,7 @@ wNeededPalIndex:: db
 
 wEmotePal:: db
 
-	ds 60 ; unused
+	ds 64 ; unused
 
 wCandyAmounts::
 wExpCandyXSAmount:: db

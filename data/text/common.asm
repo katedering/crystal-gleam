@@ -1632,7 +1632,7 @@ _ComeAgainText::
 SECTION "_NotYetText", ROMX
 _NotYetText::
 	text "Not yet…"
-    done
+	done
 
 SECTION "_FoundAnEggAgainText", ROMX
 _FoundAnEggAgainText::
@@ -3871,6 +3871,12 @@ _MoveForgotText::
 	text "."
 
 	para "And…"
+	prompt
+
+SECTION "_MoveCantForgetHMText", ROMX
+_MoveCantForgetHMText::
+	text "HM moves can't be"
+	line "forgotten now."
 	prompt
 
 SECTION "_CardFlipPlayWithThreeCoinsText", ROMX

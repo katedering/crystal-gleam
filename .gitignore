@@ -66,3 +66,7 @@ deploy.sh
 *.*.bak
 *.asm.bak
 *.mp4
+*.bak
+*.bak
+constants/trainer_constants.asm.bak
+data/abilities/descriptions.asm.bak

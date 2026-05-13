@@ -359,8 +359,7 @@ Continue:
 	call CloseWindow
 	call ClearTileMap
 	farcall ClearSavedObjPals
-	ld c, 20
-	call DelayFrames
+	farcall FixPlayerEVsAndStats
 	farcall JumpRoamMons
 	farcall ClockContinue ; time-related
 	ld a, [wSpawnAfterChampion]
@@ -1237,7 +1236,7 @@ TitleScreenEntrance:
 	ld hl, wStatusFlags
 	bit 6, [hl] ; hall of fame
 	jr z, .ok
-	ld e, MUSIC_TITLE_XY
+	ld e, MUSIC_RBY_TITLESCREEN
 .ok
 	call PlayMusic
 

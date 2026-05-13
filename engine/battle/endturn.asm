@@ -626,15 +626,12 @@ IncrementToxic:
 	bit TOX, a
 	ret z
 
+	; Cap toxic counter at 15. Do not return z.
 	inc [hl]
-
-	; Cap toxic counter at 15.
 	ld a, [hl]
-	cp 15
-	jr nz, .no_overflow
+	cp 16
+	ret c
 	dec [hl]
-.no_overflow
-	inc [hl]
 	ret
 
 DoPoisonBurnDamageAnim:

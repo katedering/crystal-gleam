@@ -129,6 +129,7 @@ CanStealItem:
 	ld hl, wBattleMode
 	ldh a, [hBattleTurn]
 	and a
+	ld a, [hl]
 	ld hl, wBattleMonItem
 	ld bc, wEnemyMonItem
 	jr nz, .foe
@@ -146,8 +147,8 @@ CanStealItem:
 	; A wildmon can never steal items.
 	dec a
 	jr z, .cant
-	
-; Swap item source and target since the enemy is the one stealing an item.
+
+	; Swap item source and target since the enemy is the one stealing an item.
 	push hl
 	ld h, b
 	ld l, c

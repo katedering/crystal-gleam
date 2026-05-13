@@ -78,7 +78,7 @@ TMHMMoves:
 	db SWORDS_DANCE ; TM75 (Celadon Dept. Store)
 	assert_table_length NUM_TMS
 	db CUT          ; HM01 (Ilex Forest)
-	db FLY          ; HM02 (Cianwood City)
+	db FLY          ; HM02 (Yellow Forest)
 	db SURF         ; HM03 (Ecruteak City)
 	db STRENGTH     ; HM04 (Cianwood City)
 	db WHIRLPOOL    ; HM05 (Route 42)
@@ -117,5 +117,4 @@ TMHMMoves:
 	db ZAP_CANNON   ; MT31 (Power Plant)
 	db ZEN_HEADBUTT ; MT32 (Saffron City)
 	assert_table_length NUM_TM_HM_TUTOR
-; TODO: Baton Pass
 	db 0 ; end

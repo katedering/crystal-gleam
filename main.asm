@@ -7,7 +7,6 @@ INCLUDE "engine/menus/intro_menu.asm"
 INCLUDE "engine/overworld/init_map.asm"
 INCLUDE "engine/menus/init_options.asm"
 INCLUDE "engine/pokemon/learn.asm"
-INCLUDE "data/items/attributes.asm"
 INCLUDE "engine/overworld/npc_movement.asm"
 INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shiny_ditto.asm"
@@ -16,6 +15,10 @@ INCLUDE "engine/events/bills_grandfather.asm"
 INCLUDE "engine/events/hidden_power_guru.asm"
 INCLUDE "engine/events/mint_tea.asm"
 INCLUDE "engine/events/haircut_etc.asm"
+
+SECTION "bank1A", ROMX
+
+INCLUDE "data/items/attributes.asm"
 
 
 SECTION "bank2", ROMX

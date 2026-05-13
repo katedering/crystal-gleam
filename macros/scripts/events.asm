@@ -316,7 +316,7 @@ MACRO checkpoke
 ENDM
 
 	const givepoke_command
-MACRO givepoke ; pokemon, form, level, item, ball, move, trainer flag, nickname, ot name, ot id
+MACRO givepoke
 	db givepoke_command
 	if _NARG >= 3
 		dp \1, \2 ; pokemon
@@ -1397,6 +1397,14 @@ ENDM
 MACRO pluralize
 	db pluralize_command
 	dw \1 ; pointer
+ENDM
+
+	const loadtrainerwithpal_command
+MACRO loadtrainerwithpal
+	db loadtrainerwithpal_command
+	db \1 ; trainer_group
+	db \2 ; trainer_id
+	db \3 ; palette
 ENDM
 
 DEF NUM_EVENT_COMMANDS EQU const_value

@@ -86,6 +86,7 @@ SummaryScreenInit:
 	ld a, [hl]
 	push af
 	set B_IE_STAT, [hl]
+	res B_IE_SERIAL, [hl]
 	; save old window position
 	ldh a, [hWX]
 	ld b, a
@@ -841,7 +842,7 @@ SummaryScreen_SwitchPage:
 
 	xor a
 	ldh [hCGBPalUpdate], a
-	
+
 	ld c, 6 * 2
 	ld hl, wSummaryScreenPals + 2 palettes
 	call .WaitUntilHBlank
@@ -853,7 +854,7 @@ SummaryScreen_SwitchPage:
 	ldh a, [rLY]
 	cp 62
 	jr nc, .l60
-	
+
 	ld c, 1 * 2
 	ld hl, wSummaryScreenPals
 	call .WaitUntilHBlank
