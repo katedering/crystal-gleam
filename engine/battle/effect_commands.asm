@@ -4307,6 +4307,13 @@ BattleCommand_damagecalc:
 .check_burn
 	bit BRN, a
 	jr z, .burn_done
+	
+	; Burn should not halve physical attack if using Facade, or with Guts.
+	ld a, BATTLE_VARS_MOVE_ANIM
+	call GetBattleVar
+	cp FACADE
+	jr z, .burn_done
+	
 	call GetTrueUserAbility
 	cp GUTS
 	ln a, 1, 2 ; 1/2 = 50%
