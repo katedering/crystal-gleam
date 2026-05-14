@@ -924,7 +924,6 @@ EonForceDescription:
 	done
 
 FluffyDescription:
-	text "Half contact dmg."
-	next "Double fire dmg."
+	text "Resists contact,"
+	next "but weak to Fire."
 	done
-	

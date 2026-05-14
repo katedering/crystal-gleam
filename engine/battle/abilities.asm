@@ -1926,18 +1926,19 @@ EnemyDrySkinAbility:
 	jmp MultiplyAndDivide
 
 EnemyFluffyAbility:
+	; Weakness to Fire...
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	cp FIRE
-	jr nz, .notFire
-	call CheckContactMove
-	ret nc
+	jr nz, .fire_done
 	ln a, 2, 1 ; x2
-	jmp MultiplyAndDivide
-.notFire
+	call MultiplyAndDivide
+
+.fire_done
+	; ...but resistant to contact (stacks with Fire weakness if applicable).
 	call CheckContactMove
 	ret c
-	ln a, 1, 2 ; x0.5
+	ln a, 1, 2 ; 1/2 = 50%
 	jmp MultiplyAndDivide
 
 EnemyFurCoatAbility:
