@@ -9445,44 +9445,44 @@ KateGroup:
 	tr_mon 97, NINETALES @ NEVERMELTICE, FEMALE | ALOLAN_FORM
 		tr_extra SNOW_WARNING, SPE_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Spe, 252 SAt
+		tr_evs 4 HP, 252 Spe, 252 SAt
 		tr_moves BLIZZARD, MOONBLAST, EXTRASENSORY, SHADOW_BALL
 	tr_mon 96, BLISSEY @ BRIGHTPOWDER, FEMALE
 		tr_extra SERENE_GRACE, SDEF_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 HP, 252 SDf
+		tr_evs 252 HP, 4 SAt, 252 SDf
 		tr_moves FRESH_SNACK, SWAGGER, DOUBLE_TEAM, CURSE
 	tr_mon 98, RAPIDASH @ PINK_BOW, FEMALE | GALARIAN_FORM
 		tr_extra PASTEL_VEIL, ATK_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Atk, 252 Spe
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves MEGAHORN, PLAY_ROUGH, ZEN_HEADBUTT, SWORDS_DANCE
 	tr_mon 99, CORSOLA @ EVIOLITE, FEMALE | GALARIAN_FORM
 		tr_extra CURSED_BODY, SDEF_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 HP, 252 SDf
+		tr_evs 252 HP, 4 SAt, 252 SDf
 		tr_moves CURSE, RECOVER, WILL_O_WISP, HEX
 if !DEF(FAITHFUL)
 	tr_mon 98, KANGASKHAN @ EXPERT_BELT, FEMALE
 		tr_extra PARENTAL_BOND, ATK_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Atk, 252 Spe
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves DOUBLE_EDGE, EARTHQUAKE, IRON_TAIL, DRAIN_PUNCH
 	tr_mon 99, CELEBI @ LEFTOVERS, FEMALE
 		tr_extra MAGIC_GUARD, SATK_UP_ATK_DOWN, SHINY
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves NASTY_PLOT, MOONBLAST, AURA_SPHERE, ENERGY_BALL
 else
 	tr_mon 98, KANGASKHAN @ EXPERT_BELT, FEMALE
 		tr_extra INNER_FOCUS, ATK_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Atk, 252 Spe
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves DOUBLE_EDGE, EARTHQUAKE, IRON_TAIL, DRAIN_PUNCH
 	tr_mon 99, CELEBI @ LEFTOVERS, FEMALE
 		tr_extra SATK_UP_ATK_DOWN, SHINY
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves NASTY_PLOT, MOONBLAST, AURA_SPHERE, ENERGY_BALL
 endc
 	end_trainer
@@ -9561,32 +9561,32 @@ endc
 	tr_mon 94, MEGANIUM @ LEFTOVERS, MALE
 		tr_extra LEAF_GUARD, SPE_UP_ATK_DOWN
 		tr_dvs DVS_HP_ROCK
-		tr_evs 128 HP, 128 Def, 128 SAt, 124 Spe
+		tr_evs 85 All
 		tr_moves ENERGY_BALL, MOONBLAST, HIDDEN_POWER, CALM_MIND
 	tr_mon 94, TYPHLOSION @ CHOICE_SPECS, MALE
 		tr_extra FLASH_FIRE, SPE_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 128 HP, 128 SAt, 128 SDf, 124 Spe
+		tr_evs 85 All
 		tr_moves FLAMETHROWER, EARTH_POWER, HIDDEN_POWER, FOCUS_BLAST
 	tr_mon 94, FERALIGATR @ LIFE_ORB, MALE
 		tr_extra SHEER_FORCE, SPE_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 128 HP, 128 Atk, 128 Def, 124 Spe
+		tr_evs 85 All
 		tr_moves WATERFALL, CRUNCH, ICE_PUNCH, HONE_CLAWS
 	tr_mon 94, HERACROSS @ EXPERT_BELT, MALE
 		tr_extra SKILL_LINK, SPE_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 128 HP, 128 Atk, 128 Def, 124 Spe
+		tr_evs 85 All
 		tr_moves PIN_MISSILE, CLOSE_COMBAT, ROCK_SLIDE, SWORDS_DANCE
 	tr_mon 95, NOCTOWL @ WEAK_POLICY, MALE
 		tr_extra TINTED_LENS, SATK_UP_ATK_DOWN, SHINY
 		tr_dvs 15 All
-		tr_evs 128 HP, 128 Def, 128 SAt, 124 SDf
+		tr_evs 85 All
 		tr_moves CURSE, ROOST, PROTECT, HYPER_VOICE
 	tr_mon 96, PIKACHU @ LIGHT_BALL, MALE
 		tr_extra STATIC, SPE_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 128 HP, 128 Atk, 128 Def, 124 Spe
+		tr_evs 85 All
 		tr_moves WILD_CHARGE, IRON_TAIL, EXTREMESPEED, DIG
 	end_trainer
 
@@ -9663,34 +9663,34 @@ endc
 	
 	def_trainer 3, "Trip"
 	tr_mon 100, PORYGON_Z @ EXPERT_BELT, MALE
-		tr_extra ANALYTIC, SATK_UP_SPE_DOWN
+		tr_extra ANALYTIC, SATK_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 SDf
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves CALM_MIND, HYPER_VOICE, PSYSTRIKE, AURA_SPHERE
 	tr_mon 100, ANNIHILAPE @ EXPERT_BELT, MALE
 		tr_extra DEFIANT, ATK_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Atk, 252 Spe
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves CLOSE_COMBAT, SHADOW_CLAW, POISON_JAB, SUCKER_PUNCH
 	tr_mon 100, DRAGONITE @ EXPERT_BELT, MALE
 		tr_extra MULTISCALE, ATK_UP_SATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 ATK, 252 SDf
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves DRAGON_CLAW, WILD_CHARGE, PLAY_ROUGH, ZEN_HEADBUTT
 	tr_mon 100, PORYGON2 @ EVIOLITE, MALE
 		tr_extra ANALYTIC, SATK_UP_SPE_DOWN
 		tr_dvs 15 All
-		tr_evs 128 Def, 252 SAt, 120 SDf
+		tr_evs 4 HP, 252 Def, 252 SDf
 		tr_moves NASTY_PLOT, FLAMETHROWER, ICE_BEAM, THUNDERBOLT
 	tr_mon 100, GYARADOS @ EXPERT_BELT, MALE | GYARADOS_RED_FORM
 		tr_extra MOXIE, ATK_UP_SATK_DOWN, SHINY
 		tr_dvs 15 All
-		tr_evs 252 Atk, 252 Spe
+		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves CRABHAMMER, BRAVE_BIRD, DRAGON_DANCE, FLARE_BLITZ
 	tr_mon 100, SHUCKLE @ LEFTOVERS, FEMALE
 		tr_extra SOLID_ROCK, SDEF_UP_SPE_DOWN
 		tr_dvs 15 All
-		tr_evs 252 Def, 252 SDf
+		tr_evs 4 HP, 252 Def, 252 SDf
 		tr_moves TOXIC, RECOVER, DOUBLE_TEAM, FIRE_SPIN
 	end_trainer
 
@@ -9752,34 +9752,34 @@ FedmaeGroup:
 	
 	def_trainer 3, "Fedmae"
 	tr_mon 97, CLEFABLE @ LUM_BERRY, FEMALE
-		tr_extra MAGIC_GUARD, SATK_UP_SPE_DOWN
+		tr_extra MAGIC_GUARD, SATK_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 SDf
+		tr_evs 4 HP, 252 SAt, 252 SPe
 		tr_moves MOONBLAST, METRONOME, MINIMIZE, HEALINGLIGHT
 	tr_mon 96, ALAKAZAM @ QUICK_CLAW, MALE
 		tr_extra MAGIC_GUARD, SATK_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves PSYCHIC_M, CALM_MIND, THUNDERBOLT, SHADOW_BALL
 	tr_mon 96, NINETALES @ NEVERMELTICE, FEMALE | ALOLAN_FORM
 		tr_extra SNOW_WARNING, SPE_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves BLIZZARD, HAIL, DAZZLINGLEAM, CONFUSE_RAY
 	tr_mon 97, ESPEON @ LEFTOVERS, MALE
 		tr_extra MAGIC_BOUNCE, SATK_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves PSYCHIC_M, HEALINGLIGHT, SUBSTITUTE, POWER_GEM
 	tr_mon 97, SYLVEON @ PINK_BOW, FEMALE
 		tr_extra PIXILATE, SATK_UP_ATK_DOWN, SHINY
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 SDf
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves MOONBLAST, LIGHT_SCREEN, REFLECT, TOXIC
 	tr_mon 98, LUGIA @ KINGS_ROCK, MALE
 		tr_extra MULTISCALE, SPE_UP_ATK_DOWN
 		tr_dvs 15 All
-		tr_evs 252 SAt, 252 Spe
+		tr_evs 4 HP, 252 SAt, 252 Spe
 		tr_moves AEROBLAST, CALM_MIND, WATER_PULSE, DRAGON_PULSE
 	end_trainer
 
