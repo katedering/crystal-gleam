@@ -331,7 +331,7 @@ InitializeCrystalSprites:
 	add d
 	ld d, a
 	dec c
-	jr nz, loop
+	jr nz, .loop
 
 	; set palettes for crystal sprites besides #0
 	ld a, 0 | OAM_PRIO
