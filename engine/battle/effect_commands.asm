@@ -1294,7 +1294,7 @@ ResetMoveHitState:
 	ld [hl], a
 	pop hl
 	ret
-`
+
 CheckCrit:
 	ld a, MOVEHIT_CRITICAL
 	jr CheckMoveHitState
