@@ -97,7 +97,8 @@ CopySpritePalHandler::
 	pop af
 	ldh [rWBK], a
 	xor a
-	ld [wPalStateIndex], a
+	assert PREV_PALSTATE == 0
+	ld [wPalState], a
 	ld a, [wPalFlags]
 	push af
 	and ~NO_DYN_PAL_APPLY
@@ -122,8 +123,8 @@ CopySpritePalHandler::
 	ld a, [wPalFlags]
 	or NO_DYN_PAL_APPLY
 	ld [wPalFlags], a
-	ld a, 1
-	ld [wPalStateIndex], a
+	ld a, CURR_PALSTATE
+	ld [wPalState], a
 	call CalculateStates
 	call CopySpritePal
 	push de
@@ -149,9 +150,8 @@ CopySpritePalHandler::
 .not_fading
 	pop af
 	ldh [rWBK], a
-	; current pal state
-	ld a, 1
-	ld [wPalStateIndex], a
+	ld a, CURR_PALSTATE
+	ld [wPalState], a
 	call CalculateStates
 ; fallthrough
 CopySpritePal::
@@ -273,8 +273,9 @@ GetPalState:
 	adc HIGH(wPalStates)
 	sub l
 	ld h, a
-	ld a, [wPalStateIndex]
+	ld a, [wPalState]
 	and a ; prev
+	assert PREV_PALSTATE == 0
 	jr z, .got_state
 	ld de, PALSTATE_SIZE
 	add hl, de
