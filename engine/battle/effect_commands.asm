@@ -588,8 +588,12 @@ CheckPowerHerb:
 .chargeup
 	call CheckUserIsCharging
 	ld a, 2
-	jr z, _ResetTurn
-	; fallthrough
+	jr z, .got_charging
+	dec a
+.got_charging
+	call _ResetTurn
+	jmp DoMove
+	
 ResetTurn:
 	ld a, 1
 _ResetTurn:
@@ -1290,7 +1294,7 @@ ResetMoveHitState:
 	ld [hl], a
 	pop hl
 	ret
-
+`
 CheckCrit:
 	ld a, MOVEHIT_CRITICAL
 	jr CheckMoveHitState
