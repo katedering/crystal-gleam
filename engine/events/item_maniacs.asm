@@ -147,11 +147,6 @@ GetItemQuantity:
 	pop bc
 	ret
 
-Give_hMoneyTemp:
-	ld de, wMoney
-	ld bc, hMoneyTemp
-	farjp GiveMoney
-
 TakeItemFromMemWithQuantity:
 ; Takes wCurItem with quantity in wItemQuantityChangeBuffer
 	ld a, [wCurItem]
