@@ -96,6 +96,13 @@ _HowManyShouldIMakeText::
 	line "make?"
 	done
 
+SECTION "_HowManyDoYouWantToSellText", ROMX
+_HowManyDoYouWantToSellText::
+	text "How many do you"
+	line "want to sell?"
+	done
+
+
 SECTION "_RecoveredSomeHPText", ROMX
 _RecoveredSomeHPText::
 	text_ram wStringBuffer1
