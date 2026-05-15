@@ -6,9 +6,9 @@ if !DEF(MONOCHROME)
 	RGB 04, 05, 06
 
 	RGB 00, 00, 00
-	RGB 31, 31, 31
-	RGB 31, 00, 31 ; unused
-	RGB 26, 02, 02
+	RGB 28, 31, 31
+	RGB 20, 26, 27
+	RGB 10, 10, 27
 
 	RGB 00, 00, 00
 	RGB 29, 28, 12
