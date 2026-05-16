@@ -150,6 +150,7 @@ AbilityDescriptions:
 	dw GorillaTacticsDescription
 	dw NeutralizingGasDescription
 	dw PastelVeilDescription
+	dw WindRiderDescription
 	dw QuickDrawDescription
 	dw CudChewDescription
 	dw SharpnessDescription
@@ -881,6 +882,11 @@ NeutralizingGasDescription:
 QuickDrawDescription:
 	text "Moves first"
 	next "occasionally."
+	done
+
+WindRiderDescription:
+	text "Gives immunity to"
+	next "wind-based moves."
 	done
 
 SteelySpiritDescription:
