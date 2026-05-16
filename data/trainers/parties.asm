@@ -199,7 +199,7 @@ WhitneyGroup:
 		tr_extra THICK_FAT
 		tr_evs 64 Def, 32 SDf
 		tr_moves ATTRACT, METRONOME, DEFENSE_CURL, ROLLOUT
-	tr_mon 21, MILTANK @ LUM_BERRY, FEMALE
+	tr_mon 21, "Milky", MILTANK @ LUM_BERRY, FEMALE
 		tr_extra SCRAPPY
 		tr_evs 48 Atk, 48 Spe
 		tr_moves DEFENSE_CURL, STOMP, FRESH_SNACK, ROLLOUT
@@ -226,7 +226,7 @@ WhitneyGroup:
 		tr_extra COMPETITIVE, SATK_UP_ATK_DOWN
 		tr_evs 252 HP, 4 Def, 252 SAt
 		tr_moves NASTY_PLOT, HYPER_VOICE, MOONBLAST, FIRE_BLAST
-	tr_mon 75, MILTANK @ METRONOME_I, FEMALE
+	tr_mon 75, "Milky", MILTANK @ METRONOME_I, FEMALE
 		tr_extra SCRAPPY, ATK_UP_SATK_DOWN
 		tr_evs 4 HP, 252 Atk, 252 Spe
 		tr_moves DEFENSE_CURL, ROLLOUT, FRESH_SNACK, BODY_SLAM
