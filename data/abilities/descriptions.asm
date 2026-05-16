@@ -879,14 +879,14 @@ NeutralizingGasDescription:
 	next "other Abilities."
 	done
 
-QuickDrawDescription:
-	text "Moves first"
-	next "occasionally."
-	done
-
 WindRiderDescription:
 	text "Gives immunity to"
 	next "wind-based moves."
+	done
+	
+QuickDrawDescription:
+	text "Moves first"
+	next "occasionally."
 	done
 
 SteelySpiritDescription:
