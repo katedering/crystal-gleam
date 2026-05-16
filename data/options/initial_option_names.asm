@@ -16,6 +16,7 @@ InitialOptionNames:
 .Natures:
 	db "Natures@"
 .Abilities:
+	db "Abilities@"
 .PSS:
 	db "Phys/Spcl split@"
 .EVs:
