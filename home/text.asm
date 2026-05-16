@@ -280,6 +280,9 @@ LineChar::
 	jr NextChar
 
 ContText::
+	ld a, [wTextboxFlags]
+	bit NO_TEXT_PAUSE_F, a
+	jr nz, StopAtNonblockingTextPause
 	ld a, [wLinkMode]
 	or a
 	call z, LoadBlinkingCursor
@@ -295,7 +298,18 @@ ContText::
 	pop de
 	jmp NextChar
 
+
+StopAtNonblockingTextPause::
+	ld a, TRUE
+	ldh [hStopPrintingString], a
+	pop hl
+	dec de
+	ret
+
 Paragraph::
+	ld a, [wTextboxFlags]
+	bit NO_TEXT_PAUSE_F, a
+	jr nz, StopAtNonblockingTextPause
 	push de
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
@@ -326,6 +340,9 @@ Paragraph::
 	jmp NextChar
 
 PromptText::
+	ld a, [wTextboxFlags]
+	bit NO_TEXT_PAUSE_F, a
+	jr nz, DoneText
 	push de
 	ld a, [wLinkMode]
 	cp LINK_COLOSSEUM
