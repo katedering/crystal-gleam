@@ -296,6 +296,9 @@ INCLUDE "engine/pokemon/mon_stats.asm"
 INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/pokemon/natures.asm"
+
+
+SECTION "bank14a", ROMX
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/gfx/load_font.asm"
 

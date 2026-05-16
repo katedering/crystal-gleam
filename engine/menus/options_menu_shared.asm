@@ -8,7 +8,7 @@ OptionsShared_LoadEdgeTiles:
 	jmp DecompressRequest2bpp
 
 .BGTiles:
-	INCBIN "gfx/options/edge.2bpp.lzp"
+	INCBIN "gfx/options/edge.2bpp.lz"
 
 ; Draw left/right edge tiles and set palette attributes
 OptionsShared_DrawEdges:
