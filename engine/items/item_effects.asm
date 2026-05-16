@@ -564,10 +564,16 @@ PokeBallEffect:
 .SkipPartyMonHealBall:
 
 	call GetPartyPokemonName
+	ld a, [wOptions3]
+	bit NICKNAMES_NEVER, a
+	jmp nz, .return_from_capture
+	bit NICKNAMES_ALWAYS, a
+	jr nz, .party_skip_ask
 	ld hl, Text_AskNicknameNewlyCaughtMon
 	call PrintText
 	call YesNoBox
 	jmp c, .return_from_capture
+.party_skip_ask
 
 	ld a, [wPartyCount]
 	dec a
@@ -617,10 +623,16 @@ PokeBallEffect:
 .SkipBoxMonFriendBall:
 
 	call GetPartyPokemonName
+	ld a, [wOptions3]
+	bit NICKNAMES_NEVER, a
+	jr nz, .SkipBoxMonNickname
+	bit NICKNAMES_ALWAYS, a
+	jr nz, .box_skip_ask
 	ld hl, Text_AskNicknameNewlyCaughtMon
 	call PrintText
 	call YesNoBox
 	jr c, .SkipBoxMonNickname
+.box_skip_ask
 
 	xor a
 	ld [wCurPartyMon], a
