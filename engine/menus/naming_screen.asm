@@ -92,7 +92,7 @@ NamingScreen:
 	farcall GetShininess
 	jr z, .not_shiny
 	hlcoord 1, 4
-	ld [hl], '★'
+	ld [hl], NAMINGSCREEN_SHINY
 .not_shiny
 	jmp .StoreMonIconParams
 
