@@ -80,7 +80,7 @@ _NewGame_FinishSetup:
 	ld [wOvercastRandomDay], a
 	call NewGame_ClearTileMapEtc
 	call WarnVBA
-	call SetInitialOptions
+	farcall SetInitialOptions
 	call ProfElmSpeech
 	call InitializeWorld
 	ld a, 1
@@ -436,7 +436,9 @@ Continue_CheckRTC_RestartClock:
 Continue_CheckEGO_ResetInitialOptions:
 	ld a, [wInitialOptions2]
 	bit RESET_INIT_OPTS, a
-	call nz, SetInitialOptions
+	jr z, .skip_reset_initial_options
+	farcall SetInitialOptions
+.skip_reset_initial_options
 	; fallthrough
 Continue_FinishReset:
 	xor a
@@ -626,10 +628,10 @@ if !DEF(DEBUG)
 	call FadeToWhite
 	call ClearTileMap
 
-	ld a, LOW(PORYGON)
+	ld a, LOW(GLACEON)
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	ld a, HIGH(PORYGON) << MON_EXTSPECIES_F
+	ld a, HIGH(GLACEON) << MON_EXTSPECIES_F
 	ld [wCurForm], a
 	ld [wTempMonForm], a
 	call GetBaseData
@@ -1225,7 +1227,7 @@ TitleScreenEntrance:
 	ld hl, wStatusFlags
 	bit 6, [hl] ; hall of fame
 	jr z, .ok
-	ld e, MUSIC_RBY_TITLESCREEN
+	ld e, MUSIC_TITLE_XY
 .ok
 	call PlayMusic
 
