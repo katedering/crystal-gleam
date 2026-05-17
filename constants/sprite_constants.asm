@@ -207,6 +207,10 @@
 	const SPRITE_CHRIS_RUN ; cb
 	const SPRITE_KRIS_RUN ; cc
 	const SPRITE_CRYS_RUN ; cd
+	const SPRITE_BETA ; d1
+	const SPRITE_BETA_BIKE ; d2
+	const SPRITE_BETA_SURF ; d3
+	const SPRITE_BETA_RUN ; d4
 DEF NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)

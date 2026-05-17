@@ -610,3 +610,15 @@ CrysRunSpriteGFX:: INCBIN "gfx/sprites/crys_run.2bpp.lz"
 
 SECTION "ThortonSpriteGFX", ROMX
 ThortonSpriteGFX:: INCBIN "gfx/sprites/thorton.2bpp.lz"
+
+SECTION "BetaSpriteGFX", ROMX
+BetaSpriteGFX:: INCBIN "gfx/sprites/beta.2bpp.lz"
+
+SECTION "BetaBikeSpriteGFX", ROMX
+BetaBikeSpriteGFX:: INCBIN "gfx/sprites/beta_bike.2bpp.lz"
+
+SECTION "BetaSurfSpriteGFX", ROMX
+BetaSurfSpriteGFX:: INCBIN "gfx/sprites/beta_surf.2bpp.lz"
+
+SECTION "BetaRunSpriteGFX", ROMX
+BetaRunSpriteGFX:: INCBIN "gfx/sprites/beta_run.2bpp.lz"

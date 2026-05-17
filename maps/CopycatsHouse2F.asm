@@ -25,6 +25,7 @@ CopycatsHouse2F_MapScriptHeader:
 	const COPYCATSHOUSE2F_COPYCAT1
 	const COPYCATSHOUSE2F_COPYCAT2
 	const COPYCATSHOUSE2F_COPYCAT3
+	const COPYCATSHOUSE2F_COPYCAT4
 
 CopycatsHouse2FCallback:
 	disappear COPYCATSHOUSE2F_COPYCAT1
@@ -32,8 +33,9 @@ CopycatsHouse2FCallback:
 	disappear COPYCATSHOUSE2F_COPYCAT3
 	variablesprite SPRITE_COPYCAT, SPRITE_LASS
 	readvar VAR_PLAYERGENDER
-	ifequalfwd $1, .Female
-	ifequalfwd $2, .Enby
+	ifequalfwd PLAYER_FEMALE, .Female
+	ifequalfwd PLAYER_ENBY, .Enby
+	ifequalfwd PLAYER_BETA, .Beta
 ; Male
 	appear COPYCATSHOUSE2F_COPYCAT1
 	endcallback
@@ -42,6 +44,9 @@ CopycatsHouse2FCallback:
 	endcallback
 .Enby:
 	appear COPYCATSHOUSE2F_COPYCAT3
+	endcallback
+.Beta:
+	appear COPYCATSHOUSE2F_COPYCAT4
 	endcallback
 
 Copycat1Script:
@@ -152,6 +157,40 @@ Copycat2Script:
 	special RefreshSprites
 	showtext CopycatThanks2Text
 	applymovement COPYCATSHOUSE2F_COPYCAT2, CopycatSpinMovement
+	sjump CopycatFinalScript
+
+Copycat4Script:
+	faceplayer
+	checkevent EVENT_GOT_PASS_FROM_COPYCAT
+	iftruefwd .GotPass
+	checkevent EVENT_RETURNED_LOST_ITEM_TO_COPYCAT
+	iftrue CopycatReturnedLostItemScript
+	checkkeyitem LOST_ITEM
+	iftrue CopycatFoundLostItemScript
+	applymovement COPYCATSHOUSE2F_COPYCAT4, CopycatSpinMovement
+	faceplayer
+	loadmem wObject1Palette, 0
+	variablesprite SPRITE_COPYCAT, SPRITE_BETA
+	special RefreshSprites
+	checkevent EVENT_RESTORED_POWER_TO_KANTO
+	iftruefwd .ReturnedMachinePart
+	showtext CopycatGreeting2Text
+	applymovement COPYCATSHOUSE2F_COPYCAT4, CopycatSpinMovement
+	sjump CopycatRetortScript
+
+.ReturnedMachinePart:
+	showtext CopycatLostDoll2Text
+	applymovement COPYCATSHOUSE2F_COPYCAT4, CopycatSpinMovement
+	sjump CopycatWorriedScript
+
+.GotPass:
+	applymovement COPYCATSHOUSE2F_COPYCAT4, CopycatSpinMovement
+	faceplayer
+	loadmem wObject1Palette, 0
+	variablesprite SPRITE_COPYCAT, SPRITE_BETA
+	special RefreshSprites
+	showtext CopycatThanks2Text
+	applymovement COPYCATSHOUSE2F_COPYCAT4, CopycatSpinMovement
 	sjump CopycatFinalScript
 
 CopycatGreeting2Text:

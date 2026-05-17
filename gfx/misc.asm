@@ -27,9 +27,11 @@ SECTION "Fishing Graphics", ROMX
 ChrisFishingGFX::     INCBIN "gfx/overworld/chris_fish.2bpp"
 KrisFishingGFX::      INCBIN "gfx/overworld/kris_fish.2bpp"
 CrysFishingGFX::      INCBIN "gfx/overworld/crys_fish.2bpp"
+BetaFishingGFX::      INCBIN "gfx/overworld/beta_fish.2bpp"
 ChrisSurfFishingGFX:: INCBIN "gfx/overworld/chris_surf_fish.2bpp"
 KrisSurfFishingGFX::  INCBIN "gfx/overworld/kris_surf_fish.2bpp"
 CrysSurfFishingGFX::  INCBIN "gfx/overworld/crys_surf_fish.2bpp"
+BetaSurfFishingGFX::  INCBIN "gfx/overworld/beta_surf_fish.2bpp"
 
 
 SECTION "Copyright Graphics", ROMX
@@ -88,6 +90,12 @@ PackX2GFX:: INCBIN "gfx/pack/pack_x2.2bpp.lz"
 PackX3GFX:: INCBIN "gfx/pack/pack_x3.2bpp.lz"
 PackX4GFX:: INCBIN "gfx/pack/pack_x4.2bpp.lz"
 PackX5GFX:: INCBIN "gfx/pack/pack_x5.2bpp.lz"
+PackB0GFX:: INCBIN "gfx/pack/pack_b0.2bpp.lz"
+PackB1GFX:: INCBIN "gfx/pack/pack_b1.2bpp.lz"
+PackB2GFX:: INCBIN "gfx/pack/pack_b2.2bpp.lz"
+PackB3GFX:: INCBIN "gfx/pack/pack_b3.2bpp.lz"
+PackB4GFX:: INCBIN "gfx/pack/pack_b4.2bpp.lz"
+PackB5GFX:: INCBIN "gfx/pack/pack_b5.2bpp.lz"
 
 
 SECTION "Trainer Card Pics", ROMX
@@ -95,6 +103,7 @@ SECTION "Trainer Card Pics", ROMX
 ChrisCardPic:: INCBIN "gfx/trainer_card/chris_card.2bpp.lz"
 KrisCardPic::  INCBIN "gfx/trainer_card/kris_card.2bpp.lz"
 CrysCardPic::  INCBIN "gfx/trainer_card/crys_card.2bpp.lz"
+BetaCardPic::  INCBIN "gfx/trainer_card/beta_card.2bpp.lz"
 
 
 SECTION "Trainer Backpics", ROMX
@@ -102,6 +111,7 @@ SECTION "Trainer Backpics", ROMX
 ChrisBackpic:: INCBIN "gfx/player/chris_back.2bpp.lz"
 KrisBackpic::  INCBIN "gfx/player/kris_back.2bpp.lz"
 CrysBackpic::  INCBIN "gfx/player/crys_back.2bpp.lz"
+BetaBackpic::  INCBIN "gfx/player/beta_back.2bpp.lz"
 LyraBackpic::  INCBIN "gfx/battle/lyra_back.2bpp.lz"
 
 

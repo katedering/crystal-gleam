@@ -212,4 +212,8 @@ SpriteHeaders:
 	overworld_sprite ChrisRunSpriteGFX, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite KrisRunSpriteGFX, WALKING_SPRITE, PAL_OW_BLUE
 	overworld_sprite CrysRunSpriteGFX, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite BetaSpriteGFX, WALKING_SPRITE, PAL_OW_PURPLE
+	overworld_sprite BetaBikeSpriteGFX, WALKING_SPRITE, PAL_OW_PURPLE
+	overworld_sprite BetaSurfSpriteGFX, WALKING_SPRITE, PAL_OW_PURPLE
+	overworld_sprite BetaRunSpriteGFX, WALKING_SPRITE, PAL_OW_PURPLE
 	assert_table_length NUM_OVERWORLD_SPRITES
